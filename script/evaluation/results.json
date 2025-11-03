@@ -1,0 +1,1438 @@
+{
+  "summary": {
+    "total_instances": 48,
+    "file_accuracy": 0.8333333333333334,
+    "class_accuracy": 0.7083333333333334,
+    "function_accuracy": 0.4583333333333333,
+    "line_accuracy": 0.2708333333333333,
+    "avg_line_iou": 0.2619432898132852,
+    "file_match_count": 40,
+    "class_match_count": 34,
+    "function_match_count": 22,
+    "line_match_count": 13
+  },
+  "per_instance_results": {
+    "astropy__astropy-12907": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.07526881720430108,
+      "gt_files": [
+        "astropy/modeling/separable.py"
+      ],
+      "pred_files": [
+        "astropy/modeling/separable.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [],
+      "gt_functions": [
+        "astropy.modeling.separable._cstack"
+      ],
+      "pred_functions": [
+        "astropy.modeling.separable._cdot",
+        "astropy.modeling.separable._cstack",
+        "astropy.modeling.separable._n_inputs_outputs",
+        "astropy.modeling.separable._separable"
+      ]
+    },
+    "astropy__astropy-14365": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.21428571428571427,
+      "gt_files": [
+        "astropy/io/ascii/qdp.py"
+      ],
+      "pred_files": [
+        "astropy/io/ascii/qdp.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [],
+      "gt_functions": [
+        "astropy.io.ascii.qdp._get_tables_from_qdp_file",
+        "astropy.io.ascii.qdp._line_type"
+      ],
+      "pred_functions": [
+        "astropy.io.ascii.qdp._line_type"
+      ]
+    },
+    "django__django-10914": {
+      "file_match": true,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/conf/global_settings.py"
+      ],
+      "pred_files": [
+        "django/conf/global_settings.py",
+        "django/core/files/storage.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [
+        "django.core.files.storage.FileSystemStorage",
+        "django.core.files.storage.Storage"
+      ],
+      "gt_functions": [],
+      "pred_functions": [
+        "django.core.files.storage.FileSystemStorage._open",
+        "django.core.files.storage.FileSystemStorage._save",
+        "django.core.files.storage.FileSystemStorage.base_url",
+        "django.core.files.storage.FileSystemStorage.directory_permissions_mode",
+        "django.core.files.storage.FileSystemStorage.file_permissions_mode",
+        "django.core.files.storage.Storage.generate_filename",
+        "django.core.files.storage.Storage.path"
+      ]
+    },
+    "django__django-10924": {
+      "file_match": true,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "pred_files": [
+        "django/core/management/commands/makemigrations.py",
+        "django/db/migrations/serializer.py",
+        "django/db/models/fields/__init__.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.__init__.FilePathField"
+      ],
+      "pred_classes": [
+        "django.core.management.commands.makemigrations.Command",
+        "django.db.migrations.serializer.EnumSerializer",
+        "django.db.migrations.serializer.FloatSerializer",
+        "django.db.migrations.serializer.FrozensetSerializer",
+        "django.db.migrations.serializer.FunctionTypeSerializer",
+        "django.db.models.fields.__init__.Field"
+      ],
+      "gt_functions": [
+        "django.db.models.fields.__init__.FilePathField.formfield"
+      ],
+      "pred_functions": [
+        "django.core.management.commands.makemigrations.Command.handle",
+        "django.db.migrations.serializer.EnumSerializer.serialize",
+        "django.db.migrations.serializer.FloatSerializer.serialize",
+        "django.db.migrations.serializer.FrozensetSerializer._format",
+        "django.db.migrations.serializer.FunctionTypeSerializer.serialize",
+        "django.db.models.fields.__init__.Field.__init__",
+        "django.db.models.fields.__init__.Field.__repr__",
+        "django.db.models.fields.__init__.Field.__str__",
+        "django.db.models.fields.__init__.Field._check_field_name",
+        "django.db.models.fields.__init__.Field.check"
+      ]
+    },
+    "django__django-11019": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.13253012048192772,
+      "gt_files": [
+        "django/forms/widgets.py"
+      ],
+      "pred_files": [
+        "django/forms/widgets.py"
+      ],
+      "gt_classes": [
+        "django.forms.widgets.Media"
+      ],
+      "pred_classes": [
+        "django.forms.widgets.Media"
+      ],
+      "gt_functions": [
+        "django.forms.widgets.Media.__getitem__",
+        "django.forms.widgets.Media._css",
+        "django.forms.widgets.Media._js",
+        "django.forms.widgets.Media.merge"
+      ],
+      "pred_functions": [
+        "django.forms.widgets.Media.__add__",
+        "django.forms.widgets.Media.merge",
+        "django.forms.widgets.media_property"
+      ]
+    },
+    "django__django-11049": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": true,
+      "line_iou": 0.7,
+      "gt_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "pred_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.__init__.DurationField"
+      ],
+      "pred_classes": [
+        "django.db.models.fields.__init__.DurationField"
+      ],
+      "gt_functions": [],
+      "pred_functions": [
+        "django.db.models.fields.__init__.DurationField.get_internal_type"
+      ]
+    },
+    "django__django-11133": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.125,
+      "gt_files": [
+        "django/http/response.py"
+      ],
+      "pred_files": [
+        "django/http/response.py"
+      ],
+      "gt_classes": [
+        "django.http.response.HttpResponseBase"
+      ],
+      "pred_classes": [
+        "django.http.response.HttpResponseBase"
+      ],
+      "gt_functions": [
+        "django.http.response.HttpResponseBase.make_bytes"
+      ],
+      "pred_functions": [
+        "django.http.response.HttpResponseBase.make_bytes"
+      ]
+    },
+    "django__django-11179": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.16216216216216217,
+      "gt_files": [
+        "django/db/models/deletion.py"
+      ],
+      "pred_files": [
+        "django/db/models/deletion.py",
+        "django/db/models/sql/subqueries.py"
+      ],
+      "gt_classes": [
+        "django.db.models.deletion.Collector"
+      ],
+      "pred_classes": [
+        "django.db.models.deletion.Collector",
+        "django.db.models.sql.subqueries.DeleteQuery"
+      ],
+      "gt_functions": [
+        "django.db.models.deletion.Collector.delete"
+      ],
+      "pred_functions": [
+        "django.db.models.deletion.Collector.delete",
+        "django.db.models.deletion.Collector.sort",
+        "django.db.models.sql.subqueries.DeleteQuery.delete_batch",
+        "django.db.models.sql.subqueries.DeleteQuery.delete_qs",
+        "django.db.models.sql.subqueries.DeleteQuery.do_query"
+      ]
+    },
+    "django__django-11422": {
+      "file_match": true,
+      "class_match": false,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.1388888888888889,
+      "gt_files": [
+        "django/utils/autoreload.py"
+      ],
+      "pred_files": [
+        "django/core/management/commands/runserver.py",
+        "django/utils/autoreload.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [
+        "django.core.management.commands.runserver.Command"
+      ],
+      "gt_functions": [
+        "django.utils.autoreload.iter_modules_and_files"
+      ],
+      "pred_functions": [
+        "django.core.management.commands.runserver.Command.handle",
+        "django.core.management.commands.runserver.Command.inner_run",
+        "django.core.management.commands.runserver.Command.run",
+        "django.utils.autoreload.iter_modules_and_files",
+        "django.utils.autoreload.run_with_reloader",
+        "django.utils.autoreload.start_django"
+      ]
+    },
+    "django__django-11564": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.3880597014925373,
+      "gt_files": [
+        "django/conf/__init__.py"
+      ],
+      "pred_files": [
+        "django/contrib/staticfiles/storage.py",
+        "django/core/handlers/wsgi.py",
+        "django/templatetags/static.py",
+        "django/utils/html.py"
+      ],
+      "gt_classes": [
+        "django.conf.__init__.LazySettings",
+        "django.conf.__init__.Settings"
+      ],
+      "pred_classes": [
+        "django.contrib.staticfiles.storage.HashedFilesMixin",
+        "django.core.handlers.wsgi.WSGIHandler",
+        "django.templatetags.static.StaticNode"
+      ],
+      "gt_functions": [
+        "django.conf.__init__.LazySettings.PASSWORD_RESET_TIMEOUT_DAYS",
+        "django.conf.__init__.LazySettings.configure",
+        "django.conf.__init__.LazySettings.configured",
+        "django.conf.__init__.Settings.__init__"
+      ],
+      "pred_functions": [
+        "django.contrib.staticfiles.storage.HashedFilesMixin._url",
+        "django.contrib.staticfiles.storage.HashedFilesMixin.hashed_name",
+        "django.core.handlers.wsgi.WSGIHandler.__call__",
+        "django.core.handlers.wsgi.WSGIHandler.__init__",
+        "django.core.handlers.wsgi.get_script_name",
+        "django.templatetags.static.StaticNode.handle_simple",
+        "django.templatetags.static.StaticNode.render",
+        "django.templatetags.static.StaticNode.url",
+        "django.utils.html.conditional_escape",
+        "django.utils.html.json_script"
+      ]
+    },
+    "django__django-11583": {
+      "file_match": true,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/utils/autoreload.py"
+      ],
+      "pred_files": [
+        "django/utils/autoreload.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [
+        "django.utils.autoreload.StatReloader"
+      ],
+      "gt_functions": [
+        "django.utils.autoreload.common_roots",
+        "django.utils.autoreload.iter_modules_and_files"
+      ],
+      "pred_functions": [
+        "django.utils.autoreload.StatReloader.snapshot_files",
+        "django.utils.autoreload.StatReloader.tick"
+      ]
+    },
+    "django__django-11620": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.17543859649122806,
+      "gt_files": [
+        "django/views/debug.py"
+      ],
+      "pred_files": [
+        "django/core/handlers/exception.py",
+        "django/urls/converters.py",
+        "django/urls/exceptions.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [
+        "django.urls.converters.IntConverter",
+        "django.urls.converters.SlugConverter",
+        "django.urls.converters.StringConverter",
+        "django.urls.converters.UUIDConverter",
+        "django.urls.exceptions.Resolver404"
+      ],
+      "gt_functions": [
+        "django.views.debug.technical_404_response"
+      ],
+      "pred_functions": [
+        "django.core.handlers.exception.convert_exception_to_response",
+        "django.core.handlers.exception.response_for_exception",
+        "django.urls.converters.IntConverter.to_python",
+        "django.urls.converters.IntConverter.to_url",
+        "django.urls.converters.StringConverter.to_python",
+        "django.urls.converters.StringConverter.to_url",
+        "django.urls.converters.UUIDConverter.to_python",
+        "django.urls.converters.UUIDConverter.to_url"
+      ]
+    },
+    "django__django-11848": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.7142857142857143,
+      "gt_files": [
+        "django/utils/http.py"
+      ],
+      "pred_files": [
+        "django/utils/http.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [],
+      "gt_functions": [
+        "django.utils.http.parse_http_date"
+      ],
+      "pred_functions": [
+        "django.utils.http.parse_http_date"
+      ]
+    },
+    "django__django-11905": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/lookups.py"
+      ],
+      "pred_files": [
+        "django/contrib/admin/utils.py"
+      ],
+      "gt_classes": [
+        "django.db.models.lookups.IsNull",
+        "django.db.models.lookups.Lookup",
+        "django.db.models.lookups.Regex"
+      ],
+      "pred_classes": [],
+      "gt_functions": [
+        "django.db.models.lookups.IsNull.as_sql",
+        "django.db.models.lookups.Regex.as_sql"
+      ],
+      "pred_functions": [
+        "django.contrib.admin.utils.lookup_needs_distinct",
+        "django.contrib.admin.utils.prepare_lookup_value",
+        "django.contrib.admin.utils.quote",
+        "django.contrib.admin.utils.unquote"
+      ]
+    },
+    "django__django-12113": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/backends/sqlite3/creation.py"
+      ],
+      "pred_files": [
+        "tests/admin_views/test_multidb.py"
+      ],
+      "gt_classes": [
+        "django.db.backends.sqlite3.creation.DatabaseCreation"
+      ],
+      "pred_classes": [
+        "tests.admin_views.test_multidb.MultiDatabaseTests"
+      ],
+      "gt_functions": [
+        "django.db.backends.sqlite3.creation.DatabaseCreation.test_db_signature"
+      ],
+      "pred_functions": [
+        "tests.admin_views.test_multidb.MultiDatabaseTests.setUpTestData",
+        "tests.admin_views.test_multidb.MultiDatabaseTests.test_add_view"
+      ]
+    },
+    "django__django-12284": {
+      "file_match": true,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "pred_files": [
+        "django/db/models/base.py",
+        "django/db/models/fields/__init__.py",
+        "django/db/models/fields/related_descriptors.py",
+        "django/db/models/options.py",
+        "django/db/models/query_utils.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.__init__.Field"
+      ],
+      "pred_classes": [
+        "django.db.models.base.ModelBase",
+        "django.db.models.fields.__init__.DateTimeCheckMixin",
+        "django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor",
+        "django.db.models.options.Options",
+        "django.db.models.query_utils.Q"
+      ],
+      "gt_functions": [
+        "django.db.models.fields.__init__.Field.contribute_to_class",
+        "django.db.models.fields.__init__.Field.get_filter_kwargs_for_object"
+      ],
+      "pred_functions": [
+        "django.db.models.base.ModelBase.__new__",
+        "django.db.models.fields.__init__.DateTimeCheckMixin._check_mutually_exclusive_options",
+        "django.db.models.fields.__init__.DateTimeCheckMixin.check",
+        "django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor.get_object",
+        "django.db.models.fields.related_descriptors.ForwardManyToOneDescriptor.get_prefetch_queryset",
+        "django.db.models.options.Options.contribute_to_class",
+        "django.db.models.query_utils.Q.deconstruct"
+      ]
+    },
+    "django__django-12453": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.3,
+      "gt_files": [
+        "django/db/backends/base/creation.py"
+      ],
+      "pred_files": [
+        "django/db/backends/base/creation.py"
+      ],
+      "gt_classes": [
+        "django.db.backends.base.creation.BaseDatabaseCreation"
+      ],
+      "pred_classes": [
+        "django.db.backends.base.creation.BaseDatabaseCreation"
+      ],
+      "gt_functions": [
+        "django.db.backends.base.creation.BaseDatabaseCreation._get_database_display_str",
+        "django.db.backends.base.creation.BaseDatabaseCreation._get_test_db_name",
+        "django.db.backends.base.creation.BaseDatabaseCreation.deserialize_db_from_string"
+      ],
+      "pred_functions": [
+        "django.db.backends.base.creation.BaseDatabaseCreation._get_database_display_str",
+        "django.db.backends.base.creation.BaseDatabaseCreation.deserialize_db_from_string",
+        "django.db.backends.base.creation.BaseDatabaseCreation.serialize_db_to_string"
+      ]
+    },
+    "django__django-12497": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.4375,
+      "gt_files": [
+        "django/db/models/fields/related.py"
+      ],
+      "pred_files": [
+        "django/db/models/fields/related.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.related.ManyToManyField"
+      ],
+      "pred_classes": [
+        "django.db.models.fields.related.ManyToManyField"
+      ],
+      "gt_functions": [
+        "django.db.models.fields.related.ManyToManyField._check_relationship_model"
+      ],
+      "pred_functions": [
+        "django.db.models.fields.related.ManyToManyField._check_relationship_model"
+      ]
+    },
+    "django__django-12589": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "pred_files": [
+        "django/db/models/expressions.py",
+        "django/db/models/sql/compiler.py",
+        "django/db/models/sql/query.py"
+      ],
+      "gt_classes": [
+        "django.db.models.sql.query.Query"
+      ],
+      "pred_classes": [
+        "django.db.models.expressions.Func",
+        "django.db.models.sql.compiler.SQLCompiler",
+        "django.db.models.sql.query.Query"
+      ],
+      "gt_functions": [
+        "django.db.models.sql.query.Query.add_select_related",
+        "django.db.models.sql.query.Query.set_group_by"
+      ],
+      "pred_functions": [
+        "django.db.models.expressions.Func.__init__",
+        "django.db.models.expressions.Func.__repr__",
+        "django.db.models.expressions.Func._get_repr_options",
+        "django.db.models.expressions.Func.get_source_expressions",
+        "django.db.models.sql.compiler.SQLCompiler._get_field_choices",
+        "django.db.models.sql.compiler.SQLCompiler.get_from_clause",
+        "django.db.models.sql.compiler.SQLCompiler.get_order_by",
+        "django.db.models.sql.compiler.SQLCompiler.get_related_selections",
+        "django.db.models.sql.query.Query.__init__",
+        "django.db.models.sql.query.Query.build_filter"
+      ]
+    },
+    "django__django-12700": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.45,
+      "gt_files": [
+        "django/views/debug.py"
+      ],
+      "pred_files": [
+        "django/views/debug.py"
+      ],
+      "gt_classes": [
+        "django.views.debug.SafeExceptionReporterFilter"
+      ],
+      "pred_classes": [
+        "django.views.debug.SafeExceptionReporterFilter"
+      ],
+      "gt_functions": [
+        "django.views.debug.SafeExceptionReporterFilter.cleanse_setting"
+      ],
+      "pred_functions": [
+        "django.views.debug.SafeExceptionReporterFilter.cleanse_setting"
+      ]
+    },
+    "django__django-12915": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/contrib/staticfiles/handlers.py"
+      ],
+      "pred_files": [
+        "django/contrib/staticfiles/handlers.py"
+      ],
+      "gt_classes": [
+        "django.contrib.staticfiles.handlers.StaticFilesHandler"
+      ],
+      "pred_classes": [
+        "django.contrib.staticfiles.handlers.ASGIStaticFilesHandler",
+        "django.contrib.staticfiles.handlers.StaticFilesHandler"
+      ],
+      "gt_functions": [
+        "django.contrib.staticfiles.handlers.StaticFilesHandler.__init__"
+      ],
+      "pred_functions": [
+        "django.contrib.staticfiles.handlers.ASGIStaticFilesHandler.__init__",
+        "django.contrib.staticfiles.handlers.StaticFilesHandler.__call__"
+      ]
+    },
+    "django__django-12983": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.5,
+      "gt_files": [
+        "django/utils/text.py"
+      ],
+      "pred_files": [
+        "django/utils/text.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [],
+      "gt_functions": [
+        "django.utils.text.camel_case_to_spaces",
+        "django.utils.text.slugify"
+      ],
+      "pred_functions": [
+        "django.utils.text.camel_case_to_spaces",
+        "django.utils.text.slugify"
+      ]
+    },
+    "django__django-13158": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "pred_files": [
+        "django/db/models/query.py",
+        "django/db/models/sql/query.py",
+        "django/forms/fields.py",
+        "django/forms/models.py"
+      ],
+      "gt_classes": [
+        "django.db.models.sql.query.Query"
+      ],
+      "pred_classes": [
+        "django.db.models.query.QuerySet",
+        "django.db.models.sql.query.Query",
+        "django.forms.fields.ChoiceField",
+        "django.forms.models.ModelChoiceField"
+      ],
+      "gt_functions": [
+        "django.db.models.sql.query.Query.clone",
+        "django.db.models.sql.query.Query.is_empty",
+        "django.db.models.sql.query.Query.set_empty",
+        "django.db.models.sql.query.Query.set_limits"
+      ],
+      "pred_functions": [
+        "django.db.models.query.QuerySet.__or__",
+        "django.db.models.query.QuerySet._iterator",
+        "django.db.models.query.QuerySet.iterator",
+        "django.db.models.sql.query.Query.add_filtered_relation",
+        "django.db.models.sql.query.Query.names_to_path",
+        "django.forms.fields.ChoiceField._set_choices",
+        "django.forms.fields.ChoiceField.to_python",
+        "django.forms.fields.ChoiceField.valid_value",
+        "django.forms.fields.ChoiceField.validate",
+        "django.forms.models.ModelChoiceField._get_queryset",
+        "django.forms.models.ModelChoiceField._set_queryset",
+        "django.forms.models.ModelChoiceField.label_from_instance"
+      ]
+    },
+    "django__django-13220": {
+      "file_match": true,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/core/exceptions.py"
+      ],
+      "pred_files": [
+        "django/core/exceptions.py"
+      ],
+      "gt_classes": [
+        "django.core.exceptions.EmptyResultSet",
+        "django.core.exceptions.FieldDoesNotExist",
+        "django.core.exceptions.SynchronousOnlyOperation"
+      ],
+      "pred_classes": [
+        "django.core.exceptions.ValidationError"
+      ],
+      "gt_functions": [],
+      "pred_functions": [
+        "django.core.exceptions.ValidationError.__init__",
+        "django.core.exceptions.ValidationError.message_dict",
+        "django.core.exceptions.ValidationError.messages",
+        "django.core.exceptions.ValidationError.update_error_dict"
+      ]
+    },
+    "django__django-13321": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.14150943396226415,
+      "gt_files": [
+        "django/contrib/sessions/backends/base.py"
+      ],
+      "pred_files": [
+        "django/contrib/sessions/backends/base.py"
+      ],
+      "gt_classes": [
+        "django.contrib.sessions.backends.base.SessionBase"
+      ],
+      "pred_classes": [
+        "django.contrib.sessions.backends.base.SessionBase"
+      ],
+      "gt_functions": [
+        "django.contrib.sessions.backends.base.SessionBase._legacy_decode",
+        "django.contrib.sessions.backends.base.SessionBase._legacy_encode",
+        "django.contrib.sessions.backends.base.SessionBase.decode"
+      ],
+      "pred_functions": [
+        "django.contrib.sessions.backends.base.SessionBase._get_new_session_key",
+        "django.contrib.sessions.backends.base.SessionBase._get_or_create_session_key",
+        "django.contrib.sessions.backends.base.SessionBase._get_session",
+        "django.contrib.sessions.backends.base.SessionBase._get_session_key",
+        "django.contrib.sessions.backends.base.SessionBase._legacy_decode",
+        "django.contrib.sessions.backends.base.SessionBase._legacy_encode",
+        "django.contrib.sessions.backends.base.SessionBase._set_session_key",
+        "django.contrib.sessions.backends.base.SessionBase._validate_session_key",
+        "django.contrib.sessions.backends.base.SessionBase.clear",
+        "django.contrib.sessions.backends.base.SessionBase.decode",
+        "django.contrib.sessions.backends.base.SessionBase.encode",
+        "django.contrib.sessions.backends.base.SessionBase.has_key",
+        "django.contrib.sessions.backends.base.SessionBase.is_empty",
+        "django.contrib.sessions.backends.base.SessionBase.items",
+        "django.contrib.sessions.backends.base.SessionBase.keys",
+        "django.contrib.sessions.backends.base.SessionBase.update",
+        "django.contrib.sessions.backends.base.SessionBase.values"
+      ]
+    },
+    "django__django-13551": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.41379310344827586,
+      "gt_files": [
+        "django/contrib/auth/tokens.py"
+      ],
+      "pred_files": [
+        "django/contrib/auth/tokens.py"
+      ],
+      "gt_classes": [
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator"
+      ],
+      "pred_classes": [
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator"
+      ],
+      "gt_functions": [
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._make_hash_value",
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._now",
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._num_seconds"
+      ],
+      "pred_functions": [
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._make_hash_value",
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._make_token_with_timestamp",
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._now",
+        "django.contrib.auth.tokens.PasswordResetTokenGenerator._num_seconds"
+      ]
+    },
+    "django__django-13590": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "pred_files": [
+        "django/db/models/sql/query.py"
+      ],
+      "gt_classes": [
+        "django.db.models.sql.query.Query"
+      ],
+      "pred_classes": [
+        "django.db.models.sql.query.Query"
+      ],
+      "gt_functions": [
+        "django.db.models.sql.query.Query.resolve_lookup_value",
+        "django.db.models.sql.query.Query.solve_lookup_type"
+      ],
+      "pred_functions": [
+        "django.db.models.sql.query.Query.__deepcopy__",
+        "django.db.models.sql.query.Query.__str__",
+        "django.db.models.sql.query.Query.base_table",
+        "django.db.models.sql.query.Query.get_compiler"
+      ]
+    },
+    "django__django-13660": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.5,
+      "gt_files": [
+        "django/core/management/commands/shell.py"
+      ],
+      "pred_files": [
+        "django/core/management/commands/shell.py"
+      ],
+      "gt_classes": [
+        "django.core.management.commands.shell.Command"
+      ],
+      "pred_classes": [
+        "django.core.management.commands.shell.Command"
+      ],
+      "gt_functions": [
+        "django.core.management.commands.shell.Command.handle"
+      ],
+      "pred_functions": [
+        "django.core.management.commands.shell.Command.handle",
+        "django.core.management.commands.shell.Command.python"
+      ]
+    },
+    "django__django-13710": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.8666666666666667,
+      "gt_files": [
+        "django/contrib/admin/options.py"
+      ],
+      "pred_files": [
+        "django/contrib/admin/options.py"
+      ],
+      "gt_classes": [
+        "django.contrib.admin.options.InlineModelAdmin"
+      ],
+      "pred_classes": [
+        "django.contrib.admin.options.InlineModelAdmin"
+      ],
+      "gt_functions": [
+        "django.contrib.admin.options.InlineModelAdmin.__init__",
+        "django.contrib.admin.options.InlineModelAdmin.media"
+      ],
+      "pred_functions": [
+        "django.contrib.admin.options.InlineModelAdmin.__init__",
+        "django.contrib.admin.options.InlineModelAdmin.media"
+      ]
+    },
+    "django__django-13757": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.4117647058823529,
+      "gt_files": [
+        "django/db/models/fields/json.py"
+      ],
+      "pred_files": [
+        "django/db/models/fields/json.py",
+        "tests/model_fields/test_jsonfield.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.json.KeyTransformIn",
+        "django.db.models.fields.json.KeyTransformIsNull"
+      ],
+      "pred_classes": [
+        "django.db.models.fields.json.KeyTransformIn",
+        "django.db.models.fields.json.KeyTransformIsNull",
+        "tests.model_fields.test_jsonfield.TestQuerying"
+      ],
+      "gt_functions": [
+        "django.db.models.fields.json.KeyTransformIn.resolve_expression_parameter",
+        "django.db.models.fields.json.KeyTransformIsNull.as_oracle",
+        "django.db.models.fields.json.KeyTransformIsNull.as_sqlite"
+      ],
+      "pred_functions": [
+        "django.db.models.fields.json.KeyTransformIn.resolve_expression_parameter",
+        "django.db.models.fields.json.KeyTransformIsNull.as_oracle",
+        "django.db.models.fields.json.KeyTransformIsNull.as_sqlite",
+        "tests.model_fields.test_jsonfield.TestQuerying.test_deep_distinct",
+        "tests.model_fields.test_jsonfield.TestQuerying.test_isnull_key",
+        "tests.model_fields.test_jsonfield.TestQuerying.test_isnull_key_or_none"
+      ]
+    },
+    "django__django-13768": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.18604651162790697,
+      "gt_files": [
+        "django/dispatch/dispatcher.py"
+      ],
+      "pred_files": [
+        "django/dispatch/dispatcher.py"
+      ],
+      "gt_classes": [
+        "django.dispatch.dispatcher.Signal"
+      ],
+      "pred_classes": [
+        "django.dispatch.dispatcher.Signal"
+      ],
+      "gt_functions": [
+        "django.dispatch.dispatcher.Signal._clear_dead_receivers",
+        "django.dispatch.dispatcher.Signal.send_robust",
+        "django.dispatch.dispatcher._make_id"
+      ],
+      "pred_functions": [
+        "django.dispatch.dispatcher.Signal._clear_dead_receivers",
+        "django.dispatch.dispatcher.Signal.send",
+        "django.dispatch.dispatcher.Signal.send_robust"
+      ]
+    },
+    "django__django-13933": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.3103448275862069,
+      "gt_files": [
+        "django/forms/models.py"
+      ],
+      "pred_files": [
+        "django/forms/models.py"
+      ],
+      "gt_classes": [
+        "django.forms.models.ModelChoiceField"
+      ],
+      "pred_classes": [
+        "django.forms.models.ModelChoiceField"
+      ],
+      "gt_functions": [
+        "django.forms.models.ModelChoiceField.has_changed",
+        "django.forms.models.ModelChoiceField.to_python",
+        "django.forms.models.ModelChoiceField.validate"
+      ],
+      "pred_functions": [
+        "django.forms.models.ModelChoiceField.has_changed",
+        "django.forms.models.ModelChoiceField.prepare_value",
+        "django.forms.models.ModelChoiceField.to_python",
+        "django.forms.models.ModelChoiceField.validate"
+      ]
+    },
+    "django__django-14016": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.631578947368421,
+      "gt_files": [
+        "django/db/models/query_utils.py"
+      ],
+      "pred_files": [
+        "django/db/models/query_utils.py"
+      ],
+      "gt_classes": [
+        "django.db.models.query_utils.Q"
+      ],
+      "pred_classes": [
+        "django.db.models.query_utils.Q"
+      ],
+      "gt_functions": [
+        "django.db.models.query_utils.Q._combine"
+      ],
+      "pred_functions": [
+        "django.db.models.query_utils.Q._combine"
+      ]
+    },
+    "django__django-14017": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/models/query_utils.py"
+      ],
+      "pred_files": [
+        "django/db/models/query_utils.py"
+      ],
+      "gt_classes": [
+        "django.db.models.query_utils.Q"
+      ],
+      "pred_classes": [
+        "django.db.models.query_utils.Q"
+      ],
+      "gt_functions": [
+        "django.db.models.query_utils.Q.__init__",
+        "django.db.models.query_utils.Q._combine"
+      ],
+      "pred_functions": [
+        "django.db.models.query_utils.Q.__and__",
+        "django.db.models.query_utils.Q.__invert__",
+        "django.db.models.query_utils.Q.deconstruct",
+        "django.db.models.query_utils.Q.resolve_expression"
+      ]
+    },
+    "django__django-14155": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.21875,
+      "gt_files": [
+        "django/urls/resolvers.py"
+      ],
+      "pred_files": [
+        "django/urls/resolvers.py"
+      ],
+      "gt_classes": [
+        "django.urls.resolvers.ResolverMatch"
+      ],
+      "pred_classes": [
+        "django.urls.resolvers.ResolverMatch"
+      ],
+      "gt_functions": [
+        "django.urls.resolvers.ResolverMatch.__getitem__",
+        "django.urls.resolvers.ResolverMatch.__repr__",
+        "django.urls.resolvers.get_resolver"
+      ],
+      "pred_functions": [
+        "django.urls.resolvers.ResolverMatch.__init__",
+        "django.urls.resolvers.get_resolver"
+      ]
+    },
+    "django__django-14238": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.5833333333333334,
+      "gt_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "pred_files": [
+        "django/db/models/fields/__init__.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.__init__.AutoField",
+        "django.db.models.fields.__init__.AutoFieldMeta"
+      ],
+      "pred_classes": [
+        "django.db.models.fields.__init__.AutoField",
+        "django.db.models.fields.__init__.AutoFieldMeta"
+      ],
+      "gt_functions": [
+        "django.db.models.fields.__init__.AutoFieldMeta.__instancecheck__",
+        "django.db.models.fields.__init__.AutoFieldMeta.__subclasscheck__"
+      ],
+      "pred_functions": [
+        "django.db.models.fields.__init__.AutoField.get_internal_type",
+        "django.db.models.fields.__init__.AutoFieldMeta.__instancecheck__",
+        "django.db.models.fields.__init__.AutoFieldMeta.__subclasscheck__"
+      ]
+    },
+    "django__django-14534": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.6363636363636364,
+      "gt_files": [
+        "django/forms/boundfield.py"
+      ],
+      "pred_files": [
+        "django/forms/boundfield.py"
+      ],
+      "gt_classes": [
+        "django.forms.boundfield.BoundWidget"
+      ],
+      "pred_classes": [
+        "django.forms.boundfield.BoundWidget"
+      ],
+      "gt_functions": [
+        "django.forms.boundfield.BoundWidget.choice_label",
+        "django.forms.boundfield.BoundWidget.id_for_label"
+      ],
+      "pred_functions": [
+        "django.forms.boundfield.BoundWidget.choice_label",
+        "django.forms.boundfield.BoundWidget.id_for_label",
+        "django.forms.boundfield.BoundWidget.template_name"
+      ]
+    },
+    "django__django-14580": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/db/migrations/serializer.py"
+      ],
+      "pred_files": [
+        "django/db/migrations/writer.py"
+      ],
+      "gt_classes": [
+        "django.db.migrations.serializer.TypeSerializer"
+      ],
+      "pred_classes": [
+        "django.db.migrations.writer.MigrationWriter"
+      ],
+      "gt_functions": [
+        "django.db.migrations.serializer.TypeSerializer.serialize"
+      ],
+      "pred_functions": [
+        "django.db.migrations.writer.MigrationWriter.as_string"
+      ]
+    },
+    "django__django-14608": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.12195121951219512,
+      "gt_files": [
+        "django/forms/formsets.py"
+      ],
+      "pred_files": [
+        "django/forms/formsets.py"
+      ],
+      "gt_classes": [
+        "django.forms.formsets.BaseFormSet"
+      ],
+      "pred_classes": [
+        "django.forms.formsets.BaseFormSet"
+      ],
+      "gt_functions": [
+        "django.forms.formsets.BaseFormSet.clean",
+        "django.forms.formsets.BaseFormSet.full_clean"
+      ],
+      "pred_functions": [
+        "django.forms.formsets.BaseFormSet.add_fields",
+        "django.forms.formsets.BaseFormSet.clean",
+        "django.forms.formsets.BaseFormSet.errors",
+        "django.forms.formsets.BaseFormSet.get_ordering_widget",
+        "django.forms.formsets.BaseFormSet.has_changed",
+        "django.forms.formsets.BaseFormSet.non_form_errors"
+      ]
+    },
+    "django__django-14672": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.6363636363636364,
+      "gt_files": [
+        "django/db/models/fields/reverse_related.py"
+      ],
+      "pred_files": [
+        "django/db/models/fields/reverse_related.py"
+      ],
+      "gt_classes": [
+        "django.db.models.fields.reverse_related.ManyToManyRel"
+      ],
+      "pred_classes": [
+        "django.db.models.fields.reverse_related.ManyToManyRel"
+      ],
+      "gt_functions": [
+        "django.db.models.fields.reverse_related.ManyToManyRel.identity"
+      ],
+      "pred_functions": [
+        "django.db.models.fields.reverse_related.ManyToManyRel.__init__",
+        "django.db.models.fields.reverse_related.ManyToManyRel.get_related_field",
+        "django.db.models.fields.reverse_related.ManyToManyRel.identity"
+      ]
+    },
+    "django__django-14787": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.0,
+      "gt_files": [
+        "django/utils/decorators.py"
+      ],
+      "pred_files": [
+        "django/utils/decorators.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [],
+      "gt_functions": [
+        "django.utils.decorators._multi_decorate",
+        "django.utils.decorators._wrapper"
+      ],
+      "pred_functions": [
+        "django.utils.decorators.decorator_from_middleware_with_args",
+        "django.utils.decorators.method_decorator"
+      ]
+    },
+    "django__django-14915": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.47368421052631576,
+      "gt_files": [
+        "django/forms/models.py"
+      ],
+      "pred_files": [
+        "django/forms/models.py"
+      ],
+      "gt_classes": [
+        "django.forms.models.ModelChoiceIteratorValue"
+      ],
+      "pred_classes": [
+        "django.forms.models.ModelChoiceIterator",
+        "django.forms.models.ModelChoiceIteratorValue"
+      ],
+      "gt_functions": [
+        "django.forms.models.ModelChoiceIteratorValue.__eq__",
+        "django.forms.models.ModelChoiceIteratorValue.__str__"
+      ],
+      "pred_functions": [
+        "django.forms.models.ModelChoiceIterator.__init__",
+        "django.forms.models.ModelChoiceIteratorValue.__eq__",
+        "django.forms.models.ModelChoiceIteratorValue.__init__",
+        "django.forms.models.ModelChoiceIteratorValue.__str__"
+      ]
+    },
+    "django__django-14997": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.019801980198019802,
+      "gt_files": [
+        "django/db/backends/ddl_references.py"
+      ],
+      "pred_files": [
+        "django/db/backends/sqlite3/schema.py",
+        "django/db/migrations/operations/fields.py"
+      ],
+      "gt_classes": [
+        "django.db.backends.ddl_references.Expressions"
+      ],
+      "pred_classes": [
+        "django.db.backends.sqlite3.schema.DatabaseSchemaEditor",
+        "django.db.migrations.operations.fields.AlterField"
+      ],
+      "gt_functions": [
+        "django.db.backends.ddl_references.Expressions.rename_table_references"
+      ],
+      "pred_functions": [
+        "django.db.backends.sqlite3.schema.DatabaseSchemaEditor._alter_field",
+        "django.db.backends.sqlite3.schema.DatabaseSchemaEditor._alter_many_to_many",
+        "django.db.backends.sqlite3.schema.DatabaseSchemaEditor._remake_table",
+        "django.db.backends.sqlite3.schema.DatabaseSchemaEditor.delete_model",
+        "django.db.migrations.operations.fields.AlterField.database_backwards",
+        "django.db.migrations.operations.fields.AlterField.database_forwards",
+        "django.db.migrations.operations.fields.AlterField.describe",
+        "django.db.migrations.operations.fields.AlterField.migration_name_fragment",
+        "django.db.migrations.operations.fields.AlterField.reduce"
+      ]
+    },
+    "django__django-15061": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.875,
+      "gt_files": [
+        "django/forms/widgets.py"
+      ],
+      "pred_files": [
+        "django/forms/widgets.py"
+      ],
+      "gt_classes": [
+        "django.forms.widgets.MultiWidget"
+      ],
+      "pred_classes": [
+        "django.forms.widgets.MultiWidget"
+      ],
+      "gt_functions": [
+        "django.forms.widgets.MultiWidget.get_context",
+        "django.forms.widgets.MultiWidget.id_for_label"
+      ],
+      "pred_functions": [
+        "django.forms.widgets.MultiWidget.get_context",
+        "django.forms.widgets.MultiWidget.id_for_label"
+      ]
+    },
+    "django__django-15202": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": false,
+      "line_iou": 0.19444444444444445,
+      "gt_files": [
+        "django/core/validators.py"
+      ],
+      "pred_files": [
+        "django/core/validators.py"
+      ],
+      "gt_classes": [
+        "django.core.validators.URLValidator"
+      ],
+      "pred_classes": [
+        "django.core.validators.URLValidator"
+      ],
+      "gt_functions": [
+        "django.core.validators.URLValidator.__call__"
+      ],
+      "pred_functions": [
+        "django.core.validators.URLValidator.__call__"
+      ]
+    },
+    "django__django-15252": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.25,
+      "gt_files": [
+        "django/db/migrations/executor.py"
+      ],
+      "pred_files": [
+        "django/db/migrations/recorder.py"
+      ],
+      "gt_classes": [
+        "django.db.migrations.executor.MigrationExecutor"
+      ],
+      "pred_classes": [
+        "django.db.migrations.recorder.MigrationRecorder"
+      ],
+      "gt_functions": [
+        "django.db.migrations.executor.MigrationExecutor.migrate"
+      ],
+      "pred_functions": [
+        "django.db.migrations.recorder.MigrationRecorder.applied_migrations",
+        "django.db.migrations.recorder.MigrationRecorder.ensure_schema",
+        "django.db.migrations.recorder.MigrationRecorder.flush",
+        "django.db.migrations.recorder.MigrationRecorder.has_table",
+        "django.db.migrations.recorder.MigrationRecorder.record_applied",
+        "django.db.migrations.recorder.MigrationRecorder.record_unapplied"
+      ]
+    },
+    "django__django-15347": {
+      "file_match": true,
+      "class_match": true,
+      "function_match": true,
+      "line_match": true,
+      "line_iou": 0.5384615384615384,
+      "gt_files": [
+        "django/contrib/messages/storage/cookie.py"
+      ],
+      "pred_files": [
+        "django/contrib/messages/storage/cookie.py"
+      ],
+      "gt_classes": [
+        "django.contrib.messages.storage.cookie.MessageEncoder"
+      ],
+      "pred_classes": [
+        "django.contrib.messages.storage.cookie.MessageEncoder"
+      ],
+      "gt_functions": [
+        "django.contrib.messages.storage.cookie.MessageEncoder.default"
+      ],
+      "pred_functions": [
+        "django.contrib.messages.storage.cookie.MessageEncoder.default"
+      ]
+    },
+    "django__django-15388": {
+      "file_match": false,
+      "class_match": false,
+      "function_match": false,
+      "line_match": false,
+      "line_iou": 0.05,
+      "gt_files": [
+        "django/template/autoreload.py"
+      ],
+      "pred_files": [
+        "django/core/management/commands/runserver.py",
+        "django/template/loaders/filesystem.py",
+        "django/utils/_os.py",
+        "django/utils/autoreload.py"
+      ],
+      "gt_classes": [],
+      "pred_classes": [
+        "django.core.management.commands.runserver.Command",
+        "django.template.loaders.filesystem.Loader"
+      ],
+      "gt_functions": [
+        "django.template.autoreload.template_changed"
+      ],
+      "pred_functions": [
+        "django.core.management.commands.runserver.Command.add_arguments",
+        "django.core.management.commands.runserver.Command.execute",
+        "django.core.management.commands.runserver.Command.get_handler",
+        "django.core.management.commands.runserver.Command.handle",
+        "django.template.loaders.filesystem.Loader.get_contents",
+        "django.template.loaders.filesystem.Loader.get_template_sources",
+        "django.utils._os.safe_join",
+        "django.utils._os.symlinks_supported",
+        "django.utils.autoreload._walk",
+        "django.utils.autoreload.common_roots",
+        "django.utils.autoreload.ensure_echo_on",
+        "django.utils.autoreload.iter_all_python_module_files",
+        "django.utils.autoreload.iter_modules_and_files"
+      ]
+    }
+  }
+}
