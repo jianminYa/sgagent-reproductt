@@ -11,7 +11,7 @@ SGAgent 结合代码知识图谱、检索工具和多阶段 agent workflow，对
 1. 使用完整 14 个工具时，SGAgent Locator 在固定 SWE-bench Lite 样本上的定位效果；
 2. 移除 `find_methods_by_name` 和 `find_all_variables_named` 两个 N2D 相关工具后，定位质量和资源消耗是否发生变化。
 
-实验使用本地 SWE-bench Lite 数据集，共 300 条 issue；正式 baseline 使用固定的 45 条样本，配对消融 smoke 使用相同的 10 条样本。模型请求使用 Claude-3.5-Sonnet 对应的模型别名 `ep-64pmfvfo`，保留官方 Locator workflow、文本 `#TOOL_CALL` 协议、summarizer 和 `recursion_limit=150`。
+实验使用本地 SWE-bench Lite 数据集，共 300 条 issue；正式 baseline 使用固定的 45 条样本，配对消融 smoke 使用相同的 10 条样本。模型请求使用 Claude-3.5-Sonnet ，保留官方 Locator workflow、文本 `#TOOL_CALL` 协议、summarizer 和 `recursion_limit=150`。
 
 报告同时保留两类指标：
 
