@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "725e7eca-828f-414e-9b9a-38a512b68eaa",
+    "e8640e51-92a8-4bc5-bcca-91c1dbcdf58f",
+    "afa917f1-1f4e-4366-adb8-aa8417bf371f",
+    "f0233b3a-94fd-417d-9d0c-000054732c84",
+    "ba69d3ff-1964-4b53-8f32-488d4bcfb2af",
+    "e2ed1369-28b9-4ef6-89b3-66bbdd1384ac",
+    "b1229e0a-8a74-4b52-b183-5adf08898bbe",
+    "33915f64-f5d4-42ba-9a43-400cc635b64b",
+    "e50d6d6e-4673-42ae-aa3b-b9ffaf438a4e",
+    "110e7a45-9730-4390-9838-5dc3ce17f16a",
+    "f888ed75-1e41-499b-b6ba-eb4649b7acc4",
+    "e0af5484-cf14-4c39-b509-28f90fd35169",
+    "bf1c2e14-12bf-4b7d-9078-73168bdb3820",
+    "daece131-3d19-4c46-80d9-ab700c556b0e"
+  ],
+  "stop_reasons": {
+    "stop": 14
+  },
+  "locator_llm_calls": 13,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 14,
+  "tool_result_chars": 8597,
+  "tool_original_chars": 8597,
+  "tool_returned_chars": 8597,
+  "truncated_tool_calls": 0,
+  "input_tokens": 52721,
+  "output_tokens": 2368,
+  "total_tokens": 55089,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 100391.325,
+  "graph_updates": 26,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-i76a9757/src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1349
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1349
+    }
+  ],
+  "run_id": "sgagent-official-pytest-dev__pytest-5221-0-7c98588226",
+  "instance_id": "pytest-dev__pytest-5221",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

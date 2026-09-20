@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_7e7bc4fdb0274a2296559ba62464a150",
+    "msg_167b11af561c468d892212c185f4622d",
+    "msg_8ac5890c627444749578f8e57a0aff13",
+    "msg_ffb5fb7a180845808eaa27049f459a92",
+    "msg_28423875cfea4d3bb5211b73a8e7f699",
+    "msg_e1555a377dda4de6b3e7cd51054a3cd9",
+    "msg_1363ef03354e4355aa32d5aa20dc5123"
+  ],
+  "stop_reasons": {
+    "end_turn": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 24388,
+  "input_tokens": 18408,
+  "output_tokens": 2278,
+  "total_tokens": 20686,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 57507.402,
+  "graph_updates": 11,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-bei8r6u3/requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-bei8r6u3/requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-1963-0-a550c2ea17",
+  "instance_id": "psf__requests-1963",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

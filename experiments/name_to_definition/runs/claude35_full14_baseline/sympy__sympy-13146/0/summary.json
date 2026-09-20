@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "4900d480-2460-44f6-a2b5-3679d47c1627",
+    "11710fef-9eef-4252-8169-e26193901dc8",
+    "e01a8c39-64f2-43f9-9ab5-2524cf04b631",
+    "094060f7-8a33-429f-80d3-d3613551040f",
+    "af944257-1dee-4f14-8621-653b0a6d3bc1",
+    "f233b23a-da16-4148-b350-cf84a2b9dcdd",
+    "e05fb3e3-442a-426d-bb51-bdb13f902f3c",
+    "2088cf50-063f-434d-8e1d-ce75eec5a070",
+    "9720c12a-0959-4513-8e51-b9633dc849cd",
+    "8dcf219c-a7be-4fa1-85c9-3630348ad6ea",
+    "08ff1f73-bee1-496d-9d5e-c34a99390ed6",
+    "6fa70d2b-f49f-453d-8c42-6b5d7df3bf14",
+    "cb1c7bb5-7916-4c43-b941-519255161e93",
+    "35df7963-b3b6-4e27-b488-834564a5ca57",
+    "7a3ce7f8-1f94-4d03-b709-06415c06dd47",
+    "c2162865-7189-44bb-9a5e-89054eee9882",
+    "ddf87069-c0d1-4dd7-980c-92b9ceae473a",
+    "2fcd6adf-3a96-496c-8a92-7fd019c42828",
+    "bae2a446-f612-4164-ac07-5dadd90ee65f",
+    "d9ccc93e-8324-4495-8d55-464e4bc9ba90",
+    "414db9d2-6cea-4096-a460-cd6f3b9e14d4",
+    "cf1eede6-a977-4e06-b9dd-0fd80e27dcdd",
+    "6a4215b1-7f37-4570-b5e0-36ebab9d85dd",
+    "17935153-5f45-42c7-81a0-07b0d58b7dbe",
+    "9b337884-4730-4ad7-9703-9e032c59038e",
+    "3c58ea20-8ea0-4213-a655-3c3d4ac52e5f",
+    "9a040bc5-22d4-440d-9a55-8ecffb5a0ccd",
+    "e089ed87-599e-46af-9707-5f9f56fb4256",
+    "9bb2e454-68a4-4fcb-a727-69a1353e999f",
+    "dae88f70-1874-47ca-b99f-10605f8e7fa7",
+    "bd3bb04a-c522-4d85-baa8-d102ae364d12",
+    "018e5933-827f-4448-8faf-8c1c33ca6c67",
+    "3b248b01-2cdf-4be7-b7c2-db71eb7c37b5",
+    "3edf06d2-20ce-4b86-9cbb-8d4b32e444fa",
+    "1c7956dd-e995-4a23-a70d-99e40d527023",
+    "d89f1999-3e22-41f9-a91c-4e2d1f6c85ca",
+    "f1f54bde-836c-4eff-9e4c-0877bfd1ca70",
+    "8651e7f5-973f-41fe-bd24-76d18d410ad6",
+    "ed03bc3c-6813-4d40-bab2-0fc6674bca5c",
+    "5341fa39-a89a-435d-bc54-27d89d87cede",
+    "5406ac9a-9112-443d-bb03-601fef80a22d"
+  ],
+  "stop_reasons": {
+    "stop": 41
+  },
+  "locator_llm_calls": 36,
+  "tool_calls": 34,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 5,
+  "total_llm_calls": 41,
+  "tool_result_chars": 1032106,
+  "tool_original_chars": 1032106,
+  "tool_returned_chars": 1032106,
+  "truncated_tool_calls": 0,
+  "input_tokens": 1753430,
+  "output_tokens": 24124,
+  "total_tokens": 1777554,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 745117.692,
+  "graph_updates": 80,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-nien318u/sympy/core/basic.py",
+      "start_line": 1738,
+      "end_line": 1748
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-nien318u/sympy/core/operations.py",
+      "start_line": 323,
+      "end_line": 337
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-nien318u/sympy/core/numbers.py",
+      "start_line": 1089,
+      "end_line": 1090
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-nien318u/sympy/core/numbers.py",
+      "start_line": 1266,
+      "end_line": 1267
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-nien318u/sympy/core/operations.py",
+      "start_line": 341,
+      "end_line": 350
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/core/basic.py",
+      "start_line": 1738,
+      "end_line": 1748
+    },
+    {
+      "file_path": "sympy/core/operations.py",
+      "start_line": 323,
+      "end_line": 337
+    },
+    {
+      "file_path": "sympy/core/numbers.py",
+      "start_line": 1089,
+      "end_line": 1090
+    },
+    {
+      "file_path": "sympy/core/numbers.py",
+      "start_line": 1266,
+      "end_line": 1267
+    },
+    {
+      "file_path": "sympy/core/operations.py",
+      "start_line": 341,
+      "end_line": 350
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13146-0-38f08bc173",
+  "instance_id": "sympy__sympy-13146",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

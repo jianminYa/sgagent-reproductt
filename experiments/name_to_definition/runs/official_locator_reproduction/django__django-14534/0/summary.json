@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 5023,
+  "input_tokens": 38059,
+  "output_tokens": 3557,
+  "total_tokens": 41616,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 167917.442,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-z10ktugo/django/forms/boundfield.py",
+      "start_line": 279,
+      "end_line": 280
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/forms/boundfield.py",
+      "start_line": 279,
+      "end_line": 280
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14534-0-020ec8843e",
+  "instance_id": "django__django-14534",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

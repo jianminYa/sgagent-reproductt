@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL extract_complete_method
+{ "file": "/tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py", "full_qualified_name": "django.core.files.storage.FileSystemStorage.file_permissions_mode" }

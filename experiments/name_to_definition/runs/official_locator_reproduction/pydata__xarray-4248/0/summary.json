@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 14,
+  "tool_calls": 12,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 15,
+  "tool_result_chars": 17385,
+  "input_tokens": 51828,
+  "output_tokens": 5100,
+  "total_tokens": 56928,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 165811.261,
+  "graph_updates": 28,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-9gqs9srk/xarray/core/formatting.py",
+      "start_line": 271,
+      "end_line": 291
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 271,
+      "end_line": 291
+    }
+  ],
+  "run_id": "sgagent-official-pydata__xarray-4248-0-9c986ae691",
+  "instance_id": "pydata__xarray-4248",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

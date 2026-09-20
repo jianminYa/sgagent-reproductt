@@ -1,0 +1,74 @@
+Search results for 'col_insert' in file (showing first 6 matches):
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 78-84:
+  78:             return self[i, j] if j < col else self[i, j + 1]
+  79:         return self._new(self.rows, self.cols - 1, entry)
+  80: 
+  81:     def _eval_col_insert(self, pos, other):
+  82:         cols = self.cols
+  83: 
+  84:         def entry(i, j):
+
+================================================================================
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 179-185:
+ 179:             raise ValueError("Column {} out of range.".format(col))
+ 180:         return self._eval_col_del(col)
+ 181: 
+ 182:     def col_insert(self, pos, other):
+ 183:         """Insert one or more columns at the given column position.
+ 184: 
+ 185:         Examples
+
+================================================================================
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 188-194:
+ 188:         >>> from sympy import zeros, ones
+ 189:         >>> M = zeros(3)
+ 190:         >>> V = ones(3, 1)
+ 191:         >>> M.col_insert(1, V)
+ 192:         Matrix([
+ 193:         [0, 1, 0, 0],
+ 194:         [0, 1, 0, 0],
+
+================================================================================
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 215-221:
+ 215:             raise ShapeError(
+ 216:                 "self and other must have the same number of rows.")
+ 217: 
+ 218:         return self._eval_col_insert(pos, other)
+ 219: 
+ 220:     def col_join(self, other):
+ 221:         """Concatenates two matrices along self's last and other's first row.
+
+================================================================================
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 268-274:
+ 268:         col_swap
+ 269:         col_del
+ 270:         col_join
+ 271:         col_insert
+ 272:         """
+ 273:         return self[:, j]
+ 274: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 434-440:
+ 434:         ========
+ 435: 
+ 436:         row
+ 437:         col_insert
+ 438:         """
+ 439:         from sympy.matrices import MutableMatrix
+ 440:         # Allows you to build a matrix even if it is null matrix
+
+================================================================================
+

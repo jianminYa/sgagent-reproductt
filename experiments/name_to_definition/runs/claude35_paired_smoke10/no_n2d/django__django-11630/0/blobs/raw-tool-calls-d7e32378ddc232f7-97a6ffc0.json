@@ -1,0 +1,1 @@
+["#TOOL_CALL execute_shell_command_with_validation\n{\"command\": \"cd /tmp/sgagent-n2d-1yd2xahh && cat -n django/core/checks/model_checks.py | head -50\"}"]

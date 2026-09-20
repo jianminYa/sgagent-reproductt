@@ -1,0 +1,24 @@
+
+
+#REFLECT
+Now I have a clear understanding of the bug. When empty lists/arrays are passed to WCS transformation methods like `wcs_pix2world([], [], 0)`, the `_array_converter` method processes them through `_return_list_of_arrays`, which creates an empty `xy` array and passes it to the underlying wcslib C function (`wcs.p2s`). The C function then throws an `InconsistentAxisTypesError` because it receives an array with 0 coordinates (ncoord=0).
+
+The fix should be in the `_return_list_of_arrays` inner function and/or `_return_single_array` inner function within `_array_converter`. We need to add an early return for empty arrays before calling `func(xy, origin)`.
+
+Looking at the code:
+
+1. **`_return_list_of_arrays` (lines 1214-1231)**: After broadcasting and creating `xy`, if `xy` is empty (size 0), we should return empty arrays without calling `func`.
+
+2. **`_return_single_array` (lines 1233-1243)**: Similarly, if `xy` has 0 rows, we should return an empty result.
+
+The key locations to fix are:
+- In `_return_list_of_arrays`, after line 1221 (where `xy` is created), add a check for empty arrays
+- In `_return_single_array`, after the shape check, add a check for empty arrays
+
+**INFO ENOUGH**
+
+Here are the locations that need to be fixed:
+
+1. **Lines 1214–1231** (`_return_list_of_arrays` in `_array_converter`): This inner function needs an early-return check for empty input arrays. After `xy = np.hstack(...)` on line 1221, if `xy.size == 0`, it should return a list of empty arrays instead of calling `func(xy, origin)` which triggers the wcslib error.
+
+2. **Lines 1233–1243** (`_return_single_array` in `_array_converter`): This inner function also needs an early-return check for empty input. When `xy` has shape `(0, N)`, it should return an empty array of the same shape instead of calling `func(xy, origin)`.

@@ -1,0 +1,20 @@
+
+
+#REFLECT
+I have all the context I need. Let me now implement the fix.
+
+The bug is in `/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py`:
+
+1. **Line 22**: Models are grouped by `db_table` alone, but should be grouped by `(db_table, database)` to account for database routing.
+2. **Lines 38-46**: The error generation loop iterates over `db_table_models` and needs to handle the new tuple key.
+3. **Import needed**: `router` from `django.db`.
+
+The fix locations are:
+- **Line 1-8** (imports): Need to add `from django.db import router`
+- **Line 22**: Change grouping key to include database
+- **Lines 38-46**: Update error generation to extract `db_table` from the tuple key
+
+Let me now write the fix.
+
+#TOOL_CALL execute_shell_command_with_validation
+{"command": "cd /tmp/sgagent-n2d-1yd2xahh && cat -n django/core/checks/model_checks.py | head -50"}

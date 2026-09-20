@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{\"file\": \"/tmp/sgagent-n2d-1yd2xahh/django/db/utils.py\", \"full_qualified_name\": \"django.db.utils.ConnectionRouter.db_for_read\"}"]

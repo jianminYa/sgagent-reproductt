@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{ \"file\": \"/tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py\", \"full_qualified_name\": \"sympy.core.function.Derivative\" }"]

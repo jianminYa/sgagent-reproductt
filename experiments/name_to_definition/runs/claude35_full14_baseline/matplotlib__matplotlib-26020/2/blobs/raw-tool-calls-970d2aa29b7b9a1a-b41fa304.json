@@ -1,0 +1,1 @@
+["#TOOL_CALL find_variable_usage\n{\"file\": \"/tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/axes_grid.py\", \"variable_name\": \"_tick_only\"}"]

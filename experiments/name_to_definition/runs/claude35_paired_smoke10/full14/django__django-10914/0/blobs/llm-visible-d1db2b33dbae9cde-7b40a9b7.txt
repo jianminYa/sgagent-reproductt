@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL find_files_containing
+{ "keyword": "FILE_UPLOAD_PERMISSIONS" }

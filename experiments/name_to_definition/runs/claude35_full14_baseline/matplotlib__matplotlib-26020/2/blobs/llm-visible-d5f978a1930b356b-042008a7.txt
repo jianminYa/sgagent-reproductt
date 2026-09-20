@@ -1,0 +1,11 @@
+
+
+#REFLECT
+The bug is clear. In `_tick_only` (lines 13-17), `ax.axis["bottom"]` and `ax.axis["left"]` are used, which assumes `ax.axis` is a dict-like object (as it is for `mpl_toolkits.axes_grid1.mpl_axes.Axes`). However, for other axes classes (like cartopy's `GeoAxes`), `ax.axis` is just a method and not subscriptable.
+
+The fix should check whether `ax.axis` is subscriptable (i.e., has the special dict-like behavior from `mpl_axes.Axes`) and fall back to using `ax.tick_params` for other axes types.
+
+Let me look at the current implementation more carefully and check if there's a way to use `tick_params` as a fallback.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/axes_grid.py", "start_line": 13, "end_line": 18}

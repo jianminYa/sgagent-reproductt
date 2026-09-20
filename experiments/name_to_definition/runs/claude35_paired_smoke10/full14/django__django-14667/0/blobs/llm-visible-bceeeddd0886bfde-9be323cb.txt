@@ -1,0 +1,29 @@
+
+
+#REFLECT
+Now I have a complete understanding of the bug. The issue is in `add_deferred_loading` at line 2089:
+
+```python
+self.deferred_loading = existing.difference(field_names), False
+```
+
+When we're in "only" mode (`defer=False`) and `existing` has fields (e.g., `{"name"}` from `.only("name")`), calling `.defer("name")` removes "name" from the set, resulting in `(set(), False)`.
+
+The problem: `(set(), False)` means "only load these fields" with an empty set. But elsewhere in Django, an empty set with `defer=False` is interpreted as "no restriction at all" — load ALL fields. This is because the initial default state is `(frozenset(), True)` (defer nothing), and the check for whether deferred loading is active looks at whether the set is non-empty.
+
+The fix: In the `else` branch, when `existing` is non-empty (meaning there was an active `.only()` restriction) and the result of the difference is empty, we should convert to defer mode. Specifically, we should set `self.deferred_loading = field_names, True` — meaning "defer these fields."
+
+Wait, but that's not quite right either. If `existing = {"name"}` and `field_names = {"name"}`, the result should be "only load nothing except pk" which means "defer everything except pk." The correct conversion would be to switch to `(field_names, True)` — defer mode with those field names.
+
+Actually, let me reconsider. The simplest and most correct fix: when in "only" mode and the resulting set after difference is empty but the existing set was NOT empty (meaning we had an active restriction), we should switch to defer mode. The deferred fields should be `field_names` (the ones being deferred).
+
+But wait — there's a subtler issue. Consider: `.only("name", "country").defer("name")` → `existing = {"name", "country"}`, `field_names = {"name"}`, result = `({"country"}, False)` — this works correctly.
+
+The bug only manifests when the difference results in an empty set. The fix should handle this edge case: when `existing` is non-empty and the result becomes empty, switch to `(field_names, True)`.
+
+But actually, I think the even simpler and more robust fix is: when `existing` is empty (no prior `.only()` was called), just treat it as adding to deferred fields (switch to `True` mode). When `existing` is non-empty, the current logic is fine as long as the result isn't empty.
+
+Let me look at the initial state of `deferred_loading`.
+
+#TOOL_CALL find_variable_usage
+{ "file": "/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py", "variable_name": "deferred_loading" }

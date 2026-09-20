@@ -1,0 +1,6 @@
+
+
+Now I understand the problem clearly. The `send_robust()` method catches exceptions but doesn't log them. Let me look at the implementation.
+
+#TOOL_CALL analyze_file_structure
+{ "file": "/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py" }

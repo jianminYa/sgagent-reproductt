@@ -24,7 +24,8 @@ def create_workflow(
     suggester_template,
     fixer_template,
     base_dir: str,
-    project_name: str
+    project_name: str,
+    trace=None,
 ):
     """Create the complete workflow graph"""
 
@@ -58,7 +59,34 @@ def create_workflow(
     fixer_node = functools.partial(agent_node, agent=fixer_agent, name="Fixer", model_type=model_type)
 
     # Create summarizer with LLM
-    summarize_node = functools.partial(summarize, llm=llm)
+    def summarize_node(state):
+        input_ref = None
+        if trace is not None:
+            input_ref = trace.blob_json("summarizer-input", {
+                "messages": [trace.serialize_message(message) for message in state.get("messages", [])],
+                "summary": state.get("summary", ""),
+            })
+            trace.event("summarizer", "summarizer_start", input=input_ref)
+        result = summarize(state, llm=llm)
+        if trace is not None:
+            output_ref = trace.blob_json("summarizer-output", result)
+            trace.event("summarizer", "summarizer_end", output=output_ref,
+                        summary_chars=len(str(result.get("summary", ""))),
+                        returned_message_count=len(result.get("messages", [])))
+        return result
+
+    def traced_router(name, router):
+        if trace is None:
+            return router
+
+        def route(state):
+            decision = router(state)
+            trace.event("workflow", "router_decision", router=name, decision=decision,
+                        message_count=len(state.get("messages", [])),
+                        next_state=state.get("next"))
+            return decision
+
+        return route
 
     # Build workflow graph
     workflow = StateGraph(AgentState)
@@ -81,7 +109,7 @@ def create_workflow(
     # Add conditional edges
     workflow.add_conditional_edges(
         "Locator",
-        locator_router,
+        traced_router("Locator", locator_router),
         {
             "continue": "Locator",
             "suggester": "Suggester",
@@ -92,7 +120,7 @@ def create_workflow(
 
     workflow.add_conditional_edges(
         "Suggester",
-        suggester_router,
+        traced_router("Suggester", suggester_router),
         {
             "continue": "Suggester",
             "fixer": "Fixer",
@@ -104,7 +132,7 @@ def create_workflow(
 
     workflow.add_conditional_edges(
         "Fixer",
-        fixer_router,
+        traced_router("Fixer", fixer_router),
         {
             "Fixer": "Fixer",
             "Locator": "Locator",
@@ -117,7 +145,7 @@ def create_workflow(
 
     workflow.add_conditional_edges(
         "summarize",
-        summarize_router,
+        traced_router("summarize", summarize_router),
         {"Fixer": "Fixer", "Locator": "Locator", "Suggester": "Suggester", "END": END},
     )
 

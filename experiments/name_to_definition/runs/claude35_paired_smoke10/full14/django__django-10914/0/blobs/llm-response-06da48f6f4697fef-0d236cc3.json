@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL find_files_containing\n{ \"keyword\": \"FILE_UPLOAD_PERMISSIONS\" }", "name": null, "tool_calls": [], "type": "ai"}

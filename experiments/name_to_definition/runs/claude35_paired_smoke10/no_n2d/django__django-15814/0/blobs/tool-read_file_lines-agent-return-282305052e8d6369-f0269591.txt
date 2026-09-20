@@ -1,0 +1,45 @@
+File: /tmp/sgagent-n2d-43vv_8rf/django/db/models/query.py
+Total lines: 2626
+Showing lines 2230-2270:
+
+2230: 
+2231:     all_lookups = normalize_prefetch_lookups(reversed(related_lookups))
+2232:     while all_lookups:
+2233:         lookup = all_lookups.pop()
+2234:         if lookup.prefetch_to in done_queries:
+2235:             if lookup.queryset is not None:
+2236:                 raise ValueError(
+2237:                     "'%s' lookup was already seen with a different queryset. "
+2238:                     "You may need to adjust the ordering of your lookups."
+2239:                     % lookup.prefetch_to
+2240:                 )
+2241: 
+2242:             continue
+2243: 
+2244:         # Top level, the list of objects to decorate is the result cache
+2245:         # from the primary QuerySet. It won't be for deeper levels.
+2246:         obj_list = model_instances
+2247: 
+2248:         through_attrs = lookup.prefetch_through.split(LOOKUP_SEP)
+2249:         for level, through_attr in enumerate(through_attrs):
+2250:             # Prepare main instances
+2251:             if not obj_list:
+2252:                 break
+2253: 
+2254:             prefetch_to = lookup.get_current_prefetch_to(level)
+2255:             if prefetch_to in done_queries:
+2256:                 # Skip any prefetching, and any object preparation
+2257:                 obj_list = done_queries[prefetch_to]
+2258:                 continue
+2259: 
+2260:             # Prepare objects:
+2261:             good_objects = True
+2262:             for obj in obj_list:
+2263:                 # Since prefetching can re-use instances, it is possible to have
+2264:                 # the same instance multiple times in obj_list, so obj might
+2265:                 # already be prepared.
+2266:                 if not hasattr(obj, "_prefetched_objects_cache"):
+2267:                     try:
+2268:                         obj._prefetched_objects_cache = {}
+2269:                     except (AttributeError, TypeError):
+2270:                         # Must be an immutable object from

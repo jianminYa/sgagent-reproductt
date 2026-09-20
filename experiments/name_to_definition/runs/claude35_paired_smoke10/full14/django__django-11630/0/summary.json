@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "c194a6db-4671-4a34-a65a-8178f8ff36cf",
+    "064c4851-180a-477c-860a-9dd582d33ba1",
+    "c9987c68-5118-440a-a78b-d10d27f0be7e",
+    "b46558b5-5622-4f25-a968-9f48f6e0e7e8",
+    "7af5d5b1-549c-4a79-a5cc-e7f35e4d3770",
+    "831c3553-6af4-4eb3-8359-98ee3d2c55c6",
+    "d07fc8d9-f6f7-425b-8bbd-bc480c34b512",
+    "edb85ff3-035a-4cf6-852b-1a7709c15ebb",
+    "1eac8006-b2fc-4f3d-bdb8-a874c087e149",
+    "37da8edd-e700-4538-ba29-38ed916b4ebb",
+    "8690a3a1-8eba-4d42-8caa-68ad0c618d67",
+    "95c33e16-fa6e-43c0-8431-898abe236c8c"
+  ],
+  "stop_reasons": {
+    "stop": 12
+  },
+  "logical_llm_calls": 12,
+  "http_attempts": 12,
+  "request_retries": 0,
+  "successful_llm_responses": 12,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 12,
+  "logical_calls_by_phase": {
+    "locator": 11,
+    "summarizer": 1
+  },
+  "successful_responses_by_phase": {
+    "locator": 11,
+    "summarizer": 1
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 55150,
+      "output_tokens": 2231,
+      "total_tokens": 57381
+    },
+    "summarizer": {
+      "input_tokens": 7042,
+      "output_tokens": 741,
+      "total_tokens": 7783
+    }
+  },
+  "tool_result_chars": 16944,
+  "tool_original_chars": 16944,
+  "tool_returned_chars": 16944,
+  "tool_original_bytes": 16980,
+  "tool_returned_bytes": 16980,
+  "truncated_tool_calls": 0,
+  "input_tokens": 62192,
+  "output_tokens": 2972,
+  "total_tokens": 65164,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 191504.845,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py",
+      "start_line": 22,
+      "end_line": 22
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py",
+      "start_line": 38,
+      "end_line": 47
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/core/checks/model_checks.py",
+      "start_line": 22,
+      "end_line": 22
+    },
+    {
+      "file_path": "django/core/checks/model_checks.py",
+      "start_line": 38,
+      "end_line": 47
+    }
+  ],
+  "run_id": "sgagent-official-django__django-11630-0-8db5996023",
+  "instance_id": "django__django-11630",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_full14"
+}

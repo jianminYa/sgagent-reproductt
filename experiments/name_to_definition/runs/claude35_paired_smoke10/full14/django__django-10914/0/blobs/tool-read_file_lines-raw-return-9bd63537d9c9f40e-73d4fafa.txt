@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py
+Total lines: 360
+Showing lines 210-259:
+
+ 210:     def base_url(self):
+ 211:         if self._base_url is not None and not self._base_url.endswith('/'):
+ 212:             self._base_url += '/'
+ 213:         return self._value_or_setting(self._base_url, settings.MEDIA_URL)
+ 214: 
+ 215:     @cached_property
+ 216:     def file_permissions_mode(self):
+ 217:         return self._value_or_setting(self._file_permissions_mode, settings.FILE_UPLOAD_PERMISSIONS)
+ 218: 
+ 219:     @cached_property
+ 220:     def directory_permissions_mode(self):
+ 221:         return self._value_or_setting(self._directory_permissions_mode, settings.FILE_UPLOAD_DIRECTORY_PERMISSIONS)
+ 222: 
+ 223:     def _open(self, name, mode='rb'):
+ 224:         return File(open(self.path(name), mode))
+ 225: 
+ 226:     def _save(self, name, content):
+ 227:         full_path = self.path(name)
+ 228: 
+ 229:         # Create any intermediate directories that do not exist.
+ 230:         directory = os.path.dirname(full_path)
+ 231:         try:
+ 232:             if self.directory_permissions_mode is not None:
+ 233:                 # os.makedirs applies the global umask, so we reset it,
+ 234:                 # for consistency with file_permissions_mode behavior.
+ 235:                 old_umask = os.umask(0)
+ 236:                 try:
+ 237:                     os.makedirs(directory, self.directory_permissions_mode, exist_ok=True)
+ 238:                 finally:
+ 239:                     os.umask(old_umask)
+ 240:             else:
+ 241:                 os.makedirs(directory, exist_ok=True)
+ 242:         except FileExistsError:
+ 243:             raise FileExistsError('%s exists and is not a directory.' % directory)
+ 244: 
+ 245:         # There's a potential race condition between get_available_name and
+ 246:         # saving the file; it's possible that two threads might return the
+ 247:         # same name, at which point all sorts of fun happens. So we need to
+ 248:         # try to create the file, but if it already exists we have to go back
+ 249:         # to get_available_name() and try again.
+ 250: 
+ 251:         while True:
+ 252:             try:
+ 253:                 # This file has a file path that we can move.
+ 254:                 if hasattr(content, 'temporary_file_path'):
+ 255:                     file_move_safe(content.temporary_file_path(), full_path)
+ 256: 
+ 257:                 # This is a normal uploadedfile that we can stream.
+ 258:                 else:
+ 259:                     # The current umask value is masked out by os.open!

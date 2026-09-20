@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 5094,
+  "input_tokens": 44229,
+  "output_tokens": 3105,
+  "total_tokens": 47334,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 139243.775,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-5x0qreg1/django/contrib/sessions/backends/base.py",
+      "start_line": 135,
+      "end_line": 136
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/contrib/sessions/backends/base.py",
+      "start_line": 135,
+      "end_line": 136
+    }
+  ],
+  "run_id": "sgagent-official-django__django-13321-0-3f55a8352d",
+  "instance_id": "django__django-13321",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

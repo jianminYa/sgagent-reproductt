@@ -1,0 +1,8 @@
+Contents of /tmp/sgagent-n2d-hirjf5mk/django/urls:
+__init__.py
+base.py
+conf.py
+converters.py
+exceptions.py
+resolvers.py
+utils.py

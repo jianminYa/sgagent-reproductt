@@ -1,0 +1,18 @@
+
+
+#REFLECT
+Now I have a clear understanding of the bug and the fix needed:
+
+**The Bug:** `FILE_UPLOAD_PERMISSIONS` defaults to `None` in `global_settings.py` (line 307). When it's `None`, the `_save` method in `FileSystemStorage` (line 283-284) skips the `os.chmod` call. This means:
+- For `MemoryUploadedFile`: files get permissions based on umask (e.g., 0o644)
+- For `TemporaryUploadedFile`: files get 0o600 permissions (from Python's tempfile module)
+
+This inconsistency is the bug. The fix is to change the default from `None` to `0o644`.
+
+**Locations to fix:**
+1. `django/conf/global_settings.py`, line 307: Change `FILE_UPLOAD_PERMISSIONS = None` to `FILE_UPLOAD_PERMISSIONS = 0o644`
+
+Now let me also check the test files to see if any tests need updating due to this change.
+
+#TOOL_CALL find_variable_usage
+{ "file": "/tmp/sgagent-n2d-wtyvhqy4/tests/file_storage/tests.py", "variable_name": "FILE_UPLOAD_PERMISSIONS" }

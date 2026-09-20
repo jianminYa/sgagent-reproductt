@@ -1,0 +1,2 @@
+#TOOL_CALL execute_shell_command_with_validation
+{ "command": "cd /tmp/sgagent-n2d-b9dtj6zl && python -m pytest tests/dispatch/tests.py -x 2>&1 | tail -50" }

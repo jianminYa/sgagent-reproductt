@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_5596ca2734b046f0a363e446c843c3a3"
+  ],
+  "stop_reasons": {
+    "end_turn": 1
+  },
+  "locator_llm_calls": 1,
+  "tool_calls": 1,
+  "failed_tool_calls": 0,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 1,
+  "tool_result_chars": 310,
+  "input_tokens": 733,
+  "output_tokens": 355,
+  "total_tokens": 1088,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 182796.173,
+  "graph_updates": 2,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-django__django-12184-1-0be25a2294",
+  "instance_id": "django__django-12184",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_smoke"
+}

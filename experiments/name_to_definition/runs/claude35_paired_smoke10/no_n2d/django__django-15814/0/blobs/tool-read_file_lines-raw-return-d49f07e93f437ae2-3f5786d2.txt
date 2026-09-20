@@ -1,0 +1,9 @@
+File: /tmp/sgagent-n2d-43vv_8rf/django/db/models/sql/query.py
+Total lines: 2693
+Showing lines 747-751:
+
+ 747:                 if is_reverse_o2o(source):
+ 748:                     cur_model = source.related_model
+ 749:                 else:
+ 750:                     cur_model = source.remote_field.model
+ 751:                 opts = cur_model._meta

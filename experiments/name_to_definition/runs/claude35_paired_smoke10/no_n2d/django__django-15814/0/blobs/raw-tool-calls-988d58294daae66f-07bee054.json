@@ -1,0 +1,1 @@
+["#TOOL_CALL read_file_lines\n{\n  \"file_path\": \"/tmp/sgagent-n2d-43vv_8rf/django/db/models/query.py\",\n  \"start_line\": 2230,\n  \"end_line\": 2270\n}"]

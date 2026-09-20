@@ -1,0 +1,5 @@
+abs_path:/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py
+content:FILE_UPLOAD_PERMISSIONS = None
+start line:307
+end line:307
+

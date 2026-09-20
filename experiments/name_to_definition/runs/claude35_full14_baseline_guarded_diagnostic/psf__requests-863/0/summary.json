@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "b05754e3-41ce-4429-b165-999b3d8a1526",
+    "1ccccae0-0fbe-4637-b971-964fc6525485",
+    "ad0ec802-93e6-4fa8-a7da-cc5f48988620",
+    "f7420067-fa74-4c20-8cc2-0c46ec579d21",
+    "12fd7cfb-2885-4892-a2e9-d53fadf20abf",
+    "452f0d46-a639-4bab-99d2-fc1ac3b39de2",
+    "0b7ba99c-4162-4978-932e-92e6f17780cb",
+    "bad15495-04bb-465a-9a92-c12785290f5d",
+    "bcbe8c76-d239-4ff3-9bc0-2ddeff426e88",
+    "aad951b4-f4a5-420a-a857-8bc05b2781a1",
+    "d054b2e4-acdc-4c0a-be90-050527dacd77",
+    "5a31fdfb-394f-48d6-ab99-a8ff454ce1af"
+  ],
+  "stop_reasons": {
+    "stop": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 56061,
+  "tool_original_chars": 212450,
+  "tool_returned_chars": 56061,
+  "truncated_tool_calls": 2,
+  "input_tokens": 127600,
+  "output_tokens": 2100,
+  "total_tokens": 129700,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 89933.66,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-wrhx9d8t/requests/models.py",
+      "start_line": 463,
+      "end_line": 466
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/models.py",
+      "start_line": 463,
+      "end_line": 466
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-863-0-398dda1421",
+  "instance_id": "psf__requests-863",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

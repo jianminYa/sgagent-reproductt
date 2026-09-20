@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+Total lines: 1201
+Showing lines 267-316:
+
+ 267:     def eval(cls, arg):
+ 268:         from sympy.calculus import AccumBounds
+ 269:         from sympy.sets.setexpr import SetExpr
+ 270:         from sympy.matrices.matrices import MatrixBase
+ 271:         from sympy import im, logcombine, re
+ 272:         if isinstance(arg, MatrixBase):
+ 273:             return arg.exp()
+ 274:         elif global_parameters.exp_is_pow:
+ 275:             return Pow(S.Exp1, arg)
+ 276:         elif arg.is_Number:
+ 277:             if arg is S.NaN:
+ 278:                 return S.NaN
+ 279:             elif arg.is_zero:
+ 280:                 return S.One
+ 281:             elif arg is S.One:
+ 282:                 return S.Exp1
+ 283:             elif arg is S.Infinity:
+ 284:                 return S.Infinity
+ 285:             elif arg is S.NegativeInfinity:
+ 286:                 return S.Zero
+ 287:         elif arg is S.ComplexInfinity:
+ 288:             return S.NaN
+ 289:         elif isinstance(arg, log):
+ 290:             return arg.args[0]
+ 291:         elif isinstance(arg, AccumBounds):
+ 292:             return AccumBounds(exp(arg.min), exp(arg.max))
+ 293:         elif isinstance(arg, SetExpr):
+ 294:             return arg._eval_func(cls)
+ 295:         elif arg.is_Mul:
+ 296:             coeff = arg.as_coefficient(S.Pi*S.ImaginaryUnit)
+ 297:             if coeff:
+ 298:                 if (2*coeff).is_integer:
+ 299:                     if coeff.is_even:
+ 300:                         return S.One
+ 301:                     elif coeff.is_odd:
+ 302:                         return S.NegativeOne
+ 303:                     elif (coeff + S.Half).is_even:
+ 304:                         return -S.ImaginaryUnit
+ 305:                     elif (coeff + S.Half).is_odd:
+ 306:                         return S.ImaginaryUnit
+ 307:                 elif coeff.is_Rational:
+ 308:                     ncoeff = coeff % 2 # restrict to [0, 2pi)
+ 309:                     if ncoeff > 1: # restrict to (-pi, pi]
+ 310:                         ncoeff -= 2
+ 311:                     if ncoeff != coeff:
+ 312:                         return cls(ncoeff*S.Pi*S.ImaginaryUnit)
+ 313: 
+ 314:             # Warning: code in risch.py will be very sensitive to changes
+ 315:             # in this (see DifferentialExtension).
+ 316: 

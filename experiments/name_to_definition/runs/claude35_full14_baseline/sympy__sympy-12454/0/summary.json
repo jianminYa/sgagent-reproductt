@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "1d97441d-8258-4a2d-b566-875184eeac91",
+    "0dd3cf0c-f273-404a-b9be-db4bf4947d5c",
+    "70cff1ce-bcdb-47b0-98d9-595fd3261ca1",
+    "48e7ee83-9a80-464b-8c5c-892f49744a8a"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "locator_llm_calls": 4,
+  "tool_calls": 3,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 4,
+  "tool_result_chars": 159231,
+  "tool_original_chars": 159231,
+  "tool_returned_chars": 159231,
+  "truncated_tool_calls": 0,
+  "input_tokens": 185557,
+  "output_tokens": 1017,
+  "total_tokens": 186574,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 107344.439,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-dx7p9895/sympy/matrices/matrices.py",
+      "start_line": 1113,
+      "end_line": 1115
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-dx7p9895/sympy/matrices/matrices.py",
+      "start_line": 641,
+      "end_line": 644
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/matrices/matrices.py",
+      "start_line": 1113,
+      "end_line": 1115
+    },
+    {
+      "file_path": "sympy/matrices/matrices.py",
+      "start_line": 641,
+      "end_line": 644
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-12454-0-76ab5a9937",
+  "instance_id": "sympy__sympy-12454",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

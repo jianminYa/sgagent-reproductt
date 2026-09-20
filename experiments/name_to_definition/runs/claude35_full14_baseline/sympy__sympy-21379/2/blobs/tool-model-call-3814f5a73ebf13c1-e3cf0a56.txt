@@ -1,0 +1,2 @@
+#TOOL_CALL search_code_with_context
+{"keyword": "def as_real_imag", "search_path": "/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py"}

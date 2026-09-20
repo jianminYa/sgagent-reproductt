@@ -1,0 +1,44 @@
+Each line below indicates a class, including class_name and absolute_path:
+ExpBase /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+exp_polar /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+ExpMeta /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+exp /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+log /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+LambertW /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+inverse  sympy.functions.elementary.exponential.ExpBase.inverse  [{'name': 'self', 'type': None}, {'name': 'argindex', 'type': None}]
+as_numer_denom  sympy.functions.elementary.exponential.ExpBase.as_numer_denom  [{'name': 'self', 'type': None}]
+exp  sympy.functions.elementary.exponential.ExpBase.exp  [{'name': 'self', 'type': None}]
+as_base_exp  sympy.functions.elementary.exponential.ExpBase.as_base_exp  [{'name': 'self', 'type': None}]
+_eval_adjoint  sympy.functions.elementary.exponential.ExpBase._eval_adjoint  [{'name': 'self', 'type': None}]
+_eval_conjugate  sympy.functions.elementary.exponential.ExpBase._eval_conjugate  [{'name': 'self', 'type': None}]
+_eval_transpose  sympy.functions.elementary.exponential.ExpBase._eval_transpose  [{'name': 'self', 'type': None}]
+_eval_is_finite  sympy.functions.elementary.exponential.ExpBase._eval_is_finite  [{'name': 'self', 'type': None}]
+_eval_is_rational  sympy.functions.elementary.exponential.ExpBase._eval_is_rational  [{'name': 'self', 'type': None}]
+_eval_is_zero  sympy.functions.elementary.exponential.ExpBase._eval_is_zero  [{'name': 'self', 'type': None}]
+_eval_power  sympy.functions.elementary.exponential.ExpBase._eval_power  [{'name': 'self', 'type': None}, {'name': 'other', 'type': None}]
+_eval_expand_power_exp  sympy.functions.elementary.exponential.ExpBase._eval_expand_power_exp  [{'name': 'self', 'type': None}]
+_eval_Abs  sympy.functions.elementary.exponential.exp_polar._eval_Abs  [{'name': 'self', 'type': None}]
+_eval_evalf  sympy.functions.elementary.exponential.exp_polar._eval_evalf  [{'name': 'self', 'type': None}, {'name': 'prec', 'type': None}]
+_eval_power  sympy.functions.elementary.exponential.exp_polar._eval_power  [{'name': 'self', 'type': None}, {'name': 'other', 'type': None}]
+_eval_is_extended_real  sympy.functions.elementary.exponential.exp_polar._eval_is_extended_real  [{'name': 'self', 'type': None}]
+as_base_exp  sympy.functions.elementary.exponential.exp_polar.as_base_exp  [{'name': 'self', 'type': None}]
+__instancecheck__  sympy.functions.elementary.exponential.ExpMeta.__instancecheck__  [{'name': 'cls', 'type': None}, {'name': 'instance', 'type': None}]
+fdiff  sympy.functions.elementary.exponential.exp.fdiff  [{'name': 'self', 'type': None}, {'name': 'argindex', 'type': None}]
+_eval_refine  sympy.functions.elementary.exponential.exp._eval_refine  [{'name': 'self', 'type': None}, {'name': 'assumptions', 'type': None}]
+eval  sympy.functions.elementary.exponential.exp.eval  [{'name': 'cls', 'type': None}, {'name': 'arg', 'type': None}]
+base  sympy.functions.elementary.exponential.exp.base  [{'name': 'self', 'type': None}]
+taylor_term  sympy.functions.elementary.exponential.exp.taylor_term  [{'name': 'n', 'type': None}, {'name': 'x', 'type': None}]
+as_real_imag  sympy.functions.elementary.exponential.exp.as_real_imag  [{'name': 'self', 'type': None}, {'name': 'deep', 'type': None}]
+_eval_subs  sympy.functions.elementary.exponential.exp._eval_subs  [{'name': 'self', 'type': None}, {'name': 'old', 'type': None}, {'name': 'new', 'type': None}]
+_eval_is_extended_real  sympy.functions.elementary.exponential.exp._eval_is_extended_real  [{'name': 'self', 'type': None}]
+_eval_is_complex  sympy.functions.elementary.exponential.exp._eval_is_complex  [{'name': 'self', 'type': None}]
+complex_extended_negative  sympy.functions.elementary.exponential.exp.complex_extended_negative  [{'name': 'arg', 'type': None}]
+_eval_is_algebraic  sympy.functions.elementary.exponential.exp._eval_is_algebraic  [{'name': 'self', 'type': None}]
+_eval_is_extended_positive  sympy.functions.elementary.exponential.exp._eval_is_extended_positive  [{'name': 'self', 'type': None}]
+_eval_nseries  sympy.functions.elementary.exponential.exp._eval_nseries  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'n', 'type': None}, {'name': 'logx', 'type': None}, {'name': 'cdir', 'type': None}]
+_taylor  sympy.functions.elementary.exponential.exp._taylor  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'n', 'type': None}]
+_eval_as_leading_term  sympy.functions.elementary.exponential.exp._eval_as_leading_term  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'cdir', 'type': None}]
+_eval_rewrite_as_sin  sympy.functions.elementary.exponential.exp._eval_rewrite_as_sin  [{'name': 'self', 'type': None}, {'name': 'arg', '
+
+... [输出被截断，原始长度: 9346 字符，显示前 5000 字符]

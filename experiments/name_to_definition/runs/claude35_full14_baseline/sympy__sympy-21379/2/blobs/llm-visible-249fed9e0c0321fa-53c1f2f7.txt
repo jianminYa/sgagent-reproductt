@@ -1,0 +1,94 @@
+# Summary of Bug Investigation: PolynomialError with Piecewise in subs()
+
+## Problem Description
+A `PolynomialError: Piecewise generators do not make sense` occurs when calling `subs({1: 1.0})` on an expression like `exp(sinh(Piecewise((x, y > x), (y, True)) / z))` with **real symbols** and after **clearing the cache**.
+
+### Key Characteristics:
+- Only happens with `sinh`, `cosh`, or `tanh` (hyperbolic functions) inside `exp`
+- Only occurs with real-valued symbols (not generic symbols)
+- Only triggers after cache clearing (works on second run)
+- The error originates from `sympy/polys/polytools.py`
+
+## Error Source Location
+**File: `sympy/polys/polytools.py`, lines 4397-4399:**
+```python
+for k in opt.gens:
+    if isinstance(k, Piecewise):
+        raise PolynomialError("Piecewise generators do not make sense")
+```
+This is inside `_parallel_poly_from_expr()` (line 4343). Called after `_parallel_dict_from_expr(exprs, opt)` at line 4393 extracts generators. When a Piecewise object ends up as a generator, the error is raised.
+
+## Files Examined in Detail
+
+### 1. `sympy/polys/polytools.py`
+- `_parallel_poly_from_expr()` at line 4343: The function that raises the error
+- Line 4393: `reps, opt = _parallel_dict_from_expr(exprs, opt)` — generators extracted
+- Lines 4397-4399: The Piecewise check that raises the error
+
+### 2. `sympy/core/power.py` — `Pow.as_real_imag()` (lines 1237-1316)
+**Critical — the likely trigger path:**
+- **Lines 1241-1277 (Integer exponent branch):** Calls `poly((a + b)**exp)` with Dummy symbols `a, b` — **SAFE**, Piecewise can't appear here
+- **Lines 1279-1296 (Rational exponent branch):** Uses `atan2`, `cos`, `sin` — no `poly()` call
+- **Line 1297: `elif self.base is S.Exp1:`** — Branch for `exp(arg)` since `exp(x) = E**x`
+- **Line 1299: `re_e, im_e = self.exp.as_real_imag()`** — Calls `as_real_imag()` on the exponent (which contains the Piecewise)
+- **Lines 1300-1304:** Uses `cos(im_e)`, `sin(im_e)`, `exp(re_e)` to compute real/imag parts
+- **Lines 1305-1316 (else branch):** Calls `re(expanded)`, `im(expanded)` — could trigger further evaluation
+
+### 3. `sympy/functions/elementary/exponential.py` — `exp` class
+- **`exp.eval()` (lines 267-370):** Has `arg.is_Mul` branch (line 295) calling `logcombine(term)` and checking `term.is_comparable`; `arg.is_Add` branch (line 349) recursively creates `cls(a)` for each addend
+- **`exp._eval_subs()` (lines 429-442):** For `old=1, new=1.0`, falls through to `Function._eval_subs(self, old, new)` at line 442
+
+### 4. `sympy/functions/elementary/complexes.py` — `re` and `im` classes
+- **`re.eval()` (lines 67-105):**
+  - Line 72: `arg.is_extended_real` → if True, returns `arg` directly (short-circuit)
+  - Line 74: `arg.is_imaginary` check → returns `S.Zero`
+  - **Lines 80-105 (else branch):** When `is_extended_real` returns None (not cached):
+    - Line 83: `args = Add.make_args(arg)` — splits into addends
+    - Line 90: Checks `term.is_extended_real` for each term
+    - **Line 96: `real_imag = term.as_real_imag(ignore=arg)`** — calls `as_real_imag()` on terms that aren't clearly real/imaginary, which can propagate to `Pow.as_real_imag()` and further down the chain
+  - This is a key intermediate step: when `is_extended_real` is None for a Piecewise-containing expression, `re.eval()` falls through to calling `as_real_imag()` on sub-terms
+
+### 5. `sympy/core/mul.py` — `Mul` class
+- `Mul.as_real_imag()` (lines 858-909): Calls `a.as_real_imag()` for each arg, uses `re(m)`, `im(m)`
+
+## Refined Root Cause Analysis
+
+### Most Likely Code Path:
+1. `subs({1: 1.0})` walks the expression tree
+2. During reconstruction/evaluation, assumption queries are triggered on sub-expressions (because symbols are real)
+3. For `exp(sinh(Piecewise(...)/z))`, checking `is_extended_real` or similar triggers `as_real_imag()`
+4. **`Pow.as_real_imag()` line 1297-1304** handles `exp(arg)` by calling `self.exp.as_real_imag()` on `sinh(Piecewise(...)/z)`
+5. `sinh(Piecewise(...)/z).as_real_imag()` propagates down — needs to decompose the expression
+6. At some point, `re()` or `im()` is called on an expression containing Piecewise
+7. In `re.eval()`, if `is_extended_real` returns None (empty cache), it falls to line 96 calling `term.as_real_imag(ignore=arg)`
+8. This chain eventually calls `poly()` on an expression containing Piecewise, triggering the error at line 4399
+
+### Why sinh/cosh/tanh specifically:
+- These hyperbolic functions inside `exp()` create expressions where `exp.eval()` tries to simplify but can't (since `exp(sinh(x))` doesn't simplify)
+- The `arg.is_Mul` branch in `exp.eval()` may process the argument, triggering `is_comparable` checks leading to `as_real_imag()` → `poly()`
+
+### Why cache matters:
+- On first run (empty cache), `is_extended_real` returns None for complex Piecewise expressions
+- This causes `re.eval()` to fall through to the else branch (line 80+) which calls `as_real_imag()`
+- On second run, cached `is_extended_real = True` causes early return at line 72
+
+## Key Unresolved Question
+The **exact intermediate step** where `poly()` gets called with a Piecewise-containing expression still needs pinpointing. The `poly()` calls in `Pow.as_real_imag()` (lines 1254, 1265) use Dummy symbols and are safe. The problematic `poly()` call must come from somewhere else in the chain — possibly:
+1. Some `expand()` call that triggers polynomial operations
+2. A different `as_real_imag()` implementation that calls `poly()` directly
+3. An `is_comparable` or similar check that internally uses polynomial machinery
+
+## Investigation Still Needed
+1. **Get the actual traceback** — essential to confirm the exact code path
+2. **Find how `sinh.as_real_imag()` works** — likely inherited from `Function` base class; need to check if it calls `poly()` or triggers a path that does
+3. **Search for ALL `poly()` call sites** beyond `Pow.as_real_imag()` — especially in `Function.as_real_imag()`, `Expr.as_real_imag()`, expand functions, etc.
+4. **Check `is_comparable` code path** — `exp.eval()` line 342 calls `term.is_comparable` which might trigger polynomial operations
+
+## Proposed Fix Approaches
+1. **Catch PolynomialError** at the call site where `poly()` receives Piecewise expressions
+2. **Add Piecewise guard** in `as_real_imag()` implementations to handle Piecewise before reaching polynomial code
+3. **Improve `is_extended_real`** for Piecewise expressions so `re.eval()` short-circuits at line 72
+4. **Most targeted**: Find the specific `poly()` call site and add a Piecewise check before calling
+
+## Blocking Issue
+Multiple attempts to run a reproduction script have failed due to persistent Pydantic validation errors with the `execute_shell_command_with_validation` tool. No actual traceback has been obtained yet.

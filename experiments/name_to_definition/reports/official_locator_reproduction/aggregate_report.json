@@ -1,0 +1,122 @@
+{
+  "status": "official Locator reproduction; pilot-scale evidence",
+  "experiment_id": "sgagent_official_locator_reproduction",
+  "n": 45,
+  "completed": 45,
+  "completion_rate": 1.0,
+  "termination_reasons": {
+    "completed": 45
+  },
+  "official_repository_metrics": {
+    "file_accuracy": 0.9333333333333333,
+    "class_accuracy": 0.9333333333333333,
+    "function_accuracy": 0.4222222222222222,
+    "line_accuracy": 0.26666666666666666,
+    "line_iou": 0.16491006725103774
+  },
+  "paper_set_jaccard_metrics": {
+    "file_accuracy": 0.9222222222222223,
+    "function_accuracy": 0.5513227513227513
+  },
+  "tokens": {
+    "incomplete_trajectories": 0,
+    "total": {
+      "n": 45,
+      "mean": 52088.77777777778,
+      "median": 41616.0,
+      "p25": 34179.0,
+      "p75": 73309.0
+    },
+    "input": {
+      "n": 45,
+      "mean": 47222.26666666667,
+      "median": 37054.0,
+      "p25": 31271.0,
+      "p75": 66930.0
+    },
+    "output": {
+      "n": 45,
+      "mean": 4866.511111111111,
+      "median": 3958.0,
+      "p25": 3032.0,
+      "p75": 5692.0
+    }
+  },
+  "calls": {
+    "locator_llm": {
+      "n": 45,
+      "mean": 12.155555555555555,
+      "median": 11.0,
+      "p25": 10.0,
+      "p75": 15.0
+    },
+    "summarizer_llm": {
+      "n": 45,
+      "mean": 1.1555555555555554,
+      "median": 1.0,
+      "p25": 1.0,
+      "p75": 1.0
+    },
+    "total_llm": {
+      "n": 45,
+      "mean": 13.311111111111112,
+      "median": 12.0,
+      "p25": 11.0,
+      "p75": 16.0
+    },
+    "tools": {
+      "n": 45,
+      "mean": 9.866666666666667,
+      "median": 8.0,
+      "p25": 7.0,
+      "p75": 12.0
+    },
+    "failed_tools": {
+      "n": 45,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0
+    }
+  },
+  "tool_usage_patterns": {
+    "calls": {
+      "execute_shell_command_with_validation": 5,
+      "explore_directory": 124,
+      "read_file_lines": 177,
+      "search_code_with_context": 135,
+      "show_file_imports": 3
+    },
+    "failed_calls": {}
+  },
+  "latency_ms": {
+    "n": 45,
+    "mean": 191844.21637777778,
+    "median": 161768.131,
+    "p25": 132459.185,
+    "p75": 233140.232
+  },
+  "cost_usd": null,
+  "cost_note": "qtapi pricing was not supplied; no fabricated cost estimate is reported.",
+  "evaluation_adapter": {
+    "predicted_ranges_as_synthetic_diff": true,
+    "official_evaluator_classes": "script.evaluation.PatchParser, ASTAnalyzer, MetricsCalculator",
+    "gold_source": "local Lite parquet patch; agent never receives patch"
+  },
+  "sampling": {
+    "actual_size": 45,
+    "method": "random.Random(seed).sample(sorted Lite instance_id list)",
+    "requested_size": 45,
+    "seed": 20260915
+  },
+  "dataset": {
+    "benchmark_split": "test",
+    "lite_path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "name": "SWE-bench Lite",
+    "revision": "local-commit-33a2cfe",
+    "row_count": 300,
+    "sort_rule": "instance_id ascending after repo de-duplication",
+    "source_note": "Local dataset/lite.parquet is authoritative for this reproduction run.",
+    "source_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench"
+  }
+}

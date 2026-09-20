@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "eef28f64-ccae-446a-87cf-0bbcb329f0ee",
+    "6dd80e2c-5d05-4d1e-a389-13a47d6afb17",
+    "9c6e8ffc-7167-47b1-854b-bda4cd780ff4",
+    "0f28574e-d884-48ee-89cf-8797d595cdcf",
+    "2d700b5b-6b48-4c29-bf9a-ad99f8356e14",
+    "7a18d546-e9ca-4d11-9004-a70a04e55d5d",
+    "9d83d67f-09f9-425e-8d5f-3f5cac459aff",
+    "a9930533-9d36-46d3-b577-50c758313103",
+    "5b2b40a9-75b8-49d8-9a25-1b27280bd134",
+    "27fa5213-43ad-4120-98a9-18e958442410",
+    "8e249f2d-6fad-4cbc-911a-f81e16429d61",
+    "4cd39b04-357d-4d52-bde5-9491047d7fb1",
+    "b649bd4b-197c-499e-8029-049b32ce3aa7"
+  ],
+  "stop_reasons": {
+    "stop": 13
+  },
+  "locator_llm_calls": 12,
+  "tool_calls": 10,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 13,
+  "tool_result_chars": 34940,
+  "tool_original_chars": 62337,
+  "tool_returned_chars": 34940,
+  "truncated_tool_calls": 1,
+  "input_tokens": 105874,
+  "output_tokens": 2155,
+  "total_tokens": 108029,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 136869.156,
+  "graph_updates": 24,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-q_wvaif_/django/dispatch/dispatcher.py",
+      "start_line": 1,
+      "end_line": 3
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-q_wvaif_/django/dispatch/dispatcher.py",
+      "start_line": 210,
+      "end_line": 211
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/dispatch/dispatcher.py",
+      "start_line": 1,
+      "end_line": 3
+    },
+    {
+      "file_path": "django/dispatch/dispatcher.py",
+      "start_line": 210,
+      "end_line": 211
+    }
+  ],
+  "run_id": "sgagent-official-django__django-13768-0-dd5486adda",
+  "instance_id": "django__django-13768",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

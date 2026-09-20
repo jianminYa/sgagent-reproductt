@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_1378cd5cf21248a39a3f8771ad3c78da",
+    "msg_cb7f36cf61644a2c89c79b6988f3023b",
+    "msg_f21901edd71648ffb1c1c1405d9ce066",
+    "msg_f45069ab435b420daf3105081a13c8c1",
+    "msg_7139842f55a54ad291099a416c664e5f",
+    "msg_e6c88f4e7cf64aef9e3734db085557cf",
+    "msg_b217f9ce7af4449097fb53b80b9a700d",
+    "msg_9d5e173d66bb4cd29f2571c6bb156904",
+    "msg_186285ac51584f3a920b0fcff42c0d0a",
+    "msg_cbdc91caea5c4f42b5f4e2a6a52de613",
+    "msg_8bff0f6ac35e4d9da0dafea7e6c98f48",
+    "msg_a7584f9d5a6e4497ba6583b574208247",
+    "msg_0f472229e7104062ba528fe7271e0f13"
+  ],
+  "stop_reasons": {
+    "end_turn": 13
+  },
+  "locator_llm_calls": 12,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 13,
+  "tool_result_chars": 74550,
+  "input_tokens": 92489,
+  "output_tokens": 4240,
+  "total_tokens": 96729,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 112571.494,
+  "graph_updates": 23,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-_ku0wpfb/requests/utils.py",
+      "start_line": 362,
+      "end_line": 365
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-_ku0wpfb/requests/utils.py",
+      "start_line": 367,
+      "end_line": 374
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/utils.py",
+      "start_line": 362,
+      "end_line": 365
+    },
+    {
+      "file_path": "requests/utils.py",
+      "start_line": 367,
+      "end_line": 374
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-3362-0-3940b7331a",
+  "instance_id": "psf__requests-3362",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

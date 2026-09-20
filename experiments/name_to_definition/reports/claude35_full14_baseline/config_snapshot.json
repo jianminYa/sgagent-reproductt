@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sgagent_claude35_full14_baseline",
+  "status": "formal unguarded Full14 baseline",
+  "model": {
+    "requested_alias": "ep-64pmfvfo",
+    "user_provided_mapping": "ep-64pmfvfo maps to Claude-3.5-Sonnet",
+    "returned_model_observed": "ep-64pmfvfo",
+    "underlying_version_inferred": false
+  },
+  "transport": {
+    "base_url_source": "secure local environment configuration: OPENAI_BASE_URL",
+    "credential_source": "secure local environment configuration: credential variable; contents omitted",
+    "credential_recorded": false,
+    "protocol": "openai_chat_completions",
+    "provider_label": "qtapi_openai_chat_completions",
+    "native_tools": false,
+    "textual_tool_protocol": "#TOOL_CALL"
+  },
+  "workflow": {
+    "tool_count": 14,
+    "official_tool_prompt": true,
+    "official_locator_workflow": true,
+    "info_enough_to_propose_location": true,
+    "summarizer_enabled": true,
+    "recursion_limit": 150,
+    "temperature": 0.0,
+    "locator_only_stop_after_first_parseable_output": true
+  },
+  "tool_output_behavior": {
+    "experiment_layer_guard_enabled": false,
+    "guard_cap_chars": null,
+    "raw_result_returned_to_public_custom_tool_node": true,
+    "original_and_returned_char_counters_recorded": true,
+    "public_tool_internal_return_logic_unchanged": true
+  },
+  "sampling": {
+    "smoke_manifest": "experiments/name_to_definition/manifests/full14_smoke_8_seed_20260915.json",
+    "baseline_manifest": "experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json",
+    "seed": 20260915,
+    "baseline_requested_size": 45
+  },
+  "retry_policy": {
+    "preflight_max_additional_retries": 2,
+    "smoke_and_baseline_max_additional_retries": 1,
+    "retry_condition": "temporary provider/network 5xx only",
+    "baseline_initial_attempts": 45,
+    "baseline_retry_attempts": 10,
+    "baseline_recovered_on_retry": 7,
+    "baseline_persistent_api_failures": 3
+  },
+  "commands_without_credentials": {
+    "load_environment": "source <secure qtapi environment>; export required non-secret environment variable names",
+    "preflight": "python -m experiments.name_to_definition.claude35_preflight --model ep-64pmfvfo --report experiments/name_to_definition/reports/claude35_full14_baseline/connectivity_report.json --max-retries 2",
+    "formal_runner": "python -m experiments.name_to_definition.official_locator --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --experiment-id sgagent_claude35_full14_baseline --output-root experiments/name_to_definition/runs/claude35_full14_baseline --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar --model ep-64pmfvfo --protocol openai_chat_completions --workers 4 --timeout 300",
+    "formal_evaluator": "python -m experiments.name_to_definition.official_evaluate --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --runs experiments/name_to_definition/runs/claude35_full14_baseline --lite dataset/lite.parquet --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar --output experiments/name_to_definition/reports/claude35_full14_baseline --experiment-id sgagent_claude35_full14_baseline"
+  },
+  "verification": {
+    "local_tests": "pytest -q tests/test_output_guard.py tests/test_name_to_definition.py: 7 passed",
+    "connectivity": "HTTP 200, stop, input 23, output 8, total 31, one attempt",
+    "smoke_completion": "8/8",
+    "baseline_completion": "42/45",
+    "n2d_arm_run": false,
+    "no_n2d_arm_run": false
+  },
+  "artifacts": {
+    "single_run": "experiments/name_to_definition/runs/claude35_full14_preflight/",
+    "smoke_run": "experiments/name_to_definition/runs/claude35_full14_smoke/",
+    "baseline_run": "experiments/name_to_definition/runs/claude35_full14_baseline/",
+    "guarded_diagnostic_runs_preserved_under": "experiments/name_to_definition/runs/*_guarded_diagnostic/"
+  },
+  "decision": {
+    "transport_and_output_behavior_validated": true,
+    "start_full14_vs_no_n2d_paired_experiment": false,
+    "reason": "The smoke gate passed, but the 45-sample baseline retains three persistent 502 failures after the allowed retry; establish a complete stable baseline before a paired causal comparison."
+  }
+}

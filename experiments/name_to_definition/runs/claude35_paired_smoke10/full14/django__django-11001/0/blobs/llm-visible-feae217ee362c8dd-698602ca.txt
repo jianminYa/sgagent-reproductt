@@ -1,0 +1,11 @@
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py",
+            "start_line": 35,
+            "end_line": 35
+        }
+    ]
+}
+```

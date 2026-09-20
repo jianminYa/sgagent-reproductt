@@ -1,0 +1,32 @@
+
+
+#REFLECT
+I now have all the information I need to identify the bug locations. Let me summarize:
+
+**The Bug:** `FILE_UPLOAD_PERMISSIONS` defaults to `None`, causing inconsistent file permissions depending on upload handler used (MemoryUploadedFile vs TemporaryUploadedFile).
+
+**The Fix:** Change the default to `0o644`.
+
+**Locations that need changes:**
+
+1. **`django/conf/global_settings.py` line 307** — Change `FILE_UPLOAD_PERMISSIONS = None` to `FILE_UPLOAD_PERMISSIONS = 0o644`
+
+2. **`tests/test_utils/tests.py` line 1102** — `self.assertIsNone(default_storage.file_permissions_mode)` needs to change to `self.assertEqual(default_storage.file_permissions_mode, 0o644)` since the default is no longer `None`
+
+3. **`tests/file_storage/tests.py` lines 895-900** — `test_file_upload_default_permissions` overrides to `None` and asserts `0o666 & ~self.umask`. This test explicitly tests the `None` behavior. With the new default of `0o644`, a test for the *default* behavior should expect `0o644`, not `0o666 & ~umask`. This test needs updating.
+
+4. **`tests/staticfiles_tests/test_storage.py` lines 518-528** — `test_collect_static_files_default_permissions` also overrides to `None` and checks `0o666 & ~self.umask`. Same issue.
+
+These are all the locations needed.
+
+**INFO ENOUGH**
+
+Here are the precise locations that need to be modified to fix this bug:
+
+1. **`django/conf/global_settings.py` line 307** — Change `FILE_UPLOAD_PERMISSIONS = None` to `FILE_UPLOAD_PERMISSIONS = 0o644`. This is the root cause: the default `None` leads to inconsistent file permissions depending on the upload handler.
+
+2. **`tests/test_utils/tests.py` line 1102** — `self.assertIsNone(default_storage.file_permissions_mode)` must change to `self.assertEqual(default_storage.file_permissions_mode, 0o644)` to match the new non-`None` default.
+
+3. **`tests/file_storage/tests.py` lines 895–900** — `test_file_upload_default_permissions` overrides `FILE_UPLOAD_PERMISSIONS=None` and asserts `mode == 0o666 & ~self.umask`. This test needs to be updated to test the new default of `0o644` (remove the `None` override, assert `0o644`).
+
+4. **`tests/staticfiles_tests/test_storage.py` lines 518–528** — `test_collect_static_files_default_permissions` overrides `FILE_UPLOAD_PERMISSIONS=None` and asserts `file_mode == 0o666 & ~self.umask`. Needs updating to reflect the new `0o644` default.

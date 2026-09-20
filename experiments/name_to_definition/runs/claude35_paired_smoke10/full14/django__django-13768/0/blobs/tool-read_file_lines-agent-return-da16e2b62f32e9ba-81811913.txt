@@ -1,0 +1,42 @@
+File: /tmp/sgagent-n2d-b9dtj6zl/tests/dispatch/tests.py
+Total lines: 232
+Showing lines 195-232:
+
+ 195:         receiver_2_disconnected = a_signal.disconnect(receiver_2)
+ 196:         self.assertTrue(receiver_1_disconnected)
+ 197:         self.assertFalse(receiver_2_disconnected)
+ 198:         self.assertTestIsClean(a_signal)
+ 199: 
+ 200:     def test_has_listeners(self):
+ 201:         self.assertFalse(a_signal.has_listeners())
+ 202:         self.assertFalse(a_signal.has_listeners(sender=object()))
+ 203:         receiver_1 = Callable()
+ 204:         a_signal.connect(receiver_1)
+ 205:         self.assertTrue(a_signal.has_listeners())
+ 206:         self.assertTrue(a_signal.has_listeners(sender=object()))
+ 207:         a_signal.disconnect(receiver_1)
+ 208:         self.assertFalse(a_signal.has_listeners())
+ 209:         self.assertFalse(a_signal.has_listeners(sender=object()))
+ 210: 
+ 211: 
+ 212: class ReceiverTestCase(SimpleTestCase):
+ 213: 
+ 214:     def test_receiver_single_signal(self):
+ 215:         @receiver(a_signal)
+ 216:         def f(val, **kwargs):
+ 217:             self.state = val
+ 218:         self.state = False
+ 219:         a_signal.send(sender=self, val=True)
+ 220:         self.assertTrue(self.state)
+ 221: 
+ 222:     def test_receiver_signal_list(self):
+ 223:         @receiver([a_signal, b_signal, c_signal])
+ 224:         def f(val, **kwargs):
+ 225:             self.state.append(val)
+ 226:         self.state = []
+ 227:         a_signal.send(sender=self, val='a')
+ 228:         c_signal.send(sender=self, val='c')
+ 229:         b_signal.send(sender=self, val='b')
+ 230:         self.assertIn('a', self.state)
+ 231:         self.assertIn('b', self.state)
+ 232:         self.assertIn('c', self.state)

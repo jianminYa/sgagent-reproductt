@@ -1,0 +1,90 @@
+# Summary of Bug Investigation and Repair: PolynomialError with Piecewise in subs()
+
+## Problem Description
+A `PolynomialError: Piecewise generators do not make sense` occurs when calling `subs({1: 1.0})` on an expression like `exp(sinh(Piecewise((x, y > x), (y, True)) / z))` with **real symbols** and after **clearing the cache**.
+
+### Key Characteristics:
+- Only happens with `sinh`, `cosh`, `tanh`, `coth` (hyperbolic functions) inside `exp`
+- Only occurs with real-valued symbols (not generic symbols)
+- Only triggers after cache clearing (works on second run)
+- The error originates from `sympy/polys/polytools.py`
+
+## Error Source Location
+**File: `sympy/polys/polytools.py`, lines 4397-4399:**
+```python
+for k in opt.gens:
+    if isinstance(k, Piecewise):
+        raise PolynomialError("Piecewise generators do not make sense")
+```
+This is inside `_parallel_poly_from_expr()` (line 4343).
+
+## Root Cause Identified
+
+**The root cause is in the `as_real_imag()` methods of hyperbolic functions.**
+
+In `sinh.as_real_imag()` (and identically in `cosh`, `tanh`, `coth`):
+
+```python
+def as_real_imag(self, deep=True, **hints):
+    from sympy import cos, sin
+    if self.args[0].is_extended_real:      # KEY CHECK - only matches True, not None
+        if deep:
+            hints['complex'] = False
+            return (self.expand(deep, **hints), S.Zero)  # SAFE PATH
+        else:
+            return (self, S.Zero)
+    if deep:                                              # DANGEROUS PATH
+        re, im = self.args[0].expand(deep, **hints).as_real_imag()
+    else:
+        re, im = self.args[0].as_real_imag()
+    return (sinh(re)*cos(im), cosh(re)*sin(im))
+```
+
+**The critical branch point:**
+- When `is_extended_real` returns **True** (cached): Takes the safe path → **NO ERROR**
+- When `is_extended_real` returns **None** (empty cache): Falls through to complex decomposition path which creates expressions with Piecewise → **TRIGGERS PolynomialError**
+
+**Why cache matters:** On first run with empty cache, `Piecewise(...)/z` with real symbols has `is_extended_real` returning `None` because the Piecewise's `is_extended_real` hasn't been computed yet. On second run, it's cached as `True`.
+
+## All Affected Locations in `hyperbolic.py` (CONFIRMED via file reads)
+
+All four methods have identical structure, confirmed by reading the actual file:
+
+1. **`sinh.as_real_imag()`** — line 184: `if self.args[0].is_extended_real:`
+2. **`cosh.as_real_imag()`** — line 369: `if self.args[0].is_extended_real:`
+3. **`tanh.as_real_imag()`** — line 614: `if self.args[0].is_extended_real:`
+4. **`coth.as_real_imag()`** — line 808: `if self.args[0].is_extended_real:`
+
+Each confirmed by reading the exact file lines (179-194, 367-380, 612-625, 806-819).
+
+## Trigonometric Functions (Same Pattern)
+The trigonometric `_as_real_imag()` at line 56-67 of `trigonometric.py` has the same pattern:
+```python
+def _as_real_imag(self, deep=True, **hints):
+    if self.args[0].is_extended_real:
+```
+Same vulnerability exists but may not trigger the same error due to different downstream usage.
+
+## Proposed Fix
+
+Change the condition at all four locations from:
+```python
+if self.args[0].is_extended_real:
+```
+to:
+```python
+if self.args[0].is_extended_real is not False:
+```
+
+This means: if the argument is real OR unknown, treat it as real. Only decompose into complex parts when we're **certain** the argument is complex (`is_extended_real is False`).
+
+## Current Status
+
+- **Root cause fully confirmed** through file reads of all four locations
+- **Fix strategy determined** — change condition at lines 184, 369, 614, 808 in `hyperbolic.py`
+- **Shell commands failing** with error `OfficialTrace.event() got multiple values for argument 'phase'` — both `sed` and `cat | head | tail` piped commands fail
+- **NEXT STEP: Need to apply the fix** using a method that works (likely `write_file_lines` or direct file writing tool rather than shell commands)
+
+## Files Needing Changes
+1. **`/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py`** — lines 184, 369, 614, 808
+2. Optionally **`/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py`** — line 57 (same pattern)

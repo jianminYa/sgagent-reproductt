@@ -1,0 +1,17 @@
+File: /tmp/sgagent-n2d-ej6s_t4e/django/db/models/sql/query.py
+Total lines: 2693
+Showing lines 746-758:
+
+ 746:                 source = opts.get_field(name)
+ 747:                 if is_reverse_o2o(source):
+ 748:                     cur_model = source.related_model
+ 749:                 else:
+ 750:                     cur_model = source.remote_field.model
+ 751:                 opts = cur_model._meta
+ 752:                 # Even if we're "just passing through" this model, we must add
+ 753:                 # both the current model's pk and the related reference field
+ 754:                 # (if it's not a reverse relation) to the things we select.
+ 755:                 if not is_reverse_o2o(source):
+ 756:                     must_include[old_model].add(source)
+ 757:                 add_to_dict(must_include, cur_model, opts.pk)
+ 758:             field = opts.get_field(parts[-1])

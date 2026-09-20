@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/axes_grid.py
+Total lines: 571
+Showing lines 1-50:
+
+   1: from numbers import Number
+   2: import functools
+   3: 
+   4: import numpy as np
+   5: 
+   6: from matplotlib import _api, cbook
+   7: from matplotlib.gridspec import SubplotSpec
+   8: 
+   9: from .axes_divider import Size, SubplotDivider, Divider
+  10: from .mpl_axes import Axes
+  11: 
+  12: 
+  13: def _tick_only(ax, bottom_on, left_on):
+  14:     bottom_off = not bottom_on
+  15:     left_off = not left_on
+  16:     ax.axis["bottom"].toggle(ticklabels=bottom_off, label=bottom_off)
+  17:     ax.axis["left"].toggle(ticklabels=left_off, label=left_off)
+  18: 
+  19: 
+  20: class CbarAxesBase:
+  21:     def __init__(self, *args, orientation, **kwargs):
+  22:         self.orientation = orientation
+  23:         super().__init__(*args, **kwargs)
+  24: 
+  25:     def colorbar(self, mappable, **kwargs):
+  26:         return self.figure.colorbar(
+  27:             mappable, cax=self, location=self.orientation, **kwargs)
+  28: 
+  29:     @_api.deprecated("3.8", alternative="ax.tick_params and colorbar.set_label")
+  30:     def toggle_label(self, b):
+  31:         axis = self.axis[self.orientation]
+  32:         axis.toggle(ticklabels=b, label=b)
+  33: 
+  34: 
+  35: _cbaraxes_class_factory = cbook._make_class_factory(CbarAxesBase, "Cbar{}")
+  36: 
+  37: 
+  38: class Grid:
+  39:     """
+  40:     A grid of Axes.
+  41: 
+  42:     In Matplotlib, the Axes location (and size) is specified in normalized
+  43:     figure coordinates. This may not be ideal for images that needs to be
+  44:     displayed with a given aspect ratio; for example, it is difficult to
+  45:     display multiple images of a same size with some fixed padding between
+  46:     them.  AxesGrid can be used in such case.
+  47:     """
+  48: 
+  49:     _defaultAxesClass = Axes
+  50: 

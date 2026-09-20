@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "993e8bae-e7b4-4032-8e0f-3fa098f192cb",
+    "bbc90d3c-8884-46bf-91db-9b78d173a7c6",
+    "3beb7c58-6fe4-4290-b3ea-aa7313191599",
+    "863c4cdd-04ad-4272-93e3-186cb21f2eb9",
+    "7a2843db-0320-4f07-ab88-d1807883fd3e",
+    "8a95dd0e-a24a-4c64-8cbc-63fc5d974e55",
+    "85cb4b8d-146a-4466-a8c6-b7c43cbc39a1",
+    "ad75592e-2813-4fc9-9d09-cab358b577b1",
+    "775cd9a0-a718-431d-bb85-71394851c437",
+    "1e47a6e9-2e15-439a-87a3-78487a783bff",
+    "b40b488b-9ee7-413b-aeda-8058cbe46d02",
+    "da76c64e-56aa-4465-922d-b4ae58b79bd2",
+    "5998075a-5d61-4161-94d7-152429d459e1",
+    "8175cbde-39ba-4cc4-ae4a-31481bd52a21",
+    "49776f40-e9c7-4efc-a634-0848d41d8b01",
+    "4c27b347-024d-4664-af1d-d191ad0e094e",
+    "04d6508f-b78f-4ea3-9f81-59287c92eb99",
+    "45abe121-9e07-4bc5-b70b-637e9f4d61e6",
+    "95b20ca2-f6ac-4725-b465-4b276f5a7c7b",
+    "101492bb-f1d1-4300-9c43-822f889dad94",
+    "bb145ed0-b1c3-4a4b-94ba-0e0bfeeb08a6",
+    "11c7bc50-fae2-427f-8966-973b1730e77e",
+    "93610171-a9a4-4a49-843a-afaa5d212cf4",
+    "7de7a6c0-51c7-4ce5-87eb-840f65205327",
+    "c8cd3e34-67e8-4dff-b803-a027376a4d22",
+    "02b75a8a-9c6d-4c7e-9ee0-74d45b40ac21",
+    "64ef73df-e5af-47b2-9cf8-92050e5635b4",
+    "b52d452a-2989-4843-b1da-e67085d023de",
+    "9fb70728-9a8b-4b97-a476-d3002992b518",
+    "60ec11c4-24d9-4c6d-be15-cfc450ac6c07",
+    "fc9999f8-bebb-4142-9ed7-95c9f1f975a4",
+    "27b364c6-f04b-4055-9e5e-16d48bd4ec40",
+    "d553502e-ee1e-4250-b6f4-d59c91a712ea",
+    "aa904469-76db-43d1-bfb3-10c017b08ce8",
+    "69374644-f74e-404d-ac39-a7c836f63c3f",
+    "45be269d-4632-4337-9481-c43f9dae39c0",
+    "8642d913-c51e-4619-8347-a0b6afcf7189",
+    "c8e37688-40d2-43c9-a05f-09632f75e90c",
+    "4c882c87-ca7e-4b2a-b610-b75c62670f29",
+    "ffe2e418-9f89-4d59-b3c0-ee748be64274",
+    "2a4cdcfe-0d7b-4190-b064-742c8589c231",
+    "dfc2e24c-a219-4d3d-ae26-f0583f0e14e0",
+    "5c7b5214-155d-4743-bb57-98797c13cd88",
+    "73853ed3-491c-432f-8dbf-aea77706b1a1",
+    "5e74ec4e-4af3-4014-8f4c-5784b6c05f77",
+    "2ba0c93e-7b86-4ced-9199-4659fcd31bea",
+    "f064f832-58a2-4920-bf3d-5766ee6e3491",
+    "e01eeafd-8cd3-4c84-aba0-bdcb50b945ae",
+    "d08cc5d2-09e9-4c26-ac78-3d8980887d98"
+  ],
+  "stop_reasons": {
+    "stop": 49
+  },
+  "locator_llm_calls": 43,
+  "tool_calls": 33,
+  "failed_tool_calls": 8,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 6,
+  "total_llm_calls": 49,
+  "tool_result_chars": 226885,
+  "tool_original_chars": 558094,
+  "tool_returned_chars": 226885,
+  "truncated_tool_calls": 5,
+  "input_tokens": 702263,
+  "output_tokens": 25052,
+  "total_tokens": 727315,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 832458.137,
+  "graph_updates": 96,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-0z4h5nhg/sympy/functions/elementary/piecewise.py",
+      "start_line": 807,
+      "end_line": 825
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-0z4h5nhg/sympy/core/basic.py",
+      "start_line": 1026,
+      "end_line": 1056
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-0z4h5nhg/sympy/polys/polytools.py",
+      "start_line": 4394,
+      "end_line": 4399
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-0z4h5nhg/sympy/functions/elementary/exponential.py",
+      "start_line": 396,
+      "end_line": 427
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-0z4h5nhg/sympy/core/basic.py",
+      "start_line": 1058,
+      "end_line": 1064
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/functions/elementary/piecewise.py",
+      "start_line": 807,
+      "end_line": 825
+    },
+    {
+      "file_path": "sympy/core/basic.py",
+      "start_line": 1026,
+      "end_line": 1056
+    },
+    {
+      "file_path": "sympy/polys/polytools.py",
+      "start_line": 4394,
+      "end_line": 4399
+    },
+    {
+      "file_path": "sympy/functions/elementary/exponential.py",
+      "start_line": 396,
+      "end_line": 427
+    },
+    {
+      "file_path": "sympy/core/basic.py",
+      "start_line": 1058,
+      "end_line": 1064
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21379-1-ff9a8462d8",
+  "instance_id": "sympy__sympy-21379",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

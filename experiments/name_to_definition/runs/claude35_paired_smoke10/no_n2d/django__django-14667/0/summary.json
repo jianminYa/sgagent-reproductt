@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "196e12ce-5c5d-4ec7-b871-85426e697357",
+    "fed20cb1-f7e3-4aa9-a816-40b64692e962",
+    "bf7879f2-487c-40ad-a5d0-284340e605b4",
+    "7dcc5bf4-b844-46f4-b1df-a590e6812e97",
+    "f8e73c64-232b-438b-80b4-aecee8667ab6",
+    "1f95eb66-d831-45e2-9314-46524f09b60f"
+  ],
+  "stop_reasons": {
+    "stop": 6
+  },
+  "logical_llm_calls": 6,
+  "http_attempts": 6,
+  "request_retries": 0,
+  "successful_llm_responses": 6,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 6,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 6,
+  "logical_calls_by_phase": {
+    "locator": 6
+  },
+  "successful_responses_by_phase": {
+    "locator": 6
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 666968,
+      "output_tokens": 1723,
+      "total_tokens": 668691
+    }
+  },
+  "tool_result_chars": 510395,
+  "tool_original_chars": 510395,
+  "tool_returned_chars": 510395,
+  "tool_original_bytes": 510395,
+  "tool_returned_bytes": 510395,
+  "truncated_tool_calls": 0,
+  "input_tokens": 666968,
+  "output_tokens": 1723,
+  "total_tokens": 668691,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 224372.4,
+  "graph_updates": 10,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-gwa0zdpk/django/db/models/sql/query.py",
+      "start_line": 2083,
+      "end_line": 2089
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-gwa0zdpk/django/db/models/sql/query.py",
+      "start_line": 680,
+      "end_line": 682
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 2083,
+      "end_line": 2089
+    },
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 680,
+      "end_line": 682
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14667-0-304b0f52e2",
+  "instance_id": "django__django-14667",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d"
+}

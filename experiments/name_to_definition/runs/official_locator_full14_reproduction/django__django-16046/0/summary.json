@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_94b124e253c34bee8bf1be3b48134060",
+    "msg_078a7a4d185649109b819d4c24dbeec9",
+    "msg_1e5b2b0cf9d9414b82170f66f9b913fa",
+    "msg_3718d3fc04ad4ac9b2c9473beb523c15",
+    "msg_3149640e500a40b7a56c4dce08c1e761",
+    "msg_086e3362fe2745dcad3d6dc58643dee3",
+    "msg_1cd7501c62d04d77975eebf9b02a022e"
+  ],
+  "stop_reasons": {
+    "end_turn": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 6161,
+  "input_tokens": 17526,
+  "output_tokens": 1193,
+  "total_tokens": 18719,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 103932.07,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-ciyh3luu/django/utils/numberformat.py",
+      "start_line": 71,
+      "end_line": 73
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/utils/numberformat.py",
+      "start_line": 71,
+      "end_line": 73
+    }
+  ],
+  "run_id": "sgagent-official-django__django-16046-0-4bd5d6e19a",
+  "instance_id": "django__django-16046",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

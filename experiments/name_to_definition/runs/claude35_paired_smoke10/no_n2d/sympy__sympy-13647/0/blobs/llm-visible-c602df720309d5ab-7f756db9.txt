@@ -1,0 +1,29 @@
+
+
+I've identified the bug. The issue is on line 89 of `common.py` in the `_eval_col_insert` method.
+
+**Bug Analysis:**
+
+In the `_eval_col_insert` method, the `entry` function handles three cases:
+1. `j < pos`: columns before insertion → `self[i, j]` ✓
+2. `pos <= j < pos + other.cols`: inserted columns → `other[i, j - pos]` ✓  
+3. `j >= pos + other.cols`: columns after insertion → `self[i, j - pos - other.cols]` ✗ **BUG**
+
+For case 3, the index into the original matrix should be `j - other.cols` (just subtract the number of inserted columns to get back to the original column index). The current code incorrectly subtracts `pos` as well.
+
+**Example:** With `M = eye(6)`, `V = 2*ones(6,2)`, `pos=3`:
+- For `j=5` (first column after inserted block): current code gives `self[i, 5-3-2] = self[i, 0]` (wrong!), should give `self[i, 5-2] = self[i, 3]` (correct).
+
+This explains why the identity block gets "shifted" — it's reading from column 0 instead of column 3.
+
+**Fix location:**
+
+Line 89 in `/tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py`:
+- **Current:** `return self[i, j - pos - other.cols]`
+- **Fix:** `return self[i, j - other.cols]`
+
+**Locations:**
+
+1. **Line 89** in `/tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py` (lines 89–89): The incorrect column index calculation `j - pos - other.cols` should be `j - other.cols`.
+
+**INFO ENOUGH**

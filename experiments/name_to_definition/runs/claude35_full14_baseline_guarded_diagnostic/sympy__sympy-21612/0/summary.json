@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "907210c8-7c31-4ecb-87b5-452b626d8a17",
+    "6e967b6a-41be-4a49-a39c-a69930955a0d",
+    "f6e9f061-86b5-4d8d-9032-87a73aee386c",
+    "fc243ac8-aa5f-4429-aeea-4c092700f409",
+    "35a3735f-da64-4eaa-9c6a-9269441a8247",
+    "b3e862b4-6b14-438d-a6c8-807c8f9c3f63",
+    "6cf93999-88ff-4a94-b1ee-696a01925033",
+    "69946c84-f381-43eb-917d-e218b6a9321c"
+  ],
+  "stop_reasons": {
+    "stop": 8
+  },
+  "locator_llm_calls": 8,
+  "tool_calls": 6,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 8,
+  "tool_result_chars": 9983,
+  "tool_original_chars": 9983,
+  "tool_returned_chars": 9983,
+  "truncated_tool_calls": 0,
+  "input_tokens": 52837,
+  "output_tokens": 4028,
+  "total_tokens": 56865,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 291865.156,
+  "graph_updates": 14,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-bvpb_k3g/sympy/parsing/latex/_parse_latex_antlr.py",
+      "start_line": 383,
+      "end_line": 389
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/parsing/latex/_parse_latex_antlr.py",
+      "start_line": 383,
+      "end_line": 389
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21612-0-01df00e2b8",
+  "instance_id": "sympy__sympy-21612",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

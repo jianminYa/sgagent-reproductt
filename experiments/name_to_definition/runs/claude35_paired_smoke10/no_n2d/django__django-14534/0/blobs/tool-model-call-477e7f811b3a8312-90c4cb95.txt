@@ -1,0 +1,2 @@
+#TOOL_CALL find_variable_usage
+{ "file": "/tmp/sgagent-n2d-ratox0tr/django/forms/boundfield.py", "variable_name": "id_for_label" }

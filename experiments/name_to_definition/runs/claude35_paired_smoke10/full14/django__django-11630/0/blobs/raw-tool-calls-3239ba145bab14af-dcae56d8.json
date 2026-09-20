@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{\"file\": \"/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py\", \"full_qualified_name\": \"django.core.checks.model_checks.check_all_models\"}"]

@@ -1,0 +1,48 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/core/power.py
+Total lines: 1899
+Showing lines 1237-1280:
+
+1237:     def as_real_imag(self, deep=True, **hints):
+1238:         from sympy import atan2, cos, im, re, sin
+1239:         from sympy.polys.polytools import poly
+1240: 
+1241:         if self.exp.is_Integer:
+1242:             exp = self.exp
+1243:             re_e, im_e = self.base.as_real_imag(deep=deep)
+1244:             if not im_e:
+1245:                 return self, S.Zero
+1246:             a, b = symbols('a b', cls=Dummy)
+1247:             if exp >= 0:
+1248:                 if re_e.is_Number and im_e.is_Number:
+1249:                     # We can be more efficient in this case
+1250:                     expr = expand_multinomial(self.base**exp)
+1251:                     if expr != self:
+1252:                         return expr.as_real_imag()
+1253: 
+1254:                 expr = poly(
+1255:                     (a + b)**exp)  # a = re, b = im; expr = (a + b*I)**exp
+1256:             else:
+1257:                 mag = re_e**2 + im_e**2
+1258:                 re_e, im_e = re_e/mag, -im_e/mag
+1259:                 if re_e.is_Number and im_e.is_Number:
+1260:                     # We can be more efficient in this case
+1261:                     expr = expand_multinomial((re_e + im_e*S.ImaginaryUnit)**-exp)
+1262:                     if expr != self:
+1263:                         return expr.as_real_imag()
+1264: 
+1265:                 expr = poly((a + b)**-exp)
+1266: 
+1267:             # Terms with even b powers will be real
+1268:             r = [i for i in expr.terms() if not i[0][1] % 2]
+1269:             re_part = Add(*[cc*a**aa*b**bb for (aa, bb), cc in r])
+1270:             # Terms with odd b powers will be imaginary
+1271:             r = [i for i in expr.terms() if i[0][1] % 4 == 1]
+1272:             im_part1 = Add(*[cc*a**aa*b**bb for (aa, bb), cc in r])
+1273:             r = [i for i in expr.terms() if i[0][1] % 4 == 3]
+1274:             im_part3 = Add(*[cc*a**aa*b**bb for (aa, bb), cc in r])
+1275: 
+1276:             return (re_part.subs({a: re_e, b: S.ImaginaryUnit*im_e}),
+1277:             im_part1.subs({a: re_e, b: im_e}) + im_part3.subs({a: re_e, b: -im_e}))
+1278: 
+1279:         elif self.exp.is_Rational:
+1280:             re_e, im_e = self.base.as_real_imag(deep=deep)

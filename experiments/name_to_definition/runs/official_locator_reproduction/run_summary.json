@@ -1,0 +1,1722 @@
+[
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 11962,
+    "input_tokens": 42147,
+    "output_tokens": 5381,
+    "total_tokens": 47528,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 145103.89,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-zrfp534a/astropy/wcs/wcs.py",
+        "start_line": 1221,
+        "end_line": 1225
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-zrfp534a/astropy/wcs/wcs.py",
+        "start_line": 1238,
+        "end_line": 1240
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "astropy/wcs/wcs.py",
+        "start_line": 1221,
+        "end_line": 1225
+      },
+      {
+        "file_path": "astropy/wcs/wcs.py",
+        "start_line": 1238,
+        "end_line": 1240
+      }
+    ],
+    "run_id": "sgagent-official-astropy__astropy-7746-0-e978320cb0",
+    "instance_id": "astropy__astropy-7746",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/astropy__astropy-7746/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 9,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 10,
+    "tool_result_chars": 7263,
+    "input_tokens": 29829,
+    "output_tokens": 3565,
+    "total_tokens": 33394,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 129837.623,
+    "graph_updates": 17,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-w_ew_wcm/django/conf/global_settings.py",
+        "start_line": 307,
+        "end_line": 307
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/conf/global_settings.py",
+        "start_line": 307,
+        "end_line": 307
+      }
+    ],
+    "run_id": "sgagent-official-django__django-10914-0-b6240669f6",
+    "instance_id": "django__django-10914",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-10914/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 15,
+    "tool_calls": 12,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 16,
+    "tool_result_chars": 12122,
+    "input_tokens": 56328,
+    "output_tokens": 6929,
+    "total_tokens": 63257,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 186493.006,
+    "graph_updates": 29,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-bm1rib0w/django/db/models/sql/compiler.py",
+        "start_line": 356,
+        "end_line": 356
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-bm1rib0w/django/db/models/sql/compiler.py",
+        "start_line": 369,
+        "end_line": 369
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/sql/compiler.py",
+        "start_line": 356,
+        "end_line": 356
+      },
+      {
+        "file_path": "django/db/models/sql/compiler.py",
+        "start_line": 369,
+        "end_line": 369
+      }
+    ],
+    "run_id": "sgagent-official-django__django-11001-0-c7cb8f0d7b",
+    "instance_id": "django__django-11001",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-11001/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 13,
+    "tool_calls": 10,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 14,
+    "tool_result_chars": 16943,
+    "input_tokens": 44660,
+    "output_tokens": 5204,
+    "total_tokens": 49864,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 161768.131,
+    "graph_updates": 25,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-eea5rsv_/django/core/checks/model_checks.py",
+        "start_line": 38,
+        "end_line": 47
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-eea5rsv_/django/core/checks/model_checks.py",
+        "start_line": 20,
+        "end_line": 22
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/core/checks/model_checks.py",
+        "start_line": 38,
+        "end_line": 47
+      },
+      {
+        "file_path": "django/core/checks/model_checks.py",
+        "start_line": 20,
+        "end_line": 22
+      }
+    ],
+    "run_id": "sgagent-official-django__django-11630-0-2b54dd9abc",
+    "instance_id": "django__django-11630",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-11630/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 4379,
+    "input_tokens": 36588,
+    "output_tokens": 5460,
+    "total_tokens": 42048,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 169972.972,
+    "graph_updates": 22,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-mb4amah8/django/urls/resolvers.py",
+        "start_line": 161,
+        "end_line": 162
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/urls/resolvers.py",
+        "start_line": 161,
+        "end_line": 162
+      }
+    ],
+    "run_id": "sgagent-official-django__django-12184-0-05804f8289",
+    "instance_id": "django__django-12184",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-12184/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 12,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 13,
+    "tool_result_chars": 8567,
+    "input_tokens": 40547,
+    "output_tokens": 5074,
+    "total_tokens": 45621,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 164601.569,
+    "graph_updates": 23,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-6633xg9p/django/core/checks/translation.py",
+        "start_line": 59,
+        "end_line": 60
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/core/checks/translation.py",
+        "start_line": 59,
+        "end_line": 60
+      }
+    ],
+    "run_id": "sgagent-official-django__django-12286-0-6e28e8e0db",
+    "instance_id": "django__django-12286",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-12286/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 23,
+    "tool_calls": 19,
+    "failed_tool_calls": 0,
+    "reflection_turns": 3,
+    "summarizer_llm_calls": 3,
+    "total_llm_calls": 26,
+    "tool_result_chars": 46225,
+    "input_tokens": 104265,
+    "output_tokens": 7141,
+    "total_tokens": 111406,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 245638.879,
+    "graph_updates": 48,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-ybrx8rzd/django/forms/models.py",
+        "start_line": 98,
+        "end_line": 103
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/forms/models.py",
+        "start_line": 98,
+        "end_line": 103
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13315-0-5c054bb704",
+    "instance_id": "django__django-13315",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13315/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 7,
+    "tool_calls": 5,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 7,
+    "tool_result_chars": 4284,
+    "input_tokens": 21456,
+    "output_tokens": 1211,
+    "total_tokens": 22667,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 92643.57,
+    "graph_updates": 12,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-h14fydao/django/contrib/sessions/backends/base.py",
+        "start_line": 133,
+        "end_line": 150
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/contrib/sessions/backends/base.py",
+        "start_line": 133,
+        "end_line": 150
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13321-0-ee62d5f5f7",
+    "instance_id": "django__django-13321",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13321/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 8,
+    "tool_calls": 6,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 8,
+    "tool_result_chars": 7349,
+    "input_tokens": 27851,
+    "output_tokens": 2924,
+    "total_tokens": 30775,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 118156.632,
+    "graph_updates": 14,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-l4wb7m7_/django/db/backends/base/creation.py",
+        "start_line": 77,
+        "end_line": 78
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/backends/base/creation.py",
+        "start_line": 77,
+        "end_line": 78
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13448-0-f332ca6632",
+    "instance_id": "django__django-13448",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13448/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 3416,
+    "input_tokens": 31296,
+    "output_tokens": 3281,
+    "total_tokens": 34577,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 132922.234,
+    "graph_updates": 18,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-3hzsqova/django/db/models/sql/query.py",
+        "start_line": 1080,
+        "end_line": 1083
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/sql/query.py",
+        "start_line": 1080,
+        "end_line": 1083
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13590-0-8c9a708641",
+    "instance_id": "django__django-13590",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13590/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 12,
+    "tool_calls": 10,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 13,
+    "tool_result_chars": 12267,
+    "input_tokens": 42408,
+    "output_tokens": 5077,
+    "total_tokens": 47485,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 163094.134,
+    "graph_updates": 24,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-6vvmx8wu/django/contrib/admin/options.py",
+        "start_line": 2040,
+        "end_line": 2043
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/contrib/admin/options.py",
+        "start_line": 2040,
+        "end_line": 2043
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13710-0-05d61c8be8",
+    "instance_id": "django__django-13710",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13710/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 9937,
+    "input_tokens": 30426,
+    "output_tokens": 3031,
+    "total_tokens": 33457,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 132543.655,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-0b0jdrch/django/dispatch/dispatcher.py",
+        "start_line": 1,
+        "end_line": 6
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-0b0jdrch/django/dispatch/dispatcher.py",
+        "start_line": 210,
+        "end_line": 211
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/dispatch/dispatcher.py",
+        "start_line": 1,
+        "end_line": 6
+      },
+      {
+        "file_path": "django/dispatch/dispatcher.py",
+        "start_line": 210,
+        "end_line": 211
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13768-0-51fc5a9ae5",
+    "instance_id": "django__django-13768",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13768/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 13995,
+    "input_tokens": 37054,
+    "output_tokens": 4405,
+    "total_tokens": 41459,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 172559.766,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-zijorih4/django/db/models/fields/related_descriptors.py",
+        "start_line": 254,
+        "end_line": 257
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/fields/related_descriptors.py",
+        "start_line": 254,
+        "end_line": 257
+      }
+    ],
+    "run_id": "sgagent-official-django__django-13964-0-a74c2a8a5f",
+    "instance_id": "django__django-13964",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-13964/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 21,
+    "tool_calls": 18,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 23,
+    "tool_result_chars": 18058,
+    "input_tokens": 95149,
+    "output_tokens": 10751,
+    "total_tokens": 105900,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 337236.481,
+    "graph_updates": 43,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-ko5cim_r/django/db/models/query_utils.py",
+        "start_line": 43,
+        "end_line": 44
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-ko5cim_r/django/db/models/query_utils.py",
+        "start_line": 64,
+        "end_line": 65
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/query_utils.py",
+        "start_line": 43,
+        "end_line": 44
+      },
+      {
+        "file_path": "django/db/models/query_utils.py",
+        "start_line": 64,
+        "end_line": 65
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14017-0-ba6ffbb62a",
+    "instance_id": "django__django-14017",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14017/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 5023,
+    "input_tokens": 38059,
+    "output_tokens": 3557,
+    "total_tokens": 41616,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 167917.442,
+    "graph_updates": 21,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-z10ktugo/django/forms/boundfield.py",
+        "start_line": 279,
+        "end_line": 280
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/forms/boundfield.py",
+        "start_line": 279,
+        "end_line": 280
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14534-0-020ec8843e",
+    "instance_id": "django__django-14534",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14534/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 18,
+    "tool_calls": 15,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 20,
+    "tool_result_chars": 17790,
+    "input_tokens": 71299,
+    "output_tokens": 7326,
+    "total_tokens": 78625,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 262563.64,
+    "graph_updates": 37,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-xl3mnhzt/django/db/models/sql/query.py",
+        "start_line": 680,
+        "end_line": 682
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/sql/query.py",
+        "start_line": 680,
+        "end_line": 682
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14667-0-fe522afdef",
+    "instance_id": "django__django-14667",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14667/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 6978,
+    "input_tokens": 33388,
+    "output_tokens": 3411,
+    "total_tokens": 36799,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 148689.872,
+    "graph_updates": 22,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-m8u_edrt/django/db/models/fields/related.py",
+        "start_line": 1180,
+        "end_line": 1187
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/fields/related.py",
+        "start_line": 1180,
+        "end_line": 1187
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14730-0-a96303dfc7",
+    "instance_id": "django__django-14730",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14730/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 6759,
+    "input_tokens": 31271,
+    "output_tokens": 2348,
+    "total_tokens": 33619,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 126028.731,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-dr8kemt_/django/contrib/admin/helpers.py",
+        "start_line": 212,
+        "end_line": 212
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/contrib/admin/helpers.py",
+        "start_line": 212,
+        "end_line": 212
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14855-0-c0c79bbc63",
+    "instance_id": "django__django-14855",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14855/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 5,
+    "tool_calls": 3,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 5,
+    "tool_result_chars": 1493,
+    "input_tokens": 9792,
+    "output_tokens": 1626,
+    "total_tokens": 11418,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 94600.865,
+    "graph_updates": 8,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-mc0y0as7/django/forms/models.py",
+        "start_line": 1161,
+        "end_line": 1173
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/forms/models.py",
+        "start_line": 1161,
+        "end_line": 1173
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14915-0-c89d0c5b98",
+    "instance_id": "django__django-14915",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14915/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 8108,
+    "input_tokens": 31543,
+    "output_tokens": 3114,
+    "total_tokens": 34657,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 140974.066,
+    "graph_updates": 22,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-e9gt0fob/django/db/migrations/operations/models.py",
+        "start_line": 319,
+        "end_line": 328
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-e9gt0fob/django/db/migrations/operations/models.py",
+        "start_line": 330,
+        "end_line": 347
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-e9gt0fob/django/db/migrations/operations/models.py",
+        "start_line": 349,
+        "end_line": 368
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/migrations/operations/models.py",
+        "start_line": 319,
+        "end_line": 328
+      },
+      {
+        "file_path": "django/db/migrations/operations/models.py",
+        "start_line": 330,
+        "end_line": 347
+      },
+      {
+        "file_path": "django/db/migrations/operations/models.py",
+        "start_line": 349,
+        "end_line": 368
+      }
+    ],
+    "run_id": "sgagent-official-django__django-14999-0-9b7d39337a",
+    "instance_id": "django__django-14999",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-14999/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 9187,
+    "input_tokens": 39349,
+    "output_tokens": 3958,
+    "total_tokens": 43307,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 167922.51,
+    "graph_updates": 18,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-sz_70pmy/django/db/models/sql/query.py",
+        "start_line": 751,
+        "end_line": 751
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/sql/query.py",
+        "start_line": 751,
+        "end_line": 751
+      }
+    ],
+    "run_id": "sgagent-official-django__django-15814-0-01ba0a9f58",
+    "instance_id": "django__django-15814",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-15814/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 10907,
+    "input_tokens": 34783,
+    "output_tokens": 3371,
+    "total_tokens": 38154,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 151156.991,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-cin23obi/django/forms/formsets.py",
+        "start_line": 258,
+        "end_line": 269
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/forms/formsets.py",
+        "start_line": 258,
+        "end_line": 269
+      }
+    ],
+    "run_id": "sgagent-official-django__django-16041-0-ed47484516",
+    "instance_id": "django__django-16041",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-16041/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 6261,
+    "input_tokens": 31114,
+    "output_tokens": 2857,
+    "total_tokens": 33971,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 142330.867,
+    "graph_updates": 18,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-3lj7f7qs/django/utils/numberformat.py",
+        "start_line": 71,
+        "end_line": 73
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/utils/numberformat.py",
+        "start_line": 71,
+        "end_line": 73
+      }
+    ],
+    "run_id": "sgagent-official-django__django-16046-0-e3352ed4bd",
+    "instance_id": "django__django-16046",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-16046/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 16,
+    "tool_calls": 14,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 18,
+    "tool_result_chars": 19624,
+    "input_tokens": 76503,
+    "output_tokens": 12537,
+    "total_tokens": 89040,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 338202.9,
+    "graph_updates": 34,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+        "start_line": 99,
+        "end_line": 104
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+        "start_line": 129,
+        "end_line": 137
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+        "start_line": 139,
+        "end_line": 154
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/forms.py",
+        "start_line": 520,
+        "end_line": 522
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+        "start_line": 252,
+        "end_line": 256
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/forms/boundfield.py",
+        "start_line": 99,
+        "end_line": 104
+      },
+      {
+        "file_path": "django/forms/boundfield.py",
+        "start_line": 129,
+        "end_line": 137
+      },
+      {
+        "file_path": "django/forms/boundfield.py",
+        "start_line": 139,
+        "end_line": 154
+      },
+      {
+        "file_path": "django/forms/forms.py",
+        "start_line": 520,
+        "end_line": 522
+      },
+      {
+        "file_path": "django/forms/boundfield.py",
+        "start_line": 252,
+        "end_line": 256
+      }
+    ],
+    "run_id": "sgagent-official-django__django-16229-0-b54dd133bd",
+    "instance_id": "django__django-16229",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/django__django-16229/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 16,
+    "tool_calls": 13,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 18,
+    "tool_result_chars": 17585,
+    "input_tokens": 67298,
+    "output_tokens": 7306,
+    "total_tokens": 74604,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 208512.773,
+    "graph_updates": 32,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-zwvl5r7q/lib/matplotlib/legend.py",
+        "start_line": 343,
+        "end_line": 346
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-zwvl5r7q/lib/matplotlib/legend.py",
+        "start_line": 540,
+        "end_line": 541
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "lib/matplotlib/legend.py",
+        "start_line": 343,
+        "end_line": 346
+      },
+      {
+        "file_path": "lib/matplotlib/legend.py",
+        "start_line": 540,
+        "end_line": 541
+      }
+    ],
+    "run_id": "sgagent-official-matplotlib__matplotlib-23913-0-5e96a254aa",
+    "instance_id": "matplotlib__matplotlib-23913",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/matplotlib__matplotlib-23913/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 6,
+    "tool_calls": 4,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 6,
+    "tool_result_chars": 6066,
+    "input_tokens": 17416,
+    "output_tokens": 1484,
+    "total_tokens": 18900,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 73812.106,
+    "graph_updates": 10,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-uaz3c_ye/lib/matplotlib/backends/backend_ps.py",
+        "start_line": 669,
+        "end_line": 669
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "lib/matplotlib/backends/backend_ps.py",
+        "start_line": 669,
+        "end_line": 669
+      }
+    ],
+    "run_id": "sgagent-official-matplotlib__matplotlib-23964-0-572703d2f5",
+    "instance_id": "matplotlib__matplotlib-23964",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/matplotlib__matplotlib-23964/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 8111,
+    "input_tokens": 97342,
+    "output_tokens": 5177,
+    "total_tokens": 102519,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 219159.247,
+    "graph_updates": 22,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-qndijix5/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+        "start_line": 13,
+        "end_line": 17
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-qndijix5/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+        "start_line": 29,
+        "end_line": 32
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+        "start_line": 13,
+        "end_line": 17
+      },
+      {
+        "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+        "start_line": 29,
+        "end_line": 32
+      }
+    ],
+    "run_id": "sgagent-official-matplotlib__matplotlib-26020-0-acc70c9a06",
+    "instance_id": "matplotlib__matplotlib-26020",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/matplotlib__matplotlib-26020/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 9,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 10,
+    "tool_result_chars": 9278,
+    "input_tokens": 29726,
+    "output_tokens": 3857,
+    "total_tokens": 33583,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 98487.067,
+    "graph_updates": 17,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-ord6iswx/requests/sessions.py",
+        "start_line": 91,
+        "end_line": 91
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-ord6iswx/requests/sessions.py",
+        "start_line": 102,
+        "end_line": 102
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "requests/sessions.py",
+        "start_line": 91,
+        "end_line": 91
+      },
+      {
+        "file_path": "requests/sessions.py",
+        "start_line": 102,
+        "end_line": 102
+      }
+    ],
+    "run_id": "sgagent-official-psf__requests-1963-0-ebf90b61eb",
+    "instance_id": "psf__requests-1963",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/psf__requests-1963/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 14,
+    "tool_calls": 12,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 15,
+    "tool_result_chars": 10660,
+    "input_tokens": 46607,
+    "output_tokens": 3032,
+    "total_tokens": 49639,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 135185.448,
+    "graph_updates": 28,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-m30lyy7y/requests/sessions.py",
+        "start_line": 428,
+        "end_line": 428
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "requests/sessions.py",
+        "start_line": 428,
+        "end_line": 428
+      }
+    ],
+    "run_id": "sgagent-official-psf__requests-2317-0-64d9cd0a02",
+    "instance_id": "psf__requests-2317",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/psf__requests-2317/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 7152,
+    "input_tokens": 30893,
+    "output_tokens": 3286,
+    "total_tokens": 34179,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 104602.179,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-yu4v7pau/requests/utils.py",
+        "start_line": 362,
+        "end_line": 365
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "requests/utils.py",
+        "start_line": 362,
+        "end_line": 365
+      }
+    ],
+    "run_id": "sgagent-official-psf__requests-3362-0-2b816d8b0f",
+    "instance_id": "psf__requests-3362",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/psf__requests-3362/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 7746,
+    "input_tokens": 32048,
+    "output_tokens": 3286,
+    "total_tokens": 35334,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 100572.017,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-vj1xk5tp/requests/models.py",
+        "start_line": 151,
+        "end_line": 152
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "requests/models.py",
+        "start_line": 151,
+        "end_line": 152
+      }
+    ],
+    "run_id": "sgagent-official-psf__requests-863-0-303a01e1fd",
+    "instance_id": "psf__requests-863",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/psf__requests-863/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 14,
+    "tool_calls": 12,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 15,
+    "tool_result_chars": 17385,
+    "input_tokens": 51828,
+    "output_tokens": 5100,
+    "total_tokens": 56928,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 165811.261,
+    "graph_updates": 28,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-9gqs9srk/xarray/core/formatting.py",
+        "start_line": 271,
+        "end_line": 291
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "xarray/core/formatting.py",
+        "start_line": 271,
+        "end_line": 291
+      }
+    ],
+    "run_id": "sgagent-official-pydata__xarray-4248-0-9c986ae691",
+    "instance_id": "pydata__xarray-4248",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/pydata__xarray-4248/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 8,
+    "tool_calls": 6,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 8,
+    "tool_result_chars": 2630,
+    "input_tokens": 21643,
+    "output_tokens": 1921,
+    "total_tokens": 23564,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 83199.983,
+    "graph_updates": 14,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-35aqrpv4/xarray/core/groupby.py",
+        "start_line": 438,
+        "end_line": 444
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "xarray/core/groupby.py",
+        "start_line": 438,
+        "end_line": 444
+      }
+    ],
+    "run_id": "sgagent-official-pydata__xarray-5131-0-5777062741",
+    "instance_id": "pydata__xarray-5131",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/pydata__xarray-5131/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 9666,
+    "input_tokens": 33859,
+    "output_tokens": 3652,
+    "total_tokens": 37511,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 97816.258,
+    "graph_updates": 22,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-ryo_fqwo/src/_pytest/python.py",
+        "start_line": 1345,
+        "end_line": 1349
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "src/_pytest/python.py",
+        "start_line": 1345,
+        "end_line": 1349
+      }
+    ],
+    "run_id": "sgagent-official-pytest-dev__pytest-5221-0-f07d068c49",
+    "instance_id": "pytest-dev__pytest-5221",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/pytest-dev__pytest-5221/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 10,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 11,
+    "tool_result_chars": 9755,
+    "input_tokens": 49669,
+    "output_tokens": 4945,
+    "total_tokens": 54614,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 139214.781,
+    "graph_updates": 20,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-xh12e27d/sklearn/utils/_set_output.py",
+        "start_line": 58,
+        "end_line": 59
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-xh12e27d/sklearn/utils/_set_output.py",
+        "start_line": 62,
+        "end_line": 62
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sklearn/utils/_set_output.py",
+        "start_line": 58,
+        "end_line": 59
+      },
+      {
+        "file_path": "sklearn/utils/_set_output.py",
+        "start_line": 62,
+        "end_line": 62
+      }
+    ],
+    "run_id": "sgagent-official-scikit-learn__scikit-learn-25747-0-ca9d026ea3",
+    "instance_id": "scikit-learn__scikit-learn-25747",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/scikit-learn__scikit-learn-25747/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 9,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 10,
+    "tool_result_chars": 7408,
+    "input_tokens": 32850,
+    "output_tokens": 4712,
+    "total_tokens": 37562,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 132459.185,
+    "graph_updates": 17,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-kt02xeqf/sphinx/domains/std.py",
+        "start_line": 46,
+        "end_line": 46
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-kt02xeqf/sphinx/domains/std.py",
+        "start_line": 192,
+        "end_line": 197
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sphinx/domains/std.py",
+        "start_line": 46,
+        "end_line": 46
+      },
+      {
+        "file_path": "sphinx/domains/std.py",
+        "start_line": 192,
+        "end_line": 197
+      }
+    ],
+    "run_id": "sgagent-official-sphinx-doc__sphinx-8506-0-42f2c150fc",
+    "instance_id": "sphinx-doc__sphinx-8506",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sphinx-doc__sphinx-8506/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 8,
+    "tool_calls": 6,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 8,
+    "tool_result_chars": 6234,
+    "input_tokens": 22037,
+    "output_tokens": 2192,
+    "total_tokens": 24229,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 142722.054,
+    "graph_updates": 14,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-zgkaqw3o/sympy/matrices/matrices.py",
+        "start_line": 1113,
+        "end_line": 1115
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/matrices/matrices.py",
+        "start_line": 1113,
+        "end_line": 1115
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-12454-0-73440257d4",
+    "instance_id": "sympy__sympy-12454",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-12454/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 18,
+    "tool_calls": 16,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 20,
+    "tool_result_chars": 26109,
+    "input_tokens": 76858,
+    "output_tokens": 7507,
+    "total_tokens": 84365,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 336332.256,
+    "graph_updates": 38,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-jn82xx8h/sympy/core/numbers.py",
+        "start_line": 1266,
+        "end_line": 1267
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/core/numbers.py",
+        "start_line": 1266,
+        "end_line": 1267
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-13146-0-2b5424c710",
+    "instance_id": "sympy__sympy-13146",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-13146/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 9,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 10,
+    "tool_result_chars": 5162,
+    "input_tokens": 31618,
+    "output_tokens": 3023,
+    "total_tokens": 34641,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 233140.232,
+    "graph_updates": 17,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-e2wdj11r/sympy/matrices/common.py",
+        "start_line": 89,
+        "end_line": 89
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/matrices/common.py",
+        "start_line": 89,
+        "end_line": 89
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-13647-0-52d70f9d02",
+    "instance_id": "sympy__sympy-13647",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-13647/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 15,
+    "tool_calls": 13,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 17,
+    "tool_result_chars": 17892,
+    "input_tokens": 66930,
+    "output_tokens": 6379,
+    "total_tokens": 73309,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 344730.458,
+    "graph_updates": 31,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-9o49m00o/sympy/printing/mathematica.py",
+        "start_line": 103,
+        "end_line": 103
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/printing/mathematica.py",
+        "start_line": 103,
+        "end_line": 103
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-15345-0-aaa4c7e9c1",
+    "instance_id": "sympy__sympy-15345",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-15345/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 21,
+    "tool_calls": 19,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 3,
+    "total_llm_calls": 24,
+    "tool_result_chars": 25197,
+    "input_tokens": 105879,
+    "output_tokens": 10832,
+    "total_tokens": 116711,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 475497.379,
+    "graph_updates": 45,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-1c0xwts_/sympy/printing/latex.py",
+        "start_line": 615,
+        "end_line": 619
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/printing/latex.py",
+        "start_line": 615,
+        "end_line": 619
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-15609-0-d6b41d918d",
+    "instance_id": "sympy__sympy-15609",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-15609/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 19,
+    "tool_calls": 17,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 21,
+    "tool_result_chars": 18668,
+    "input_tokens": 91814,
+    "output_tokens": 11242,
+    "total_tokens": 103056,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 426790.551,
+    "graph_updates": 40,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/polys/polyutils.py",
+        "start_line": 269,
+        "end_line": 270
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/polys/polyutils.py",
+        "start_line": 4,
+        "end_line": 5
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/polys/polytools.py",
+        "start_line": 4397,
+        "end_line": 4400
+      },
+      {
+        "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/core/exprtools.py",
+        "start_line": 238,
+        "end_line": 242
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/polys/polyutils.py",
+        "start_line": 269,
+        "end_line": 270
+      },
+      {
+        "file_path": "sympy/polys/polyutils.py",
+        "start_line": 4,
+        "end_line": 5
+      },
+      {
+        "file_path": "sympy/polys/polytools.py",
+        "start_line": 4397,
+        "end_line": 4400
+      },
+      {
+        "file_path": "sympy/core/exprtools.py",
+        "start_line": 238,
+        "end_line": 242
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-21379-0-ee9d358b16",
+    "instance_id": "sympy__sympy-21379",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-21379/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 18,
+    "tool_calls": 16,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 20,
+    "tool_result_chars": 15912,
+    "input_tokens": 78677,
+    "output_tokens": 8050,
+    "total_tokens": 86727,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 407105.663,
+    "graph_updates": 38,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-quno6_s_/sympy/printing/str.py",
+        "start_line": 294,
+        "end_line": 295
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/printing/str.py",
+        "start_line": 294,
+        "end_line": 295
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-21612-0-f4f61ec663",
+    "instance_id": "sympy__sympy-21612",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-21612/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 17,
+    "tool_calls": 15,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 2,
+    "total_llm_calls": 19,
+    "tool_result_chars": 17248,
+    "input_tokens": 67748,
+    "output_tokens": 5692,
+    "total_tokens": 73440,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 336585.661,
+    "graph_updates": 36,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-yco0nbuk/sympy/core/function.py",
+        "start_line": 1672,
+        "end_line": 1672
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/core/function.py",
+        "start_line": 1672,
+        "end_line": 1672
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-21614-0-3630d7b3be",
+    "instance_id": "sympy__sympy-21614",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-21614/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "locator_llm_calls": 11,
+    "tool_calls": 8,
+    "failed_tool_calls": 0,
+    "reflection_turns": 2,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 12,
+    "tool_result_chars": 12132,
+    "input_tokens": 35157,
+    "output_tokens": 2779,
+    "total_tokens": 37936,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 278292.752,
+    "graph_updates": 21,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-64b9pq5n/sympy/physics/units/unitsystem.py",
+        "start_line": 192,
+        "end_line": 196
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/physics/units/unitsystem.py",
+        "start_line": 192,
+        "end_line": 196
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-24066-0-0509eb42ac",
+    "instance_id": "sympy__sympy-24066",
+    "trajectory_path": "experiments/name_to_definition/runs/official_locator_reproduction/sympy__sympy-24066/0/trajectory.jsonl",
+    "model": "claude-sonnet-5"
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "670143a1-2c3a-450f-9e32-ac8411684ba4",
+    "01f809c7-7149-466e-800f-b2c3c6f24323",
+    "7b3d6144-b01b-46d4-8dcd-6883835b7288",
+    "5275e33f-c9e6-4bc3-afc1-bb5c67befa9d",
+    "9008f83a-0bea-4e4e-8fd8-4db1c59d90dd",
+    "e29d7ec5-dfb6-4644-b436-b6e798dafefd"
+  ],
+  "stop_reasons": {
+    "stop": 6
+  },
+  "locator_llm_calls": 6,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 6,
+  "tool_result_chars": 101900,
+  "tool_original_chars": 101900,
+  "tool_returned_chars": 101900,
+  "truncated_tool_calls": 0,
+  "input_tokens": 97315,
+  "output_tokens": 763,
+  "total_tokens": 98078,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 60625.586,
+  "graph_updates": 10,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-fjy4gptj/xarray/core/groupby.py",
+      "start_line": 438,
+      "end_line": 444
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "xarray/core/groupby.py",
+      "start_line": 438,
+      "end_line": 444
+    }
+  ],
+  "run_id": "sgagent-official-pydata__xarray-5131-0-76850c612c",
+  "instance_id": "pydata__xarray-5131",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

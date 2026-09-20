@@ -1,0 +1,13 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py",
+            "start_line": 1670,
+            "end_line": 1671
+        }
+    ]
+}
+```

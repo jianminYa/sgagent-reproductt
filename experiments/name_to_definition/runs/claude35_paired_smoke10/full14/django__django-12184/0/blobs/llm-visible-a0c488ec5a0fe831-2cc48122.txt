@@ -1,0 +1,37 @@
+## Summary
+
+### Objective
+Find and repair a bug in a Django project related to URL resolution with optional regex parameters.
+
+### Bug Analysis
+
+**Root Cause Identified:** In `django/urls/resolvers.py`, the `RegexPattern.match()` method (lines 155-164) incorrectly handles optional named URL groups.
+
+**Scenario:** For a regex like `r'^module/(?P<format>(html|json|xml))?/?$'`:
+- When URL is `/module/` (optional group doesn't match):
+  1. `match.groupdict()` returns `{'format': None}`
+  2. Line 161: `kwargs = {k: v for k, v in match.groupdict().items() if v is not None}` filters out `None`, producing `kwargs = {}` (empty)
+  3. Line 162: `args = () if kwargs else match.groups()` — since `kwargs` is falsy (empty dict), falls through to `args = match.groups()` which returns `(None, None)` (one for named group `format`, one for unnamed inner group `(html|json|xml)`)
+  4. View gets called as `view(request, None, None)` → **TypeError: too many positional arguments**
+
+### Proposed Fix
+
+**File:** `/tmp/sgagent-n2d-p7a2tz4q/django/urls/resolvers.py`  
+**Line 162:** Change from:
+```python
+args = () if kwargs else match.groups()
+```
+To:
+```python
+args = () if match.groupdict() else match.groups()
+```
+
+**Rationale:** `match.groupdict()` returns `{'format': None}` which is truthy (non-empty dict), so even when all named groups are `None`, the code stays in kwargs mode (`args = ()`), preventing unnamed inner groups from leaking as positional arguments. The check should be whether named groups **exist** in the pattern, not whether any matched a non-None value.
+
+### Tools Used
+- `find_files_containing` — located `resolvers.py` and `base.py` as relevant files
+- `analyze_file_structure` — mapped classes and methods in `resolvers.py`
+- `extract_complete_method` — retrieved full source of `RegexPattern.match()`
+
+### Status
+**PROPOSE LOCATION** — Bug fully diagnosed, single-line fix identified at line 162 of `django/urls/resolvers.py`. Ready to implement the change.

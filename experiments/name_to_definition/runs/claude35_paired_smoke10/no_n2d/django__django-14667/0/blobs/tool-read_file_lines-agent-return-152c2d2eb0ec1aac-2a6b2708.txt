@@ -1,0 +1,7 @@
+File: /tmp/sgagent-n2d-gwa0zdpk/django/db/models/sql/query.py
+Total lines: 2452
+Showing lines 680-682:
+
+ 680:         field_names, defer = self.deferred_loading
+ 681:         if not field_names:
+ 682:             return

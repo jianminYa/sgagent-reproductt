@@ -1,0 +1,36 @@
+File: /tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py
+Total lines: 360
+Showing lines 259-290:
+
+ 259:                     # The current umask value is masked out by os.open!
+ 260:                     fd = os.open(full_path, self.OS_OPEN_FLAGS, 0o666)
+ 261:                     _file = None
+ 262:                     try:
+ 263:                         locks.lock(fd, locks.LOCK_EX)
+ 264:                         for chunk in content.chunks():
+ 265:                             if _file is None:
+ 266:                                 mode = 'wb' if isinstance(chunk, bytes) else 'wt'
+ 267:                                 _file = os.fdopen(fd, mode)
+ 268:                             _file.write(chunk)
+ 269:                     finally:
+ 270:                         locks.unlock(fd)
+ 271:                         if _file is not None:
+ 272:                             _file.close()
+ 273:                         else:
+ 274:                             os.close(fd)
+ 275:             except FileExistsError:
+ 276:                 # A new name is needed if the file exists.
+ 277:                 name = self.get_available_name(name)
+ 278:                 full_path = self.path(name)
+ 279:             else:
+ 280:                 # OK, the file save worked. Break out of the loop.
+ 281:                 break
+ 282: 
+ 283:         if self.file_permissions_mode is not None:
+ 284:             os.chmod(full_path, self.file_permissions_mode)
+ 285: 
+ 286:         # Store filenames with forward slashes, even on Windows.
+ 287:         return name.replace('\\', '/')
+ 288: 
+ 289:     def delete(self, name):
+ 290:         assert name, "The name argument is not allowed to be empty."

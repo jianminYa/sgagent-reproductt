@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_b441349db8e54c358616efe087033cea",
+    "msg_1ae387fdcf844d85b9b853a5a8854478",
+    "msg_c54a4dfbc2ad42abb589908280a9ad03",
+    "msg_cab6b87784e9433a84b2bcfbcdf06a01",
+    "msg_e4231ae576ff45a69738bfed59229e59",
+    "msg_0ae58ccc99c147cab95b82bc70fed241",
+    "msg_9aeb3cca263d4b4d9c4c374297b9f44d",
+    "msg_087d81c74bbb4572a3c02ea1d74d4cae",
+    "msg_02eb469b8d624f93984ec23d5d0cf8ab",
+    "msg_ad6b5ac7d661433f93b8a3082597d1da",
+    "msg_cf5a163e0dff48fe83e5b9e450c5b3b3"
+  ],
+  "stop_reasons": {
+    "end_turn": 11
+  },
+  "locator_llm_calls": 10,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 11,
+  "tool_result_chars": 24428,
+  "input_tokens": 42905,
+  "output_tokens": 3612,
+  "total_tokens": 46517,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 174992.011,
+  "graph_updates": 20,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-g521er7z/sphinx/domains/std.py",
+      "start_line": 46,
+      "end_line": 46
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-g521er7z/sphinx/domains/std.py",
+      "start_line": 192,
+      "end_line": 197
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sphinx/domains/std.py",
+      "start_line": 46,
+      "end_line": 46
+    },
+    {
+      "file_path": "sphinx/domains/std.py",
+      "start_line": 192,
+      "end_line": 197
+    }
+  ],
+  "run_id": "sgagent-official-sphinx-doc__sphinx-8506-0-fcc5f0abcc",
+  "instance_id": "sphinx-doc__sphinx-8506",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

@@ -1,0 +1,25 @@
+
+
+#REFLECT
+Now I understand the bug clearly. Let me analyze the `RegexPattern.match` method:
+
+```python
+def match(self, path):
+    match = self.regex.search(path)
+    if match:
+        kwargs = {k: v for k, v in match.groupdict().items() if v is not None}
+        args = () if kwargs else match.groups()
+        return path[match.end():], args, kwargs
+    return None
+```
+
+For the regex `r'^module/(?P<format>(html|json|xml))?/?$'`:
+- When URL is `/module/html/`: `match.groupdict()` returns `{'format': 'html'}`, so `kwargs = {'format': 'html'}` (non-empty), and `args = ()`. This works fine.
+- When URL is `/module/`: `match.groupdict()` returns `{'format': None}`. The dict comprehension `{k: v for k, v in match.groupdict().items() if v is not None}` filters out `None` values, so `kwargs = {}` (empty). Since `kwargs` is empty/falsy, `args = match.groups()` which returns `(None, None)` — one `None` for the outer named group `(?P<format>...)` and one for the inner group `(html|json|xml)`. So the view is called with `request, None, None` = 3 positional args, but it only accepts 1-2.
+
+The fix should be: when kwargs is empty because all named groups matched `None`, the code should still not fall back to positional args. The issue is that **when there are named groups in the pattern**, we should always use kwargs mode, not fall through to args mode just because all named groups are `None`.
+
+Let me check if there are any test files related to this to confirm my understanding.
+
+#TOOL_CALL find_files_containing
+{"keyword": "optional_url"}

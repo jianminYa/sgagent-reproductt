@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "6d6e6a5e-1a38-4823-b3c0-963a38193d56",
+    "33a42293-4960-45e9-bd8f-e563e3dcb9db",
+    "b1ad71ce-b0bc-412b-a9d9-40c4d913a202",
+    "42179b6d-e0f0-44b4-8f5b-06acac1df83a",
+    "de7308e6-f3b8-43b8-a268-e3624164fa9d",
+    "ea91dd74-2bb4-4117-9b23-42c15cc6e6fa",
+    "fc0b7871-eb15-49d2-a008-e8c98a16d691"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 6042,
+  "tool_original_chars": 6042,
+  "tool_returned_chars": 6042,
+  "truncated_tool_calls": 0,
+  "input_tokens": 40608,
+  "output_tokens": 1258,
+  "total_tokens": 41866,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 79800.032,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-za1tzfs2/sklearn/utils/_set_output.py",
+      "start_line": 55,
+      "end_line": 60
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-za1tzfs2/sklearn/utils/_set_output.py",
+      "start_line": 130,
+      "end_line": 134
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 55,
+      "end_line": 60
+    },
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 130,
+      "end_line": 134
+    }
+  ],
+  "run_id": "sgagent-official-scikit-learn__scikit-learn-25747-0-21f054f0ee",
+  "instance_id": "scikit-learn__scikit-learn-25747",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

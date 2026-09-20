@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "56568cb2-e53c-44f2-877c-55f48685fd0a",
+    "46b8eb58-d8a5-470a-9372-d8bc036201df",
+    "c5156a6e-4cd9-4e81-8ae4-836a4d6cb2a6",
+    "e3b7233a-6f01-45ca-a2c5-997ee38fdfc6",
+    "0a9ae966-490f-4040-a2a8-471ab0491eed",
+    "88ccbaf9-75fe-4095-afe7-8f0a2b7774d2",
+    "fb4a42d9-ce87-4d91-ab3a-5a5387923bf0"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 36896,
+  "tool_original_chars": 82137,
+  "tool_returned_chars": 36896,
+  "truncated_tool_calls": 1,
+  "input_tokens": 86457,
+  "output_tokens": 1314,
+  "total_tokens": 87771,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 59100.102,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-g6k1u3h5/requests/sessions.py",
+      "start_line": 428,
+      "end_line": 428
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 428,
+      "end_line": 428
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-2317-0-2d11de1ec3",
+  "instance_id": "psf__requests-2317",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

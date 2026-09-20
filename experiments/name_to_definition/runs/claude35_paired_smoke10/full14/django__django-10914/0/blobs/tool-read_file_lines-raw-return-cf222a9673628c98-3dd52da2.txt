@@ -1,0 +1,20 @@
+File: /tmp/sgagent-n2d-0hngtli7/django/conf/global_settings.py
+Total lines: 634
+Showing lines 300-315:
+
+ 300: # Directory in which upload streamed files will be temporarily saved. A value of
+ 301: # `None` will make Django use the operating system's default temporary directory
+ 302: # (i.e. "/tmp" on *nix systems).
+ 303: FILE_UPLOAD_TEMP_DIR = None
+ 304: 
+ 305: # The numeric mode to set newly-uploaded files to. The value should be a mode
+ 306: # you'd pass directly to os.chmod; see https://docs.python.org/library/os.html#files-and-directories.
+ 307: FILE_UPLOAD_PERMISSIONS = None
+ 308: 
+ 309: # The numeric mode to assign to newly-created directories, when uploading files.
+ 310: # The value should be a mode as you'd pass to os.chmod;
+ 311: # see https://docs.python.org/library/os.html#files-and-directories.
+ 312: FILE_UPLOAD_DIRECTORY_PERMISSIONS = None
+ 313: 
+ 314: # Python module path where user will place custom format definition.
+ 315: # The directory where this setting is pointing should contain subdirectories

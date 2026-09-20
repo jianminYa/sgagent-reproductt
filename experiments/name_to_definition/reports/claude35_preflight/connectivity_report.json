@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "status": "failed",
+  "protocol": "openai_chat_completions",
+  "requested_model": "claude-3.5-sonnet",
+  "returned_model": null,
+  "request_id": null,
+  "stop_reason": null,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null
+  },
+  "http_status": 400,
+  "credential_env_var": "OPENAI_API_KEY",
+  "credential_present": true,
+  "base_url_env_var": "OPENAI_BASE_URL",
+  "base_url_present": true,
+  "api_key_recorded": false,
+  "diagnosis": "provider HTTP 400; error body intentionally omitted"
+}

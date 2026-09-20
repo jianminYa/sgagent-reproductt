@@ -1,0 +1,1 @@
+Error executing command 'cd /tmp/sgagent-n2d-1yd2xahh && cat -n django/core/checks/model_checks.py | head -50': OfficialTrace.event() got multiple values for argument 'phase'

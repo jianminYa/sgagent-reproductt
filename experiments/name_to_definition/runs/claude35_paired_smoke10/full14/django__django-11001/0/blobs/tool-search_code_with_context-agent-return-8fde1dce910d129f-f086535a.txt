@@ -1,0 +1,38 @@
+Search results for 'ordering_parts' in file (showing first 3 matches):
+
+File: /tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py
+Lines 32-38:
+  32:         self.select = None
+  33:         self.annotation_col_map = None
+  34:         self.klass_info = None
+  35:         self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)')
+  36:         self._meta_ordering = None
+  37: 
+  38:     def setup_query(self):
+
+================================================================================
+
+File: /tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py
+Lines 353-359:
+ 353:             # not taken into account so we strip it. When this entire method
+ 354:             # is refactored into expressions, then we can check each part as we
+ 355:             # generate it.
+ 356:             without_ordering = self.ordering_parts.search(sql).group(1)
+ 357:             params_hash = make_hashable(params)
+ 358:             if (without_ordering, params_hash) in seen:
+ 359:                 continue
+
+================================================================================
+
+File: /tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py
+Lines 366-372:
+ 366:         if self.query.distinct and not self.query.distinct_fields:
+ 367:             select_sql = [t[1] for t in select]
+ 368:             for expr, (sql, params, is_ref) in order_by:
+ 369:                 without_ordering = self.ordering_parts.search(sql).group(1)
+ 370:                 if not is_ref and (without_ordering, params) not in select_sql:
+ 371:                     extra_select.append((expr, (without_ordering, params), None))
+ 372:         return extra_select
+
+================================================================================
+

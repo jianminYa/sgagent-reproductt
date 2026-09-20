@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nLet me look at the current `send_robust` method and the top of the dispatcher.py file to see what needs to change.\n\n#TOOL_CALL read_file_lines\n{ \"file_path\": \"/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py\", \"start_line\": 1, \"end_line\": 15 }", "name": null, "tool_calls": [], "type": "ai"}

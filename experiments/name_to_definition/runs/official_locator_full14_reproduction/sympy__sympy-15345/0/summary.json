@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_36accf0ade8f4249b541fa163f88a04b",
+    "msg_864f91b4571b4018935afd0acaacea42",
+    "msg_bddf091776da415db4933f164d7a0530",
+    "msg_880e96f2ea6c430b8ac0243f883e43c1",
+    "msg_a78c6213aa534275a412ebc2d6f91df5",
+    "msg_c2c19dbab71f44f1893e286aef2e1530",
+    "msg_37f99389286f44dc8eda3c9a40614ad8",
+    "msg_da0ba8613b044d5ab92b1a484f3203fe",
+    "msg_aa3302b7866a45e99e9d3f904cef3af0",
+    "msg_4cc1f900338f4960a52113fa70883b7a",
+    "msg_ca1eded46e0a427c9db1f99a697d45a5",
+    "msg_8e1f5a688f4f4e01a78b5f2602696609",
+    "msg_fa8421865c784bb58a386f54e9738fc3",
+    "msg_f489839f10dd4409b30c3ae229d8c860",
+    "msg_8b728776e9d04e37be8bd9356040f33c",
+    "msg_c360e07cfa9641818a5d2b794adb341d",
+    "msg_08bac2cb9b5e4d31b28e5618eca98097",
+    "msg_3193134b7d7d494baf98bce7b420e22c",
+    "msg_ebab6796cb3644f199c800c3e2edfa8f",
+    "msg_579e30259af94fa2b04c65030ce6ef86"
+  ],
+  "stop_reasons": {
+    "end_turn": 20
+  },
+  "locator_llm_calls": 18,
+  "tool_calls": 16,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 20,
+  "tool_result_chars": 58813,
+  "input_tokens": 115900,
+  "output_tokens": 7201,
+  "total_tokens": 123101,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 355175.929,
+  "graph_updates": 38,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-l494xo_w/sympy/printing/mathematica.py",
+      "start_line": 103,
+      "end_line": 103
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/printing/mathematica.py",
+      "start_line": 103,
+      "end_line": 103
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-15345-0-9a6f7a44d8",
+  "instance_id": "sympy__sympy-15345",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

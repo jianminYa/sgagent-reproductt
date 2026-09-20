@@ -1,0 +1,54 @@
+Each line below indicates a class, including class_name and absolute_path:
+PoleError /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+ArgumentIndexError /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+BadSignatureError /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+BadArgumentsError /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+FunctionClass /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+Application /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+Function /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+AppliedUndef /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+UndefSageHelper /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+UndefinedFunction /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+WildFunction /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+Derivative /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+Lambda /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+Subs /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+CustomStrPrinter /tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+__str__  sympy.core.function.ArgumentIndexError.__str__  [{'name': 'self', 'type': None}]
+__init__  sympy.core.function.FunctionClass.__init__  [{'name': 'cls', 'type': None}]
+__signature__  sympy.core.function.FunctionClass.__signature__  [{'name': 'self', 'type': None}]
+free_symbols  sympy.core.function.FunctionClass.free_symbols  [{'name': 'self', 'type': None}]
+xreplace  sympy.core.function.FunctionClass.xreplace  [{'name': 'self', 'type': None}]
+nargs  sympy.core.function.FunctionClass.nargs  [{'name': 'self', 'type': None}]
+__repr__  sympy.core.function.FunctionClass.__repr__  [{'name': 'cls', 'type': None}]
+__new__  sympy.core.function.Application.__new__  [{'name': 'cls', 'type': None}]
+eval  sympy.core.function.Application.eval  [{'name': 'cls', 'type': None}]
+func  sympy.core.function.Application.func  [{'name': 'self', 'type': None}]
+_eval_subs  sympy.core.function.Application._eval_subs  [{'name': 'self', 'type': None}, {'name': 'old', 'type': None}, {'name': 'new', 'type': None}]
+_diff_wrt  sympy.core.function.Function._diff_wrt  [{'name': 'self', 'type': None}]
+__new__  sympy.core.function.Function.__new__  [{'name': 'cls', 'type': None}]
+_should_evalf  sympy.core.function.Function._should_evalf  [{'name': 'cls', 'type': None}, {'name': 'arg', 'type': None}]
+class_key  sympy.core.function.Function.class_key  [{'name': 'cls', 'type': None}]
+_eval_evalf  sympy.core.function.Function._eval_evalf  [{'name': 'self', 'type': None}, {'name': 'prec', 'type': None}]
+_get_mpmath_func  sympy.core.function.Function._get_mpmath_func  [{'name': 'fname', 'type': None}]
+bad  sympy.core.function.Function.bad  [{'name': 'm', 'type': None}]
+_eval_derivative  sympy.core.function.Function._eval_derivative  [{'name': 'self', 'type': None}, {'name': 's', 'type': None}]
+_eval_is_commutative  sympy.core.function.Function._eval_is_commutative  [{'name': 'self', 'type': None}]
+_eval_is_meromorphic  sympy.core.function.Function._eval_is_meromorphic  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'a', 'type': None}]
+is_singular  sympy.core.function.Function.is_singular  [{'name': 'cls', 'type': None}, {'name': 'a', 'type': None}]
+as_base_exp  sympy.core.function.Function.as_base_exp  [{'name': 'self', 'type': None}]
+_eval_aseries  sympy.core.function.Function._eval_aseries  [{'name': 'self', 'type': None}, {'name': 'n', 'type': None}, {'name': 'args0', 'type': None}, {'name': 'x', 'type': None}, {'name': 'logx', 'type': None}]
+_eval_nseries  sympy.core.function.Function._eval_nseries  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'n', 'type': None}, {'name': 'logx', 'type': None}, {'name': 'cdir', 'type': None}]
+fdiff  sympy.core.function.Function.fdiff  [{'name': 'self', 'type': None}, {'name': 'argindex', 'type': None}]
+_eval_as_leading_term  sympy.core.function.Function._eval_as_leading_term  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'cdir', 'type': None}]
+_sage_  sympy.core.function.Function._sage_  [{'name': 'self', 'type': None}]
+__new__  sympy.core.function.AppliedUndef.__new__  [{'name': 'cls', 'type': None}]
+_eval_as_leading_term  sympy.core.function.AppliedUndef._eval_as_leading_term  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'cdir', 'type': None}]
+_sage_  sympy.core.function.AppliedUndef._sage_  [{'name': 'self', 'type': None}]
+_diff_wrt  sympy.core.function.AppliedUndef._diff_wrt  [{'name': 'self', 'type': None}]
+__get__  sympy.core.function.UndefSageHelper.__get__  [{'name': 'self', 'type': None}, {'name': 'ins', 'type': None}, {'name': 'typ', 'type': None}]
+__new__  sympy.core.function.UndefinedFunction.__new__  [{'name': 'mcl', 'type': None}, {'name': 'name', 'type': None}, {'name': 'bases', 'type': None}, {'name': '__dict__', 'type': None}]
+__instancecheck__  sympy.core.function.UndefinedFunction.__instancecheck__  [{
+
+... [输出被截断，原始长度: 14620 字符，显示前 5000 字符]

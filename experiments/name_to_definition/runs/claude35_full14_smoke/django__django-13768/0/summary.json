@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "3e2bd594-d4a1-4a27-aed6-ab8dc032cf22",
+    "8878ebf9-f97e-4b27-9b5d-d708138ebf5e",
+    "58665baf-ea89-4b2f-af2f-05fe5421dcba",
+    "a5b04c56-82f3-44cc-a161-cda7bf21a579",
+    "26ee0b9d-c90b-4300-8e4e-d3398d6935f1",
+    "bef585cc-1a95-49b5-89b9-b80849111eda",
+    "d3d17d89-d4ad-4c63-8115-3c053ee634ea",
+    "f865c2c2-316e-48e5-9c1a-33f8c306faab",
+    "1cc29af6-b712-4144-876c-6f7f1fb01555",
+    "b867fe00-e94f-4522-9c8b-3a28c5b2e557",
+    "e7d58ab5-77e2-4081-8998-bce856deca16",
+    "d5e6bb74-d4b3-46ca-907e-c5c7b4d970b2",
+    "a66937ac-66ec-4b22-af17-37297ff55532",
+    "2ad99287-0997-499f-9612-bf8e4a3e0ae8"
+  ],
+  "stop_reasons": {
+    "stop": 14
+  },
+  "locator_llm_calls": 13,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 14,
+  "tool_result_chars": 109610,
+  "tool_original_chars": 109610,
+  "tool_returned_chars": 109610,
+  "truncated_tool_calls": 0,
+  "input_tokens": 238156,
+  "output_tokens": 2267,
+  "total_tokens": 240423,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 158991.263,
+  "graph_updates": 26,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-hzn6ff1e/django/dispatch/dispatcher.py",
+      "start_line": 1,
+      "end_line": 8
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-hzn6ff1e/django/dispatch/dispatcher.py",
+      "start_line": 210,
+      "end_line": 211
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/dispatch/dispatcher.py",
+      "start_line": 1,
+      "end_line": 8
+    },
+    {
+      "file_path": "django/dispatch/dispatcher.py",
+      "start_line": 210,
+      "end_line": 211
+    }
+  ],
+  "run_id": "sgagent-official-django__django-13768-0-9af7528798",
+  "instance_id": "django__django-13768",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_smoke"
+}

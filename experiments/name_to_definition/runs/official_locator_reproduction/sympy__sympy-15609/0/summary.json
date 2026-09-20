@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 21,
+  "tool_calls": 19,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 3,
+  "total_llm_calls": 24,
+  "tool_result_chars": 25197,
+  "input_tokens": 105879,
+  "output_tokens": 10832,
+  "total_tokens": 116711,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 475497.379,
+  "graph_updates": 45,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-1c0xwts_/sympy/printing/latex.py",
+      "start_line": 615,
+      "end_line": 619
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/printing/latex.py",
+      "start_line": 615,
+      "end_line": 619
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-15609-0-d6b41d918d",
+  "instance_id": "sympy__sympy-15609",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

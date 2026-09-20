@@ -1,0 +1,14 @@
+
+
+#REFLECT
+Let me think about this more carefully. The error is `PolynomialError: Piecewise generators do not make sense`. This happens during `subs({1: 1.0})`. The key observation is:
+1. It only happens with real symbols
+2. It only happens after clearing cache
+3. It works on the second run (without clearing cache)
+
+This suggests that during the first evaluation with real symbols, some code path queries assumptions which triggers evaluation/simplification that goes through polynomial code. The `subs({1: 1.0})` is replacing the integer 1 with float 1.0.
+
+The traceback would likely go through `Pow._eval_subs` since `exp._eval_subs` delegates to it. Let me look at `Pow._eval_subs` to understand how it handles the substitution.
+
+#TOOL_CALL extract_complete_method
+{"file": "/tmp/sgagent-n2d-4st5urrw/sympy/core/power.py", "full_qualified_name": "sympy.core.power.Pow._eval_subs"}

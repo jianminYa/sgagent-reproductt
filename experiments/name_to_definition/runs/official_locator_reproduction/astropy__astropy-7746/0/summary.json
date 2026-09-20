@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 10,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 11,
+  "tool_result_chars": 11962,
+  "input_tokens": 42147,
+  "output_tokens": 5381,
+  "total_tokens": 47528,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 145103.89,
+  "graph_updates": 20,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-zrfp534a/astropy/wcs/wcs.py",
+      "start_line": 1221,
+      "end_line": 1225
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-zrfp534a/astropy/wcs/wcs.py",
+      "start_line": 1238,
+      "end_line": 1240
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1221,
+      "end_line": 1225
+    },
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1238,
+      "end_line": 1240
+    }
+  ],
+  "run_id": "sgagent-official-astropy__astropy-7746-0-e978320cb0",
+  "instance_id": "astropy__astropy-7746",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 8108,
+  "input_tokens": 31543,
+  "output_tokens": 3114,
+  "total_tokens": 34657,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 140974.066,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-e9gt0fob/django/db/migrations/operations/models.py",
+      "start_line": 319,
+      "end_line": 328
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-e9gt0fob/django/db/migrations/operations/models.py",
+      "start_line": 330,
+      "end_line": 347
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-e9gt0fob/django/db/migrations/operations/models.py",
+      "start_line": 349,
+      "end_line": 368
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/migrations/operations/models.py",
+      "start_line": 319,
+      "end_line": 328
+    },
+    {
+      "file_path": "django/db/migrations/operations/models.py",
+      "start_line": 330,
+      "end_line": 347
+    },
+    {
+      "file_path": "django/db/migrations/operations/models.py",
+      "start_line": 349,
+      "end_line": 368
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14999-0-9b7d39337a",
+  "instance_id": "django__django-14999",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

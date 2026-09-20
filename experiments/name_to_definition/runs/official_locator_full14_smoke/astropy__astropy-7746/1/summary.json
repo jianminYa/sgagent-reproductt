@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_abf789fe3df242d18bebe8e8999f6a4f",
+    "msg_5dac3e534d2b43c0aa554fc3628067ba",
+    "msg_861c008c7b6349229a3fed1d25d6d012",
+    "msg_43b3d6d51ae24e9080882e844b7320c8",
+    "msg_e06947a942e242d2aaa08878a90c68bb",
+    "msg_ed898309888240c2837f7563dc544cbe"
+  ],
+  "stop_reasons": {
+    "end_turn": 6
+  },
+  "locator_llm_calls": 6,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 6,
+  "tool_result_chars": 440915,
+  "input_tokens": 90546,
+  "output_tokens": 1950,
+  "total_tokens": 92496,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 111995.46,
+  "graph_updates": 10,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-rsnppj3v/astropy/wcs/wcs.py",
+      "start_line": 1214,
+      "end_line": 1231
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1214,
+      "end_line": 1231
+    }
+  ],
+  "run_id": "sgagent-official-astropy__astropy-7746-1-3a4f00e402",
+  "instance_id": "astropy__astropy-7746",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_smoke"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 15,
+  "tool_calls": 12,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 16,
+  "tool_result_chars": 12122,
+  "input_tokens": 56328,
+  "output_tokens": 6929,
+  "total_tokens": 63257,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 186493.006,
+  "graph_updates": 29,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-bm1rib0w/django/db/models/sql/compiler.py",
+      "start_line": 356,
+      "end_line": 356
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-bm1rib0w/django/db/models/sql/compiler.py",
+      "start_line": 369,
+      "end_line": 369
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 356,
+      "end_line": 356
+    },
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 369,
+      "end_line": 369
+    }
+  ],
+  "run_id": "sgagent-official-django__django-11001-0-c7cb8f0d7b",
+  "instance_id": "django__django-11001",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

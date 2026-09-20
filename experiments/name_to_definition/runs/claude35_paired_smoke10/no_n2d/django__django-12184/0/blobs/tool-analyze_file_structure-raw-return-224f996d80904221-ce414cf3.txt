@@ -1,0 +1,47 @@
+Each line below indicates a class, including class_name and absolute_path:
+ResolverMatch /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+LocaleRegexDescriptor /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+CheckURLMixin /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+RegexPattern /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+RoutePattern /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+LocalePrefixPattern /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+URLPattern /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+URLResolver /tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+__init__  django.urls.resolvers.ResolverMatch.__init__  [{'name': 'self', 'type': None}, {'name': 'func', 'type': None}, {'name': 'args', 'type': None}, {'name': 'kwargs', 'type': None}, {'name': 'url_name', 'type': None}, {'name': 'app_names', 'type': None}, {'name': 'namespaces', 'type': None}, {'name': 'route', 'type': None}]
+__getitem__  django.urls.resolvers.ResolverMatch.__getitem__  [{'name': 'self', 'type': None}, {'name': 'index', 'type': None}]
+__repr__  django.urls.resolvers.ResolverMatch.__repr__  [{'name': 'self', 'type': None}]
+__init__  django.urls.resolvers.LocaleRegexDescriptor.__init__  [{'name': 'self', 'type': None}, {'name': 'attr', 'type': None}]
+__get__  django.urls.resolvers.LocaleRegexDescriptor.__get__  [{'name': 'self', 'type': None}, {'name': 'instance', 'type': None}, {'name': 'cls', 'type': None}]
+describe  django.urls.resolvers.CheckURLMixin.describe  [{'name': 'self', 'type': None}]
+_check_pattern_startswith_slash  django.urls.resolvers.CheckURLMixin._check_pattern_startswith_slash  [{'name': 'self', 'type': None}]
+__init__  django.urls.resolvers.RegexPattern.__init__  [{'name': 'self', 'type': None}, {'name': 'regex', 'type': None}, {'name': 'name', 'type': None}, {'name': 'is_endpoint', 'type': None}]
+match  django.urls.resolvers.RegexPattern.match  [{'name': 'self', 'type': None}, {'name': 'path', 'type': None}]
+check  django.urls.resolvers.RegexPattern.check  [{'name': 'self', 'type': None}]
+_check_include_trailing_dollar  django.urls.resolvers.RegexPattern._check_include_trailing_dollar  [{'name': 'self', 'type': None}]
+_compile  django.urls.resolvers.RegexPattern._compile  [{'name': 'self', 'type': None}, {'name': 'regex', 'type': None}]
+__str__  django.urls.resolvers.RegexPattern.__str__  [{'name': 'self', 'type': None}]
+__init__  django.urls.resolvers.RoutePattern.__init__  [{'name': 'self', 'type': None}, {'name': 'route', 'type': None}, {'name': 'name', 'type': None}, {'name': 'is_endpoint', 'type': None}]
+match  django.urls.resolvers.RoutePattern.match  [{'name': 'self', 'type': None}, {'name': 'path', 'type': None}]
+check  django.urls.resolvers.RoutePattern.check  [{'name': 'self', 'type': None}]
+_compile  django.urls.resolvers.RoutePattern._compile  [{'name': 'self', 'type': None}, {'name': 'route', 'type': None}]
+__str__  django.urls.resolvers.RoutePattern.__str__  [{'name': 'self', 'type': None}]
+__init__  django.urls.resolvers.LocalePrefixPattern.__init__  [{'name': 'self', 'type': None}, {'name': 'prefix_default_language', 'type': None}]
+regex  django.urls.resolvers.LocalePrefixPattern.regex  [{'name': 'self', 'type': None}]
+language_prefix  django.urls.resolvers.LocalePrefixPattern.language_prefix  [{'name': 'self', 'type': None}]
+match  django.urls.resolvers.LocalePrefixPattern.match  [{'name': 'self', 'type': None}, {'name': 'path', 'type': None}]
+check  django.urls.resolvers.LocalePrefixPattern.check  [{'name': 'self', 'type': None}]
+describe  django.urls.resolvers.LocalePrefixPattern.describe  [{'name': 'self', 'type': None}]
+__str__  django.urls.resolvers.LocalePrefixPattern.__str__  [{'name': 'self', 'type': None}]
+__init__  django.urls.resolvers.URLPattern.__init__  [{'name': 'self', 'type': None}, {'name': 'pattern', 'type': None}, {'name': 'callback', 'type': None}, {'name': 'default_args', 'type': None}, {'name': 'name', 'type': None}]
+__repr__  django.urls.resolvers.URLPattern.__repr__  [{'name': 'self', 'type': None}]
+check  django.urls.resolvers.URLPattern.check  [{'name': 'self', 'type': None}]
+_check_pattern_name  django.urls.resolvers.URLPattern._check_pattern_name  [{'name': 'self', 'type': None}]
+resolve  django.urls.resolvers.URLPattern.resolve  [{'name': 'self', 'type': None}, {'name': 'path', 'type': None}]
+lookup_str  django.urls.resolvers.URLPattern.lookup_str  [{'name': 'self', 'type': None}]
+__init__  django.urls.resolvers.URLResolver.__init__  [{'name': 'self', 'type': None}, {'name': 'pattern', 'type': None}, {'name': 'urlconf_name', 'type': None}, {'name': 'default_kwargs', 'type': None}, {'name': 'app_name', 'type': None}, {'name': 'namespace', 'type': None}]
+__repr__  django.urls.resolvers.URLResolver.__repr__  [{'name': 'self', 'type': None}]
+check  django.urls.resolvers.URLResolver.check  [{'name': 'self', 'type': None}]
+_check_custom_error_ha
+
+... [输出被截断，原始长度: 6987 字符，显示前 5000 字符]

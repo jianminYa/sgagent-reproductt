@@ -1,0 +1,6 @@
+
+
+Let me analyze this bug. The issue is that when optional URL parameters match, they're passing extra arguments to the view function. Let me trace through the Django URL resolution code.
+
+#TOOL_CALL find_files_containing
+{"keyword": "callback_args"}

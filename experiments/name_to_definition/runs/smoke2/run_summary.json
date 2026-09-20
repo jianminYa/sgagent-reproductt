@@ -1,0 +1,126 @@
+[
+  {
+    "run_id": "name_to_definition_phase1-astropy__astropy-12907-baseline-c3d81de3f1",
+    "instance_id": "astropy__astropy-12907",
+    "arm": "baseline",
+    "trajectory_path": "experiments/name_to_definition/runs/smoke2/baseline/astropy__astropy-12907/0/trajectory.jsonl",
+    "locations": [],
+    "termination_reason": "budget_exhausted",
+    "locator_llm_calls": 5,
+    "tool_calls": 5,
+    "failed_tool_calls": 0,
+    "reflection_turns": 0,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 5,
+    "tool_result_chars": 6206,
+    "token_usage_incomplete": false,
+    "input_tokens": 14851,
+    "output_tokens": 237,
+    "total_tokens": 15088,
+    "wall_clock_ms": 25076.7,
+    "first_round_token_usage": {
+      "input_tokens": 1400,
+      "output_tokens": 69,
+      "total_tokens": 1469,
+      "cached_input_tokens": null,
+      "reasoning_tokens": null,
+      "complete": true
+    },
+    "later_round_token_usage": [
+      {
+        "input_tokens": 1921,
+        "output_tokens": 18,
+        "total_tokens": 1939,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      },
+      {
+        "input_tokens": 3602,
+        "output_tokens": 21,
+        "total_tokens": 3623,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      },
+      {
+        "input_tokens": 3732,
+        "output_tokens": 61,
+        "total_tokens": 3793,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      },
+      {
+        "input_tokens": 4196,
+        "output_tokens": 68,
+        "total_tokens": 4264,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      }
+    ]
+  },
+  {
+    "run_id": "name_to_definition_phase1-astropy__astropy-12907-n2d-782f6a5d0a",
+    "instance_id": "astropy__astropy-12907",
+    "arm": "n2d",
+    "trajectory_path": "experiments/name_to_definition/runs/smoke2/n2d/astropy__astropy-12907/0/trajectory.jsonl",
+    "locations": [],
+    "termination_reason": "budget_exhausted",
+    "locator_llm_calls": 5,
+    "tool_calls": 5,
+    "failed_tool_calls": 0,
+    "reflection_turns": 0,
+    "summarizer_llm_calls": 0,
+    "total_llm_calls": 5,
+    "tool_result_chars": 6206,
+    "token_usage_incomplete": false,
+    "input_tokens": 16078,
+    "output_tokens": 246,
+    "total_tokens": 16324,
+    "wall_clock_ms": 21610.132,
+    "first_round_token_usage": {
+      "input_tokens": 1178,
+      "output_tokens": 91,
+      "total_tokens": 1269,
+      "cached_input_tokens": null,
+      "reasoning_tokens": null,
+      "complete": true
+    },
+    "later_round_token_usage": [
+      {
+        "input_tokens": 2437,
+        "output_tokens": 18,
+        "total_tokens": 2455,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      },
+      {
+        "input_tokens": 3910,
+        "output_tokens": 21,
+        "total_tokens": 3931,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      },
+      {
+        "input_tokens": 4041,
+        "output_tokens": 65,
+        "total_tokens": 4106,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      },
+      {
+        "input_tokens": 4512,
+        "output_tokens": 51,
+        "total_tokens": 4563,
+        "cached_input_tokens": null,
+        "reasoning_tokens": null,
+        "complete": true
+      }
+    ]
+  }
+]

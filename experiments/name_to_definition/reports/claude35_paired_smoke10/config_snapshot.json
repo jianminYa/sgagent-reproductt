@@ -1,0 +1,50 @@
+{
+  "phase": "PHASE3_TRACE_AND_ABLATION_PREP",
+  "experiment": "paired 10-instance paid smoke",
+  "manifest": "experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json",
+  "instance_selection": "explicit paired-smoke instance IDs; identical across arms",
+  "instances": [
+    "astropy__astropy-7746",
+    "django__django-10914",
+    "django__django-11001",
+    "django__django-11630",
+    "django__django-12184",
+    "django__django-13768",
+    "django__django-14534",
+    "django__django-14667",
+    "django__django-15814",
+    "sympy__sympy-13647"
+  ],
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "protocol": "openai_chat_completions",
+  "base_url_source": "OPENAI_BASE_URL from the secure local configuration; secret material omitted",
+  "temperature": 0.0,
+  "workers": 2,
+  "timeout_seconds": 300,
+  "request_retries": 3,
+  "retry_backoff_seconds": [15.0, 30.0, 60.0],
+  "tool_output_guard": false,
+  "arms": {
+    "full14": {
+      "experiment_id": "sgagent_claude35_paired_smoke10_full14",
+      "output_root": "experiments/name_to_definition/runs/claude35_paired_smoke10/full14"
+    },
+    "no_n2d": {
+      "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d",
+      "output_root": "experiments/name_to_definition/runs/claude35_paired_smoke10/no_n2d"
+    }
+  },
+  "offline_evaluation": {
+    "dataset": "dataset/lite.parquet",
+    "repo_cache": "experiments/name_to_definition/repo_cache",
+    "source_root": "/home/jql/.orcar",
+    "evaluator": "experiments.name_to_definition.official_evaluate"
+  },
+  "trace_gate": {
+    "full14_valid": 10,
+    "no_n2d_valid": 10,
+    "provider_failures_full14": 0,
+    "provider_failures_no_n2d": 0
+  }
+}

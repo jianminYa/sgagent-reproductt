@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nLet me explore the project structure to find the dispatcher source code.\n\n#TOOL_CALL explore_directory\n{ \"dir_path\": \"/tmp/sgagent-n2d-b9dtj6zl\" }", "name": null, "tool_calls": [], "type": "ai"}

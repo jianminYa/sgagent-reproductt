@@ -1,0 +1,16 @@
+
+
+#REFLECT
+Let me think about this more carefully. The `Pow.as_real_imag()` at lines 1254 and 1265 calls `poly((a + b)**exp)` where `a` and `b` are Dummy symbols - so Piecewise can't appear there. That's safe.
+
+The key path for `exp(arg)` is at line 1297-1304, which calls `self.exp.as_real_imag()`. For `exp(sinh(Piecewise(...)/z))`, the exponent is `sinh(Piecewise(...)/z)`.
+
+So `sinh(Piecewise(...)/z).as_real_imag()` is called. Let me check how `sinh` implements `as_real_imag()`. Hyperbolic functions typically use the identity:
+- `sinh(a + bi) = sinh(a)*cos(b) + i*cosh(a)*sin(b)`
+
+The argument `Piecewise(...)/z` with real symbols should be real, so `im_e` should be 0. But if the `is_extended_real` check on `Piecewise(...)/z` returns None (not cached yet), then `as_real_imag()` might not simplify properly.
+
+Let me look at how `sinh.as_real_imag()` works - it's likely inherited from a parent class.
+
+#TOOL_CALL find_methods_by_name
+{"name": "_eval_as_real_imag"}

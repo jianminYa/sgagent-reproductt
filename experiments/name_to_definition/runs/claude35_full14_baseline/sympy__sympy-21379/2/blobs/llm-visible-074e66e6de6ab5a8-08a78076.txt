@@ -1,0 +1,22 @@
+
+
+#REFLECT
+Now I need to understand the actual code path. The error is at line 4397-4399 in `polytools.py`. The `_parallel_poly_from_expr` function is called when `poly()` is invoked. The Piecewise check happens after `_parallel_dict_from_expr` extracts generators from the expression.
+
+The key question is: what calls `poly()` (or a function that eventually calls `_parallel_poly_from_expr`) with an expression containing Piecewise?
+
+From the earlier investigation, `Pow.as_real_imag()` at lines 1254 and 1265 calls `poly()` but with dummy symbols. However, let me think about this differently.
+
+The expression is `exp(sinh(Piecewise((x, y > x), (y, True)) / z))`. When `subs({1: 1.0})` is called:
+1. The subs walks the tree
+2. At some point, `exp._eval_subs` is called
+3. This might trigger `exp.eval()` which could trigger assumption checks
+4. With real symbols, assumption checks like `is_extended_real` are triggered
+5. For `exp(something)`, checking `is_extended_real` might call `as_real_imag()` on the base
+
+Wait - `exp` inherits from `Pow` (since `exp(x) = E**x`). So `exp(arg).as_real_imag()` would call `Pow.as_real_imag()`. Let me check: when `self.exp.is_Integer` is True (line 1241), it uses dummy symbols. But `exp(sinh(...))` has `self.exp = sinh(...)` which is NOT an integer. So it would go to the `elif self.exp.is_Rational` branch at line 1279, or further down.
+
+Let me look at what happens when the exponent is NOT Integer and NOT Rational.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-4st5urrw/sympy/core/power.py", "start_line": 1286, "end_line": 1316}

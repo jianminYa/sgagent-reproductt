@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_e2241b4594aa4ec3a0dcaaf54efb60af",
+    "msg_35aef123570042e9b67d9efd006ad573",
+    "msg_f46cb323af864e12808e9161f0181839",
+    "msg_0dbd6e0f2dff474d81147a577f3acb67",
+    "msg_a86ee759b6c649669bd3779122653bc3",
+    "msg_0673a8b189f6477eb1031adeb0e2463a",
+    "msg_3c104bf2cb104b8b89e0b972b4ca7b51",
+    "msg_33f7f6236e3942f7b7520938834d8365",
+    "msg_562009c0edaf49de8659b12fc954e9f2",
+    "msg_3156ebe05f0e430097397c6c64af171c",
+    "msg_30979b00ef8f43e193f5a3012f05b392",
+    "msg_a3608806baf74e05b8fb26242254593d",
+    "msg_e6a7cdd6adca44c89168e3d6dceeca5b",
+    "msg_f462d47a752541f2aac7736c971c7217",
+    "msg_9dec698387f74217b2a78d4c07913236",
+    "msg_0e02747a12f04df09bb1f3c7cd15b420",
+    "msg_fedda1343dfc43e3b9509353a79a11f6",
+    "msg_d39b23f9c998494baf4a6dda27e79def"
+  ],
+  "stop_reasons": {
+    "end_turn": 18
+  },
+  "locator_llm_calls": 16,
+  "tool_calls": 13,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 18,
+  "tool_result_chars": 18551,
+  "input_tokens": 74184,
+  "output_tokens": 7011,
+  "total_tokens": 81195,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 382136.384,
+  "graph_updates": 32,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-2pzpgaqt/sympy/parsing/latex/_parse_latex_antlr.py",
+      "start_line": 383,
+      "end_line": 389
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/parsing/latex/_parse_latex_antlr.py",
+      "start_line": 383,
+      "end_line": 389
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21612-0-8806db9d2d",
+  "instance_id": "sympy__sympy-21612",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

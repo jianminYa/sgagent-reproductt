@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 9666,
+  "input_tokens": 33859,
+  "output_tokens": 3652,
+  "total_tokens": 37511,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 97816.258,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-ryo_fqwo/src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1349
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1349
+    }
+  ],
+  "run_id": "sgagent-official-pytest-dev__pytest-5221-0-f07d068c49",
+  "instance_id": "pytest-dev__pytest-5221",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

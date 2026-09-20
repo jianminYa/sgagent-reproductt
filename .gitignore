@@ -1,3 +1,11 @@
-logs/
 .ruff_cache
 __pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
+*.pyo
+*.env
+.env
+
+# Local third-party repository clones used to build knowledge graphs.
+experiments/name_to_definition/repo_cache/

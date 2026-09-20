@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "7eff9635-4023-4a65-8231-63f56fefdeed",
+    "9e56c18b-eb68-4c83-91a8-d9888f2adc56",
+    "54738556-3aff-4637-81dd-1310d44086e9",
+    "b49cfdfc-7b52-4669-843c-225419d171b8"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "logical_llm_calls": 4,
+  "http_attempts": 4,
+  "request_retries": 0,
+  "successful_llm_responses": 4,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 4,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 4,
+  "logical_calls_by_phase": {
+    "locator": 4
+  },
+  "successful_responses_by_phase": {
+    "locator": 4
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 285089,
+      "output_tokens": 2108,
+      "total_tokens": 287197
+    }
+  },
+  "tool_result_chars": 286680,
+  "tool_original_chars": 286680,
+  "tool_returned_chars": 286680,
+  "tool_original_bytes": 286716,
+  "tool_returned_bytes": 286716,
+  "truncated_tool_calls": 0,
+  "input_tokens": 285089,
+  "output_tokens": 2108,
+  "total_tokens": 287197,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 122555.39,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py",
+      "start_line": 35,
+      "end_line": 35
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py",
+      "start_line": 356,
+      "end_line": 356
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py",
+      "start_line": 369,
+      "end_line": 369
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 35,
+      "end_line": 35
+    },
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 356,
+      "end_line": 356
+    },
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 369,
+      "end_line": 369
+    }
+  ],
+  "run_id": "sgagent-official-django__django-11001-0-7165383a30",
+  "instance_id": "django__django-11001",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d"
+}

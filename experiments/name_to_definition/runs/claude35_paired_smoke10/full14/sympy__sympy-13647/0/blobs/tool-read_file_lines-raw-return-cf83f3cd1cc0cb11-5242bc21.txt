@@ -1,0 +1,16 @@
+File: /tmp/sgagent-n2d-tlq5q8z5/sympy/matrices/common.py
+Total lines: 2319
+Showing lines 81-92:
+
+  81:     def _eval_col_insert(self, pos, other):
+  82:         cols = self.cols
+  83: 
+  84:         def entry(i, j):
+  85:             if j < pos:
+  86:                 return self[i, j]
+  87:             elif pos <= j < pos + other.cols:
+  88:                 return other[i, j - pos]
+  89:             return self[i, j - pos - other.cols]
+  90: 
+  91:         return self._new(self.rows, self.cols + other.cols,
+  92:                          lambda i, j: entry(i, j))

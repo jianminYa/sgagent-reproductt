@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 3176,
+    "output_tokens": 86,
+    "reasoning_tokens": null,
+    "total_tokens": 3262
+  },
+  "input_tokens": 56020,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 600,
+      "output_tokens": 17,
+      "reasoning_tokens": null,
+      "total_tokens": 617
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4111,
+      "output_tokens": 183,
+      "reasoning_tokens": null,
+      "total_tokens": 4294
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3753,
+      "output_tokens": 21,
+      "reasoning_tokens": null,
+      "total_tokens": 3774
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4289,
+      "output_tokens": 69,
+      "reasoning_tokens": null,
+      "total_tokens": 4358
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4277,
+      "output_tokens": 69,
+      "reasoning_tokens": null,
+      "total_tokens": 4346
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5452,
+      "output_tokens": 58,
+      "reasoning_tokens": null,
+      "total_tokens": 5510
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5619,
+      "output_tokens": 24,
+      "reasoning_tokens": null,
+      "total_tokens": 5643
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 12221,
+      "output_tokens": 70,
+      "reasoning_tokens": null,
+      "total_tokens": 12291
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 12522,
+      "output_tokens": 75,
+      "reasoning_tokens": null,
+      "total_tokens": 12597
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 10,
+  "output_tokens": 672,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "timeout",
+  "token_usage_incomplete": false,
+  "tool_calls": 10,
+  "tool_result_chars": 48296,
+  "total_llm_calls": 10,
+  "total_tokens": 56692,
+  "wall_clock_ms": 138937.508,
+  "run_id": "name_to_definition_phase1-django__django-13033-baseline-c24de20d64",
+  "arm": "baseline",
+  "instance_id": "django__django-13033"
+}

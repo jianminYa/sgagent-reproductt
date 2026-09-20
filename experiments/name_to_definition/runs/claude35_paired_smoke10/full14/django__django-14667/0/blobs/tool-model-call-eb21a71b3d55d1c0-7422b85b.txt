@@ -1,0 +1,2 @@
+#TOOL_CALL find_variable_usage
+{ "file": "/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py", "variable_name": "deferred_loading" }

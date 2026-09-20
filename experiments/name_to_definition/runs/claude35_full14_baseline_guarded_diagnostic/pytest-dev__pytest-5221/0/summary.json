@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "b69fcff2-ea87-419f-9f66-67f397301257",
+    "d24f57ea-e125-4a54-8380-5c6b964a4d47",
+    "725ecf01-3e31-45e4-9dc0-194eb8a17be3",
+    "c4809daa-a3dc-4ea1-a34f-b5a375a47407",
+    "e7eed0c2-ff31-49b0-a9dd-50ce4baf08b4",
+    "f55be2b3-e38f-4d63-a1e7-724203ae4a42",
+    "67e453de-e9b6-474a-a462-cb433b0bf8d8"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 4610,
+  "tool_original_chars": 4610,
+  "tool_returned_chars": 4610,
+  "truncated_tool_calls": 0,
+  "input_tokens": 24374,
+  "output_tokens": 1143,
+  "total_tokens": 25517,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 54290.366,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-9q9oj65h/src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1355
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1355
+    }
+  ],
+  "run_id": "sgagent-official-pytest-dev__pytest-5221-0-623f53fbe9",
+  "instance_id": "pytest-dev__pytest-5221",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

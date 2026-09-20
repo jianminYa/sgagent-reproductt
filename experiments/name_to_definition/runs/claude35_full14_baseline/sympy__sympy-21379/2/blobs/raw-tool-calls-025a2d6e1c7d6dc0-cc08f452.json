@@ -1,0 +1,1 @@
+["#TOOL_CALL read_file_lines\n{\"file_path\": \"/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py\", \"start_line\": 610, \"end_line\": 630}"]

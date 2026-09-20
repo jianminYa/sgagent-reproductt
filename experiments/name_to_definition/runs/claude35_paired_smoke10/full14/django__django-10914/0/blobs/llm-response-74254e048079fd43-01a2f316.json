@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL read_file_lines\n{ \"file_path\": \"/tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py\", \"start_line\": 259, \"end_line\": 290 }", "name": null, "tool_calls": [], "type": "ai"}

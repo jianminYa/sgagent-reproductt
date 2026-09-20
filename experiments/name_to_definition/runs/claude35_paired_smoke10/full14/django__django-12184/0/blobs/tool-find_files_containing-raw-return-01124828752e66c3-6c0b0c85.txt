@@ -1,0 +1,1 @@
+['/tmp/sgagent-n2d-p7a2tz4q/tests/urlpatterns_reverse/tests.py', '/tmp/sgagent-n2d-p7a2tz4q/django/urls/resolvers.py']

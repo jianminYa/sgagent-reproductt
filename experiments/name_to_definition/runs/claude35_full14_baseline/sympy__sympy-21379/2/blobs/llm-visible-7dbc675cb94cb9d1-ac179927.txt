@@ -1,0 +1,11 @@
+
+
+#REFLECT
+Now I see the key insight. In `Pow.as_real_imag()` at lines 1254-1255 and 1265, `poly()` is called with `(a + b)**exp` where `a` and `b` are dummy symbols. This should be safe. BUT, the issue is at line 1243: `re_e, im_e = self.base.as_real_imag(deep=deep)`. If `im_e` is not zero (line 1244 check), it proceeds to use dummy symbols. But if `im_e` IS zero (or evaluates to zero), it returns `self, S.Zero` at line 1245.
+
+Wait, let me re-read the code. The `poly()` calls at lines 1254 and 1265 use dummy symbols `a` and `b`, so Piecewise can't appear there. The error must come from somewhere else.
+
+Let me search for other places where `poly()` is called that could receive the actual expression with Piecewise.
+
+#TOOL_CALL search_code_with_context
+{"keyword": "_parallel_poly_from_expr", "search_path": "/tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py"}

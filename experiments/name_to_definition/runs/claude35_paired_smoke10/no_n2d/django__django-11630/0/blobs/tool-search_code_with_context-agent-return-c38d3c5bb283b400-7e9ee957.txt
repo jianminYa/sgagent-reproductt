@@ -1,0 +1,80 @@
+Search results for 'from django.db import router' in directory (showing first 7 matches):
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/backends/base/creation.py
+Lines 5-11:
+   5: from django.apps import apps
+   6: from django.conf import settings
+   7: from django.core import serializers
+   8: from django.db import router
+   9: 
+  10: # The prefix to put on the default database name when creating
+  11: # the test database.
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/backends/base/introspection.py
+Lines 62-68:
+  62:         If only_existing is True, include only the tables in the database.
+  63:         """
+  64:         from django.apps import apps
+  65:         from django.db import router
+  66:         tables = set()
+  67:         for app_config in apps.get_app_configs():
+  68:             for model in router.get_migratable_models(app_config, self.connection.alias):
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/backends/base/introspection.py
+Lines 89-95:
+  89:         names.
+  90:         """
+  91:         from django.apps import apps
+  92:         from django.db import router
+  93:         all_models = []
+  94:         for app_config in apps.get_app_configs():
+  95:             all_models.extend(router.get_migratable_models(app_config, self.connection.alias))
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/backends/base/introspection.py
+Lines 105-111:
+ 105:         all apps.
+ 106:         """
+ 107:         from django.apps import apps
+ 108:         from django.db import router
+ 109: 
+ 110:         sequence_list = []
+ 111:         with self.connection.cursor() as cursor:
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/models/manager.py
+Lines 2-8:
+   2: import inspect
+   3: from importlib import import_module
+   4: 
+   5: from django.db import router
+   6: from django.db.models.query import QuerySet
+   7: 
+   8: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/migrations/operations/special.py
+Lines 1-4:
+   1: from django.db import router
+   2: 
+   3: from .base import Operation
+   4: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/migrations/operations/base.py
+Lines 1-4:
+   1: from django.db import router
+   2: from django.db.models.fields.related import RECURSIVE_RELATIONSHIP_CONSTANT
+   3: 
+   4: 
+
+================================================================================
+

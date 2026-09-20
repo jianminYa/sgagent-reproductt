@@ -1,0 +1,1 @@
+["#TOOL_CALL find_variable_usage\n{ \"file\": \"/tmp/sgagent-n2d-wtyvhqy4/tests/file_storage/tests.py\", \"variable_name\": \"FILE_UPLOAD_PERMISSIONS\" }"]

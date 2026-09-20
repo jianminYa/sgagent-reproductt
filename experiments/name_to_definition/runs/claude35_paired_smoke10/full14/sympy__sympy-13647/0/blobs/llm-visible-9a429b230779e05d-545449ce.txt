@@ -1,0 +1,26 @@
+
+
+#REFLECT
+I can see the bug clearly. In `_eval_col_insert` at line 89:
+
+```python
+return self[i, j - pos - other.cols]
+```
+
+This is wrong. When `j >= pos + other.cols`, we want to access the original matrix's column that was at position `j - other.cols` (since we inserted `other.cols` new columns). The correct expression should be:
+
+```python
+return self[i, j - other.cols]
+```
+
+Let me verify by tracing through the example:
+- `self` is 6×6 identity, `other` is 6×2 of twos, `pos` = 3
+- Result is 6×8
+- For `j = 5` (which is `>= pos + other.cols = 5`): should map to original column `j - other.cols = 3`
+  - Current code: `j - pos - other.cols = 5 - 3 - 2 = 0` → maps to column 0 (WRONG!)
+  - Fixed code: `j - other.cols = 5 - 2 = 3` → maps to column 3 (CORRECT!)
+
+This confirms the bug. Let me verify the exact line.
+
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-tlq5q8z5/sympy/matrices/common.py", "start_line": 81, "end_line": 92 }

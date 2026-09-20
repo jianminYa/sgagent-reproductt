@@ -1,0 +1,50 @@
+## Summary
+
+### Objective
+Find and fix a bug in Django's system check framework where `models.E028` produces false positives when multiple models share the same `db_table` name but are routed to different databases.
+
+### Bug Identified
+**File:** `/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py`, function `check_all_models` (lines 11-74)
+
+**Root Cause:** At line 22, models are grouped solely by `db_table` name:
+```python
+db_table_models[model._meta.db_table].append(model._meta.label)
+```
+At lines 38-47, an `E028` error is raised whenever multiple models share the same `db_table`. This doesn't account for database routing — models in different apps pointing to **different databases** can legitimately share table names.
+
+### Key Files
+- **Bug location:** `/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py`
+- **Tests:** `/tmp/sgagent-n2d-5oom4hte/tests/check_framework/test_model_checks.py`
+- Existing tests cover: same-app collision, cross-app collision, unmanaged models (no collision), proxy models (no collision)
+
+### Current Imports in Bug File
+```python
+import inspect, types
+from collections import defaultdict
+from itertools import chain
+from django.apps import apps
+from django.core.checks import Error, Tags, register
+```
+
+### Proposed Fix (Not Yet Applied)
+1. **Add import** for the database router (e.g., `from django.db import router`)
+2. **Change line 22** to group by `(db_table, database)` tuple instead of just `db_table`:
+   ```python
+   db_alias = router.db_for_read(model)
+   db_table_models[(model._meta.db_table, db_alias)].append(model._meta.label)
+   ```
+3. **Update lines 38-47** to adjust the error message generation to work with the new key structure (extract just `db_table` from the tuple key for the error message)
+4. **Add new tests** for the case where models share `db_table` but use different databases (should produce no error)
+
+### Progress Status
+- ✅ Bug fully diagnosed and located
+- ✅ Root cause understood
+- ✅ Fix approach designed
+- ❌ Code changes not yet applied
+- ❌ Tests not yet written/updated
+- ❌ Fix not yet verified
+
+### Important Technical Details
+- Django uses `router.db_for_read(model)` or `router.db_for_write(model)` to determine database routing
+- The check already correctly skips unmanaged models (`model._meta.managed`) and proxy models (`model._meta.proxy`) at line 21
+- The same pattern (index names E029/E030, constraint names E031/E032) at lines 48-73 may need similar database-awareness, but the primary issue is with `db_table` (E028)

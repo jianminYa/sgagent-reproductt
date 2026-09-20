@@ -1,0 +1,19 @@
+File: /tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py
+Total lines: 294
+Showing lines 1-15:
+
+   1: import threading
+   2: import warnings
+   3: import weakref
+   4: 
+   5: from django.utils.deprecation import RemovedInDjango40Warning
+   6: from django.utils.inspect import func_accepts_kwargs
+   7: 
+   8: 
+   9: def _make_id(target):
+  10:     if hasattr(target, '__func__'):
+  11:         return (id(target.__self__), id(target.__func__))
+  12:     return id(target)
+  13: 
+  14: 
+  15: NONE_ID = _make_id(None)

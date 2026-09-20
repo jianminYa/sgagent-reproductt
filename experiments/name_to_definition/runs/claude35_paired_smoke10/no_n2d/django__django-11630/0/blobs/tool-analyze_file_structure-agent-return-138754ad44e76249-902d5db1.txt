@@ -1,0 +1,12 @@
+Each line below indicates a class, including class_name and absolute_path:
+
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+check_all_models  django.core.checks.model_checks.check_all_models  [{'name': 'app_configs', 'type': None}]
+_check_lazy_references  django.core.checks.model_checks._check_lazy_references  [{'name': 'apps', 'type': None}, {'name': 'ignore', 'type': None}]
+extract_operation  django.core.checks.model_checks.extract_operation  [{'name': 'obj', 'type': None}]
+app_model_error  django.core.checks.model_checks.app_model_error  [{'name': 'model_key', 'type': None}]
+field_error  django.core.checks.model_checks.field_error  [{'name': 'model_key', 'type': None}, {'name': 'func', 'type': None}, {'name': 'args', 'type': None}, {'name': 'keywords', 'type': None}]
+signal_connect_error  django.core.checks.model_checks.signal_connect_error  [{'name': 'model_key', 'type': None}, {'name': 'func', 'type': None}, {'name': 'args', 'type': None}, {'name': 'keywords', 'type': None}]
+default_error  django.core.checks.model_checks.default_error  [{'name': 'model_key', 'type': None}, {'name': 'func', 'type': None}, {'name': 'args', 'type': None}, {'name': 'keywords', 'type': None}]
+build_error  django.core.checks.model_checks.build_error  [{'name': 'model_key', 'type': None}, {'name': 'func', 'type': None}, {'name': 'args', 'type': None}, {'name': 'keywords', 'type': None}]
+check_lazy_references  django.core.checks.model_checks.check_lazy_references  [{'name': 'app_configs', 'type': None}]

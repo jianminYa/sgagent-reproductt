@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "c614d3d3-3879-4899-9d49-b91a6a8de1be",
+    "59f4bff3-8002-49ac-9181-8debbbc01c8d",
+    "8ab6ac34-02e6-4bbd-9d55-b9708a0aeb3b",
+    "bdf7b40a-5ad5-47fb-a0fc-fba5356ad61d",
+    "d55815ae-5641-45f9-9b19-0414ba8d66e4",
+    "d83331e5-2ced-4415-9c45-fbc4b9b3c603"
+  ],
+  "stop_reasons": {
+    "stop": 6
+  },
+  "locator_llm_calls": 6,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 6,
+  "tool_result_chars": 102385,
+  "tool_original_chars": 102385,
+  "tool_returned_chars": 102385,
+  "truncated_tool_calls": 0,
+  "input_tokens": 122833,
+  "output_tokens": 1179,
+  "total_tokens": 124012,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 110242.411,
+  "graph_updates": 10,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-l4vege9o/django/forms/formsets.py",
+      "start_line": 258,
+      "end_line": 269
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/forms/formsets.py",
+      "start_line": 258,
+      "end_line": 269
+    }
+  ],
+  "run_id": "sgagent-official-django__django-16041-1-6b9b960d6a",
+  "instance_id": "django__django-16041",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

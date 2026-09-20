@@ -1,0 +1,36 @@
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Total lines: 232
+Showing lines 164-195:
+
+ 164:     def test_send_robust_fail(self):
+ 165:         def fails(val, **kwargs):
+ 166:             raise ValueError('this')
+ 167:         a_signal.connect(fails)
+ 168:         result = a_signal.send_robust(sender=self, val="test")
+ 169:         err = result[0][1]
+ 170:         self.assertIsInstance(err, ValueError)
+ 171:         self.assertEqual(err.args, ('this',))
+ 172:         self.assertTrue(hasattr(err, '__traceback__'))
+ 173:         self.assertIsInstance(err.__traceback__, TracebackType)
+ 174:         a_signal.disconnect(fails)
+ 175:         self.assertTestIsClean(a_signal)
+ 176: 
+ 177:     def test_disconnection(self):
+ 178:         receiver_1 = Callable()
+ 179:         receiver_2 = Callable()
+ 180:         receiver_3 = Callable()
+ 181:         a_signal.connect(receiver_1)
+ 182:         a_signal.connect(receiver_2)
+ 183:         a_signal.connect(receiver_3)
+ 184:         a_signal.disconnect(receiver_1)
+ 185:         del receiver_2
+ 186:         garbage_collect()
+ 187:         a_signal.disconnect(receiver_3)
+ 188:         self.assertTestIsClean(a_signal)
+ 189: 
+ 190:     def test_values_returned_by_disconnection(self):
+ 191:         receiver_1 = Callable()
+ 192:         receiver_2 = Callable()
+ 193:         a_signal.connect(receiver_1)
+ 194:         receiver_1_disconnected = a_signal.disconnect(receiver_1)
+ 195:         receiver_2_disconnected = a_signal.disconnect(receiver_2)

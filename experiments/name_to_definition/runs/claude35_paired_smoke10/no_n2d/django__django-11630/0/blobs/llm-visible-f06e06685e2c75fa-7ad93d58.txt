@@ -1,0 +1,12 @@
+
+
+Now I have all the information needed. Let me implement the fix. The key changes are:
+
+1. **`model_checks.py` line 22**: Group by `(db_table, database)` instead of just `db_table`
+2. **`model_checks.py` lines 38-46**: Update the error generation to use the new tuple key
+3. **Add import** for `router`
+
+Let me also check the `router.db_for_read` signature to make sure I use it correctly.
+
+#TOOL_CALL extract_complete_method
+{"file": "/tmp/sgagent-n2d-1yd2xahh/django/db/utils.py", "full_qualified_name": "django.db.utils.ConnectionRouter.db_for_read"}

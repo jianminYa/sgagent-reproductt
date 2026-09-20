@@ -1,0 +1,39 @@
+## Summary
+
+### Main Objective
+Find and fix a bug in the `_tick_only` function in `/tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/axes_grid.py`.
+
+### Bug Identified
+**Location:** `axes_grid.py`, lines 13-17, function `_tick_only`
+
+```python
+def _tick_only(ax, bottom_on, left_on):
+    bottom_off = not bottom_on
+    left_off = not left_on
+    ax.axis["bottom"].toggle(ticklabels=bottom_off, label=bottom_off)
+    ax.axis["left"].toggle(ticklabels=left_off, label=left_off)
+```
+
+**Problem:** The function assumes `ax.axis` is a dict-like (subscriptable) object — which is true for `mpl_toolkits.axes_grid1.mpl_axes.Axes` (which has an `AxisDict` with `__getitem__`). However, for non-default axes classes (e.g., cartopy's `GeoAxes`), `ax.axis` is just a regular method (callable), causing `TypeError: 'method' object is not subscriptable`.
+
+### Key Technical Details Discovered
+1. **`_tick_only` is called extensively** throughout the `Grid` class (lines 261-287) in various label visibility modes ("all", "L", "1") to control which axes show tick labels and axis labels.
+2. **`toggle` method** (in `SimpleAxisArtist`, lines 99-128) controls tick visibility via `set_tick_params` and label visibility via `label.set_visible()` / `set_label_position()`.
+3. **The `toggle` call pattern** in `_tick_only` is: `toggle(ticklabels=bool, label=bool)` — it only controls ticklabels and axis label visibility (not ticks themselves).
+
+### Required Fix
+The `_tick_only` function needs to handle both cases:
+- **When `ax.axis` is subscriptable** (has `__getitem__`): use existing `ax.axis["bottom"].toggle(...)` approach
+- **When `ax.axis` is not subscriptable** (regular axes): fall back to `ax.tick_params()` for tick label control and `ax.xaxis.label.set_visible()` / `ax.yaxis.label.set_visible()` for axis label control
+
+### Current Progress
+- ✅ Bug identified and root cause understood
+- ✅ `toggle` method behavior fully analyzed
+- ✅ All call sites of `_tick_only` mapped (8 occurrences in `axes_grid.py`)
+- ❌ Fix not yet implemented
+- ❌ No existing tests found for `_tick_only` (`test_tick_only` search returned no results)
+
+### Next Steps
+1. Modify `_tick_only` to add a try/except or `hasattr(ax.axis, '__getitem__')` check
+2. Implement fallback using `ax.tick_params(axis="x", labelbottom=not bottom_off)` and `ax.tick_params(axis="y", labelleft=not left_off)` plus `ax.xaxis.label.set_visible(not bottom_off)` / `ax.yaxis.label.set_visible(not left_off)`
+3. Add tests to verify the fix works with both standard and non-standard axes classes

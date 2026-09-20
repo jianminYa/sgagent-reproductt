@@ -1,0 +1,29 @@
+File: /tmp/sgagent-n2d-8x0fpmqo/django/forms/boundfield.py
+Total lines: 284
+Showing lines 260-284:
+
+ 260:     def __init__(self, parent_widget, data, renderer):
+ 261:         self.parent_widget = parent_widget
+ 262:         self.data = data
+ 263:         self.renderer = renderer
+ 264: 
+ 265:     def __str__(self):
+ 266:         return self.tag(wrap_label=True)
+ 267: 
+ 268:     def tag(self, wrap_label=False):
+ 269:         context = {'widget': {**self.data, 'wrap_label': wrap_label}}
+ 270:         return self.parent_widget._render(self.template_name, context, self.renderer)
+ 271: 
+ 272:     @property
+ 273:     def template_name(self):
+ 274:         if 'template_name' in self.data:
+ 275:             return self.data['template_name']
+ 276:         return self.parent_widget.template_name
+ 277: 
+ 278:     @property
+ 279:     def id_for_label(self):
+ 280:         return 'id_%s_%s' % (self.data['name'], self.data['index'])
+ 281: 
+ 282:     @property
+ 283:     def choice_label(self):
+ 284:         return self.data['label']

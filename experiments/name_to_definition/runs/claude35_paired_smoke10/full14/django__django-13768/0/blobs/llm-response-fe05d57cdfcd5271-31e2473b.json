@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nNow I understand the problem. The `send_robust()` method catches exceptions but doesn't log them. Let me find the actual implementation of `send_robust` in the Django source code.\n\n#TOOL_CALL find_files_containing\n{ \"keyword\": \"send_robust\" }", "name": null, "tool_calls": [], "type": "ai"}

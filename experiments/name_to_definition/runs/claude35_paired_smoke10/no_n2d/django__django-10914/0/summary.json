@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "e251f073-1505-4eee-b256-3c857c16c2bc",
+    "95e94edf-a9c7-4213-ad00-aef29e3d909f",
+    "52f02159-e4ce-40d8-ae50-40248c0c88d7",
+    "501a1e08-90d7-4bd1-bbfe-74cd0080bb7c",
+    "a10571fd-f7ab-4f52-8ed8-a72f0771fc3c",
+    "3f88b2fc-b95d-489b-aebe-5e7faa5c5c43",
+    "7db95d49-5ca5-44e2-b834-815504dcd91d",
+    "3e7d1bd2-7c09-4fa5-80c4-dc5ef61b6b22",
+    "b430fed1-466f-44a9-be3f-030ce4e7b883",
+    "6bc829dd-14ca-4f7a-8b90-ad1f2fadaca3",
+    "2bdd9f05-b9f4-43a1-9f8f-79bbd78901c1",
+    "e5d157fb-1301-4d52-8b84-5b4abafbc8c8",
+    "b9917e19-d0a0-45fb-88d6-704c2739517b"
+  ],
+  "stop_reasons": {
+    "stop": 13
+  },
+  "logical_llm_calls": 13,
+  "http_attempts": 13,
+  "request_retries": 0,
+  "successful_llm_responses": 13,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 12,
+  "tool_calls": 10,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 13,
+  "logical_calls_by_phase": {
+    "locator": 12,
+    "summarizer": 1
+  },
+  "successful_responses_by_phase": {
+    "locator": 12,
+    "summarizer": 1
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 100044,
+      "output_tokens": 2019,
+      "total_tokens": 102063
+    },
+    "summarizer": {
+      "input_tokens": 19778,
+      "output_tokens": 723,
+      "total_tokens": 20501
+    }
+  },
+  "tool_result_chars": 58493,
+  "tool_original_chars": 58493,
+  "tool_returned_chars": 58493,
+  "tool_original_bytes": 58493,
+  "tool_returned_bytes": 58493,
+  "truncated_tool_calls": 0,
+  "input_tokens": 119822,
+  "output_tokens": 2742,
+  "total_tokens": 122564,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 226620.55,
+  "graph_updates": 24,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py",
+      "start_line": 307,
+      "end_line": 307
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-wtyvhqy4/tests/test_utils/tests.py",
+      "start_line": 1102,
+      "end_line": 1102
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-wtyvhqy4/tests/file_storage/tests.py",
+      "start_line": 895,
+      "end_line": 900
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-wtyvhqy4/tests/staticfiles_tests/test_storage.py",
+      "start_line": 518,
+      "end_line": 528
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/conf/global_settings.py",
+      "start_line": 307,
+      "end_line": 307
+    },
+    {
+      "file_path": "tests/test_utils/tests.py",
+      "start_line": 1102,
+      "end_line": 1102
+    },
+    {
+      "file_path": "tests/file_storage/tests.py",
+      "start_line": 895,
+      "end_line": 900
+    },
+    {
+      "file_path": "tests/staticfiles_tests/test_storage.py",
+      "start_line": 518,
+      "end_line": 528
+    }
+  ],
+  "run_id": "sgagent-official-django__django-10914-0-3ad2b38ec9",
+  "instance_id": "django__django-10914",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d"
+}

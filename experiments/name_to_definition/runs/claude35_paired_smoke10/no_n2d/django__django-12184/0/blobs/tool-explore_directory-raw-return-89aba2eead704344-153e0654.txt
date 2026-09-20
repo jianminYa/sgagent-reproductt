@@ -1,0 +1,27 @@
+Contents of /tmp/sgagent-n2d-hirjf5mk:
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
+.hgignore
+.tx/
+AUTHORS
+CONTRIBUTING.rst
+FUNDING.yml
+Gruntfile.js
+INSTALL
+LICENSE
+LICENSE.python
+MANIFEST.in
+README.rst
+django/
+docs/
+extras/
+js_tests/
+package.json
+scripts/
+setup.cfg
+setup.py
+tests/
+tox.ini

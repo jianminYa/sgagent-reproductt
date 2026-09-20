@@ -1,0 +1,33 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Total lines: 1748
+Showing lines 367-395:
+
+ 367:     def as_real_imag(self, deep=True, **hints):
+ 368:         from sympy import cos, sin
+ 369:         if self.args[0].is_extended_real:
+ 370:             if deep:
+ 371:                 hints['complex'] = False
+ 372:                 return (self.expand(deep, **hints), S.Zero)
+ 373:             else:
+ 374:                 return (self, S.Zero)
+ 375:         if deep:
+ 376:             re, im = self.args[0].expand(deep, **hints).as_real_imag()
+ 377:         else:
+ 378:             re, im = self.args[0].as_real_imag()
+ 379: 
+ 380:         return (cosh(re)*cos(im), sinh(re)*sin(im))
+ 381: 
+ 382:     def _eval_expand_complex(self, deep=True, **hints):
+ 383:         re_part, im_part = self.as_real_imag(deep=deep, **hints)
+ 384:         return re_part + im_part*S.ImaginaryUnit
+ 385: 
+ 386:     def _eval_expand_trig(self, deep=True, **hints):
+ 387:         if deep:
+ 388:             arg = self.args[0].expand(deep, **hints)
+ 389:         else:
+ 390:             arg = self.args[0]
+ 391:         x = None
+ 392:         if arg.is_Add: # TODO, implement more if deep stuff here
+ 393:             x, y = arg.as_two_terms()
+ 394:         else:
+ 395:             coeff, terms = arg.as_coeff_Mul(rational=True)

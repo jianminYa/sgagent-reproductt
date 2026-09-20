@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_725c2d28074c4a77a83821800e329869",
+    "msg_1f729cba1f0c42c5b115e27d630271e0",
+    "msg_05cdf9f45e804163ae505d9cfe6e936f",
+    "msg_5483172c59ad466db4e4bb733a30f7f4",
+    "msg_45b0e0e6382b43f1829fab80a595db60",
+    "msg_a5abbdb39acd4b81acf8f72e015efde1",
+    "msg_bb4ee5c0e4464b73a84bc39bc122c955"
+  ],
+  "stop_reasons": {
+    "end_turn": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 200650,
+  "input_tokens": 47276,
+  "output_tokens": 2299,
+  "total_tokens": 49575,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 121723.07,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-lugwdi3_/django/forms/formsets.py",
+      "start_line": 210,
+      "end_line": 217
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-lugwdi3_/django/forms/formsets.py",
+      "start_line": 259,
+      "end_line": 269
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/forms/formsets.py",
+      "start_line": 210,
+      "end_line": 217
+    },
+    {
+      "file_path": "django/forms/formsets.py",
+      "start_line": 259,
+      "end_line": 269
+    }
+  ],
+  "run_id": "sgagent-official-django__django-16041-0-e036cb7221",
+  "instance_id": "django__django-16041",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "f56627d7-a2fb-4ae6-8679-dbd47f57d346",
+    "beb9b4cc-baa6-433c-83a4-52c745a8d773",
+    "1db591a1-c1ea-42fa-99b5-08bd1c1e7647",
+    "560da327-d8f9-4624-a45a-af1e4f96b62d",
+    "caa853de-d514-4126-8006-342cd158ddcb",
+    "b5c69d04-0952-487d-a1fc-f331cd6e232a",
+    "7d1618e2-5d5f-4751-8e43-6f0d0ca4e819",
+    "1631ce3c-da60-48cb-800c-4448d46ce772",
+    "25ccbc3f-0228-42fe-a8dc-474d0e0fdfef"
+  ],
+  "stop_reasons": {
+    "stop": 9
+  },
+  "locator_llm_calls": 8,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 3,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 9,
+  "tool_result_chars": 72734,
+  "tool_original_chars": 180824,
+  "tool_returned_chars": 72734,
+  "truncated_tool_calls": 2,
+  "input_tokens": 214127,
+  "output_tokens": 8163,
+  "total_tokens": 222290,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 289658.325,
+  "graph_updates": 14,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-2pvsndz3/sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13647-0-93b3b11820",
+  "instance_id": "sympy__sympy-13647",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_smoke"
+}

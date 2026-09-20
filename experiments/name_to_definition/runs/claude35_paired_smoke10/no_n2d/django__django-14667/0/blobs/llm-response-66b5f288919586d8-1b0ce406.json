@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nLet me analyze this bug step by step. The issue is about `QuerySet.defer()` not properly clearing deferred fields when chaining with `only()`.\n\n#TOOL_CALL find_files_containing\n{ \"keyword\": \"def defer\" }\n\n<br>", "name": null, "tool_calls": [], "type": "ai"}

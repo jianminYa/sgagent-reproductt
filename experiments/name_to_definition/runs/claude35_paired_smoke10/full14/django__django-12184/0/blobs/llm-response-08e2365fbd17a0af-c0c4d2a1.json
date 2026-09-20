@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL analyze_file_structure\n{\"file\": \"/tmp/sgagent-n2d-p7a2tz4q/django/urls/resolvers.py\"}", "name": null, "tool_calls": [], "type": "ai"}

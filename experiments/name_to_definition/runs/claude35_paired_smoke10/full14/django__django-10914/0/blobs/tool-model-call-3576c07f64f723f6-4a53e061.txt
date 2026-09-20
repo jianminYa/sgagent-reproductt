@@ -1,0 +1,2 @@
+#TOOL_CALL search_code_with_context
+{ "keyword": "FILE_UPLOAD_PERMISSIONS", "search_path": "/tmp/sgagent-n2d-0hngtli7/tests" }

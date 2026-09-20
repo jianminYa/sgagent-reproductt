@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_fc49b90555e24ee7bced98e10be3edbc",
+    "msg_100e8d6ad3ff41439545d7ef9e40e0c3",
+    "msg_4b8b359184f547aaa24a14d61f3e43cf",
+    "msg_9113474139cf44bf95cf61960a4bfd26",
+    "msg_d6e3996e21db4125be9a93ad489572f4",
+    "msg_3bc52059aa5a4841804ffae150630f36",
+    "msg_a3d19d17864342fba62bb6c73208f892",
+    "msg_17445e72bdc04e8aa88cbd975df31628",
+    "msg_982e84efeb054c57a072761626847171",
+    "msg_5daa8f1b7e894543ae0d823577a97475",
+    "msg_fc23de1399324e22a48fc6d744252be6",
+    "msg_df23c24153e641a48f3ecba951dba84e"
+  ],
+  "stop_reasons": {
+    "end_turn": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 10201,
+  "input_tokens": 53083,
+  "output_tokens": 3238,
+  "total_tokens": 56321,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 198412.788,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-81u46nz5/sklearn/utils/_set_output.py",
+      "start_line": 58,
+      "end_line": 59
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-81u46nz5/sklearn/utils/_set_output.py",
+      "start_line": 62,
+      "end_line": 62
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 58,
+      "end_line": 59
+    },
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 62,
+      "end_line": 62
+    }
+  ],
+  "run_id": "sgagent-official-scikit-learn__scikit-learn-25747-0-2ee40d8d51",
+  "instance_id": "scikit-learn__scikit-learn-25747",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

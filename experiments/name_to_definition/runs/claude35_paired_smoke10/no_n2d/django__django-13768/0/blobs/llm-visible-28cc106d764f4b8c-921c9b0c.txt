@@ -1,0 +1,33 @@
+
+
+#REFLECT
+
+I have all the information I need. The bug is clearly described in the problem statement: `Signal.send_robust()` doesn't log exceptions raised in receivers. The fix requires:
+
+1. Adding `import logging` at the top of `dispatcher.py`
+2. Creating a module-level logger: `logger = logging.getLogger('django.dispatch')`
+3. Adding a `logger.exception()` call in the `except` block of `send_robust()`
+
+Let me confirm the exact lines that need to be modified by reviewing the current code.
+
+The key locations are:
+
+1. **Lines 1-5 of `dispatcher.py`** - imports section where `import logging` needs to be added
+2. **Lines 18-20 of `dispatcher.py`** - module-level area where the logger needs to be created  
+3. **Lines 208-211 of `dispatcher.py`** - the `except` block in `send_robust()` where `logger.exception()` needs to be added
+
+**INFO ENOUGH**
+
+Here are the precise locations that need to be modified to fix this bug:
+
+### Location 1: Import section (line 1–3)
+**File:** `/tmp/sgagent-n2d-p6bk8dd9/django/dispatch/dispatcher.py`  
+**Lines 1–3** — Need to add `import logging` to the imports.
+
+### Location 2: Module-level constants area (line 8–9)
+**File:** `/tmp/sgagent-n2d-p6bk8dd9/django/dispatch/dispatcher.py`  
+**Lines 8–9** — Need to add `logger = logging.getLogger('django.dispatch')` at the module level, after the existing imports and before the helper function/class definitions.
+
+### Location 3: The `except` block in `send_robust()` (lines 208–211)
+**File:** `/tmp/sgagent-n2d-p6bk8dd9/django/dispatch/dispatcher.py`  
+**Lines 208–211** — The `except Exception as err:` block currently only appends the error to responses. A `logger.error(...)` call with `exc_info=err` needs to be added before the `responses.append()` line so that exceptions are logged.

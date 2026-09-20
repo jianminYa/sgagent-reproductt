@@ -1,0 +1,9 @@
+
+
+#REFLECT
+The problem is about Django's `models.E028` check that was introduced in Django 2.2, which incorrectly flags models in different apps that use different databases but happen to share the same `db_table` name. The check should account for the fact that models might be routed to different databases, or at least should not flag models that are in different databases.
+
+Let me find where this check is implemented in the Django codebase.
+
+#TOOL_CALL find_files_containing
+{"keyword": "models.E028"}

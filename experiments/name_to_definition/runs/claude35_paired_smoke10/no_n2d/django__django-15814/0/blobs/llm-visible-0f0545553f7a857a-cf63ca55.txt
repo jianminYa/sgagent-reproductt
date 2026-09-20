@@ -1,0 +1,18 @@
+
+
+Now I understand the bug. Let me verify the fix location. The issue is on line 751:
+
+```python
+opts = cur_model._meta
+```
+
+When `cur_model` is a proxy model (like `ProxyCustomModel`), `cur_model._meta` gives the proxy model's meta, but we need the concrete model's meta. The `cur_model` itself could be a proxy model because `source.remote_field.model` (line 750) or `source.related_model` (line 748) can return a proxy model.
+
+Let me check if `cur_model` should also be set to the concrete model, or if only `opts` needs the fix.
+
+#TOOL_CALL read_file_lines
+{
+  "file_path": "/tmp/sgagent-n2d-43vv_8rf/django/db/models/sql/query.py",
+  "start_line": 730,
+  "end_line": 766
+}

@@ -1,0 +1,6 @@
+
+
+Let me look at the `Derivative` class to understand how it handles the `kind` property.
+
+#TOOL_CALL find_files_containing
+{ "keyword": "class Derivative" }

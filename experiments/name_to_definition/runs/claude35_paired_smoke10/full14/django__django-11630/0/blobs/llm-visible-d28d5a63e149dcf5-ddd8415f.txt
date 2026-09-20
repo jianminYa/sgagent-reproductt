@@ -1,0 +1,20 @@
+
+
+#REFLECT
+Now I have a clear understanding of the bug and the fix needed.
+
+The bug is in `check_all_models` in `/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py`. At line 22, models are grouped solely by `db_table` name. But models in different apps can use different databases (via database routing), so having the same table name is perfectly valid when they target different databases.
+
+The fix should use the database router to determine which database each model targets, and only flag a collision when models share both the same `db_table` AND the same database.
+
+The key change is at line 22 where models are grouped. Instead of:
+```python
+db_table_models[model._meta.db_table].append(model._meta.label)
+```
+
+We need to group by `(db_table, database)` tuple. We can use `router.db_for_read(model)` to determine the database for each model.
+
+Let me check the imports in the file to see what's already available.
+
+#TOOL_CALL show_file_imports
+{"python_file_path": "/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py"}

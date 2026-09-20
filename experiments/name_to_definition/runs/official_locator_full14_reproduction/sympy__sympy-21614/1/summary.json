@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_f7c7ef4e8fec40789e7908e39a630c86",
+    "msg_cbe268ce52c24fb5a91d2aea8495b24c",
+    "msg_8949858a720b4336aec23d56c75e8254",
+    "msg_8e162e92116649e6ae21b9cfaf740110",
+    "msg_bc5684d3432d4409b6484e7e6d80716a",
+    "msg_57fc59515c0f4de6bbb8c784ca3b46fa",
+    "msg_6a81f843515c4d3aa941bedac6fd989c",
+    "msg_fea57132f0db4d8380319a34cb1d12c5",
+    "msg_6c10cb1c007d44a39acc8f7609011df5",
+    "msg_0f565068630c4e4cb04e7457a76c32de",
+    "msg_051bb98453144110a355a5f830f071bd",
+    "msg_4d14ea58f7604e0b91993a9cf0312efe",
+    "msg_7cfa4a0ad84c4e86af1da555b7c4818f",
+    "msg_8a1c7731ead14ce78388dc9147c09cb7",
+    "msg_30a9b8b8bd274d4993e5f6c57b1e5714",
+    "msg_15d2240a3ce942c39de1d90ccda2d215",
+    "msg_36de1ff50629424f81b619b55186f76c",
+    "msg_96a6d65a4e6b4d04ba6b007747b9f876",
+    "msg_9f486f0b87da484683cf285fa6a564be",
+    "msg_b5e3f9d5797b4c56bf2d34879cbba81d"
+  ],
+  "stop_reasons": {
+    "end_turn": 20
+  },
+  "locator_llm_calls": 18,
+  "tool_calls": 16,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 20,
+  "tool_result_chars": 77205,
+  "input_tokens": 106841,
+  "output_tokens": 6402,
+  "total_tokens": 113243,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 354315.286,
+  "graph_updates": 38,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-00tgtlt0/sympy/core/function.py",
+      "start_line": 1672,
+      "end_line": 1672
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/core/function.py",
+      "start_line": 1672,
+      "end_line": 1672
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21614-1-4f2f85e558",
+  "instance_id": "sympy__sympy-21614",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

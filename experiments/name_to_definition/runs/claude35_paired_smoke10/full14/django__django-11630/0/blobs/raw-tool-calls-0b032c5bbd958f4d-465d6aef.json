@@ -1,0 +1,1 @@
+["#TOOL_CALL read_file_lines\n{\"file_path\": \"/tmp/sgagent-n2d-5oom4hte/tests/check_framework/test_model_checks.py\", \"start_line\": 1, \"end_line\": 50}"]

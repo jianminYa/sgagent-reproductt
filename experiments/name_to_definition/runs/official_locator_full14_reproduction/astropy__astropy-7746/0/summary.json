@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_c76fa23925a64962b9ce0051fb37d6f2",
+    "msg_6b6ca3b1937a444c92c9bc6e522b2131",
+    "msg_84446b9497ed44cb9c94638985951cae",
+    "msg_1043442ba0264fbab8b10fe731ad1fd2",
+    "msg_6fc6f9c892a74382ac883fb1a382b083",
+    "msg_c7393f0c50b14c4dafbcd34c0dffcb0e",
+    "msg_551605e3d77447218e7e246ece69a505",
+    "msg_ba25b1cd300740d79a52d32ee005a7d4",
+    "msg_c9c327d5271440efba5ea40cc2e4d856",
+    "msg_615f6a4ebab74f7d83ceed4f278b06e7",
+    "msg_8310f7187d4f4a648c4797bc11dbe485",
+    "msg_df599ec9906f4e2baeeea25287a49765"
+  ],
+  "stop_reasons": {
+    "end_turn": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 13081,
+  "input_tokens": 45644,
+  "output_tokens": 2777,
+  "total_tokens": 48421,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 117905.961,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-uzhvklct/astropy/wcs/wcs.py",
+      "start_line": 1221,
+      "end_line": 1225
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-uzhvklct/astropy/wcs/wcs.py",
+      "start_line": 1237,
+      "end_line": 1240
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1221,
+      "end_line": 1225
+    },
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1237,
+      "end_line": 1240
+    }
+  ],
+  "run_id": "sgagent-official-astropy__astropy-7746-0-a44213469c",
+  "instance_id": "astropy__astropy-7746",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

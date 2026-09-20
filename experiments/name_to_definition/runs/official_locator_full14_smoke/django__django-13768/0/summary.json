@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_c6d35cb6758f49ce979a14c2600473c4",
+    "msg_c25744694e2c4d85b4519f8fdf4326a9",
+    "msg_4cdaac659a864382bfbd21afa3a72b8e",
+    "msg_d46984356aed4274ba0f9c275cb0642e",
+    "msg_425438dbcf394cdc970666cee348d972",
+    "msg_a21b8173698b455ba107a12485d57a76",
+    "msg_dcac8bc3a00c42a8827e93f6b26d0364",
+    "msg_576729fbc38f42d0808c717944d50301",
+    "msg_6944e37780e14e1996fe8de30f895461",
+    "msg_f536289dfbb14dce9b95f09420e5ea99",
+    "msg_83fdb668f10e47c787aa9a53829a302a",
+    "msg_dedfebfe04eb4076aaac07ca5777ad6c"
+  ],
+  "stop_reasons": {
+    "end_turn": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 49889,
+  "input_tokens": 61200,
+  "output_tokens": 3344,
+  "total_tokens": 64544,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 262116.843,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-cpr7s7d2/django/dispatch/dispatcher.py",
+      "start_line": 4,
+      "end_line": 6
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-cpr7s7d2/django/dispatch/dispatcher.py",
+      "start_line": 210,
+      "end_line": 211
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/dispatch/dispatcher.py",
+      "start_line": 4,
+      "end_line": 6
+    },
+    {
+      "file_path": "django/dispatch/dispatcher.py",
+      "start_line": 210,
+      "end_line": 211
+    }
+  ],
+  "run_id": "sgagent-official-django__django-13768-0-bb73a45c5a",
+  "instance_id": "django__django-13768",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_smoke"
+}

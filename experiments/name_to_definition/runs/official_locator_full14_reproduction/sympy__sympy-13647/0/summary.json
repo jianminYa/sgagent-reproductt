@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_a7e41b0869d24c8bb7b6e714005aec0d",
+    "msg_a04bede3245946d5aae75fb14d08b660",
+    "msg_634c4278c63f46bc9f07babc206c7516",
+    "msg_f9f90c8e94034eb2932d7ab284c82fea",
+    "msg_aa7e2c80e2c54dd086727622ee2b08eb",
+    "msg_8f8da730eb08475a8997eaf77963c67c"
+  ],
+  "stop_reasons": {
+    "end_turn": 6
+  },
+  "locator_llm_calls": 6,
+  "tool_calls": 3,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 6,
+  "tool_result_chars": 91162,
+  "input_tokens": 28737,
+  "output_tokens": 1949,
+  "total_tokens": 30686,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 211089.784,
+  "graph_updates": 9,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-3nbrud58/sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13647-0-0f06a7bf6d",
+  "instance_id": "sympy__sympy-13647",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

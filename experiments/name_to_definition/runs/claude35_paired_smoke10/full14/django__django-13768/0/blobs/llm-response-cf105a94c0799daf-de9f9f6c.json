@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nNow I understand the problem clearly. The `send_robust()` method catches exceptions but doesn't log them. Let me look at the implementation.\n\n#TOOL_CALL analyze_file_structure\n{ \"file\": \"/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py\" }", "name": null, "tool_calls": [], "type": "ai"}

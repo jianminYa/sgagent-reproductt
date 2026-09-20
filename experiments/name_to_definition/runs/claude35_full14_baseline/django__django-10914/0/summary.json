@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "3abf0f3f-6391-48dc-ac61-c744e6bd304f",
+    "4c25407d-22a2-4fe9-a620-3fcd087f0fd3",
+    "b6d0d34f-a807-4fc9-bad0-cfb71865d7e0",
+    "99a142ad-6379-440d-aad0-a5b93909d747",
+    "b0a71426-e394-4a24-9cd2-c1dc2af975b1",
+    "2cd5783f-31b9-4c02-a350-e373ef1f5e69",
+    "902dc6f1-b1cf-4cd8-bd5f-24ac4582c12f",
+    "6d5b6649-79d7-4cd0-b67a-c5994b55d9d7",
+    "98779386-b787-4446-8bed-22478b3995df",
+    "59f2682d-8f5d-45e3-951d-7d8ede219c70",
+    "f134fd3d-8da4-4fee-a031-d0e4b8ba0415",
+    "79f4700c-ac08-4078-9415-675fc02ceb5b",
+    "852f94ba-583a-46c6-9b0a-adaa56528035"
+  ],
+  "stop_reasons": {
+    "stop": 13
+  },
+  "locator_llm_calls": 12,
+  "tool_calls": 10,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 13,
+  "tool_result_chars": 59084,
+  "tool_original_chars": 59084,
+  "tool_returned_chars": 59084,
+  "truncated_tool_calls": 0,
+  "input_tokens": 138579,
+  "output_tokens": 2627,
+  "total_tokens": 141206,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 139673.622,
+  "graph_updates": 24,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-b5k7rva8/django/conf/global_settings.py",
+      "start_line": 307,
+      "end_line": 307
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-b5k7rva8/tests/file_storage/tests.py",
+      "start_line": 895,
+      "end_line": 900
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-b5k7rva8/tests/staticfiles_tests/test_storage.py",
+      "start_line": 518,
+      "end_line": 528
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/conf/global_settings.py",
+      "start_line": 307,
+      "end_line": 307
+    },
+    {
+      "file_path": "tests/file_storage/tests.py",
+      "start_line": 895,
+      "end_line": 900
+    },
+    {
+      "file_path": "tests/staticfiles_tests/test_storage.py",
+      "start_line": 518,
+      "end_line": 528
+    }
+  ],
+  "run_id": "sgagent-official-django__django-10914-0-451493b201",
+  "instance_id": "django__django-10914",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

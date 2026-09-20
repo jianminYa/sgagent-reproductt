@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "a62d0723-b806-4cf6-9b02-857e8e1f57be",
+    "056c06af-b7b3-4272-8e63-94fe416a2e9f",
+    "0587d593-a219-4b75-a937-6cc19371ef63",
+    "1445a80c-a359-4ef1-9742-dade7df0c683",
+    "5760c3b8-d418-4901-a7a5-0afbe28d8524",
+    "cea41b55-a566-4066-9407-0fd989052e68",
+    "ef88670a-a4f4-4cac-97ca-29bfc165c0f3"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 539377,
+  "tool_original_chars": 539377,
+  "tool_returned_chars": 539377,
+  "truncated_tool_calls": 0,
+  "input_tokens": 374156,
+  "output_tokens": 1574,
+  "total_tokens": 375730,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 125322.458,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-uehkrd3u/django/db/models/sql/query.py",
+      "start_line": 747,
+      "end_line": 751
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 747,
+      "end_line": 751
+    }
+  ],
+  "run_id": "sgagent-official-django__django-15814-0-a23a170f29",
+  "instance_id": "django__django-15814",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

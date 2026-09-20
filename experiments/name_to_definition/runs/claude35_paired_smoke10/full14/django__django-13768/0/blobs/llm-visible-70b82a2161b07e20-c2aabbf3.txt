@@ -1,0 +1,6 @@
+
+
+Let me find the `send_robust` method implementation in the Django source code.
+
+#TOOL_CALL find_methods_by_name
+{ "name": "send_robust" }

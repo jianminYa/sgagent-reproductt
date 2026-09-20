@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "581f9193-e762-4ec6-be8c-eb531c4a1edc",
+    "ef3ec23e-9f4c-4616-9ff2-d678481b7adf",
+    "22dc2f02-3aa7-463e-9ffe-57d9f81374d9",
+    "d7b0f4f6-d36d-4333-9e87-8b6b6126aaa0",
+    "d8943778-9a0c-4501-ba95-068d6fa1b899",
+    "3f7d111f-ee91-43c4-a440-f5fb32636067",
+    "a09e1abb-019e-4ed9-b481-c421dbd5206f",
+    "41932230-37c8-453d-b808-b7ddf7ea2683",
+    "f5b9c25a-e53e-4b73-bd43-48003a3be995",
+    "d557a1b1-2fb7-483a-88fe-379317bbc87c"
+  ],
+  "stop_reasons": {
+    "stop": 10
+  },
+  "locator_llm_calls": 9,
+  "tool_calls": 7,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 10,
+  "tool_result_chars": 3525,
+  "tool_original_chars": 3525,
+  "tool_returned_chars": 3525,
+  "truncated_tool_calls": 0,
+  "input_tokens": 42538,
+  "output_tokens": 4893,
+  "total_tokens": 47431,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 124599.595,
+  "graph_updates": 17,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-lyltdccv/sphinx/domains/std.py",
+      "start_line": 46,
+      "end_line": 46
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sphinx/domains/std.py",
+      "start_line": 46,
+      "end_line": 46
+    }
+  ],
+  "run_id": "sgagent-official-sphinx-doc__sphinx-8506-0-7ed22d9f95",
+  "instance_id": "sphinx-doc__sphinx-8506",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

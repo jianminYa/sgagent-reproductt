@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_b30d4e1be7ec42cfab31d6cec2df631b",
+    "msg_b81137a862764238bd086d6e3a42f695",
+    "msg_b0bf4d1da0464d189bf2b5d14fb21109",
+    "msg_700a4c4bd4504129ba4c44382c6932f4",
+    "msg_97385fbff2eb4f5dbe5ed368e73087e0",
+    "msg_6cb6287c664743328061de37897baeb6",
+    "msg_c8b6589f50f4409b96d0c9b9c53470af",
+    "msg_7a47e5d819c64de7bbed7982cff00cac",
+    "msg_86a83ae6653d496aac4cfe7ebe4a8e78",
+    "msg_2aedd35a35bf4558b41d1a9c69d1d7e9",
+    "msg_f868072617d64bb5932e273486a75be8",
+    "msg_288a41151eae43c5a1648128b4dfd9e3",
+    "msg_d4bfbea1d135453080cdb4495b45cd8e",
+    "msg_4c8a296bb5464a9eafd5ef25f2f324f7",
+    "msg_a39c6a0c29874ff79730720342887f39",
+    "msg_707b9f7405674389ac5f95a03583b625",
+    "msg_df56a4b5025a447dafc70704b0494288",
+    "msg_3a0fef222dbe4c339ba09cfd4ef25d01",
+    "msg_2e1ca44d216e42fe89849b2fff12c788"
+  ],
+  "stop_reasons": {
+    "end_turn": 19
+  },
+  "locator_llm_calls": 17,
+  "tool_calls": 14,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 19,
+  "tool_result_chars": 315934,
+  "input_tokens": 231937,
+  "output_tokens": 9911,
+  "total_tokens": 241848,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 287180.6,
+  "graph_updates": 35,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-gdm9crgq/django/db/models/sql/query.py",
+      "start_line": 680,
+      "end_line": 685
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 680,
+      "end_line": 685
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14667-0-e38db5953b",
+  "instance_id": "django__django-14667",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_smoke"
+}

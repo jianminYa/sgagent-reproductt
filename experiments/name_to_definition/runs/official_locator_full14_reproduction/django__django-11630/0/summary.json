@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_1d975435816d4a79b2e30037fca88c30",
+    "msg_d97cc985e94a48d0b717095314ee277d",
+    "msg_8dc9702f7dd1406ab5faad48284c4df1",
+    "msg_dc7a0f16bd944e1cbe48234bfcef05e9",
+    "msg_b967116b3c644e338c6bbcf97a2e44c0",
+    "msg_f3cfa72d7be64b9fa3523da76bf91fed",
+    "msg_3480465411de452bb0107b0ecbf26d98",
+    "msg_954a2a57470e46e5985032f48d5c8c34",
+    "msg_5bf07b93c6a643d1a19e6ed268811e0b",
+    "msg_ddda57cda39f473aa84810719348a8ab",
+    "msg_982dd072e7b9458c9e2b65f71ee22082",
+    "msg_38bc1d29de3541769a2cdcf501adfcee",
+    "msg_dd326772917641f68849d4ca70d209b3",
+    "msg_3baaf729543c4a2fa98dbb5c80c962b7",
+    "msg_16f0eced124744c0b17b22c84e1b9ec2"
+  ],
+  "stop_reasons": {
+    "end_turn": 15
+  },
+  "locator_llm_calls": 14,
+  "tool_calls": 12,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 15,
+  "tool_result_chars": 27172,
+  "input_tokens": 60148,
+  "output_tokens": 6682,
+  "total_tokens": 66830,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 201467.364,
+  "graph_updates": 28,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-dlh68pnp/django/core/checks/model_checks.py",
+      "start_line": 12,
+      "end_line": 22
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-dlh68pnp/django/core/checks/model_checks.py",
+      "start_line": 38,
+      "end_line": 47
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/core/checks/model_checks.py",
+      "start_line": 12,
+      "end_line": 22
+    },
+    {
+      "file_path": "django/core/checks/model_checks.py",
+      "start_line": 38,
+      "end_line": 47
+    }
+  ],
+  "run_id": "sgagent-official-django__django-11630-0-097c224772",
+  "instance_id": "django__django-11630",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

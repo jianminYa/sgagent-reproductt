@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "PROPOSE LOCATION\n\n```json\n{\n    \"locations\": [\n        {\n            \"file_path\": \"/tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py\",\n            \"start_line\": 81,\n            \"end_line\": 92\n        }\n    ]\n}\n```", "name": null, "tool_calls": [], "type": "ai"}

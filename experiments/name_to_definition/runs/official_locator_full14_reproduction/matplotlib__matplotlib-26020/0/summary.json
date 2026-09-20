@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_69f216c70d8948e68c2d25bf50e99b0b",
+    "msg_2321ff65ce644d3a8933f8edfa759900",
+    "msg_aade051db48047958804332b59955c33",
+    "msg_fc60c6ef98f64747bbad1b47e70155db",
+    "msg_f2b38b86e79343f6a4d653583b8afdec",
+    "msg_bdc1bd75396d498eb4311d8b3c61dbdb",
+    "msg_7f9795927eb545389786b24795237661",
+    "msg_60af4739098d4da6a74032af18b8e3fb",
+    "msg_caae68b0dc1048bc9ef1404e644a4997",
+    "msg_44d6b2d9ef4345f2aa74f7ad54ac86f9",
+    "msg_2807990c2dca4f31a51f36371bc7e2c2",
+    "msg_0d0f8c308f90482b977d2a88177eb084",
+    "msg_227b48e7b2494369a80c5e9d59307298",
+    "msg_91f9db607dff42d0b4e1269fa006a817",
+    "msg_838b1c3cac26424ba0fd40b32f11588c"
+  ],
+  "stop_reasons": {
+    "end_turn": 15
+  },
+  "locator_llm_calls": 14,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 15,
+  "tool_result_chars": 12160,
+  "input_tokens": 116169,
+  "output_tokens": 3075,
+  "total_tokens": 119244,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 159970.842,
+  "graph_updates": 27,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-_lxslrh0/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 13,
+      "end_line": 17
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-_lxslrh0/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 29,
+      "end_line": 32
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 13,
+      "end_line": 17
+    },
+    {
+      "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 29,
+      "end_line": 32
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-26020-0-71ad51d928",
+  "instance_id": "matplotlib__matplotlib-26020",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

@@ -1,0 +1,2 @@
+#TOOL_CALL analyze_file_structure
+{ "file": "/tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py" }

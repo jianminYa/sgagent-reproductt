@@ -1,0 +1,33 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py
+Total lines: 7229
+Showing lines 4392-4420:
+
+4392: 
+4393:     reps, opt = _parallel_dict_from_expr(exprs, opt)
+4394:     if not opt.gens:
+4395:         raise PolificationFailed(opt, origs, exprs, True)
+4396: 
+4397:     for k in opt.gens:
+4398:         if isinstance(k, Piecewise):
+4399:             raise PolynomialError("Piecewise generators do not make sense")
+4400: 
+4401:     coeffs_list, lengths = [], []
+4402: 
+4403:     all_monoms = []
+4404:     all_coeffs = []
+4405: 
+4406:     for rep in reps:
+4407:         monoms, coeffs = list(zip(*list(rep.items())))
+4408: 
+4409:         coeffs_list.extend(coeffs)
+4410:         all_monoms.append(monoms)
+4411: 
+4412:         lengths.append(len(coeffs))
+4413: 
+4414:     domain = opt.domain
+4415: 
+4416:     if domain is None:
+4417:         opt.domain, coeffs_list = construct_domain(coeffs_list, opt=opt)
+4418:     else:
+4419:         coeffs_list = list(map(domain.from_sympy, coeffs_list))
+4420: 

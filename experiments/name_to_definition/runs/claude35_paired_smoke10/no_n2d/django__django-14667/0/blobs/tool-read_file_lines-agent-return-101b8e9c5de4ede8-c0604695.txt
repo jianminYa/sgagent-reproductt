@@ -1,0 +1,11 @@
+File: /tmp/sgagent-n2d-gwa0zdpk/django/db/models/sql/query.py
+Total lines: 2452
+Showing lines 2083-2089:
+
+2083:         existing, defer = self.deferred_loading
+2084:         if defer:
+2085:             # Add to existing deferred names.
+2086:             self.deferred_loading = existing.union(field_names), True
+2087:         else:
+2088:             # Remove names from the set of any existing "immediate load" names.
+2089:             self.deferred_loading = existing.difference(field_names), False

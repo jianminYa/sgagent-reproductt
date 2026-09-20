@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "f5946acb-04d5-4c0a-a83a-2d0fb9fc60dd",
+    "8eb4cae1-8b81-4da3-81a1-e5d8d92dbd64",
+    "b441659d-f2ff-4232-a023-b6889fade654",
+    "f8fefcbb-3481-4bc1-bd27-1de7c04c2034",
+    "c664ab38-d445-43ba-a85a-b22cdf1ee217",
+    "aa68b45d-46ef-4b99-9d4d-deb7e950b0b2",
+    "8046bc73-7835-45c3-8b8b-3cb6c7f85374",
+    "a02e0fcf-3748-4574-8d88-1b41a70d8567",
+    "f156e242-21c5-43c8-97be-c706e68ca267",
+    "dc85e67b-cfbb-4df9-be9f-6dfb2c03a27a",
+    "8212059a-1655-4921-a13d-26a835a2e9b8",
+    "723f36cf-35e8-4da3-a3bc-596436ae6e4e"
+  ],
+  "stop_reasons": {
+    "stop": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 77155,
+  "tool_original_chars": 94292,
+  "tool_returned_chars": 77155,
+  "truncated_tool_calls": 2,
+  "input_tokens": 162644,
+  "output_tokens": 2680,
+  "total_tokens": 165324,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 149135.312,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-hmegja6p/django/db/models/query_utils.py",
+      "start_line": 42,
+      "end_line": 44
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/query_utils.py",
+      "start_line": 42,
+      "end_line": 44
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14017-0-8d2e5c99c2",
+  "instance_id": "django__django-14017",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

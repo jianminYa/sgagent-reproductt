@@ -1,0 +1,2 @@
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py", "start_line": 1, "end_line": 15}

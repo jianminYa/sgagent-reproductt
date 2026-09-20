@@ -1,0 +1,65 @@
+
+
+Let me find the relevant file and code to fix this bug.
+
+#TOOL_CALL find_methods_by_name
+{ "name": "id_for_label" }
+
+<br>
+
+Now let me look at the BoundWidget class to find the exact location of the bug.
+
+#TOOL_CALL extract_complete_method
+{ "file": "/tmp/sgagent-n2d-8x0fpmqo/django/forms/boundfield.py", "full_qualified_name": "django.forms.boundfield.BoundWidget.id_for_label" }
+
+<br>
+
+Let me read the relevant lines around the BoundWidget class to see the exact line numbers.
+
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-8x0fpmqo/django/forms/boundfield.py", "start_line": 260, "end_line": 300 }
+
+<br>
+
+#REFLECT
+I need to see the actual file content to find the `id_for_label` method in the `BoundWidget` class. Let me analyze the file structure first.
+
+#TOOL_CALL analyze_file_structure
+{ "file": "/tmp/sgagent-n2d-8x0fpmqo/django/forms/boundfield.py" }
+
+<br>
+
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-8x0fpmqo/django/forms/boundfield.py", "start_line": 277, "end_line": 285 }
+
+<br>
+
+Now I can see the bug clearly. Line 280 has the problematic implementation of `id_for_label` in the `BoundWidget` class.
+
+The current code at line 280 is:
+```python
+return 'id_%s_%s' % (self.data['name'], self.data['index'])
+```
+
+This hardcodes the `id_` prefix and ignores the actual `id` that was set in `self.data['attrs']['id']` by the widget's `subwidgets` method. The fix is to change it to:
+```python
+return self.data['attrs']['id']
+```
+
+**INFO ENOUGH**
+
+## Bug Location
+
+**File:** `/tmp/sgagent-n2d-8x0fpmqo/django/forms/boundfield.py`  
+**Line:** 280  
+
+The `BoundWidget.id_for_label` method at line 280 hardcodes the id format as `'id_%s_%s' % (self.data['name'], self.data['index'])` instead of using the id already computed and stored in `self.data['attrs']['id']`. This means it ignores any custom `auto_id` format or widget-specified id.
+
+**Fix:** Change line 280 from:
+```python
+return 'id_%s_%s' % (self.data['name'], self.data['index'])
+```
+to:
+```python
+return self.data['attrs']['id']
+```

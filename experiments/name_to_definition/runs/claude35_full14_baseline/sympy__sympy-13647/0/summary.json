@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "5a29d63c-b541-4e85-84b9-683d667725be",
+    "79c97739-51d2-49d3-9f9a-06c49cf43950",
+    "c5cbc7b4-b2db-4122-a102-dbfa5d3e4d27",
+    "ff17f4b7-7d46-4a02-971a-f3cc83e3564c"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "locator_llm_calls": 4,
+  "tool_calls": 2,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 4,
+  "tool_result_chars": 90506,
+  "tool_original_chars": 90506,
+  "tool_returned_chars": 90506,
+  "truncated_tool_calls": 0,
+  "input_tokens": 81689,
+  "output_tokens": 1153,
+  "total_tokens": 82842,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 195023.638,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-950hbgz4/sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13647-0-ae183fcd1e",
+  "instance_id": "sympy__sympy-13647",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

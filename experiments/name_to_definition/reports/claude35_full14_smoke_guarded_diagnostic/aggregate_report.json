@@ -1,0 +1,166 @@
+{
+  "status": "official Locator reproduction; pilot-scale evidence",
+  "experiment_id": "sgagent_claude35_full14_smoke",
+  "n": 8,
+  "completed": 8,
+  "completion_rate": 1.0,
+  "termination_reasons": {
+    "completed": 8
+  },
+  "official_repository_metrics": {
+    "file_accuracy": 1.0,
+    "class_accuracy": 1.0,
+    "function_accuracy": 0.375,
+    "line_accuracy": 0.625,
+    "line_iou": 0.22799006549006548
+  },
+  "paper_set_jaccard_metrics": {
+    "file_accuracy": 1.0,
+    "function_accuracy": 0.6145833333333334
+  },
+  "tokens": {
+    "incomplete_trajectories": 0,
+    "total": {
+      "n": 8,
+      "mean": 89360.375,
+      "median": 70964.5,
+      "p25": 58227.75,
+      "p75": 97111.75
+    },
+    "input": {
+      "n": 8,
+      "mean": 86170.375,
+      "median": 68922.0,
+      "p25": 56541.75,
+      "p75": 91708.5
+    },
+    "output": {
+      "n": 8,
+      "mean": 3190.0,
+      "median": 2042.5,
+      "p25": 1788.75,
+      "p75": 3667.0
+    }
+  },
+  "calls": {
+    "locator_llm": {
+      "n": 8,
+      "mean": 7.5,
+      "median": 8.0,
+      "p25": 5.75,
+      "p75": 9.0
+    },
+    "summarizer_llm": {
+      "n": 8,
+      "mean": 0.5,
+      "median": 0.5,
+      "p25": 0.0,
+      "p75": 1.0
+    },
+    "total_llm": {
+      "n": 8,
+      "mean": 8.0,
+      "median": 8.5,
+      "p25": 5.75,
+      "p75": 10.0
+    },
+    "tools": {
+      "n": 8,
+      "mean": 7.0,
+      "median": 7.0,
+      "p25": 5.5,
+      "p75": 9.0
+    },
+    "failed_tools": {
+      "n": 8,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0
+    }
+  },
+  "tool_output": {
+    "original_chars": {
+      "n": 8,
+      "mean": 148445.125,
+      "median": 118558.5,
+      "p25": 19247.25,
+      "p75": 207048.75
+    },
+    "returned_chars": {
+      "n": 8,
+      "mean": 35269.5,
+      "median": 34609.0,
+      "p25": 19247.25,
+      "p75": 45155.25
+    },
+    "truncated_calls": {
+      "n": 8,
+      "mean": 0.75,
+      "median": 1.0,
+      "p25": 0.0,
+      "p75": 1.0
+    },
+    "trajectories_with_truncation": 5
+  },
+  "tool_usage_patterns": {
+    "calls": {
+      "analyze_file_structure": 2,
+      "execute_shell_command_with_validation": 3,
+      "explore_directory": 1,
+      "extract_complete_method": 8,
+      "find_class_constructor": 1,
+      "find_files_containing": 4,
+      "find_methods_by_name": 8,
+      "find_variable_usage": 4,
+      "read_file_lines": 23,
+      "search_code_with_context": 1,
+      "show_file_imports": 1
+    },
+    "failed_calls": {}
+  },
+  "latency_ms": {
+    "n": 8,
+    "mean": 142040.223875,
+    "median": 125361.0435,
+    "p25": 90127.56324999999,
+    "p75": 158306.60525
+  },
+  "cost_usd": null,
+  "cost_note": "qtapi pricing was not supplied; no fabricated cost estimate is reported.",
+  "model_metadata": {
+    "requested_models": {
+      "ep-64pmfvfo": 8
+    },
+    "returned_models": {
+      "ep-64pmfvfo": 8
+    },
+    "request_ids_recorded": 64,
+    "request_ids_unique": 64,
+    "request_ids_missing": 0,
+    "stop_reasons": {
+      "stop": 64
+    }
+  },
+  "evaluation_adapter": {
+    "predicted_ranges_as_synthetic_diff": true,
+    "official_evaluator_classes": "script.evaluation.PatchParser, ASTAnalyzer, MetricsCalculator",
+    "gold_source": "local Lite parquet patch; agent never receives patch"
+  },
+  "sampling": {
+    "actual_size": 8,
+    "method": "explicit instance IDs selected from the frozen Lite manifest for smoke testing",
+    "requested_size": 8,
+    "seed": 20260915
+  },
+  "dataset": {
+    "benchmark_split": "test",
+    "lite_path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "name": "SWE-bench Lite",
+    "revision": "local-commit-33a2cfe",
+    "row_count": 300,
+    "sort_rule": "instance_id ascending after repo de-duplication",
+    "source_note": "Local dataset/lite.parquet is authoritative for this reproduction run.",
+    "source_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench"
+  }
+}

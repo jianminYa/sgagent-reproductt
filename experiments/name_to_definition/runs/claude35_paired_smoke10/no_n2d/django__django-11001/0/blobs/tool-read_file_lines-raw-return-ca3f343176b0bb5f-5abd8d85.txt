@@ -1,0 +1,5 @@
+File: /tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py
+Total lines: 1507
+Showing lines 35-35:
+
+  35:         self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)')

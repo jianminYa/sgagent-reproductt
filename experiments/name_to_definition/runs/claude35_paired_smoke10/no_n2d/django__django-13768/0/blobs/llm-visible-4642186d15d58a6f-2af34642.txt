@@ -1,0 +1,55 @@
+## Summary
+
+### Objective
+Find and repair a bug in a Django project, specifically in the signal dispatch system (`django/dispatch/dispatcher.py`).
+
+### Key Investigation Steps
+
+1. **Located relevant files** via searching for `send_robust`:
+   - `/tmp/sgagent-n2d-p6bk8dd9/django/dispatch/dispatcher.py` (main source)
+   - `/tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py` (tests)
+
+2. **Examined the `Signal` class** in `dispatcher.py` (lines 21-271), focusing on the `send_robust` method (lines 182-214).
+
+3. **Examined the test file** (232 lines), particularly `test_send_robust_fail` (lines 164-175) which:
+   - Connects a receiver that raises `ValueError`
+   - Calls `send_robust` and checks the error is returned
+   - **Asserts `err.__traceback__` is a `TracebackType` instance** (line 172-173)
+   - Imports `TracebackType` from `types` module (line 4)
+
+4. **Checked module-level imports** (lines 1-20): No `logging` import or logger exists in the file.
+
+### Identified Bug
+The `send_robust` method catches exceptions but does **not log them**. The fix requires:
+
+1. **Add `import logging`** at the top of `dispatcher.py`
+2. **Create a module-level logger**: `logger = logging.getLogger('django.dispatch')`
+3. **Add `logger.error()` call** in the `except` block of `send_robust()` (around line 210-211), after `responses.append((receiver, err))`
+
+The specific change to `send_robust` (lines 208-211):
+```python
+# Current:
+except Exception as err:
+    responses.append((receiver, err))
+
+# Fixed:
+except Exception as err:
+    logger.error(
+        'Error calling %s in Signal.send_robust() (%s)',
+        receiver.__qualname__,
+        err,
+        exc_info=err,
+    )
+    responses.append((receiver, err))
+```
+
+### Current Status
+- **Bug identified but NOT yet fixed** — no code changes have been applied
+- **Test execution failed** due to environment issue (`OfficialTrace.event() got multiple values for argument 'phase'`), so tests couldn't be run to confirm the fix
+- The existing test `test_send_robust_fail` should still pass after the fix since it only checks the returned error tuple, not logging behavior
+- No test currently validates logging output, so the fix adds functionality without breaking existing tests
+
+### Next Steps
+1. Apply the code changes to `dispatcher.py` (add logging import, logger, and log call in `send_robust`)
+2. Resolve the test environment issue and run tests to verify
+3. Consider whether a test for the logging behavior should be added

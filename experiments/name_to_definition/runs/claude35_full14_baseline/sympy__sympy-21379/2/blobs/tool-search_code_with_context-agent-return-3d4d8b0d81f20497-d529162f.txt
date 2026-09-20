@@ -1,0 +1,14 @@
+Search results for 'Piecewise generators do not make sense' in file (showing first 1 matches):
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py
+Lines 4396-4402:
+4396: 
+4397:     for k in opt.gens:
+4398:         if isinstance(k, Piecewise):
+4399:             raise PolynomialError("Piecewise generators do not make sense")
+4400: 
+4401:     coeffs_list, lengths = [], []
+4402: 
+
+================================================================================
+

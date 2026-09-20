@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "8557b795-6d28-430f-b6ec-f19d6ccd5321",
+    "49567ebb-3bc0-4b03-acb2-6c6936b83f01",
+    "52d4b309-0e80-4a80-9e40-44c8a4ed44ce",
+    "d2b8792d-883a-463a-bcf9-a3275d027d12"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "locator_llm_calls": 4,
+  "tool_calls": 2,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 4,
+  "tool_result_chars": 5560,
+  "tool_original_chars": 5560,
+  "tool_returned_chars": 5560,
+  "truncated_tool_calls": 0,
+  "input_tokens": 17177,
+  "output_tokens": 1382,
+  "total_tokens": 18559,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 235940.146,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-9hos_pvb/sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-24066-0-111f1d5e3b",
+  "instance_id": "sympy__sympy-24066",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

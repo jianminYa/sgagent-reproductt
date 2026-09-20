@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_5bbe306c12894ed18a9e8d809de8d85b",
+    "msg_f778a9a229ad43ff876ed7c6e44ffc24",
+    "msg_1f62704ad26348b2aab591383d0851e4",
+    "msg_2443e7f3c25b4a7eb7feeac3a1b821f9",
+    "msg_2159171833674b7aa71c2c0d5ab64829",
+    "msg_aeb3f16e70e445048747dd4b72c44fb4",
+    "msg_2ef31cbdcd27498e845331c4205e873e"
+  ],
+  "stop_reasons": {
+    "end_turn": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 280224,
+  "input_tokens": 60453,
+  "output_tokens": 2149,
+  "total_tokens": 62602,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 152883.322,
+  "graph_updates": 11,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-6dpw7zcj/django/db/models/sql/compiler.py",
+      "start_line": 351,
+      "end_line": 361
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-6dpw7zcj/django/db/models/sql/compiler.py",
+      "start_line": 364,
+      "end_line": 372
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 351,
+      "end_line": 361
+    },
+    {
+      "file_path": "django/db/models/sql/compiler.py",
+      "start_line": 364,
+      "end_line": 372
+    }
+  ],
+  "run_id": "sgagent-official-django__django-11001-0-f1bb939200",
+  "instance_id": "django__django-11001",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_smoke"
+}

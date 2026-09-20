@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "09e11539-1e31-4b5f-bb8c-a1800ca9ac89",
+    "7e509508-3805-4939-b18f-9ce05a0ec009",
+    "9fd88236-83b3-4819-a39c-fd6e8973f758",
+    "0b50d178-92fe-4099-ac84-1b77323658b7",
+    "21a1300a-4019-477e-b5ff-cc934a66d2db",
+    "455962be-6200-4508-ab13-dfde186aa43d",
+    "72512864-d8de-47ca-b0c7-1bb0dd79ec4d",
+    "23a65336-20df-4b7f-a00f-b1bb2095a365"
+  ],
+  "stop_reasons": {
+    "stop": 8
+  },
+  "locator_llm_calls": 8,
+  "tool_calls": 6,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 8,
+  "tool_result_chars": 6228,
+  "tool_original_chars": 6228,
+  "tool_returned_chars": 6228,
+  "truncated_tool_calls": 0,
+  "input_tokens": 48156,
+  "output_tokens": 1492,
+  "total_tokens": 49648,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 89798.593,
+  "graph_updates": 14,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-fq72v89h/sklearn/utils/_set_output.py",
+      "start_line": 58,
+      "end_line": 59
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-fq72v89h/sklearn/utils/_set_output.py",
+      "start_line": 62,
+      "end_line": 62
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-fq72v89h/sklearn/utils/_set_output.py",
+      "start_line": 130,
+      "end_line": 134
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 58,
+      "end_line": 59
+    },
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 62,
+      "end_line": 62
+    },
+    {
+      "file_path": "sklearn/utils/_set_output.py",
+      "start_line": 130,
+      "end_line": 134
+    }
+  ],
+  "run_id": "sgagent-official-scikit-learn__scikit-learn-25747-0-4982a9092c",
+  "instance_id": "scikit-learn__scikit-learn-25747",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

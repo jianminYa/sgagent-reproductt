@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nLet me find the `send_robust` method implementation in the Django source code.\n\n#TOOL_CALL find_methods_by_name\n{ \"name\": \"send_robust\" }", "name": null, "tool_calls": [], "type": "ai"}

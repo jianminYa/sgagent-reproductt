@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 11934,
+    "output_tokens": 97,
+    "reasoning_tokens": null,
+    "total_tokens": 12031
+  },
+  "input_tokens": 103458,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 0,
+      "output_tokens": 17,
+      "reasoning_tokens": null,
+      "total_tokens": 17
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7989,
+      "output_tokens": 53,
+      "reasoning_tokens": null,
+      "total_tokens": 8042
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8035,
+      "output_tokens": 77,
+      "reasoning_tokens": null,
+      "total_tokens": 8112
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8058,
+      "output_tokens": 8,
+      "reasoning_tokens": null,
+      "total_tokens": 8066
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8372,
+      "output_tokens": 54,
+      "reasoning_tokens": null,
+      "total_tokens": 8426
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8809,
+      "output_tokens": 83,
+      "reasoning_tokens": null,
+      "total_tokens": 8892
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 9627,
+      "output_tokens": 84,
+      "reasoning_tokens": null,
+      "total_tokens": 9711
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 9829,
+      "output_tokens": 72,
+      "reasoning_tokens": null,
+      "total_tokens": 9901
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 10014,
+      "output_tokens": 97,
+      "reasoning_tokens": null,
+      "total_tokens": 10111
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 10168,
+      "output_tokens": 49,
+      "reasoning_tokens": null,
+      "total_tokens": 10217
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 10623,
+      "output_tokens": 95,
+      "reasoning_tokens": null,
+      "total_tokens": 10718
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 786,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 13950,
+  "total_llm_calls": 12,
+  "total_tokens": 104244,
+  "wall_clock_ms": 67412.006,
+  "run_id": "name_to_definition_phase1-pylint-dev__pylint-7080-n2d-488a9f6006",
+  "arm": "n2d",
+  "instance_id": "pylint-dev__pylint-7080"
+}

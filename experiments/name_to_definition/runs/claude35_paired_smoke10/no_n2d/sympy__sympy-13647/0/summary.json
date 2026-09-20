@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "b5b40f1c-d4e4-4e24-a32f-3600b318bb15",
+    "b27ee002-b3af-4fab-98c6-225d1acd3e04",
+    "035e3942-2f71-4312-8cbf-95fbffabe432",
+    "da0ac64d-b9bf-4e8d-8a42-68b8bd8b33e4",
+    "49b09dda-7762-4404-b147-a63962e69176",
+    "217fea8c-cbaf-4322-8d7a-a400ce4bba3b",
+    "4ff3dccb-850b-4f34-829c-317b78a5869a",
+    "40058189-d38c-4dbe-9298-b9c0feb5cb46"
+  ],
+  "stop_reasons": {
+    "stop": 8
+  },
+  "logical_llm_calls": 8,
+  "http_attempts": 8,
+  "request_retries": 0,
+  "successful_llm_responses": 8,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 8,
+  "tool_calls": 6,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 8,
+  "logical_calls_by_phase": {
+    "locator": 8
+  },
+  "successful_responses_by_phase": {
+    "locator": 8
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 36237,
+      "output_tokens": 1369,
+      "total_tokens": 37606
+    }
+  },
+  "tool_result_chars": 6441,
+  "tool_original_chars": 6441,
+  "tool_returned_chars": 6441,
+  "tool_original_bytes": 6441,
+  "tool_returned_bytes": 6441,
+  "truncated_tool_calls": 0,
+  "input_tokens": 36237,
+  "output_tokens": 1369,
+  "total_tokens": 37606,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 334333.198,
+  "graph_updates": 14,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py",
+      "start_line": 81,
+      "end_line": 92
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/matrices/common.py",
+      "start_line": 81,
+      "end_line": 92
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13647-0-74d62a5d33",
+  "instance_id": "sympy__sympy-13647",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d"
+}

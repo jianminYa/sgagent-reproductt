@@ -17,10 +17,11 @@ from utils.logging import set_api_stats_file
 from utils.logger import Logger
 from settings import settings
 
-def _get_problem_statement_by_instance_id(id):
+def _get_problem_statement_by_instance_id(id, dataset_path=None):
     current_dir = Path(__file__).parent
-    # parquet_path = current_dir / "dataset.parquet"
-    parquet_path = current_dir /"dataset"/ "lite.parquet"
+    parquet_path = Path(dataset_path) if dataset_path else current_dir / settings.DATASET_PATH
+    if not parquet_path.is_absolute():
+        parquet_path = current_dir / parquet_path
 
     df = pd.read_parquet(parquet_path)
     result = df.loc[df["instance_id"] == id, "problem_statement"]
@@ -36,7 +37,7 @@ ROUND = settings.ROUND
 TEST_BED = settings.TEST_BED
 PROJECT_NAME = settings.PROJECT_NAME
 INSTANCE_ID = settings.INSTANCE_ID
-PROBLEM_STATEMENT = _get_problem_statement_by_instance_id(INSTANCE_ID)
+PROBLEM_STATEMENT = _get_problem_statement_by_instance_id(INSTANCE_ID, settings.DATASET_PATH)
 
 print("========ISEA Settings========")
 print(f"{TEST_BED}")
@@ -46,7 +47,6 @@ print(f"DISABLE_KG: {DISABLE_KG}")
 print("=============================")
 # No external dependencies needed - using internal Logger
 print("========================")
-print(settings.openai_api_key)
 print("========================")
 
 llm = ChatOpenAI(

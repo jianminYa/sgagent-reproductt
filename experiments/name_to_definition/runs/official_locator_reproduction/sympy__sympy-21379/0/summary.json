@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 19,
+  "tool_calls": 17,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 21,
+  "tool_result_chars": 18668,
+  "input_tokens": 91814,
+  "output_tokens": 11242,
+  "total_tokens": 103056,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 426790.551,
+  "graph_updates": 40,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/polys/polyutils.py",
+      "start_line": 269,
+      "end_line": 270
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/polys/polyutils.py",
+      "start_line": 4,
+      "end_line": 5
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/polys/polytools.py",
+      "start_line": 4397,
+      "end_line": 4400
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-eqwm_60h/sympy/core/exprtools.py",
+      "start_line": 238,
+      "end_line": 242
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/polys/polyutils.py",
+      "start_line": 269,
+      "end_line": 270
+    },
+    {
+      "file_path": "sympy/polys/polyutils.py",
+      "start_line": 4,
+      "end_line": 5
+    },
+    {
+      "file_path": "sympy/polys/polytools.py",
+      "start_line": 4397,
+      "end_line": 4400
+    },
+    {
+      "file_path": "sympy/core/exprtools.py",
+      "start_line": 238,
+      "end_line": 242
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21379-0-ee9d358b16",
+  "instance_id": "sympy__sympy-21379",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

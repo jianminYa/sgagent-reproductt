@@ -1,0 +1,9 @@
+
+
+#REFLECT
+The bug is clear. The `_tick_only` function at lines 13-17 uses `ax.axis["bottom"]` and `ax.axis["left"]`, which assumes `ax.axis` is a dict-like object (as it is for `mpl_toolkits.axes_grid1.mpl_axes.Axes`). For other axes classes (like cartopy's `GeoAxes`), `ax.axis` is just a method and not subscriptable, causing `TypeError: 'method' object is not subscriptable`.
+
+The fix should check whether `ax.axis` is subscriptable and fall back to `ax.tick_params` for axes that don't support dict-like access. Let me check what the `toggle` method does to understand the equivalent `tick_params` call.
+
+#TOOL_CALL find_methods_by_name
+{"name": "toggle"}

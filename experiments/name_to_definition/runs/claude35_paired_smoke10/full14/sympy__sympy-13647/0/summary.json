@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "36858c30-ed41-4743-a92e-c5f639165415",
+    "86b4e481-6d7b-4f3f-94dd-34218692090f",
+    "78b72a37-e6cb-407f-8dc5-2f4b006dee41",
+    "a2518499-a0e0-494e-bc54-5bf691f3a8ed"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "logical_llm_calls": 4,
+  "http_attempts": 4,
+  "request_retries": 0,
+  "successful_llm_responses": 4,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 4,
+  "tool_calls": 2,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 4,
+  "logical_calls_by_phase": {
+    "locator": 4
+  },
+  "successful_responses_by_phase": {
+    "locator": 4
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 19260,
+      "output_tokens": 871,
+      "total_tokens": 20131
+    }
+  },
+  "tool_result_chars": 5610,
+  "tool_original_chars": 5610,
+  "tool_returned_chars": 5610,
+  "tool_original_bytes": 5646,
+  "tool_returned_bytes": 5646,
+  "truncated_tool_calls": 0,
+  "input_tokens": 19260,
+  "output_tokens": 871,
+  "total_tokens": 20131,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 211183.155,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-tlq5q8z5/sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/matrices/common.py",
+      "start_line": 89,
+      "end_line": 89
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13647-0-e4c244f192",
+  "instance_id": "sympy__sympy-13647",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_full14"
+}

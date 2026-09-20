@@ -1,0 +1,11 @@
+
+
+#REFLECT
+Now I understand the issue clearly. The root cause is in `sinh.as_real_imag()` at line 184. When `self.args[0].is_extended_real` returns `None` (because the cache is empty and the Piecewise-containing expression can't determine its realness), the method falls through to lines 190-194, which decomposes the argument into real and imaginary parts. This decomposition eventually leads to `poly()` being called on expressions containing Piecewise, which raises `PolynomialError`.
+
+The fix should be: when `is_extended_real` returns `None` but the argument could still be real (e.g., it contains Piecewise with real branches), we should handle it gracefully. The same pattern exists in `cosh.as_real_imag()`, `tanh.as_real_imag()`, and the other hyperbolic functions.
+
+Let me look at all the affected `as_real_imag` methods to understand the full scope.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py", "start_line": 367, "end_line": 395}

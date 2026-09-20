@@ -1,0 +1,27 @@
+
+
+Now I have a complete understanding of the bug. The issue is on **line 35** of `/tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py`:
+
+```python
+self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)')
+```
+
+The regex `.*` does not match newline characters by default. When multiline RawSQL is used in `order_by()`, the `ordering_parts.search(sql)` only matches the **last line** containing ASC/DESC. This causes different multiline expressions that happen to share the same last line (like `else null end`) to be incorrectly identified as duplicates and removed.
+
+The fix is to add `re.DOTALL` so that `.` matches newline characters too.
+
+**Bug Location:**
+- **Line 35**: The `ordering_parts` regex definition
+
+**Fix:** Change line 35 from:
+```python
+self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)')
+```
+to:
+```python
+self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)', re.DOTALL)
+```
+
+This ensures that when `sql` is multiline, the `.*` in group(1) captures the **entire** SQL expression before the ASC/DESC keyword, not just the content of the last line. This correctly distinguishes different multiline RawSQL expressions from each other.
+
+**INFO ENOUGH**

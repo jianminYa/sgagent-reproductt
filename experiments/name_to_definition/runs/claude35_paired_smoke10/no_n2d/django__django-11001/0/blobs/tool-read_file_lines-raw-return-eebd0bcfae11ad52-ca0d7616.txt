@@ -1,0 +1,18 @@
+File: /tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py
+Total lines: 1507
+Showing lines 22-35:
+
+  22: class SQLCompiler:
+  23:     def __init__(self, query, connection, using):
+  24:         self.query = query
+  25:         self.connection = connection
+  26:         self.using = using
+  27:         self.quote_cache = {'*': '*'}
+  28:         # The select, klass_info, and annotations are needed by QuerySet.iterator()
+  29:         # these are set as a side-effect of executing the query. Note that we calculate
+  30:         # separately a list of extra select columns needed for grammatical correctness
+  31:         # of the query, but these columns are not included in self.select.
+  32:         self.select = None
+  33:         self.annotation_col_map = None
+  34:         self.klass_info = None
+  35:         self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)')

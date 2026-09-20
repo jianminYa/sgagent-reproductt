@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL analyze_file_structure\n{\"file\": \"/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py\"}", "name": null, "tool_calls": [], "type": "ai"}

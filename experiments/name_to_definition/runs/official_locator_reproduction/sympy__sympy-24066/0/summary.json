@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 12132,
+  "input_tokens": 35157,
+  "output_tokens": 2779,
+  "total_tokens": 37936,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 278292.752,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-64b9pq5n/sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-24066-0-0509eb42ac",
+  "instance_id": "sympy__sympy-24066",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

@@ -1,0 +1,21 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Total lines: 1748
+Showing lines 364-380:
+
+ 364:     def _eval_conjugate(self):
+ 365:         return self.func(self.args[0].conjugate())
+ 366: 
+ 367:     def as_real_imag(self, deep=True, **hints):
+ 368:         from sympy import cos, sin
+ 369:         if self.args[0].is_extended_real:
+ 370:             if deep:
+ 371:                 hints['complex'] = False
+ 372:                 return (self.expand(deep, **hints), S.Zero)
+ 373:             else:
+ 374:                 return (self, S.Zero)
+ 375:         if deep:
+ 376:             re, im = self.args[0].expand(deep, **hints).as_real_imag()
+ 377:         else:
+ 378:             re, im = self.args[0].as_real_imag()
+ 379: 
+ 380:         return (cosh(re)*cos(im), sinh(re)*sin(im))

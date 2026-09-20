@@ -1,0 +1,74 @@
+# Summary of Bug Investigation: PolynomialError with Piecewise in subs()
+
+## Problem Description
+A `PolynomialError: Piecewise generators do not make sense` occurs when calling `subs({1: 1.0})` on an expression like `exp(sinh(Piecewise((x, y > x), (y, True)) / z))` with **real symbols** and after **clearing the cache**.
+
+### Key Characteristics:
+- Only happens with `sinh`, `cosh`, or `tanh` (hyperbolic functions) inside `exp`
+- Only occurs with real-valued symbols (not generic symbols)
+- Only triggers after cache clearing (works on second run)
+- The error originates from `sympy/polys/polytools.py`
+
+## Error Source Location
+**File: `sympy/polys/polytools.py`, lines 4397-4399:**
+```python
+for k in opt.gens:
+    if isinstance(k, Piecewise):
+        raise PolynomialError("Piecewise generators do not make sense")
+```
+This is the only place in the codebase where this error message exists.
+
+## Files Examined in Detail
+
+### 1. `sympy/polys/polytools.py`
+- Contains the error at line 4399 - raises when Piecewise objects appear as generators in polynomial operations
+
+### 2. `sympy/functions/elementary/exponential.py` - `exp` class
+- **`exp.eval()` (lines 267-370):**
+  - `arg.is_Mul` branch (line 295): calls `logcombine(term)` on factors (line 336), checks `term.is_comparable` (line 342)
+  - `arg.is_Add` branch (line 349): recursively creates `cls(a)` for each addend (line 357)
+  - These paths could trigger evaluation chains leading to polynomial code
+- **`exp._eval_subs()` (lines 429-442):** For `old=1, new=1.0`, falls through to `Function._eval_subs(self, old, new)` at line 442, which reconstructs via constructor calling `exp.eval()`
+
+### 3. `sympy/core/power.py` - `Pow` class
+- **`Pow.as_real_imag()` (lines 1237-1316):** Calls `poly()` at lines 1254-1255 and 1265, BUT uses dummy symbols `a` and `b` (line 1246), so these calls are on `(a + b)**exp` — **NOT the source of the Piecewise error**
+- **`Pow._eval_subs()` (lines 791-908):** For `old=1`, the exp/Pow-specific blocks are not reached
+
+### 4. `sympy/core/mul.py` - `Mul` class
+- **`Mul._eval_is_extended_real()` (line 1380):** Delegates to `self._eval_real_imag(True)` — this is an assumption handler that could be triggered during evaluation with real symbols
+
+## Revised Root Cause Analysis
+
+### What's Been Ruled Out:
+- `Pow.as_real_imag()` → `poly()` path: Uses dummy symbols `a, b`, not the actual expression, so Piecewise wouldn't appear as generators here
+
+### Current Hypothesis:
+The path likely involves:
+1. `subs({1: 1.0})` walks the expression tree
+2. During reconstruction, `exp.eval()` is called on the argument
+3. With real symbols, assumption queries like `is_comparable`, `is_extended_real`, `is_positive` are triggered
+4. These assumption queries (particularly through `Mul._eval_is_extended_real()` → `_eval_real_imag()`) may call `as_real_imag()` on sub-expressions
+5. Some code path eventually calls `poly()` on an expression containing the Piecewise, causing the error
+6. The cache dependency: assumption results are cached after first computation, so the problematic code path isn't re-entered on subsequent runs
+
+### Alternative Hypothesis:
+The `re()` and `im()` calls in `exp.eval()` at lines 326-330 (inside the `coeff in [S.NegativeInfinity, S.Infinity]` block) could trigger `as_real_imag()` on expressions containing Piecewise. However, this block requires `coeff` to be infinity, which seems unlikely here.
+
+## Blocking Issue
+**Multiple attempts to run a reproduction script have failed** due to persistent Pydantic validation errors with the `execute_shell_command_with_validation` tool. The tool consistently returns:
+```
+1 validation error for execute_shell_command_with_validation
+command
+  Field required [type=missing, input_value={}, input_type=dict]
+```
+This prevents getting an actual traceback to confirm the exact code path.
+
+## Next Steps Needed
+1. **Get the actual traceback** — essential to confirm which code path triggers `poly()` with Piecewise
+2. **Investigate `Mul._eval_real_imag()`** — likely involved in the assumption checking chain with real symbols
+3. **Search for other `poly()` call sites** that could receive Piecewise expressions (beyond `Pow.as_real_imag()`)
+4. **Implement fix**: Most likely either:
+   - Add a try/except around the `poly()` call that catches `PolynomialError` and falls back
+   - Add a check for Piecewise before calling `poly()`
+   - Prevent unnecessary assumption evaluation when Piecewise is present
+5. The fix location depends on confirming the exact code path via traceback

@@ -1,0 +1,17 @@
+
+
+#REFLECT
+Now I can see the `Pow.as_real_imag()` method. The `poly()` calls at lines 1254-1255 and 1265 use dummy symbols `a` and `b`, so they wouldn't directly fail on Piecewise. The `poly()` call here is on `(a + b)**exp` which is fine.
+
+So the issue must be elsewhere. Let me reconsider. The error "Piecewise generators do not make sense" comes from `poly()` being called on an expression containing Piecewise. Let me look at where else `poly()` or polynomial-related functions are called in the codebase that could be triggered during `subs`.
+
+Let me think about the actual code path:
+1. `expr.subs({1: 1.0})` - substituting 1 with 1.0
+2. This walks the expression tree
+3. For `exp(sinh(...))`, `sinh` gets expanded to `(exp(x) - exp(-x))/2`
+4. During reconstruction/evaluation, `exp.eval()` is called
+
+Let me look at `exp.eval()` more carefully, particularly the part that handles `Mul` arguments and calls `as_real_imag`.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py", "start_line": 267, "end_line": 316}

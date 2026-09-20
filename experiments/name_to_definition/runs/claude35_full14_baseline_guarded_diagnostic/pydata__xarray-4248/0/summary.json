@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "a7ccdd2f-8cf0-4a36-8a1f-83d3c26272ac",
+    "a33314b9-b49c-4921-a27d-fa15f89609f9",
+    "77741960-4b9c-45ee-b9a1-da5f2bbd5f94",
+    "8fceceec-93a3-4cc3-adae-f0cafc8beca1",
+    "e4acab98-cba0-44e3-ae2c-a3ee8f45ebc6",
+    "d4f0d419-f7ef-4200-9d2c-2d75b98ed400",
+    "007f3cf3-09cb-4c0b-939e-5648c43e9cad",
+    "b7abc37b-2c0a-4c9c-be4d-6ea79d3a3b91",
+    "0581e26e-81ca-45d3-85a0-f5e54fbf28c5",
+    "e34fae60-428f-45f9-8446-993668d53e6f",
+    "ddef6201-ffb2-41ef-b961-40e7df87b5a0"
+  ],
+  "stop_reasons": {
+    "stop": 11
+  },
+  "locator_llm_calls": 10,
+  "tool_calls": 10,
+  "failed_tool_calls": 0,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 11,
+  "tool_result_chars": 7814,
+  "tool_original_chars": 7814,
+  "tool_returned_chars": 7814,
+  "truncated_tool_calls": 0,
+  "input_tokens": 45810,
+  "output_tokens": 1888,
+  "total_tokens": 47698,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 124446.005,
+  "graph_updates": 22,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-pydata__xarray-4248-0-1572a9dd3a",
+  "instance_id": "pydata__xarray-4248",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

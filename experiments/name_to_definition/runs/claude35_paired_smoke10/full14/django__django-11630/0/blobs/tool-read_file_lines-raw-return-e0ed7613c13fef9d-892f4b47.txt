@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-5oom4hte/tests/check_framework/test_model_checks.py
+Total lines: 304
+Showing lines 1-50:
+
+   1: from django.core import checks
+   2: from django.core.checks import Error
+   3: from django.db import models
+   4: from django.test import SimpleTestCase, TestCase, skipUnlessDBFeature
+   5: from django.test.utils import (
+   6:     isolate_apps, modify_settings, override_system_checks,
+   7: )
+   8: 
+   9: 
+  10: @isolate_apps('check_framework', attr_name='apps')
+  11: @override_system_checks([checks.model_checks.check_all_models])
+  12: class DuplicateDBTableTests(SimpleTestCase):
+  13:     def test_collision_in_same_app(self):
+  14:         class Model1(models.Model):
+  15:             class Meta:
+  16:                 db_table = 'test_table'
+  17: 
+  18:         class Model2(models.Model):
+  19:             class Meta:
+  20:                 db_table = 'test_table'
+  21: 
+  22:         self.assertEqual(checks.run_checks(app_configs=self.apps.get_app_configs()), [
+  23:             Error(
+  24:                 "db_table 'test_table' is used by multiple models: "
+  25:                 "check_framework.Model1, check_framework.Model2.",
+  26:                 obj='test_table',
+  27:                 id='models.E028',
+  28:             )
+  29:         ])
+  30: 
+  31:     @modify_settings(INSTALLED_APPS={'append': 'basic'})
+  32:     @isolate_apps('basic', 'check_framework', kwarg_name='apps')
+  33:     def test_collision_across_apps(self, apps):
+  34:         class Model1(models.Model):
+  35:             class Meta:
+  36:                 app_label = 'basic'
+  37:                 db_table = 'test_table'
+  38: 
+  39:         class Model2(models.Model):
+  40:             class Meta:
+  41:                 app_label = 'check_framework'
+  42:                 db_table = 'test_table'
+  43: 
+  44:         self.assertEqual(checks.run_checks(app_configs=apps.get_app_configs()), [
+  45:             Error(
+  46:                 "db_table 'test_table' is used by multiple models: "
+  47:                 "basic.Model1, check_framework.Model2.",
+  48:                 obj='test_table',
+  49:                 id='models.E028',
+  50:             )

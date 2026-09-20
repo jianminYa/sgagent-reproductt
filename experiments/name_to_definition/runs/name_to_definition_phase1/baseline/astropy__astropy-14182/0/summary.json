@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 1881,
+    "output_tokens": 79,
+    "reasoning_tokens": null,
+    "total_tokens": 1960
+  },
+  "input_tokens": 53330,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 1585,
+      "output_tokens": 21,
+      "reasoning_tokens": null,
+      "total_tokens": 1606
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3780,
+      "output_tokens": 47,
+      "reasoning_tokens": null,
+      "total_tokens": 3827
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3950,
+      "output_tokens": 44,
+      "reasoning_tokens": null,
+      "total_tokens": 3994
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4147,
+      "output_tokens": 56,
+      "reasoning_tokens": null,
+      "total_tokens": 4203
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4451,
+      "output_tokens": 35,
+      "reasoning_tokens": null,
+      "total_tokens": 4486
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4699,
+      "output_tokens": 54,
+      "reasoning_tokens": null,
+      "total_tokens": 4753
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5327,
+      "output_tokens": 52,
+      "reasoning_tokens": null,
+      "total_tokens": 5379
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5726,
+      "output_tokens": 183,
+      "reasoning_tokens": null,
+      "total_tokens": 5909
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5502,
+      "output_tokens": 170,
+      "reasoning_tokens": null,
+      "total_tokens": 5672
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5693,
+      "output_tokens": 52,
+      "reasoning_tokens": null,
+      "total_tokens": 5745
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6589,
+      "output_tokens": 97,
+      "reasoning_tokens": null,
+      "total_tokens": 6686
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 890,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 12828,
+  "total_llm_calls": 12,
+  "total_tokens": 54220,
+  "wall_clock_ms": 59699.585,
+  "run_id": "name_to_definition_phase1-astropy__astropy-14182-baseline-c82c9cb113",
+  "arm": "baseline",
+  "instance_id": "astropy__astropy-14182"
+}

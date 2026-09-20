@@ -1,0 +1,28 @@
+
+
+#REFLECT
+Now I have a clear understanding of the bug. Let me confirm the exact location:
+
+In `add_deferred_loading` (lines 2071-2089 in `/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py`):
+
+When `defer=False` (we're in "only" mode), and we call `.defer("name")`:
+```python
+self.deferred_loading = existing.difference(field_names), False
+```
+
+This computes `{"name"} - {"name"} = set()`, resulting in `(set(), False)`.
+
+The problem is that `(set(), False)` means "only load these fields" with an empty set, which is interpreted elsewhere as "no restriction" (load all fields). 
+
+The fix should be: when we're in "only" mode and we remove fields via `defer()`, if the resulting set becomes empty, we should switch to `(field_names, True)` — i.e., "defer" mode. But actually, a simpler and more correct fix: when the `existing` set is non-empty and `defer` is `False`, and we're removing fields from the "only" set, if the result is empty, we need to convert to defer mode where ALL the original fields that were in the "only" set (which are now being deferred) become deferred fields.
+
+Wait, let me think more carefully. The simplest correct fix:
+
+When `defer=False` and `existing` is non-empty (meaning we had an explicit `.only()` call), the resulting empty set should NOT be treated as "load everything." Instead, we should switch to `defer=True` mode with `field_names` as the deferred set.
+
+Actually, the cleanest fix is: in the `else` branch (when `defer=False`), if `existing` is non-empty (we have an active "only" restriction), compute the difference. If it becomes empty, we should switch to `(field_names, True)` to defer those fields. But that's still not completely right for chaining...
+
+Let me re-read the code more carefully.
+
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py", "start_line": 2071, "end_line": 2089 }

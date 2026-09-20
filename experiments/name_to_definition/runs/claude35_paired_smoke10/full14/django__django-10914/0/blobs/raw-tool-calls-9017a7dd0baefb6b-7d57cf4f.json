@@ -1,0 +1,1 @@
+["#TOOL_CALL find_variable_usage\n{ \"file\": \"/tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py\", \"variable_name\": \"FILE_UPLOAD_PERMISSIONS\" }"]

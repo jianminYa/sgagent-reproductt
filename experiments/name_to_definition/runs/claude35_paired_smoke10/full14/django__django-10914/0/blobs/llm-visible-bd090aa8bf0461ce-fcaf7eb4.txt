@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-0hngtli7/tests/staticfiles_tests/test_storage.py", "start_line": 518, "end_line": 530 }

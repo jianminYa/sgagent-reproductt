@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 15,
+  "tool_calls": 13,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 17,
+  "tool_result_chars": 17892,
+  "input_tokens": 66930,
+  "output_tokens": 6379,
+  "total_tokens": 73309,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 344730.458,
+  "graph_updates": 31,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-9o49m00o/sympy/printing/mathematica.py",
+      "start_line": 103,
+      "end_line": 103
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/printing/mathematica.py",
+      "start_line": 103,
+      "end_line": 103
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-15345-0-aaa4c7e9c1",
+  "instance_id": "sympy__sympy-15345",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

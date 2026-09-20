@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py
+Total lines: 634
+Showing lines 1-50:
+
+   1: """
+   2: Default Django settings. Override these with settings in the module pointed to
+   3: by the DJANGO_SETTINGS_MODULE environment variable.
+   4: """
+   5: 
+   6: 
+   7: # This is defined here as a do-nothing function because we can't import
+   8: # django.utils.translation -- that module depends on the settings.
+   9: def gettext_noop(s):
+  10:     return s
+  11: 
+  12: 
+  13: ####################
+  14: # CORE             #
+  15: ####################
+  16: 
+  17: DEBUG = False
+  18: 
+  19: # Whether the framework should propagate raw exceptions rather than catching
+  20: # them. This is useful under some testing situations and should never be used
+  21: # on a live site.
+  22: DEBUG_PROPAGATE_EXCEPTIONS = False
+  23: 
+  24: # People who get code error notifications.
+  25: # In the format [('Full Name', 'email@example.com'), ('Full Name', 'anotheremail@example.com')]
+  26: ADMINS = []
+  27: 
+  28: # List of IP addresses, as strings, that:
+  29: #   * See debug comments, when DEBUG is true
+  30: #   * Receive x-headers
+  31: INTERNAL_IPS = []
+  32: 
+  33: # Hosts/domain names that are valid for this site.
+  34: # "*" matches anything, ".example.com" matches example.com and all subdomains
+  35: ALLOWED_HOSTS = []
+  36: 
+  37: # Local time zone for this installation. All choices can be found here:
+  38: # https://en.wikipedia.org/wiki/List_of_tz_zones_by_name (although not all
+  39: # systems may support all possibilities). When USE_TZ is True, this is
+  40: # interpreted as the default user time zone.
+  41: TIME_ZONE = 'America/Chicago'
+  42: 
+  43: # If you set this to True, Django will use timezone-aware datetimes.
+  44: USE_TZ = False
+  45: 
+  46: # Language code for this installation. All choices can be found here:
+  47: # http://www.i18nguy.com/unicode/language-identifiers.html
+  48: LANGUAGE_CODE = 'en-us'
+  49: 
+  50: # Languages we provide translations for, out of the box.

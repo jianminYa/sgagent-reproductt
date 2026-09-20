@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "12745d95-776d-4bfc-a543-b585f0621333",
+    "e9cf3dfe-eb95-4536-ad06-1eae60ad19a8",
+    "46d9cc87-582c-49d8-963d-dbc3bd6bfdaf",
+    "d7d60efe-4e6d-4882-97b5-fa6d9cfa110e",
+    "b3f510e1-7b83-444b-b2f8-38e3a7ce7458",
+    "cfbce568-35d1-46ad-9f86-fcbe2ae78d85",
+    "093807a8-3c68-406e-9163-132b14118c5a"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 24506,
+  "tool_original_chars": 24506,
+  "tool_returned_chars": 24506,
+  "truncated_tool_calls": 0,
+  "input_tokens": 44673,
+  "output_tokens": 1641,
+  "total_tokens": 46314,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 59089.715,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-2m24pn1m/requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-2m24pn1m/requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-2m24pn1m/requests/sessions.py",
+      "start_line": 183,
+      "end_line": 184
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    },
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 183,
+      "end_line": 184
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-1963-0-00071d7f2c",
+  "instance_id": "psf__requests-1963",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

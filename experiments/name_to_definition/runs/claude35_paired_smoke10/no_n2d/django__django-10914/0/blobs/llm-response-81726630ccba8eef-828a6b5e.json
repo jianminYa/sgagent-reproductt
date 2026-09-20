@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL read_file_lines\n{ \"file_path\": \"/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py\", \"start_line\": 300, \"end_line\": 315 }", "name": null, "tool_calls": [], "type": "ai"}

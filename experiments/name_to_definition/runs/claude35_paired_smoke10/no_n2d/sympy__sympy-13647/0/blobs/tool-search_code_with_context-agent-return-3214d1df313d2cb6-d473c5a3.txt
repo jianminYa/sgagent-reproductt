@@ -1,0 +1,14 @@
+Search results for '_eval_col_insert' in file (showing first 1 matches):
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/sparse.py
+Lines 268-274:
+ 268:                 smat[key] = sum
+ 269:         return self._new(self.rows, self.cols, smat)
+ 270: 
+ 271:     def _eval_col_insert(self, icol, other):
+ 272:         if not isinstance(other, SparseMatrix):
+ 273:             other = SparseMatrix(other)
+ 274:         new_smat = {}
+
+================================================================================
+

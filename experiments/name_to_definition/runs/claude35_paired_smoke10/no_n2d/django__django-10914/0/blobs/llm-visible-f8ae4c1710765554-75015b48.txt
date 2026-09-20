@@ -1,0 +1,40 @@
+
+
+#REFLECT
+I now have all the context needed. Let me summarize the locations that need to be changed:
+
+1. **`django/conf/global_settings.py` line 307**: Change `FILE_UPLOAD_PERMISSIONS = None` to `FILE_UPLOAD_PERMISSIONS = 0o644` — this is the root cause fix.
+
+2. **`tests/test_utils/tests.py` line 1102**: `self.assertIsNone(default_storage.file_permissions_mode)` needs to change to `self.assertEqual(default_storage.file_permissions_mode, 0o644)` since the default is no longer `None`.
+
+3. **`tests/file_storage/tests.py` lines 895-900**: The test `test_file_upload_default_permissions` overrides `FILE_UPLOAD_PERMISSIONS=None` and asserts `mode == 0o666 & ~self.umask`. With the new default of `0o644`, this test needs updating — it should test with the new default and expect `0o644`.
+
+4. **`tests/staticfiles_tests/test_storage.py` lines 518-528**: The test `test_collect_static_files_default_permissions` overrides `FILE_UPLOAD_PERMISSIONS=None` and asserts `file_mode == 0o666 & ~self.umask`. Same issue — needs updating.
+
+These are the 4 locations. Let me provide the final answer.
+
+**INFO ENOUGH**
+
+Here are the bug locations:
+
+## Bug Locations
+
+### Location 1: Root Cause
+**File:** `/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py`  
+**Lines:** 307  
+**Issue:** `FILE_UPLOAD_PERMISSIONS = None` causes inconsistent file permissions depending on upload handler. Should be `0o644`.
+
+### Location 2: Test expecting old default
+**File:** `/tmp/sgagent-n2d-wtyvhqy4/tests/test_utils/tests.py`  
+**Lines:** 1102  
+**Issue:** `self.assertIsNone(default_storage.file_permissions_mode)` asserts the old `None` default. Must assert `0o644`.
+
+### Location 3: Test expecting old default behavior
+**File:** `/tmp/sgagent-n2d-wtyvhqy4/tests/file_storage/tests.py`  
+**Lines:** 895–900  
+**Issue:** Test overrides `FILE_UPLOAD_PERMISSIONS=None` and expects `0o666 & ~umask`. With new default `0o644`, this test should verify the new default behavior.
+
+### Location 4: Test expecting old default behavior
+**File:** `/tmp/sgagent-n2d-wtyvhqy4/tests/staticfiles_tests/test_storage.py`  
+**Lines:** 518–528  
+**Issue:** Test overrides `FILE_UPLOAD_PERMISSIONS=None` and expects `0o666 & ~umask`. With new default `0o644`, this test should verify the new default behavior.

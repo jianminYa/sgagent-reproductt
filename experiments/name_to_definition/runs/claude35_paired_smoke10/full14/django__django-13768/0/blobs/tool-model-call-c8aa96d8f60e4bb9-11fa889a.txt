@@ -1,0 +1,2 @@
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-b9dtj6zl/tests/dispatch/tests.py", "start_line": 146, "end_line": 195 }

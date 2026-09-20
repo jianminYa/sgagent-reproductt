@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "dd7cceff-55ca-48be-a48a-927e578cb48f",
+    "39693d81-d13f-487a-8afa-6fce527c3c95",
+    "501f6503-41a7-43a6-91d5-58bdbfdfc1fe",
+    "e58aa83c-be89-436f-9f4b-bf0a3791ba95",
+    "09484f49-d251-47ff-9f25-02bb9e33319a",
+    "ad1c450a-bb0c-477a-90ad-c0dd8ee90833",
+    "60b66928-f8cc-42ab-b45c-6b1b225a8564",
+    "63b78b96-c8e9-4515-97aa-89b48a7fa6c3"
+  ],
+  "stop_reasons": {
+    "stop": 8
+  },
+  "logical_llm_calls": 8,
+  "http_attempts": 8,
+  "request_retries": 0,
+  "successful_llm_responses": 8,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 8,
+  "tool_calls": 6,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 8,
+  "logical_calls_by_phase": {
+    "locator": 8
+  },
+  "successful_responses_by_phase": {
+    "locator": 8
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 40831,
+      "output_tokens": 1446,
+      "total_tokens": 42277
+    }
+  },
+  "tool_result_chars": 8849,
+  "tool_original_chars": 8849,
+  "tool_returned_chars": 8849,
+  "tool_original_bytes": 8849,
+  "tool_returned_bytes": 8849,
+  "truncated_tool_calls": 0,
+  "input_tokens": 40831,
+  "output_tokens": 1446,
+  "total_tokens": 42277,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 230937.246,
+  "graph_updates": 14,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-43vv_8rf/django/db/models/sql/query.py",
+      "start_line": 747,
+      "end_line": 751
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 747,
+      "end_line": 751
+    }
+  ],
+  "run_id": "sgagent-official-django__django-15814-0-944de681d7",
+  "instance_id": "django__django-15814",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d"
+}

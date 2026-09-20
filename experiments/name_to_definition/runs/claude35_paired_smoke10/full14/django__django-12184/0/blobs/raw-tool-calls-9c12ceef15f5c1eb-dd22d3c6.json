@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{\"file\": \"/tmp/sgagent-n2d-p7a2tz4q/django/urls/resolvers.py\", \"full_qualified_name\": \"django.urls.resolvers.RegexPattern.match\"}"]

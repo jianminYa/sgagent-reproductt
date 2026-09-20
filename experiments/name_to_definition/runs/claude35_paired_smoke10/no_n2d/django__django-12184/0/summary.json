@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "5a1a383d-89fb-472f-97ea-7c082bb9ac65",
+    "cf3eaa34-34de-4330-a36b-aa6a71ea3aad",
+    "542a1082-8fba-4276-9385-f759ae047ce7",
+    "08485dc4-55d2-4442-be3c-76fb353cbee5",
+    "08dc19e3-d99a-44d6-8163-15a5e09ba0e6",
+    "843e31b3-7863-4f78-90e0-6a7efbf41d93",
+    "2d80925f-b4d4-4c3b-b968-ddb48e90d26d"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "logical_llm_calls": 7,
+  "http_attempts": 7,
+  "request_retries": 0,
+  "successful_llm_responses": 7,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 7,
+  "logical_calls_by_phase": {
+    "locator": 7
+  },
+  "successful_responses_by_phase": {
+    "locator": 7
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 51153,
+      "output_tokens": 1707,
+      "total_tokens": 52860
+    }
+  },
+  "tool_result_chars": 30380,
+  "tool_original_chars": 30380,
+  "tool_returned_chars": 30380,
+  "tool_original_bytes": 30416,
+  "tool_returned_bytes": 30416,
+  "truncated_tool_calls": 0,
+  "input_tokens": 51153,
+  "output_tokens": 1707,
+  "total_tokens": 52860,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 167333.655,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-hirjf5mk/django/urls/resolvers.py",
+      "start_line": 161,
+      "end_line": 162
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/urls/resolvers.py",
+      "start_line": 161,
+      "end_line": 162
+    }
+  ],
+  "run_id": "sgagent-official-django__django-12184-0-19ea935ba5",
+  "instance_id": "django__django-12184",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d"
+}

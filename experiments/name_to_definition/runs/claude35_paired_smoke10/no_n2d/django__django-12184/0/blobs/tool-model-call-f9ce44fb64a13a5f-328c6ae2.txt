@@ -1,0 +1,2 @@
+#TOOL_CALL explore_directory
+{"dir_path": "/tmp/sgagent-n2d-hirjf5mk"}

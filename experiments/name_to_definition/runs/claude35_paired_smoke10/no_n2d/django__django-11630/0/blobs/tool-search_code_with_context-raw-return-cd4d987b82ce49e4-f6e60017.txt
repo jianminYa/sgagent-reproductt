@@ -1,0 +1,26 @@
+Search results for 'models.E028' in file (showing first 2 matches):
+
+File: /tmp/sgagent-n2d-1yd2xahh/tests/check_framework/test_model_checks.py
+Lines 24-30:
+  24:                 "db_table 'test_table' is used by multiple models: "
+  25:                 "check_framework.Model1, check_framework.Model2.",
+  26:                 obj='test_table',
+  27:                 id='models.E028',
+  28:             )
+  29:         ])
+  30: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/tests/check_framework/test_model_checks.py
+Lines 46-52:
+  46:                 "db_table 'test_table' is used by multiple models: "
+  47:                 "basic.Model1, check_framework.Model2.",
+  48:                 obj='test_table',
+  49:                 id='models.E028',
+  50:             )
+  51:         ])
+  52: 
+
+================================================================================
+

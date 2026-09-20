@@ -1,0 +1,464 @@
+{
+  "status": "official Locator reproduction; pilot-scale evidence",
+  "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d",
+  "n": 10,
+  "completed": 10,
+  "completion_rate": 1.0,
+  "termination_reasons": {
+    "completed": 10
+  },
+  "official_repository_metrics": {
+    "file_accuracy": 1.0,
+    "class_accuracy": 0.9,
+    "function_accuracy": 0.4,
+    "line_accuracy": 0.6,
+    "line_iou": 0.3068066378066378
+  },
+  "paper_set_jaccard_metrics": {
+    "file_accuracy": 0.925,
+    "function_accuracy": 0.625
+  },
+  "operational_metrics": {
+    "n": 10,
+    "completed": 10,
+    "official_repository_metrics": {
+      "file_accuracy": 1.0,
+      "class_accuracy": 0.9,
+      "function_accuracy": 0.4,
+      "line_accuracy": 0.6,
+      "line_iou": 0.3068066378066378
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": 0.925,
+      "function_accuracy": 0.625
+    }
+  },
+  "completed_only_conditional_metrics": {
+    "n": 10,
+    "completed": 10,
+    "official_repository_metrics": {
+      "file_accuracy": 1.0,
+      "class_accuracy": 0.9,
+      "function_accuracy": 0.4,
+      "line_accuracy": 0.6,
+      "line_iou": 0.3068066378066378
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": 0.925,
+      "function_accuracy": 0.625
+    }
+  },
+  "bootstrap_ci_95": {
+    "completion_rate": {
+      "n": 10,
+      "resamples": 10000,
+      "lower_2_5": 1.0,
+      "upper_97_5": 1.0
+    },
+    "official_repository_metrics": {
+      "file_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 1.0,
+        "upper_97_5": 1.0
+      },
+      "class_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.7,
+        "upper_97_5": 1.0
+      },
+      "function_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.1,
+        "upper_97_5": 0.7
+      },
+      "line_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.3,
+        "upper_97_5": 0.9
+      },
+      "line_iou": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.2072323232323232,
+        "upper_97_5": 0.40669552669552667
+      }
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.775,
+        "upper_97_5": 1.0
+      },
+      "function_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.4083333333333333,
+        "upper_97_5": 0.8333333333333334
+      }
+    },
+    "tokens": {
+      "total": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 74250.3,
+        "upper_97_5": 310169.1
+      },
+      "input": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 72942.9,
+        "upper_97_5": 308732.7
+      },
+      "output": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 1455.0,
+        "upper_97_5": 2459.7
+      }
+    }
+  },
+  "tokens": {
+    "incomplete_trajectories": 0,
+    "total": {
+      "n": 10,
+      "mean": 176874.6,
+      "median": 102265.0,
+      "p25": 44922.75,
+      "p75": 249249.0,
+      "p95": 511667.54999999964,
+      "max": 668691.0
+    },
+    "input": {
+      "n": 10,
+      "mean": 174960.4,
+      "median": 99033.5,
+      "p25": 43411.5,
+      "p75": 247079.25,
+      "p95": 510318.9499999996,
+      "max": 666968.0
+    },
+    "output": {
+      "n": 10,
+      "mean": 1914.2,
+      "median": 1715.0,
+      "p25": 1388.25,
+      "p75": 2293.25,
+      "p95": 3280.449999999999,
+      "max": 3721.0
+    }
+  },
+  "completed_only_tokens": {
+    "total": {
+      "n": 10,
+      "mean": 176874.6,
+      "median": 102265.0,
+      "p25": 44922.75,
+      "p75": 249249.0,
+      "p95": 511667.54999999964,
+      "max": 668691.0
+    },
+    "input": {
+      "n": 10,
+      "mean": 174960.4,
+      "median": 99033.5,
+      "p25": 43411.5,
+      "p75": 247079.25,
+      "p95": 510318.9499999996,
+      "max": 666968.0
+    },
+    "output": {
+      "n": 10,
+      "mean": 1914.2,
+      "median": 1715.0,
+      "p25": 1388.25,
+      "p75": 2293.25,
+      "p95": 3280.449999999999,
+      "max": 3721.0
+    }
+  },
+  "calls": {
+    "locator_llm": {
+      "n": 10,
+      "mean": 7.6,
+      "median": 7.5,
+      "p25": 4.5,
+      "p75": 9.5,
+      "p95": 13.099999999999998,
+      "max": 14.0
+    },
+    "summarizer_llm": {
+      "n": 10,
+      "mean": 0.3,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.75,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "total_llm": {
+      "n": 10,
+      "mean": 7.9,
+      "median": 7.5,
+      "p25": 4.5,
+      "p75": 10.25,
+      "p95": 14.099999999999998,
+      "max": 15.0
+    },
+    "tools": {
+      "n": 10,
+      "mean": 6.7,
+      "median": 6.0,
+      "p25": 5.0,
+      "p75": 8.75,
+      "p95": 11.099999999999998,
+      "max": 12.0
+    },
+    "failed_tools": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "logical_llm": {
+      "n": 10,
+      "mean": 7.9,
+      "median": 7.5,
+      "p25": 4.5,
+      "p75": 10.25,
+      "p95": 14.099999999999998,
+      "max": 15.0
+    },
+    "http_attempts": {
+      "n": 10,
+      "mean": 8.0,
+      "median": 7.5,
+      "p25": 4.5,
+      "p75": 11.0,
+      "p95": 14.099999999999998,
+      "max": 15.0
+    },
+    "successful_responses": {
+      "n": 10,
+      "mean": 7.9,
+      "median": 7.5,
+      "p25": 4.5,
+      "p75": 10.25,
+      "p95": 14.099999999999998,
+      "max": 15.0
+    },
+    "failed_logical_llm": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "request_retries": {
+      "n": 10,
+      "mean": 0.1,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.5499999999999989,
+      "max": 1.0
+    }
+  },
+  "tool_output": {
+    "original_chars": {
+      "n": 10,
+      "mean": 142177.7,
+      "median": 42289.5,
+      "p25": 14492.25,
+      "p75": 229633.25,
+      "p95": 476716.0999999999,
+      "max": 510395.0
+    },
+    "returned_chars": {
+      "n": 10,
+      "mean": 142177.7,
+      "median": 42289.5,
+      "p25": 14492.25,
+      "p75": 229633.25,
+      "p95": 476716.0999999999,
+      "max": 510395.0
+    },
+    "original_bytes": {
+      "n": 10,
+      "mean": 142184.9,
+      "median": 42307.5,
+      "p25": 14492.25,
+      "p75": 229660.25,
+      "p95": 476716.0999999999,
+      "max": 510395.0
+    },
+    "returned_bytes": {
+      "n": 10,
+      "mean": 142184.9,
+      "median": 42307.5,
+      "p25": 14492.25,
+      "p75": 229660.25,
+      "p95": 476716.0999999999,
+      "max": 510395.0
+    },
+    "truncated_calls": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "trajectories_with_truncation": 0,
+    "guard_enabled_values": {
+      "False": 10
+    },
+    "guard_all_disabled": true
+  },
+  "tool_usage_patterns": {
+    "calls": {
+      "analyze_file_structure": 4,
+      "execute_shell_command_with_validation": 2,
+      "explore_directory": 2,
+      "extract_complete_method": 10,
+      "find_files_containing": 9,
+      "find_variable_usage": 4,
+      "read_file_lines": 26,
+      "search_code_with_context": 9,
+      "show_file_imports": 1
+    },
+    "failed_calls": {}
+  },
+  "latency_ms": {
+    "n": 10,
+    "mean": 213256.1072,
+    "median": 225496.47499999998,
+    "p25": 146723.03925,
+    "p75": 270603.86175,
+    "p95": 314650.24569999997,
+    "max": 334333.198
+  },
+  "provider_failure": {
+    "count": 0,
+    "rate": 0.0,
+    "definition": "trajectory termination_reason == api_error; HTTP attempts are separately counted"
+  },
+  "trace_validation": {
+    "checked": 10,
+    "valid": 10,
+    "invalid": 0,
+    "note": "Inherited Phase2 successful trajectories may be legacy traces; no successful sample was rerun for migration.",
+    "invalid_examples": []
+  },
+  "token_extremes": {
+    "highest": [
+      {
+        "instance_id": "django__django-14667",
+        "total_tokens": 668691
+      },
+      {
+        "instance_id": "astropy__astropy-7746",
+        "total_tokens": 319750
+      },
+      {
+        "instance_id": "django__django-11001",
+        "total_tokens": 287197
+      },
+      {
+        "instance_id": "django__django-13768",
+        "total_tokens": 135405
+      },
+      {
+        "instance_id": "django__django-10914",
+        "total_tokens": 122564
+      }
+    ],
+    "lowest": [
+      {
+        "instance_id": "django__django-14534",
+        "total_tokens": 20430
+      },
+      {
+        "instance_id": "sympy__sympy-13647",
+        "total_tokens": 37606
+      },
+      {
+        "instance_id": "django__django-15814",
+        "total_tokens": 42277
+      },
+      {
+        "instance_id": "django__django-12184",
+        "total_tokens": 52860
+      },
+      {
+        "instance_id": "django__django-11630",
+        "total_tokens": 81966
+      }
+    ]
+  },
+  "cost_usd": null,
+  "cost_note": "qtapi pricing was not supplied; no fabricated cost estimate is reported.",
+  "model_metadata": {
+    "requested_models": {
+      "ep-64pmfvfo": 10
+    },
+    "returned_models": {
+      "ep-64pmfvfo": 10
+    },
+    "request_ids_recorded": 79,
+    "request_ids_unique": 79,
+    "request_ids_missing": 0,
+    "stop_reasons": {
+      "stop": 79
+    },
+    "protocols": {
+      "openai_chat_completions": 10
+    },
+    "providers": {
+      "qtapi_openai_chat_completions": 10
+    }
+  },
+  "evaluation_adapter": {
+    "predicted_ranges_as_synthetic_diff": true,
+    "official_evaluator_classes": "script.evaluation.PatchParser, ASTAnalyzer, MetricsCalculator",
+    "gold_source": "local Lite parquet patch; agent never receives patch"
+  },
+  "sampling": {
+    "actual_size": 10,
+    "method": "explicit paired-smoke instance IDs",
+    "requested_size": 10,
+    "seed": 20260915,
+    "instance_filter": [
+      "astropy__astropy-7746",
+      "django__django-10914",
+      "django__django-11001",
+      "django__django-11630",
+      "django__django-12184",
+      "django__django-13768",
+      "django__django-14534",
+      "django__django-14667",
+      "django__django-15814",
+      "sympy__sympy-13647"
+    ]
+  },
+  "dataset": {
+    "benchmark_split": "test",
+    "lite_path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "name": "SWE-bench Lite",
+    "revision": "local-commit-33a2cfe",
+    "row_count": 300,
+    "sort_rule": "instance_id ascending after repo de-duplication",
+    "source_note": "Local dataset/lite.parquet is authoritative for this reproduction run.",
+    "source_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench"
+  }
+}

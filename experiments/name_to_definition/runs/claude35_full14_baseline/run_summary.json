@@ -1,0 +1,335 @@
+[
+  {
+    "requested_model": "ep-64pmfvfo",
+    "returned_models": [
+      "ep-64pmfvfo"
+    ],
+    "request_ids": [
+      "1a9bd372-5301-4cb0-ae1c-7c491bf31637",
+      "4986ac00-6a35-4ac0-8504-7ba262be6f6a",
+      "9be01ae4-e957-4e75-8021-272e7ec1deeb",
+      "3b79b7b1-4d00-4f70-b20d-c5779f7f62aa",
+      "e8098094-7e1f-4f62-9178-d63ccce58a3f",
+      "f3540a2f-2675-49c0-b3e3-56d170f9fc96",
+      "71df4951-2964-4548-bb2c-d3095255116c",
+      "d2dcf93c-e1d6-436a-b5ba-4f0d75e5394e",
+      "159a8f83-aaa2-4d55-bc4a-51c88f4f9a03",
+      "cf8fdf3a-c870-4512-8acf-4396c8a898fe",
+      "5cf82f58-0c01-4cfa-851a-c40eac907bea",
+      "8a6ae446-7ec4-4202-8c61-13505af41d34"
+    ],
+    "stop_reasons": {
+      "stop": 12
+    },
+    "logical_llm_calls": 12,
+    "http_attempts": 13,
+    "request_retries": 1,
+    "successful_llm_responses": 12,
+    "failed_llm_calls": 0,
+    "locator_llm_calls": 11,
+    "tool_calls": 9,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "nested_llm_calls": 0,
+    "total_llm_calls": 12,
+    "logical_calls_by_phase": {
+      "locator": 11,
+      "summarizer": 1
+    },
+    "successful_responses_by_phase": {
+      "locator": 11,
+      "summarizer": 1
+    },
+    "tokens_by_phase": {
+      "locator": {
+        "input_tokens": 144160,
+        "output_tokens": 3204,
+        "total_tokens": 147364
+      },
+      "summarizer": {
+        "input_tokens": 14459,
+        "output_tokens": 837,
+        "total_tokens": 15296
+      }
+    },
+    "tool_result_chars": 33025,
+    "tool_original_chars": 33025,
+    "tool_returned_chars": 33025,
+    "tool_original_bytes": 33061,
+    "tool_returned_bytes": 33061,
+    "truncated_tool_calls": 0,
+    "input_tokens": 158619,
+    "output_tokens": 4041,
+    "total_tokens": 162660,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 244512.456,
+    "graph_updates": 22,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+        "start_line": 13,
+        "end_line": 17
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+        "start_line": 13,
+        "end_line": 17
+      }
+    ],
+    "run_id": "sgagent-official-matplotlib__matplotlib-26020-2-c59bfcda9c",
+    "instance_id": "matplotlib__matplotlib-26020",
+    "trajectory_path": "experiments/name_to_definition/runs/claude35_full14_baseline/matplotlib__matplotlib-26020/2/trajectory.jsonl",
+    "model": "ep-64pmfvfo",
+    "experiment_id": "sgagent_claude35_full14_phase3_retry"
+  },
+  {
+    "requested_model": "ep-64pmfvfo",
+    "returned_models": [
+      "ep-64pmfvfo"
+    ],
+    "request_ids": [
+      "064600bc-8daa-4b04-b0af-26e647ae6e0d",
+      "4448e740-f509-4580-a96d-c636f8ee4519",
+      "5f09032f-f87a-4eea-977e-eefddade4beb",
+      "4b2c28a1-975d-4068-93e9-85541f23f809",
+      "a06c3c71-9120-46fe-a9c2-35a134ddd663",
+      "f73c8705-3842-4f83-9f80-77aa6fcf0856",
+      "6719a5ac-4e8c-4362-82e9-5fd124dcf661",
+      "2c669eec-48e0-41d7-bc63-0102d77ed4b0",
+      "548557a2-82ed-4e5c-b6f1-8adfd8864a70",
+      "2dee8600-bfc4-4f0b-9704-d97239e9f588",
+      "84ee0589-edc6-4c46-b117-4bcf815d654a",
+      "1516bbe1-b4fb-4acd-a9c0-5b5e55f565a7",
+      "cc426718-d8c3-42f3-b4a7-94a622540771",
+      "d8d8af58-9325-414a-84c6-5462a778cd71",
+      "e5db3c8d-75b7-4e21-a131-646955e87d77",
+      "c7e3f528-16d5-4efd-b19e-65b965c205ef",
+      "ff017ec4-3d7a-49c8-86d6-a4f7f8ee1bcf",
+      "b5d22dc4-0fae-47f8-9ae7-5e7470196771",
+      "f9952c45-bb34-4198-b722-515ec25ea14a",
+      "5cfceb0f-8f45-4c32-880d-9f6489de4c20",
+      "4edce84c-2fee-4ad7-9133-ecc9e3025568",
+      "6c180443-9379-4b08-8ab1-7f5a3a03a551",
+      "1e6fc6b3-ad20-46d6-abcc-c39eff736520",
+      "e67aae95-4b75-494d-9b66-8cf17f74f947",
+      "4e9963c7-6b92-4bfb-b5b5-d78e3d852917",
+      "44bc34a7-7255-4f85-a1ad-aa86256c5ac5",
+      "c4cd7794-4acf-4fd7-bf1c-1eb175b9c822",
+      "68a2f9b5-cead-4dcd-8548-834a1b7dd30a",
+      "f04488e8-2de6-43ec-9fa3-afdf146cc306",
+      "4bc36d13-afc5-4d66-bd74-498af768f7a4",
+      "716289a5-7a3f-4e10-93df-f7da0782bb08",
+      "f9e15728-775c-41f3-9560-5f18274f28e5",
+      "f2d08f02-e73d-4f77-90a9-d0923cf31ae4",
+      "2ee256da-be43-4cb3-8514-1badfc1ba4c6",
+      "75392655-aaf9-490e-8a7d-142ecca9155c",
+      "e0367cba-f54d-4812-ab90-22f4c0391f4a",
+      "3cc5406b-402f-416f-8dc2-3dc634282505",
+      "270a6577-33d8-475f-97d9-b8a56319a729",
+      "5475b783-20ff-44b6-8e6f-bea286668d5c",
+      "6b3d5040-93f4-4019-a552-91c7a205f452",
+      "2d13d42a-ca35-452b-9ef8-21b253daedce",
+      "6a52aa5d-98fb-4af6-8508-000533c54149",
+      "3fc38ab0-e95d-4b67-ae57-b36446ee2988",
+      "31d02b18-23e1-493b-bd3c-b6e9a4bfda0c",
+      "795967ba-b73c-403a-a64e-a543150d5c91",
+      "18bbd503-960e-48bd-a120-271624f80c36",
+      "323fdc91-cf1a-4296-a733-7ac488a9c4fa",
+      "5a840fab-0cda-4c09-8558-c30c11b631fd",
+      "a814a36a-8638-498e-b4b4-b5246d7800c5",
+      "608777d9-a83b-4995-8fb1-057282560581",
+      "ee061ec1-2e6a-4d2c-a2fb-0926c0899923",
+      "0529c7d1-c894-4ad3-9ab5-67dfde7094df",
+      "c8b94626-4966-4a93-871b-43f26c218374",
+      "43e254fd-eb7e-441a-8cdd-d5528bbeec52",
+      "ee558288-10d1-4067-a16a-e8bcc62e56c6",
+      "048e9170-bc6d-410b-8376-1f327cc9d431",
+      "068f3320-6c9f-432e-aeda-ba2d9a155927",
+      "13eeb1dd-b134-4097-a69a-4b0ac5c141cb",
+      "007c5a0d-f609-4c77-aa1d-fbc2222c6343",
+      "2c59eaae-9c85-4a95-a54c-18b5f5641916",
+      "f4722ae2-e60c-466d-bf4a-5b87857273b3",
+      "a58441ad-bb48-482d-9506-b4fe08393e00",
+      "945d1f10-e34c-4dfe-9ead-55b977d0b204",
+      "d899345f-1a5a-4bcd-a7d3-58e6b9fb7556",
+      "8d93bd9a-d15f-4967-9541-a72634111cc1",
+      "aab69ca5-ae01-45c4-a5a6-e1ae69b88649",
+      "a02e6b96-f7de-4c74-9231-4a720edeef52"
+    ],
+    "stop_reasons": {
+      "stop": 67
+    },
+    "logical_llm_calls": 67,
+    "http_attempts": 69,
+    "request_retries": 2,
+    "successful_llm_responses": 67,
+    "failed_llm_calls": 0,
+    "locator_llm_calls": 58,
+    "tool_calls": 51,
+    "failed_tool_calls": 5,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 9,
+    "nested_llm_calls": 0,
+    "total_llm_calls": 67,
+    "logical_calls_by_phase": {
+      "locator": 58,
+      "summarizer": 9
+    },
+    "successful_responses_by_phase": {
+      "locator": 58,
+      "summarizer": 9
+    },
+    "tokens_by_phase": {
+      "locator": {
+        "input_tokens": 2909029,
+        "output_tokens": 13385,
+        "total_tokens": 2922414
+      },
+      "summarizer": {
+        "input_tokens": 723648,
+        "output_tokens": 14560,
+        "total_tokens": 738208
+      }
+    },
+    "tool_result_chars": 1580083,
+    "tool_original_chars": 1580083,
+    "tool_returned_chars": 1580083,
+    "tool_original_bytes": 1580371,
+    "tool_returned_bytes": 1580371,
+    "truncated_tool_calls": 0,
+    "input_tokens": 3632677,
+    "output_tokens": 27945,
+    "total_tokens": 3660622,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 1187834.047,
+    "graph_updates": 132,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 184,
+        "end_line": 194
+      },
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 369,
+        "end_line": 380
+      },
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 614,
+        "end_line": 625
+      },
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 808,
+        "end_line": 820
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 184,
+        "end_line": 194
+      },
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 369,
+        "end_line": 380
+      },
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 614,
+        "end_line": 625
+      },
+      {
+        "file_path": "sympy/functions/elementary/hyperbolic.py",
+        "start_line": 808,
+        "end_line": 820
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-21379-2-b64a79ee3e",
+    "instance_id": "sympy__sympy-21379",
+    "trajectory_path": "experiments/name_to_definition/runs/claude35_full14_baseline/sympy__sympy-21379/2/trajectory.jsonl",
+    "model": "ep-64pmfvfo",
+    "experiment_id": "sgagent_claude35_full14_phase3_retry"
+  },
+  {
+    "requested_model": "ep-64pmfvfo",
+    "returned_models": [
+      "ep-64pmfvfo"
+    ],
+    "request_ids": [
+      "71a53b14-9332-4618-a55c-c80b8f8955ca",
+      "8390a1cc-12df-4e1f-9a90-ee675f73adfe",
+      "722350f8-b8e4-4b05-b3bd-23697930c372",
+      "5b8d435a-0d5d-4820-8999-1acaffd6de31",
+      "0728a418-5fc4-405a-a8b3-74d8bf65bb8b",
+      "18dd3d55-ca9e-4005-a540-fd3e1cfc32ee"
+    ],
+    "stop_reasons": {
+      "stop": 6
+    },
+    "logical_llm_calls": 6,
+    "http_attempts": 6,
+    "request_retries": 0,
+    "successful_llm_responses": 6,
+    "failed_llm_calls": 0,
+    "locator_llm_calls": 6,
+    "tool_calls": 4,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 0,
+    "nested_llm_calls": 0,
+    "total_llm_calls": 6,
+    "logical_calls_by_phase": {
+      "locator": 6
+    },
+    "successful_responses_by_phase": {
+      "locator": 6
+    },
+    "tokens_by_phase": {
+      "locator": {
+        "input_tokens": 1416902,
+        "output_tokens": 919,
+        "total_tokens": 1417821
+      }
+    },
+    "tool_result_chars": 1930576,
+    "tool_original_chars": 1930576,
+    "tool_returned_chars": 1930576,
+    "tool_original_bytes": 1930648,
+    "tool_returned_bytes": 1930648,
+    "truncated_tool_calls": 0,
+    "input_tokens": 1416902,
+    "output_tokens": 919,
+    "total_tokens": 1417821,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 269279.48,
+    "graph_updates": 10,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "/tmp/sgagent-n2d-bqlahm9z/sympy/core/function.py",
+        "start_line": 1670,
+        "end_line": 1671
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "sympy/core/function.py",
+        "start_line": 1670,
+        "end_line": 1671
+      }
+    ],
+    "run_id": "sgagent-official-sympy__sympy-21614-2-5491a43da4",
+    "instance_id": "sympy__sympy-21614",
+    "trajectory_path": "experiments/name_to_definition/runs/claude35_full14_baseline/sympy__sympy-21614/2/trajectory.jsonl",
+    "model": "ep-64pmfvfo",
+    "experiment_id": "sgagent_claude35_full14_phase3_retry"
+  }
+]

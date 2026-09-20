@@ -1,0 +1,62 @@
+Search results for 'def as_real_imag' in file (showing first 5 matches):
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py
+Lines 443-449:
+ 443:     def _eval_conjugate(self):
+ 444:         return self.func(self.args[0].conjugate())
+ 445: 
+ 446:     def as_real_imag(self, deep=True, **hints):
+ 447:         re, im = self._as_real_imag(deep=deep, **hints)
+ 448:         return (sin(re)*cosh(im), cos(re)*sinh(im))
+ 449: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py
+Lines 903-909:
+ 903:     def _eval_conjugate(self):
+ 904:         return self.func(self.args[0].conjugate())
+ 905: 
+ 906:     def as_real_imag(self, deep=True, **hints):
+ 907:         re, im = self._as_real_imag(deep=deep, **hints)
+ 908:         return (cos(re)*cosh(im), -sin(re)*sinh(im))
+ 909: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py
+Lines 1174-1180:
+1174:     def _eval_conjugate(self):
+1175:         return self.func(self.args[0].conjugate())
+1176: 
+1177:     def as_real_imag(self, deep=True, **hints):
+1178:         re, im = self._as_real_imag(deep=deep, **hints)
+1179:         if im:
+1180:             denom = cos(2*re) + cosh(2*im)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py
+Lines 1481-1487:
+1481:     def _eval_conjugate(self):
+1482:         return self.func(self.args[0].conjugate())
+1483: 
+1484:     def as_real_imag(self, deep=True, **hints):
+1485:         re, im = self._as_real_imag(deep=deep, **hints)
+1486:         if im:
+1487:             denom = cos(2*re) - cosh(2*im)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py
+Lines 1701-1707:
+1701:     def _eval_conjugate(self):
+1702:         return self.func(self.args[0].conjugate())
+1703: 
+1704:     def as_real_imag(self, deep=True, **hints):
+1705:         return (1/self._reciprocal_of(self.args[0])).as_real_imag(deep,
+1706:                                                                   **hints)
+1707: 
+
+================================================================================
+

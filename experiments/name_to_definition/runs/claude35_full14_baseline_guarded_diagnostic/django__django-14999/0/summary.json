@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "568a2ef0-ade1-4041-8d18-6c6cd7ea79ad",
+    "57da791b-ded4-45ec-aa87-0ad2e3dfe580",
+    "a0cb0845-0ebe-4cd5-9bb1-c3386d880154",
+    "c93c80ea-b3c6-4c92-8c0f-873e51231020",
+    "348e32e8-41b8-4328-a51a-1f296dcb16aa",
+    "1e0e8f19-2de1-4c3f-9bbe-033c4165653f",
+    "d33ebd76-8e27-43b6-aad0-5f221b66baad"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 57763,
+  "tool_original_chars": 69908,
+  "tool_returned_chars": 57763,
+  "truncated_tool_calls": 1,
+  "input_tokens": 69138,
+  "output_tokens": 1606,
+  "total_tokens": 70744,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 110175.666,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-l4b4dk9r/django/db/migrations/operations/models.py",
+      "start_line": 319,
+      "end_line": 328
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-l4b4dk9r/django/db/migrations/operations/models.py",
+      "start_line": 329,
+      "end_line": 347
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-l4b4dk9r/django/db/migrations/operations/models.py",
+      "start_line": 348,
+      "end_line": 368
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/migrations/operations/models.py",
+      "start_line": 319,
+      "end_line": 328
+    },
+    {
+      "file_path": "django/db/migrations/operations/models.py",
+      "start_line": 329,
+      "end_line": 347
+    },
+    {
+      "file_path": "django/db/migrations/operations/models.py",
+      "start_line": 348,
+      "end_line": 368
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14999-0-e026e34279",
+  "instance_id": "django__django-14999",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

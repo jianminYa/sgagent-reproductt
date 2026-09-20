@@ -1,0 +1,11 @@
+
+
+#REFLECT
+Now I understand the bug. The `check_all_models` function at line 12-22 builds a `db_table_models` dictionary that maps `db_table` names to model labels. However, it doesn't consider which database each model is routed to. Two models in different apps can legitimately share the same `db_table` name if they're routed to different databases.
+
+The fix should modify the key used in `db_table_models` to include the database information, so that models sharing the same table name but on different databases don't trigger the E028 error. Alternatively, the check at lines 38-47 should group models by both `db_table` and their database routing.
+
+Let me look at how database routing works to understand how to get the database for a model.
+
+#TOOL_CALL find_files_containing
+{"keyword": "db_for_read"}

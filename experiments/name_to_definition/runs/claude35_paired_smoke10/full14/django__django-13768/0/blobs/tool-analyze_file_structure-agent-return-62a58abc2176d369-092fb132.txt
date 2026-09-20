@@ -1,0 +1,15 @@
+Each line below indicates a class, including class_name and absolute_path:
+Signal /tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+__init__  django.dispatch.dispatcher.Signal.__init__  [{'name': 'self', 'type': None}, {'name': 'providing_args', 'type': None}, {'name': 'use_caching', 'type': None}]
+connect  django.dispatch.dispatcher.Signal.connect  [{'name': 'self', 'type': None}, {'name': 'receiver', 'type': None}, {'name': 'sender', 'type': None}, {'name': 'weak', 'type': None}, {'name': 'dispatch_uid', 'type': None}]
+disconnect  django.dispatch.dispatcher.Signal.disconnect  [{'name': 'self', 'type': None}, {'name': 'receiver', 'type': None}, {'name': 'sender', 'type': None}, {'name': 'dispatch_uid', 'type': None}]
+has_listeners  django.dispatch.dispatcher.Signal.has_listeners  [{'name': 'self', 'type': None}, {'name': 'sender', 'type': None}]
+send  django.dispatch.dispatcher.Signal.send  [{'name': 'self', 'type': None}, {'name': 'sender', 'type': None}]
+send_robust  django.dispatch.dispatcher.Signal.send_robust  [{'name': 'self', 'type': None}, {'name': 'sender', 'type': None}]
+_clear_dead_receivers  django.dispatch.dispatcher.Signal._clear_dead_receivers  [{'name': 'self', 'type': None}]
+_live_receivers  django.dispatch.dispatcher.Signal._live_receivers  [{'name': 'self', 'type': None}, {'name': 'sender', 'type': None}]
+_remove_receiver  django.dispatch.dispatcher.Signal._remove_receiver  [{'name': 'self', 'type': None}, {'name': 'receiver', 'type': None}]
+_make_id  django.dispatch.dispatcher._make_id  [{'name': 'target', 'type': None}]
+receiver  django.dispatch.dispatcher.receiver  [{'name': 'signal', 'type': None}]
+_decorator  django.dispatch.dispatcher._decorator  [{'name': 'func', 'type': None}]

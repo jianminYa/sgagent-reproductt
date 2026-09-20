@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_046ab1a07f0f425ab3db44fbda2f9d27",
+    "msg_0eb3899dbca144eda0e709f68443de8f",
+    "msg_402100924da94509ab6c38e9a34ac45d",
+    "msg_468d6d0d81d94eea9bda40bf59102ad9",
+    "msg_98642d4eb30642e6b5bc51e9a2d5894f",
+    "msg_944c047d20324cc5b6bb3ccbab15afa7",
+    "msg_c6ba55bd7d4248d5965c3555a1a6d67a",
+    "msg_e6154f3b9b204807897ed91465670384",
+    "msg_f8488696b5f1485d90f15cf3b10f665a",
+    "msg_810395985fde40dda3dba76c1c5fb568",
+    "msg_d44220c67b8243f2b9457cb0a884b042",
+    "msg_7aac5be5d9d54082ba24c25b0ad0b851"
+  ],
+  "stop_reasons": {
+    "end_turn": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 50198,
+  "input_tokens": 66614,
+  "output_tokens": 4777,
+  "total_tokens": 71391,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 317214.593,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-ywzi5rs1/sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-ywzi5rs1/sympy/physics/units/unitsystem.py",
+      "start_line": 178,
+      "end_line": 182
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    },
+    {
+      "file_path": "sympy/physics/units/unitsystem.py",
+      "start_line": 178,
+      "end_line": 182
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-24066-0-8deb7c3ca9",
+  "instance_id": "sympy__sympy-24066",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

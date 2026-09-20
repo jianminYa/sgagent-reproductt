@@ -1,0 +1,2 @@
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py", "start_line": 22, "end_line": 35 }

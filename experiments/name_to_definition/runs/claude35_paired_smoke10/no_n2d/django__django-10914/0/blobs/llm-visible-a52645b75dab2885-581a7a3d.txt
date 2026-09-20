@@ -1,0 +1,28 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py",
+            "start_line": 307,
+            "end_line": 307
+        },
+        {
+            "file_path": "/tmp/sgagent-n2d-wtyvhqy4/tests/test_utils/tests.py",
+            "start_line": 1102,
+            "end_line": 1102
+        },
+        {
+            "file_path": "/tmp/sgagent-n2d-wtyvhqy4/tests/file_storage/tests.py",
+            "start_line": 895,
+            "end_line": 900
+        },
+        {
+            "file_path": "/tmp/sgagent-n2d-wtyvhqy4/tests/staticfiles_tests/test_storage.py",
+            "start_line": 518,
+            "end_line": 528
+        }
+    ]
+}
+```

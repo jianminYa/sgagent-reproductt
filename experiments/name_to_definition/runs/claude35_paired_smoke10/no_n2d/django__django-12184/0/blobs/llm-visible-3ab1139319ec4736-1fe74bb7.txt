@@ -1,0 +1,9 @@
+
+
+#REFLECT
+The problem is about optional URL parameters in Django. When a regex pattern has an optional group with a nested group (like `(?P<format>(html|json|xml))?`), Django is passing too many positional arguments. The inner group is being captured as an additional argument. Let me investigate the Django codebase to find where URL resolution happens and how matched groups are passed to views.
+
+Let me start by exploring the project structure.
+
+#TOOL_CALL explore_directory
+{"dir_path": "/tmp/sgagent-n2d-hirjf5mk"}

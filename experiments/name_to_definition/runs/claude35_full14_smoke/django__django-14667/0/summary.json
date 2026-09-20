@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "5d9737ef-c923-47ae-9805-6ec0f32da156",
+    "62e69eca-88df-4593-ac2d-ae5a654c566d",
+    "8c673a76-c3ec-4dd8-8016-a9eb9fca3198",
+    "807a020e-1998-4ea5-bd37-bdcc92041e3b",
+    "59d07b4f-84df-4979-8727-6bd18747a313",
+    "c5156ffe-2ba0-4047-afd9-4463ff76051c",
+    "6d2c8797-0169-4aa1-b07b-748dc0b2f529"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 17342,
+  "tool_original_chars": 17342,
+  "tool_returned_chars": 17342,
+  "truncated_tool_calls": 0,
+  "input_tokens": 54687,
+  "output_tokens": 2750,
+  "total_tokens": 57437,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 126742.635,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-_fk1jqkn/django/db/models/sql/query.py",
+      "start_line": 680,
+      "end_line": 682
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-_fk1jqkn/django/db/models/sql/query.py",
+      "start_line": 2083,
+      "end_line": 2089
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 680,
+      "end_line": 682
+    },
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 2083,
+      "end_line": 2089
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14667-0-8fa56148b3",
+  "instance_id": "django__django-14667",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_smoke"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_8cf06376708344b185ebdbc0a772531b",
+    "msg_2088a246c291442fab0b5bc44b4726bd",
+    "msg_8558acdf289d49cdadfb3e0bd66655de",
+    "msg_e1448d43564749a7a9169fca8ff1596d",
+    "msg_b8516cb2cdff427b8fd9ffd26cebd220",
+    "msg_1ddfcb9cd6dc40cd8c3bf2690ce7ff4d",
+    "msg_d90c472a931c4cafa842e5fbf5163eac",
+    "msg_4f85dbde386c4d5e9df6bbf528c62cf0",
+    "msg_4ab838371eaa456994ea42ba26a66422",
+    "msg_ecea553401ad4fbd9faad5c60f7f13e1",
+    "msg_abb0722ea761458eb5639feee6f66375",
+    "msg_960bb830506c4458b4ff703133894d33",
+    "msg_ae1160785425463b994bc6ebc77f0709",
+    "msg_80c906dadee241c481975af6dbcec9a0",
+    "msg_a6a859a1814143c2ba611b7b2695e59a",
+    "msg_e2433b2230f547db9ff8e22f17b11c01",
+    "msg_e30db678f3954b74926ce9b0e9f5e882",
+    "msg_d3257e32996c41ae8f5cafddb868084f",
+    "msg_7482d77444014f45966ef64897c2019d",
+    "msg_f709b326288e482fbffcbc6c7bfa7a17"
+  ],
+  "stop_reasons": {
+    "end_turn": 20
+  },
+  "locator_llm_calls": 18,
+  "tool_calls": 16,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 20,
+  "tool_result_chars": 50106,
+  "input_tokens": 99020,
+  "output_tokens": 8945,
+  "total_tokens": 107965,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 250976.409,
+  "graph_updates": 38,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-4kr2if60/xarray/core/formatting.py",
+      "start_line": 280,
+      "end_line": 281
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-4kr2if60/xarray/core/formatting.py",
+      "start_line": 294,
+      "end_line": 295
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 280,
+      "end_line": 281
+    },
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 294,
+      "end_line": 295
+    }
+  ],
+  "run_id": "sgagent-official-pydata__xarray-4248-0-fe654bc73f",
+  "instance_id": "pydata__xarray-4248",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

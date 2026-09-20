@@ -1,0 +1,2 @@
+#TOOL_CALL analyze_file_structure
+{ "file": "/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py" }

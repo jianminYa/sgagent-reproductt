@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL find_variable_usage\n{ \"file\": \"/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py\", \"variable_name\": \"FILE_UPLOAD_PERMISSIONS\" }", "name": null, "tool_calls": [], "type": "ai"}

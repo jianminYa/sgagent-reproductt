@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL analyze_file_structure
+{"file": "/tmp/sgagent-n2d-p7a2tz4q/django/urls/resolvers.py"}

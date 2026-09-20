@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "status": "success",
+  "protocol": "openai_chat_completions",
+  "requested_model": "ep-64pmfvfo",
+  "user_provided_model_mapping": "ep-64pmfvfo maps to Claude-3.5-Sonnet",
+  "returned_model": "ep-64pmfvfo",
+  "request_id": "c1b3db8b-ad1c-4f26-93b0-ef31a29ab23c",
+  "stop_reason": "stop",
+  "usage": {
+    "input_tokens": 23,
+    "output_tokens": 8,
+    "total_tokens": 31
+  },
+  "http_status": 200,
+  "credential_env_var": "OPENAI_API_KEY",
+  "credential_present": true,
+  "base_url_env_var": "OPENAI_BASE_URL",
+  "base_url_present": true,
+  "api_key_recorded": false,
+  "diagnosis": "authenticated openai_chat_completions request returned the expected fixed text",
+  "latency_ms": 3824.008,
+  "attempts": 1
+}

@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py
+Total lines: 1201
+Showing lines 316-365:
+
+ 316: 
+ 317:             # look for a single log factor
+ 318: 
+ 319:             coeff, terms = arg.as_coeff_Mul()
+ 320: 
+ 321:             # but it can't be multiplied by oo
+ 322:             if coeff in [S.NegativeInfinity, S.Infinity]:
+ 323:                 if terms.is_number:
+ 324:                     if coeff is S.NegativeInfinity:
+ 325:                         terms = -terms
+ 326:                     if re(terms).is_zero and terms is not S.Zero:
+ 327:                         return S.NaN
+ 328:                     if re(terms).is_positive and im(terms) is not S.Zero:
+ 329:                         return S.ComplexInfinity
+ 330:                     if re(terms).is_negative:
+ 331:                         return S.Zero
+ 332:                 return None
+ 333: 
+ 334:             coeffs, log_term = [coeff], None
+ 335:             for term in Mul.make_args(terms):
+ 336:                 term_ = logcombine(term)
+ 337:                 if isinstance(term_, log):
+ 338:                     if log_term is None:
+ 339:                         log_term = term_.args[0]
+ 340:                     else:
+ 341:                         return None
+ 342:                 elif term.is_comparable:
+ 343:                     coeffs.append(term)
+ 344:                 else:
+ 345:                     return None
+ 346: 
+ 347:             return log_term**Mul(*coeffs) if log_term else None
+ 348: 
+ 349:         elif arg.is_Add:
+ 350:             out = []
+ 351:             add = []
+ 352:             argchanged = False
+ 353:             for a in arg.args:
+ 354:                 if a is S.One:
+ 355:                     add.append(a)
+ 356:                     continue
+ 357:                 newa = cls(a)
+ 358:                 if isinstance(newa, cls):
+ 359:                     if newa.args[0] != a:
+ 360:                         add.append(newa.args[0])
+ 361:                         argchanged = True
+ 362:                     else:
+ 363:                         add.append(a)
+ 364:                 else:
+ 365:                     out.append(newa)

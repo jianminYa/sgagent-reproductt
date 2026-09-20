@@ -1,0 +1,1 @@
+["#TOOL_CALL read_file_lines\n{ \"file_path\": \"/tmp/sgagent-n2d-tlq5q8z5/sympy/matrices/common.py\", \"start_line\": 81, \"end_line\": 92 }"]

@@ -1,0 +1,5 @@
+File: /tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py
+Total lines: 1507
+Showing lines 24-24:
+
+  24:         self.query = query

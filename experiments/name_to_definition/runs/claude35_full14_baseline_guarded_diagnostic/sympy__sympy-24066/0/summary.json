@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "f2eca306-f03e-4026-a8a5-04cc88dd7ab8",
+    "ede9feb0-1c70-46e3-9c61-103b0dff0cbb",
+    "0b5168aa-9aff-4711-aa7e-8b73ea523591",
+    "b1ab2554-475a-46ef-954a-8e386a748efc"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "locator_llm_calls": 4,
+  "tool_calls": 2,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 4,
+  "tool_result_chars": 6998,
+  "tool_original_chars": 6998,
+  "tool_returned_chars": 6998,
+  "truncated_tool_calls": 0,
+  "input_tokens": 18410,
+  "output_tokens": 1614,
+  "total_tokens": 20024,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 270381.387,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-rpqpz28a/sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-rpqpz28a/sympy/physics/units/unitsystem.py",
+      "start_line": 173,
+      "end_line": 183
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/physics/units/unitsystem.py",
+      "start_line": 192,
+      "end_line": 196
+    },
+    {
+      "file_path": "sympy/physics/units/unitsystem.py",
+      "start_line": 173,
+      "end_line": 183
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-24066-0-000e3c30e8",
+  "instance_id": "sympy__sympy-24066",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

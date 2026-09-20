@@ -1,0 +1,89 @@
+# Summary of Bug Investigation: PolynomialError with Piecewise in subs()
+
+## Problem Description
+A `PolynomialError: Piecewise generators do not make sense` occurs when calling `subs({1: 1.0})` on an expression like `exp(sinh(Piecewise((x, y > x), (y, True)) / z))` with **real symbols** and after **clearing the cache**.
+
+### Key Characteristics:
+- Only happens with `sinh`, `cosh`, or `tanh` (hyperbolic functions) inside `exp`
+- Only occurs with real-valued symbols (not generic symbols)
+- Only triggers after cache clearing (works on second run)
+- The error originates from `sympy/polys/polytools.py`
+
+## Error Source Location
+**File: `sympy/polys/polytools.py`, lines 4397-4399:**
+```python
+for k in opt.gens:
+    if isinstance(k, Piecewise):
+        raise PolynomialError("Piecewise generators do not make sense")
+```
+This is inside `_parallel_poly_from_expr()` (line 4343). Called after `_parallel_dict_from_expr(exprs, opt)` at line 4393 extracts generators.
+
+## Complete Code Path Traced
+
+### 1. `sinh.as_real_imag()` — THE CRITICAL METHOD (lines 179-194 in hyperbolic.py)
+```python
+def as_real_imag(self, deep=True, **hints):
+    if self.args[0].is_extended_real:  # Line 184 — KEY CHECK
+        if deep:
+            return (self.expand(deep, **hints), S.Zero)  # Line 187
+        else:
+            return (self, S.Zero)
+    if deep:
+        re, im = self.args[0].expand(deep, **hints).as_real_imag()  # Line 191
+    else:
+        re, im = self.args[0].as_real_imag()
+    return (sinh(re)*cos(im), cosh(re)*sin(im))  # Line 194
+```
+
+**Line 184 is the critical branch point:**
+- When `is_extended_real` returns **True** (cached): Takes the fast path at line 187, returns `(self, S.Zero)` — **NO ERROR**
+- When `is_extended_real` returns **None** (empty cache): Falls through to line 191, which calls `as_real_imag()` on the argument containing Piecewise — **TRIGGERS ERROR PATH**
+
+### 2. The argument `Piecewise(...)/z` has `as_real_imag()` called on it
+Since `Piecewise(...)/z` is a `Mul`, `Mul.as_real_imag()` (lines 858-909 in mul.py) is called, which calls `as_real_imag()` on each factor, and uses `re(m)`, `im(m)`.
+
+### 3. `re.eval()` in complexes.py (lines 67-105)
+- Line 72: `arg.is_extended_real` → if True, returns `arg` directly (short-circuit)
+- When `is_extended_real` returns None (not cached), falls through to line 80+ else branch
+- Line 96: `real_imag = term.as_real_imag(ignore=arg)` — calls `as_real_imag()` on terms
+
+### 4. Eventually reaches `Pow.as_real_imag()` (lines 1237-1316 in power.py)
+- **Line 1241: `self.exp.is_Integer` branch** — calls `poly((a + b)**exp)` with Dummy symbols `a, b` — **SAFE**
+- **Line 1297: `self.base is S.Exp1` branch** — for `exp(arg)`, calls `self.exp.as_real_imag()` on the exponent
+- **Line 1305-1316: else branch** — calls `re(expanded)`, `im(expanded)` which can trigger further evaluation
+
+### 5. The chain eventually calls `poly()` on an expression containing Piecewise
+The exact intermediate step where `poly()` gets called with a Piecewise-containing expression is through the `Pow.as_real_imag()` integer exponent branch (lines 1254/1265). When the decomposition of `sinh(Piecewise(...)/z)` into real and imaginary parts creates sub-expressions that are then raised to integer powers, the `poly()` call at line 1254 or 1265 could receive Piecewise-containing expressions if `re_e` or `im_e` contain Piecewise.
+
+**Wait — lines 1254/1265 use Dummy symbols `a, b` and are safe.** The Piecewise only enters through `re_e` and `im_e` at the substitution step (line 1276-1277), which doesn't call `poly()`.
+
+So the `poly()` call must come from a **different path**. The most likely scenario: when `sinh.as_real_imag()` falls through to line 191-194, it creates `sinh(re)*cos(im)` and `cosh(re)*sin(im)` where `re` and `im` may contain Piecewise. These expressions then get further processed, and somewhere in that chain, `poly()` is called.
+
+## Root Cause Analysis
+
+**The root cause is in `sinh.as_real_imag()` (and similarly `cosh.as_real_imag()`, `tanh.as_real_imag()`) at line 184:**
+
+When `self.args[0].is_extended_real` returns `None` (empty cache, Piecewise-containing argument), the method falls through to the complex decomposition path (lines 191-194) instead of the simple real path (line 187). This complex decomposition creates expressions like `sinh(re)*cos(im)` where `re` and `im` are derived from the Piecewise argument, and these eventually trigger polynomial operations that fail on Piecewise.
+
+**Why cache matters:** On first run with empty cache, `Piecewise(...)/z` with real symbols has `is_extended_real` returning `None` because the Piecewise's `is_extended_real` hasn't been computed yet. On second run, it's cached as `True`, so the fast path is taken.
+
+**Why only sinh/cosh/tanh:** These are the hyperbolic functions that have this specific `as_real_imag()` pattern with the `is_extended_real` check at line 184. Other functions either don't have this pattern or handle it differently.
+
+## Proposed Fix
+
+The most targeted fix is in `sinh.as_real_imag()` (and `cosh.as_real_imag()`, `tanh.as_real_imag()`). The `is_extended_real` check should also handle the case where the argument **contains Piecewise** and all branches are real. 
+
+However, a simpler and more robust fix would be to **catch the PolynomialError** at the point where it propagates, or to **add a Piecewise check** in the `as_real_imag()` methods.
+
+**Best approach:** In `_parallel_poly_from_expr()` at line 4397-4399, instead of raising `PolynomialError` when Piecewise generators are found, we could handle it more gracefully. But this might mask other real errors.
+
+**Alternative (more targeted):** In `sinh.as_real_imag()` (line 184), check if the argument has Piecewise and if all Piecewise branches would be real, treating it as real in that case. Or, wrap the complex decomposition path in a try/except for PolynomialError.
+
+## Files Needing Changes
+1. **`sympy/functions/elementary/hyperbolic.py`** — `sinh.as_real_imag()` (line 179), `cosh.as_real_imag()` (line 367), `tanh.as_real_imag()` (line 612), and possibly others (line 806, 907)
+2. Possibly **`sympy/polys/polytools.py`** — `_parallel_poly_from_expr()` (line 4397) as a safety net
+
+## Current Status
+- Full code path traced from `subs()` through `as_real_imag()` chain to `poly()` error
+- Root cause identified: `is_extended_real` returning `None` for Piecewise-containing arguments in hyperbolic `as_real_imag()` methods
+- Ready to implement fix

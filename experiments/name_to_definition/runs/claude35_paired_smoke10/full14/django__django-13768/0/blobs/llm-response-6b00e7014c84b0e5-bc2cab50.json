@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\nNow let me look at the `send_robust` method implementation.\n\n#TOOL_CALL extract_complete_method\n{ \"file\": \"/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py\", \"full_qualified_name\": \"django.dispatch.dispatcher.Signal.send_robust\" }", "name": null, "tool_calls": [], "type": "ai"}

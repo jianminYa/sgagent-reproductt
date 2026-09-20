@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_a37da0173b384d2cb382ba2ad3db407e",
+    "msg_f31aabbd35514af38d87510b7b824ddb",
+    "msg_33dba05ba3da45549e28488f96ade86d",
+    "msg_384b551cf7774bdb9d0e15a1de9858f0",
+    "msg_8682a2e1584e403f8dc6ebdd464f0db1",
+    "msg_2f2b34dc953a4b099e4c948c371f3b90",
+    "msg_cf4806061a16445fa913984769b33c87",
+    "msg_e4cbbbd1688c4186b257716518f5d0ac",
+    "msg_dd91b1877b9142b8a6994769774f36a9",
+    "msg_37ea4cf0814a4cfdb74102819df72ea5",
+    "msg_ff3e26a35b65423987e98190f8c54179",
+    "msg_24e4e1a2c0574248b36c903f88db63cd"
+  ],
+  "stop_reasons": {
+    "end_turn": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 407025,
+  "input_tokens": 228767,
+  "output_tokens": 5100,
+  "total_tokens": 233867,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 257552.507,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-_oe7yioq/django/db/models/base.py",
+      "start_line": 936,
+      "end_line": 939
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-_oe7yioq/django/db/models/fields/related_descriptors.py",
+      "start_line": 256,
+      "end_line": 257
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-_oe7yioq/django/db/models/base.py",
+      "start_line": 942,
+      "end_line": 943
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/base.py",
+      "start_line": 936,
+      "end_line": 939
+    },
+    {
+      "file_path": "django/db/models/fields/related_descriptors.py",
+      "start_line": 256,
+      "end_line": 257
+    },
+    {
+      "file_path": "django/db/models/base.py",
+      "start_line": 942,
+      "end_line": 943
+    }
+  ],
+  "run_id": "sgagent-official-django__django-13964-0-ba20ce9289",
+  "instance_id": "django__django-13964",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

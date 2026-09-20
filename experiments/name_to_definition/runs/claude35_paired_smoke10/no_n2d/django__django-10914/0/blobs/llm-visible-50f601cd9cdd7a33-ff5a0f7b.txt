@@ -1,0 +1,10 @@
+
+
+#REFLECT
+The problem is about `FILE_UPLOAD_PERMISSIONS` defaulting to `None`, which causes inconsistent file permissions depending on whether a `MemoryUploadedFile` or `TemporaryUploadedFile` is used. When `TemporaryUploadedFile` is used, the file ends up with 0o600 permissions (from tempfile), while `MemoryUploadedFile` gets permissions based on umask. The fix should set the default `FILE_UPLOAD_PERMISSIONS` to `0o644`.
+
+Let me start by finding the relevant settings and code.
+
+
+#TOOL_CALL find_files_containing
+{ "keyword": "FILE_UPLOAD_PERMISSIONS" }

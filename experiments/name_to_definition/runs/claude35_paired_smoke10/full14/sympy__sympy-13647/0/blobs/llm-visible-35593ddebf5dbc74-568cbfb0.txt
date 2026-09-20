@@ -1,0 +1,24 @@
+
+
+The bug is clear. On line 89, the index calculation for columns after the inserted block is wrong.
+
+**Bug analysis:**
+
+When `j >= pos + other.cols`, we need to map back to the original matrix's column. The inserted columns shifted the original columns to the right by `other.cols`. So to get the original column index, we subtract `other.cols` from `j`:
+
+- **Current (buggy):** `self[i, j - pos - other.cols]` → subtracts both `pos` and `other.cols`
+- **Correct:** `self[i, j - other.cols]` → only subtracts `other.cols`
+
+**Verification with the example:**
+- `self` = 6×6 identity, `other` = 6×2 of twos, `pos` = 3
+- Result is 6×8
+- For `j = 5` (≥ `pos + other.cols` = 5): should map to original column 3
+  - Buggy: `5 - 3 - 2 = 0` → column 0 (WRONG - this is why the identity shifts up)
+  - Fixed: `5 - 2 = 3` → column 3 (CORRECT)
+
+**Location of the bug:**
+
+File: `/tmp/sgagent-n2d-tlq5q8z5/sympy/matrices/common.py`  
+Line 89: `return self[i, j - pos - other.cols]` should be `return self[i, j - other.cols]`
+
+**INFO ENOUGH**

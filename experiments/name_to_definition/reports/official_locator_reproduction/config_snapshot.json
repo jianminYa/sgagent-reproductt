@@ -1,0 +1,79 @@
+{
+  "experiment_id": "sgagent_official_locator_reproduction",
+  "upstream_remote": "https://github.com/iSEngLab/SGAgent.git",
+  "upstream_commit": "33a2cfe61d56494ab2d20a2b0c48c1f43e37b452",
+  "dataset": {
+    "name": "SWE-bench Lite",
+    "path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "row_count": 300,
+    "manifest": "experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json",
+    "seed": 20260915,
+    "sample_size": 45,
+    "sampling": "random.Random(seed).sample(sorted(instance_id), size)"
+  },
+  "model": {
+    "model": "claude-sonnet-5",
+    "provider": "anthropic_qtapi_messages",
+    "base_url": "https://cdn.qtapi.net",
+    "credential_source": "/home/jql/.config/miclaude/env.qtapi",
+    "temperature": 0.0,
+    "transport_max_tokens": 8192,
+    "experiment_output_token_limit": null
+  },
+  "workflow": {
+    "source": "public SGAgent workflow.graph/create_workflow",
+    "prompt_source": "prompts/system.py + prompts/locator.py",
+    "tool_source": "tools.retriever_tools",
+    "tool_count": 14,
+    "native_tools": false,
+    "protocol": "textual #TOOL_CALL",
+    "graph_recursion_limit": 150,
+    "stop": "after first parseable Locator output; do not enter Suggester/Fixer"
+  },
+  "tool_names": [
+    "explore_directory",
+    "analyze_file_structure",
+    "find_files_containing",
+    "get_code_relationships",
+    "find_methods_by_name",
+    "extract_complete_method",
+    "find_class_constructor",
+    "list_class_attributes",
+    "show_file_imports",
+    "find_variable_usage",
+    "find_all_variables_named",
+    "read_file_lines",
+    "search_code_with_context",
+    "execute_shell_command_with_validation"
+  ],
+  "runtime": {
+    "python": "3.13.13",
+    "platform": "Linux ARM",
+    "langchain": "1.4.0",
+    "langchain_openai": "1.6.2",
+    "langgraph": "1.2.11",
+    "neo4j": "6.3.0",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "pydantic_settings": "2.15.0",
+    "pygments": "2.21.0",
+    "grep_ast": "0.9.0",
+    "tree_sitter": "0.26.0",
+    "tree_sitter_language_pack": "1.20.0"
+  },
+  "run_command_without_secret": "source /home/jql/.config/miclaude/env.qtapi; export OPENAI_API_KEY=\"${ANTHROPIC_AUTH_TOKEN:-$ANTHROPIC_API_KEY}\"; export OPENAI_BASE_URL=\"$ANTHROPIC_BASE_URL\"; export OPENAI_MODEL=\"$ANTHROPIC_MODEL\"; python -m experiments.name_to_definition.official_locator --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --workers 4 --timeout 300 --output-root experiments/name_to_definition/runs/official_locator_reproduction --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar",
+  "evaluation_command": "python -m experiments.name_to_definition.official_evaluate --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --runs experiments/name_to_definition/runs/official_locator_reproduction --lite dataset/lite.parquet --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar --output experiments/name_to_definition/reports/official_locator_reproduction",
+  "outputs": {
+    "run_summary": "experiments/name_to_definition/runs/official_locator_reproduction/run_summary.json",
+    "trajectories": "experiments/name_to_definition/runs/official_locator_reproduction/<instance_id>/0/trajectory.jsonl",
+    "instance_results_jsonl": "experiments/name_to_definition/reports/official_locator_reproduction/instance_results.jsonl",
+    "instance_results_csv": "experiments/name_to_definition/reports/official_locator_reproduction/instance_results.csv",
+    "aggregate_json": "experiments/name_to_definition/reports/official_locator_reproduction/aggregate_report.json",
+    "aggregate_markdown": "experiments/name_to_definition/reports/official_locator_reproduction/aggregate_report.md",
+    "gap_report": "experiments/name_to_definition/reports/reproduction_gap_report.md"
+  },
+  "security": {
+    "api_key_recorded": false,
+    "trajectory_redaction_enabled": true
+  }
+}

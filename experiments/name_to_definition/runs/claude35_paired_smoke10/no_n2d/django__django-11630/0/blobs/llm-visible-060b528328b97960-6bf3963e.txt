@@ -1,0 +1,42 @@
+## Summary
+
+### Objective
+Find and fix a bug in Django's `models.E028` system check that incorrectly flags models sharing the same `db_table` name when they are routed to different databases.
+
+### Bug Analysis
+
+**Location:** `/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py`, function `check_all_models` (lines 11-74)
+
+**Root Cause:** At line 22, models are grouped solely by `db_table` name:
+```python
+db_table_models[model._meta.db_table].append(model._meta.label)
+```
+Then at lines 38-47, if multiple models share the same `db_table`, error E028 is raised. This doesn't account for database routing — two models in different apps can legitimately share the same `db_table` name if they're routed to different databases via Django's database router system.
+
+**Required Fix:** The grouping key should include the database each model is routed to (obtainable via `router.db_for_read(model)`). Only models sharing both the same `db_table` AND the same database should trigger E028.
+
+### Key Files Identified
+1. **Bug location:** `/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py` — the `check_all_models` function
+2. **Tests:** `/tmp/sgagent-n2d-1yd2xahh/tests/check_framework/test_model_checks.py` — `DuplicateDBTableTests` class (line 12), with existing tests for same-app collision (line 13) and cross-app collision (line 33)
+3. **Router usage pattern:** `router.db_for_read(model)` is the standard way to determine a model's database (seen in `django/db/models/manager.py`, `query.py`, etc.)
+
+### Current Imports in Bug File
+- `inspect`, `types`, `defaultdict`, `chain`, `apps`, `Error`, `Tags`, `register`, `signals`
+- **Missing:** Need to import `router` from `django.db` to implement the fix
+
+### What Needs to Be Done
+1. **Add import** of `router` (from `django.db` or `django.db.utils`)
+2. **Modify line 22** to group by `(db_table, database)` tuple instead of just `db_table`:
+   ```python
+   db_table_models[(model._meta.db_table, router.db_for_read(model))].append(model._meta.label)
+   ```
+3. **Update lines 38-47** to adjust the error message/key extraction accordingly
+4. **Add a test** for the multi-database scenario where two models share `db_table` but are on different databases (should NOT raise E028)
+5. **Preserve existing tests** — same-db collisions should still be flagged
+
+### Progress Status
+- ✅ Bug identified and root cause confirmed
+- ✅ All relevant files and code paths analyzed
+- ✅ Fix approach determined
+- ❌ Code changes not yet applied
+- ❌ Tests not yet written or run

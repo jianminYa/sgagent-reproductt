@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 1439,
+    "output_tokens": 90,
+    "reasoning_tokens": null,
+    "total_tokens": 1529
+  },
+  "input_tokens": 77972,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 1939,
+      "output_tokens": 10,
+      "reasoning_tokens": null,
+      "total_tokens": 1949
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3646,
+      "output_tokens": 16,
+      "reasoning_tokens": null,
+      "total_tokens": 3662
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7340,
+      "output_tokens": 72,
+      "reasoning_tokens": null,
+      "total_tokens": 7412
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7232,
+      "output_tokens": 34,
+      "reasoning_tokens": null,
+      "total_tokens": 7266
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7598,
+      "output_tokens": 64,
+      "reasoning_tokens": null,
+      "total_tokens": 7662
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7540,
+      "output_tokens": 76,
+      "reasoning_tokens": null,
+      "total_tokens": 7616
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7686,
+      "output_tokens": 49,
+      "reasoning_tokens": null,
+      "total_tokens": 7735
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8009,
+      "output_tokens": 77,
+      "reasoning_tokens": null,
+      "total_tokens": 8086
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8049,
+      "output_tokens": 59,
+      "reasoning_tokens": null,
+      "total_tokens": 8108
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8462,
+      "output_tokens": 31,
+      "reasoning_tokens": null,
+      "total_tokens": 8493
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 9032,
+      "output_tokens": 59,
+      "reasoning_tokens": null,
+      "total_tokens": 9091
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 637,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 30298,
+  "total_llm_calls": 12,
+  "total_tokens": 78609,
+  "wall_clock_ms": 56441.778,
+  "run_id": "name_to_definition_phase1-scikit-learn__scikit-learn-14983-baseline-43a98b3fae",
+  "arm": "baseline",
+  "instance_id": "scikit-learn__scikit-learn-14983"
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "762e4ad7-61c3-465d-a7c9-89e022dbceca",
+    "f52f36c3-ea9b-4cde-8f1b-5633a6ff1d09",
+    "e5837809-3939-4b21-adea-2f70d2e6081f",
+    "784f0191-9413-4061-acf9-7c9ede3445d8",
+    "0c541c8f-3eec-4f65-95b5-0338839d3226",
+    "68bbfe03-abaa-40eb-a32e-c3b6a5495d8a",
+    "8a349cca-7c02-44ab-8c65-362c5928acd4",
+    "345f2fe3-7e2a-4133-918a-e572a87e7a35",
+    "791f47ee-de1e-4ca5-8547-fdf9b6d1cfa2",
+    "f7a6be33-8ff7-48a6-8cbe-023c277e33fc",
+    "a08efbd5-ec98-42db-9723-0815989f70db",
+    "db603c52-e293-4b7b-b7ae-34fb6594d0a9",
+    "c17808fc-9e9c-4a31-b5a0-0b4a4701060a",
+    "2a50abda-8650-4861-9fed-f7cea3df1b6c"
+  ],
+  "stop_reasons": {
+    "stop": 14
+  },
+  "locator_llm_calls": 13,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 14,
+  "tool_result_chars": 36773,
+  "tool_original_chars": 36773,
+  "tool_returned_chars": 36773,
+  "truncated_tool_calls": 0,
+  "input_tokens": 111776,
+  "output_tokens": 2366,
+  "total_tokens": 114142,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 125822.78,
+  "graph_updates": 26,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-q5su9ba9/lib/matplotlib/legend.py",
+      "start_line": 341,
+      "end_line": 345
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-q5su9ba9/lib/matplotlib/legend.py",
+      "start_line": 540,
+      "end_line": 541
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-q5su9ba9/lib/matplotlib/legend.py",
+      "start_line": 285,
+      "end_line": 289
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/matplotlib/legend.py",
+      "start_line": 341,
+      "end_line": 345
+    },
+    {
+      "file_path": "lib/matplotlib/legend.py",
+      "start_line": 540,
+      "end_line": 541
+    },
+    {
+      "file_path": "lib/matplotlib/legend.py",
+      "start_line": 285,
+      "end_line": 289
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-23913-0-4ea383273a",
+  "instance_id": "matplotlib__matplotlib-23913",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

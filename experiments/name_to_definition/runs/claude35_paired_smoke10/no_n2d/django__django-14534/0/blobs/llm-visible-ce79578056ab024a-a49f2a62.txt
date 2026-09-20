@@ -1,0 +1,16 @@
+
+
+#REFLECT
+I have all the context I need. The bug is clearly identified:
+
+- **File**: `/tmp/sgagent-n2d-ratox0tr/django/forms/boundfield.py`
+- **Line 280**: `BoundWidget.id_for_label` hardcodes the id format as `'id_%s_%s' % (self.data['name'], self.data['index'])` instead of using the already-computed id from `self.data['attrs']['id']`.
+
+The `subwidgets` method in `BoundField` properly computes the id (respecting custom `auto_id` formats) and passes it through `attrs`, which ends up in `self.data['attrs']['id']`. But `BoundWidget.id_for_label` ignores this and reconstructs the id with a hardcoded `'id_%s_%s'` pattern.
+
+The fix is on line 280: change `return 'id_%s_%s' % (self.data['name'], self.data['index'])` to `return self.data['attrs']['id']`.
+
+**Bug Location:**
+- **File**: `/tmp/sgagent-n2d-ratox0tr/django/forms/boundfield.py`, **line 280**
+
+**INFO ENOUGH**

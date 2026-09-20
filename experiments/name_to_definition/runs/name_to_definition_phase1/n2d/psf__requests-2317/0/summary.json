@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 833,
+    "output_tokens": 61,
+    "reasoning_tokens": null,
+    "total_tokens": 894
+  },
+  "input_tokens": 61040,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2761,
+      "output_tokens": 9,
+      "reasoning_tokens": null,
+      "total_tokens": 2770
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3782,
+      "output_tokens": 31,
+      "reasoning_tokens": null,
+      "total_tokens": 3813
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3869,
+      "output_tokens": 11,
+      "reasoning_tokens": null,
+      "total_tokens": 3880
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5065,
+      "output_tokens": 33,
+      "reasoning_tokens": null,
+      "total_tokens": 5098
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5707,
+      "output_tokens": 54,
+      "reasoning_tokens": null,
+      "total_tokens": 5761
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5958,
+      "output_tokens": 24,
+      "reasoning_tokens": null,
+      "total_tokens": 5982
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6470,
+      "output_tokens": 24,
+      "reasoning_tokens": null,
+      "total_tokens": 6494
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6645,
+      "output_tokens": 45,
+      "reasoning_tokens": null,
+      "total_tokens": 6690
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6673,
+      "output_tokens": 70,
+      "reasoning_tokens": null,
+      "total_tokens": 6743
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6775,
+      "output_tokens": 265,
+      "reasoning_tokens": null,
+      "total_tokens": 7040
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6502,
+      "output_tokens": 60,
+      "reasoning_tokens": null,
+      "total_tokens": 6562
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 687,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 20289,
+  "total_llm_calls": 12,
+  "total_tokens": 61727,
+  "wall_clock_ms": 60908.993,
+  "run_id": "name_to_definition_phase1-psf__requests-2317-n2d-40dbc2493e",
+  "arm": "n2d",
+  "instance_id": "psf__requests-2317"
+}

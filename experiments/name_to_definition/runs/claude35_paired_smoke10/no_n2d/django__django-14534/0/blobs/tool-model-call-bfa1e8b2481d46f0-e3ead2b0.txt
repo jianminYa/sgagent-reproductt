@@ -1,0 +1,2 @@
+#TOOL_CALL analyze_file_structure
+{ "file": "/tmp/sgagent-n2d-ratox0tr/django/forms/boundfield.py" }

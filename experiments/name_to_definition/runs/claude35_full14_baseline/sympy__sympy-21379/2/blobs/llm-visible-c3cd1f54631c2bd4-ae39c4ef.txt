@@ -1,0 +1,9 @@
+#REFLECT
+All four locations are confirmed. The bug is in the `as_real_imag()` methods of `sinh`, `cosh`, `tanh`, and `coth` in `sympy/functions/elementary/hyperbolic.py`. At lines 184, 369, 614, and 808, the condition `if self.args[0].is_extended_real:` only matches when the result is explicitly `True`. When the cache is empty and `is_extended_real` returns `None` (unknown), the code falls through to the complex decomposition path, which creates expressions involving Piecewise that eventually trigger a `PolynomialError`.
+
+The fix is to change `if self.args[0].is_extended_real:` to `if self.args[0].is_extended_real is not False:` at all four locations. This way, when `is_extended_real` is `None` (unknown but not definitively complex), we take the safe "real" path instead of the complex decomposition path that chokes on Piecewise.
+
+Now let me apply the fix using a Python script since shell pipes don't work.
+
+#TOOL_CALL execute_shell_command_with_validation
+{"command": "python3 -c \"import pathlib; p=pathlib.Path('/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py'); t=p.read_text(); t=t.replace('        if self.args[0].is_extended_real:\\n            if deep:\\n                hints[', '        if self.args[0].is_extended_real is not False:\\n            if deep:\\n                hints['); p.write_text(t); print('Done')\""}

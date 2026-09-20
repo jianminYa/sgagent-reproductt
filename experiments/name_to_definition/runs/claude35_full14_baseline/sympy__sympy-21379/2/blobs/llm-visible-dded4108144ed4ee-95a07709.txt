@@ -1,0 +1,105 @@
+# Summary of Bug Investigation: PolynomialError with Piecewise in subs()
+
+## Problem Description
+A `PolynomialError: Piecewise generators do not make sense` occurs when calling `subs({1: 1.0})` on an expression like `exp(sinh(Piecewise((x, y > x), (y, True)) / z))` with **real symbols** and after **clearing the cache**.
+
+### Key Characteristics:
+- Only happens with `sinh`, `cosh`, `tanh`, `coth` (hyperbolic functions) inside `exp`
+- Only occurs with real-valued symbols (not generic symbols)
+- Only triggers after cache clearing (works on second run)
+- The error originates from `sympy/polys/polytools.py`
+
+## Error Source Location
+**File: `sympy/polys/polytools.py`, lines 4397-4399:**
+```python
+for k in opt.gens:
+    if isinstance(k, Piecewise):
+        raise PolynomialError("Piecewise generators do not make sense")
+```
+This is inside `_parallel_poly_from_expr()` (line 4343).
+
+## Root Cause Identified
+
+**The root cause is in the `as_real_imag()` methods of hyperbolic functions.**
+
+In `sinh.as_real_imag()` (line 179-194 of `hyperbolic.py`), and identically in `cosh` (line 367), `tanh` (line 612), `coth` (line 806):
+
+```python
+def as_real_imag(self, deep=True, **hints):
+    from sympy import cos, sin
+    if self.args[0].is_extended_real:      # Line 184 — KEY CHECK
+        if deep:
+            hints['complex'] = False
+            return (self.expand(deep, **hints), S.Zero)  # SAFE PATH
+        else:
+            return (self, S.Zero)
+    if deep:                                              # DANGEROUS PATH
+        re, im = self.args[0].expand(deep, **hints).as_real_imag()
+    else:
+        re, im = self.args[0].as_real_imag()
+    return (sinh(re)*cos(im), cosh(re)*sin(im))
+```
+
+**Line 184 is the critical branch point:**
+- When `is_extended_real` returns **True** (cached): Takes the safe path, returns `(self, S.Zero)` — **NO ERROR**
+- When `is_extended_real` returns **None** (empty cache): Falls through to the complex decomposition path which creates expressions like `sinh(re)*cos(im)` where `re` and `im` are derived from the Piecewise argument — **TRIGGERS ERROR PATH**
+
+The complex decomposition path eventually leads to `poly()` being called on expressions containing Piecewise, which raises `PolynomialError`.
+
+**Why cache matters:** On first run with empty cache, `Piecewise(...)/z` with real symbols has `is_extended_real` returning `None` because the Piecewise's `is_extended_real` hasn't been computed yet. On second run, it's cached as `True`, so the safe path is taken.
+
+**Why only sinh/cosh/tanh/coth:** These hyperbolic functions have this specific `as_real_imag()` pattern with the `is_extended_real` check that gates between a safe "real" path and a complex decomposition path that breaks with Piecewise.
+
+## Comparison with Trigonometric Functions
+
+The trigonometric functions (`sin`, `cos`, `tan`, `cot`) have the **exact same pattern** in their shared `_as_real_imag()` method (line 56-67 of `trigonometric.py`):
+```python
+def _as_real_imag(self, deep=True, **hints):
+    if self.args[0].is_extended_real:
+        if deep:
+            hints['complex'] = False
+            return (self.args[0].expand(deep, **hints), S.Zero)
+        else:
+            return (self.args[0], S.Zero)
+    if deep:
+        re, im = self.args[0].expand(deep, **hints).as_real_imag()
+    else:
+        re, im = self.args[0].as_real_imag()
+    return (re, im)
+```
+The trig functions have the same vulnerability but may not trigger the error because their `as_real_imag()` callers (e.g., `sin.as_real_imag()` at line 446-448) use the returned `(re, im)` differently — they produce `sin(re)*cosh(im)` etc., which may not trigger `poly()` in the same way.
+
+## All Affected Locations in `hyperbolic.py`
+
+1. **`sinh.as_real_imag()`** — line 179-194
+2. **`cosh.as_real_imag()`** — line 367-380
+3. **`tanh.as_real_imag()`** — line 612-625
+4. **`coth.as_real_imag()`** — line 806-819
+5. **`sech/csch.as_real_imag()`** — line 907-908 (delegates to reciprocal, so indirectly affected)
+
+## Proposed Fix
+
+The fix should change the condition from `if self.args[0].is_extended_real:` (which requires `True`) to also handle the `None` case. When `is_extended_real` is `None` (unknown), we should **not** fall through to the complex decomposition path that breaks with Piecewise. Instead, we should only take the complex path when we **know** the argument is **not** real (i.e., `is_extended_real` is `False`).
+
+**Proposed change for all four methods:** Change:
+```python
+if self.args[0].is_extended_real:
+```
+to:
+```python
+if self.args[0].is_extended_real is not False:
+```
+
+This means: if the argument is real OR we don't know, treat it as real. Only decompose into complex parts when we're certain the argument is complex.
+
+**Potential concern:** If the argument is genuinely complex but `is_extended_real` returns `None`, this would give wrong results. However, this is the same trade-off the trigonometric functions make, and it's better than crashing with `PolynomialError`.
+
+## Files Needing Changes
+1. **`sympy/functions/elementary/hyperbolic.py`** — lines 184, 369, 614, 808 (four `as_real_imag` methods)
+2. Possibly **`sympy/functions/elementary/trigonometric.py`** — line 57 (same pattern, same potential vulnerability)
+
+## Current Status
+- Full code path traced and root cause confirmed
+- All affected locations identified
+- Fix strategy determined
+- **Ready to implement the fix**

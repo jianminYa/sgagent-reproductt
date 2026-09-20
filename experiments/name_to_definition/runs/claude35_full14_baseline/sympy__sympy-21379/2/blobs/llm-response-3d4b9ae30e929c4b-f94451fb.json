@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "\n\n#TOOL_CALL search_code_with_context\n{\"keyword\": \"_as_real_imag\", \"search_path\": \"/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py\"}", "name": null, "tool_calls": [], "type": "ai"}

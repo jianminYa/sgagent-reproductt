@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "86b02efb-ba12-4b62-9a65-cd851123839e",
+    "76f8a863-855b-4dda-8151-a42e56833e5c",
+    "f747e3b0-2652-4655-8433-ab5d46647324",
+    "35d78ed0-bd3e-431d-ad59-e661e932a7fd",
+    "5493bcbd-51f4-45f3-ac60-21093c0cbdaa",
+    "efd43601-a3b0-4c53-8fa7-c1399733d980",
+    "a77dcfe1-50a6-4f47-85ef-79cd6fb26ee4"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 7,
+  "failed_tool_calls": 0,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 36025,
+  "tool_original_chars": 54533,
+  "tool_returned_chars": 36025,
+  "truncated_tool_calls": 1,
+  "input_tokens": 42914,
+  "output_tokens": 783,
+  "total_tokens": 43697,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 111131.503,
+  "graph_updates": 14,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-django__django-10914-1-8cc289fb86",
+  "instance_id": "django__django-10914",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

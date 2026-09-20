@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "356bc0e6-38a0-4bbe-abdd-ac908c587744",
+    "630106f3-ce03-404e-9e9d-8fbab14be6b0",
+    "a7b6dfa2-3aa6-48b6-be98-d377d055bb8a",
+    "560eb672-ba58-4d54-ade8-1364fec1b397",
+    "a5eb04fc-15e0-4f58-991a-520372b08a1a",
+    "680c6db5-41b0-492d-8746-08c067c6c510",
+    "fbb5c12e-8a78-495f-92a8-0e4c6ece7175",
+    "5c134c80-19c7-4289-8200-c826a4d90b04",
+    "54540500-349c-4020-8bba-6b3972cb800e",
+    "660a9edd-5722-43ee-ae5b-cdd03e67c93b",
+    "bf4da183-7a88-4f14-af43-6e456b492624",
+    "bdb0db3c-b84d-4faf-a6a6-4a93454289a0",
+    "61b0b8e4-ad42-4186-a5de-65f455adfb6c",
+    "f18de730-f9fd-4282-8d71-025087bb625f",
+    "c5068319-17c6-4dd3-824d-fd59b2351ade",
+    "63354a9e-7334-4550-8a1f-fa8ed9b7bf6c",
+    "724bac2d-4584-41a1-a7e1-6b4d7e2b835e",
+    "f969f63e-8155-4a64-b8a7-372a940a3f63",
+    "d5361d8c-74e7-4ece-96f4-e5676a5f8bf2",
+    "3839be44-0c35-486a-ac3c-d6f705dd8d06",
+    "ce32c8af-4c2a-4bd1-8dd3-90efd0200fac",
+    "b675b774-d3cd-4456-859a-cbeb48fa8797",
+    "31924e0c-37db-4c60-bc04-b523d48fd7de",
+    "906fe3a1-516b-4cff-9e9e-5a8a28326f02",
+    "eff88c31-da43-4d65-88fc-d0329112e8f9",
+    "cd0155bd-1def-4a4d-bbea-664bbd59fe1f",
+    "5f9a2cd1-1a9b-4c37-b797-9e04831a588c",
+    "94e5c41f-d96e-4579-bec6-6faecb9ef0af",
+    "dd065475-baa5-46ee-bf3d-dc041847c068",
+    "c49fdb80-fe33-4b9a-8743-2aba6b4bc467",
+    "38efe7c5-396a-431f-b0b1-420fba6e6aac",
+    "2cc13392-1c4b-4766-81dd-b6a1d5957d8f",
+    "8ea84dd9-cd5a-4e62-be35-70541ddcf439",
+    "75f9b498-7205-4f75-b6fa-5d690721fa59",
+    "854c79c8-f74c-44a9-a6bc-8a1f3d034d24",
+    "d3d7401f-f29e-4c25-9849-5b796d467fb6",
+    "b25b973a-2e5d-490d-91d1-dc76f3a17d72",
+    "f371c4e5-0d5a-4479-b14d-ad4c564842bd",
+    "c808d9f3-595f-4372-b6b3-64b2ed526c50",
+    "8bad5993-ea2a-4b30-8eda-5fa5948b3fed",
+    "754cf136-fb5e-4715-a49b-b42a63411ff0",
+    "312f92dd-3ab8-4d6b-91f4-9e721788cd0d",
+    "ef26e52f-426a-435d-82b8-39666d370b0f"
+  ],
+  "stop_reasons": {
+    "stop": 43
+  },
+  "locator_llm_calls": 38,
+  "tool_calls": 36,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 5,
+  "total_llm_calls": 43,
+  "tool_result_chars": 134506,
+  "tool_original_chars": 134506,
+  "tool_returned_chars": 134506,
+  "truncated_tool_calls": 0,
+  "input_tokens": 444377,
+  "output_tokens": 16421,
+  "total_tokens": 460798,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 468805.839,
+  "graph_updates": 84,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-m76zk92d/xarray/core/formatting.py",
+      "start_line": 271,
+      "end_line": 291
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-m76zk92d/xarray/core/formatting.py",
+      "start_line": 342,
+      "end_line": 356
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-m76zk92d/xarray/core/formatting.py",
+      "start_line": 294,
+      "end_line": 296
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-m76zk92d/xarray/core/formatting.py",
+      "start_line": 495,
+      "end_line": 498
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 271,
+      "end_line": 291
+    },
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 342,
+      "end_line": 356
+    },
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 294,
+      "end_line": 296
+    },
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 495,
+      "end_line": 498
+    }
+  ],
+  "run_id": "sgagent-official-pydata__xarray-4248-1-1083a910a1",
+  "instance_id": "pydata__xarray-4248",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

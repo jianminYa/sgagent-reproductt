@@ -1,0 +1,1 @@
+['Check whether your full_qualified_name is named in compliance with the specification.']

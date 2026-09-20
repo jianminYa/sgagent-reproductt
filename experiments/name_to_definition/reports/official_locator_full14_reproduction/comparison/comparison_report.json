@@ -1,0 +1,408 @@
+{
+  "status": "preserved five-tool baseline versus full 14-tool Locator reproduction",
+  "five_tool_report": "sgagent_official_locator_reproduction",
+  "full14_report": "sgagent_official_locator_full14_reproduction",
+  "same_manifest_sample_size": true,
+  "completion": {
+    "five_tool": {
+      "n": 45,
+      "completed": 45,
+      "completion_rate": 1.0,
+      "termination_reasons": {
+        "completed": 45
+      }
+    },
+    "full14": {
+      "n": 45,
+      "completed": 44,
+      "completion_rate": 0.9777777777777777,
+      "termination_reasons": {
+        "completed": 44,
+        "api_error": 1
+      }
+    },
+    "delta_completion_rate_full14_minus_five_tool": -0.022222222222222254
+  },
+  "metrics": {
+    "official_repository_metrics": {
+      "class_accuracy": {
+        "five_tool": 0.9333333333333333,
+        "full14": 0.9111111111111111,
+        "delta_full14_minus_five_tool": -0.022222222222222254
+      },
+      "file_accuracy": {
+        "five_tool": 0.9333333333333333,
+        "full14": 0.9111111111111111,
+        "delta_full14_minus_five_tool": -0.022222222222222254
+      },
+      "function_accuracy": {
+        "five_tool": 0.4222222222222222,
+        "full14": 0.4222222222222222,
+        "delta_full14_minus_five_tool": 0.0
+      },
+      "line_accuracy": {
+        "five_tool": 0.26666666666666666,
+        "full14": 0.28888888888888886,
+        "delta_full14_minus_five_tool": 0.0222222222222222
+      },
+      "line_iou": {
+        "five_tool": 0.16491006725103774,
+        "full14": 0.16054147491753065,
+        "delta_full14_minus_five_tool": -0.0043685923335070875
+      }
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": {
+        "five_tool": 0.9222222222222223,
+        "full14": 0.8777777777777778,
+        "delta_full14_minus_five_tool": -0.04444444444444451
+      },
+      "function_accuracy": {
+        "five_tool": 0.5513227513227513,
+        "full14": 0.5439153439153439,
+        "delta_full14_minus_five_tool": -0.007407407407407418
+      }
+    }
+  },
+  "resource_stats": {
+    "tokens": {
+      "input": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 47222.26666666667,
+          "full14": 74066.08888888889,
+          "delta_full14_minus_five_tool": 26843.822222222218
+        },
+        "median": {
+          "five_tool": 37054.0,
+          "full14": 60683.0,
+          "delta_full14_minus_five_tool": 23629.0
+        },
+        "p25": {
+          "five_tool": 31271.0,
+          "full14": 42905.0,
+          "delta_full14_minus_five_tool": 11634.0
+        },
+        "p75": {
+          "five_tool": 66930.0,
+          "full14": 105002.0,
+          "delta_full14_minus_five_tool": 38072.0
+        }
+      },
+      "output": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 4866.511111111111,
+          "full14": 4027.3333333333335,
+          "delta_full14_minus_five_tool": -839.1777777777775
+        },
+        "median": {
+          "five_tool": 3958.0,
+          "full14": 3612.0,
+          "delta_full14_minus_five_tool": -346.0
+        },
+        "p25": {
+          "five_tool": 3032.0,
+          "full14": 1949.0,
+          "delta_full14_minus_five_tool": -1083.0
+        },
+        "p75": {
+          "five_tool": 5692.0,
+          "full14": 5764.0,
+          "delta_full14_minus_five_tool": 72.0
+        }
+      },
+      "total": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 52088.77777777778,
+          "full14": 78093.42222222222,
+          "delta_full14_minus_five_tool": 26004.644444444435
+        },
+        "median": {
+          "five_tool": 41616.0,
+          "full14": 66830.0,
+          "delta_full14_minus_five_tool": 25214.0
+        },
+        "p25": {
+          "five_tool": 34179.0,
+          "full14": 46517.0,
+          "delta_full14_minus_five_tool": 12338.0
+        },
+        "p75": {
+          "five_tool": 73309.0,
+          "full14": 109912.0,
+          "delta_full14_minus_five_tool": 36603.0
+        }
+      }
+    },
+    "calls": {
+      "failed_tools": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 0.0,
+          "full14": 0.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "median": {
+          "five_tool": 0.0,
+          "full14": 0.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "p25": {
+          "five_tool": 0.0,
+          "full14": 0.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "p75": {
+          "five_tool": 0.0,
+          "full14": 0.0,
+          "delta_full14_minus_five_tool": 0.0
+        }
+      },
+      "locator_llm": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 12.155555555555555,
+          "full14": 11.066666666666666,
+          "delta_full14_minus_five_tool": -1.0888888888888886
+        },
+        "median": {
+          "five_tool": 11.0,
+          "full14": 11.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "p25": {
+          "five_tool": 10.0,
+          "full14": 8.0,
+          "delta_full14_minus_five_tool": -2.0
+        },
+        "p75": {
+          "five_tool": 15.0,
+          "full14": 13.0,
+          "delta_full14_minus_five_tool": -2.0
+        }
+      },
+      "summarizer_llm": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 1.1555555555555554,
+          "full14": 0.8444444444444444,
+          "delta_full14_minus_five_tool": -0.311111111111111
+        },
+        "median": {
+          "five_tool": 1.0,
+          "full14": 1.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "p25": {
+          "five_tool": 1.0,
+          "full14": 0.0,
+          "delta_full14_minus_five_tool": -1.0
+        },
+        "p75": {
+          "five_tool": 1.0,
+          "full14": 1.0,
+          "delta_full14_minus_five_tool": 0.0
+        }
+      },
+      "tools": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 9.866666666666667,
+          "full14": 8.688888888888888,
+          "delta_full14_minus_five_tool": -1.177777777777779
+        },
+        "median": {
+          "five_tool": 8.0,
+          "full14": 8.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "p25": {
+          "five_tool": 7.0,
+          "full14": 6.0,
+          "delta_full14_minus_five_tool": -1.0
+        },
+        "p75": {
+          "five_tool": 12.0,
+          "full14": 11.0,
+          "delta_full14_minus_five_tool": -1.0
+        }
+      },
+      "total_llm": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 13.311111111111112,
+          "full14": 11.911111111111111,
+          "delta_full14_minus_five_tool": -1.4000000000000004
+        },
+        "median": {
+          "five_tool": 12.0,
+          "full14": 12.0,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "p25": {
+          "five_tool": 11.0,
+          "full14": 8.0,
+          "delta_full14_minus_five_tool": -3.0
+        },
+        "p75": {
+          "five_tool": 16.0,
+          "full14": 14.0,
+          "delta_full14_minus_five_tool": -2.0
+        }
+      }
+    },
+    "latency_ms": {
+      "latency_ms": {
+        "n": {
+          "five_tool": 45,
+          "full14": 45,
+          "delta_full14_minus_five_tool": 0.0
+        },
+        "mean": {
+          "five_tool": 191844.21637777778,
+          "full14": 189687.61675555556,
+          "delta_full14_minus_five_tool": -2156.5996222222166
+        },
+        "median": {
+          "five_tool": 161768.131,
+          "full14": 180249.69,
+          "delta_full14_minus_five_tool": 18481.55900000001
+        },
+        "p25": {
+          "five_tool": 132459.185,
+          "full14": 117905.961,
+          "delta_full14_minus_five_tool": -14553.224000000002
+        },
+        "p75": {
+          "five_tool": 233140.232,
+          "full14": 245359.775,
+          "delta_full14_minus_five_tool": 12219.543000000005
+        }
+      }
+    }
+  },
+  "tool_usage": {
+    "analyze_file_structure": {
+      "five_tool": 0,
+      "full14": 52,
+      "delta_full14_minus_five_tool": 52
+    },
+    "execute_shell_command_with_validation": {
+      "five_tool": 5,
+      "full14": 1,
+      "delta_full14_minus_five_tool": -4
+    },
+    "explore_directory": {
+      "five_tool": 124,
+      "full14": 116,
+      "delta_full14_minus_five_tool": -8
+    },
+    "extract_complete_method": {
+      "five_tool": 0,
+      "full14": 53,
+      "delta_full14_minus_five_tool": 53
+    },
+    "find_class_constructor": {
+      "five_tool": 0,
+      "full14": 1,
+      "delta_full14_minus_five_tool": 1
+    },
+    "find_files_containing": {
+      "five_tool": 0,
+      "full14": 18,
+      "delta_full14_minus_five_tool": 18
+    },
+    "find_methods_by_name": {
+      "five_tool": 0,
+      "full14": 14,
+      "delta_full14_minus_five_tool": 14
+    },
+    "find_variable_usage": {
+      "five_tool": 0,
+      "full14": 1,
+      "delta_full14_minus_five_tool": 1
+    },
+    "get_code_relationships": {
+      "five_tool": 0,
+      "full14": 1,
+      "delta_full14_minus_five_tool": 1
+    },
+    "list_class_attributes": {
+      "five_tool": 0,
+      "full14": 1,
+      "delta_full14_minus_five_tool": 1
+    },
+    "read_file_lines": {
+      "five_tool": 177,
+      "full14": 87,
+      "delta_full14_minus_five_tool": -90
+    },
+    "search_code_with_context": {
+      "five_tool": 135,
+      "full14": 41,
+      "delta_full14_minus_five_tool": -94
+    },
+    "show_file_imports": {
+      "five_tool": 3,
+      "full14": 5,
+      "delta_full14_minus_five_tool": 2
+    }
+  },
+  "model_metadata": {
+    "five_tool": null,
+    "full14": {
+      "requested_models": {
+        "claude-sonnet-5": 45
+      },
+      "returned_models": {
+        "claude-sonnet-5": 45
+      },
+      "request_ids_recorded": 536,
+      "request_ids_unique": 536,
+      "request_ids_missing": 0,
+      "stop_reasons": {
+        "end_turn": 536
+      }
+    }
+  },
+  "notes": [
+    "Both reports use the same seeded 45-instance manifest and the same offline evaluator adapter.",
+    "The full14 run uses the latest successful attempt when a transient API failure was retried; failed attempts remain in the run directory.",
+    "Official repository metrics are containment booleans; paper metrics are set Jaccard values.",
+    "The full14 run is Locator-only and is not an N2D ablation."
+  ]
+}

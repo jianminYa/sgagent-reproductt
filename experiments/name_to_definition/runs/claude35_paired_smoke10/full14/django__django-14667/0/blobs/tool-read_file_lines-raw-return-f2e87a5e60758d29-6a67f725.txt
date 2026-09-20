@@ -1,0 +1,23 @@
+File: /tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py
+Total lines: 2452
+Showing lines 2071-2089:
+
+2071:     def add_deferred_loading(self, field_names):
+2072:         """
+2073:         Add the given list of model field names to the set of fields to
+2074:         exclude from loading from the database when automatic column selection
+2075:         is done. Add the new field names to any existing field names that
+2076:         are deferred (or removed from any existing field names that are marked
+2077:         as the only ones for immediate loading).
+2078:         """
+2079:         # Fields on related models are stored in the literal double-underscore
+2080:         # format, so that we can use a set datastructure. We do the foo__bar
+2081:         # splitting and handling when computing the SQL column names (as part of
+2082:         # get_columns()).
+2083:         existing, defer = self.deferred_loading
+2084:         if defer:
+2085:             # Add to existing deferred names.
+2086:             self.deferred_loading = existing.union(field_names), True
+2087:         else:
+2088:             # Remove names from the set of any existing "immediate load" names.
+2089:             self.deferred_loading = existing.difference(field_names), False

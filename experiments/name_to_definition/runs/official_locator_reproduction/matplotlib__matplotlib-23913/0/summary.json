@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 16,
+  "tool_calls": 13,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 18,
+  "tool_result_chars": 17585,
+  "input_tokens": 67298,
+  "output_tokens": 7306,
+  "total_tokens": 74604,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 208512.773,
+  "graph_updates": 32,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-zwvl5r7q/lib/matplotlib/legend.py",
+      "start_line": 343,
+      "end_line": 346
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-zwvl5r7q/lib/matplotlib/legend.py",
+      "start_line": 540,
+      "end_line": 541
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/matplotlib/legend.py",
+      "start_line": 343,
+      "end_line": 346
+    },
+    {
+      "file_path": "lib/matplotlib/legend.py",
+      "start_line": 540,
+      "end_line": 541
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-23913-0-5e96a254aa",
+  "instance_id": "matplotlib__matplotlib-23913",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

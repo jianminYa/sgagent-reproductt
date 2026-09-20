@@ -1,0 +1,62 @@
+Search results for 'router.db_for_read' in directory (showing first 5 matches):
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/models/manager.py
+Lines 130-136:
+ 130: 
+ 131:     @property
+ 132:     def db(self):
+ 133:         return self._db or router.db_for_read(self.model, **self._hints)
+ 134: 
+ 135:     #######################
+ 136:     # PROXIES TO QUERYSET #
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/models/query.py
+Lines 1175-1181:
+1175:         """Return the database used if this query is executed now."""
+1176:         if self._for_write:
+1177:             return self._db or router.db_for_write(self.model, **self._hints)
+1178:         return self._db or router.db_for_read(self.model, **self._hints)
+1179: 
+1180:     ###################
+1181:     # PRIVATE METHODS #
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/models/query.py
+Lines 1452-1458:
+1452:     @property
+1453:     def db(self):
+1454:         """Return the database used if this query is executed now."""
+1455:         return self._db or router.db_for_read(self.model, **self._hints)
+1456: 
+1457:     def using(self, alias):
+1458:         """Select the database this RawQuerySet should execute against."""
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/models/fields/related_descriptors.py
+Lines 575-581:
+ 575:             """
+ 576:             Filter the queryset for the instance this manager is bound to.
+ 577:             """
+ 578:             db = self._db or router.db_for_read(self.model, instance=self.instance)
+ 579:             empty_strings_as_null = connections[db].features.interprets_empty_strings_as_nulls
+ 580:             queryset._add_hints(instance=self.instance)
+ 581:             if self._db:
+
+================================================================================
+
+File: /tmp/sgagent-n2d-1yd2xahh/django/db/models/fields/related.py
+Lines 900-906:
+ 900:         if value is None:
+ 901:             return
+ 902: 
+ 903:         using = router.db_for_read(self.remote_field.model, instance=model_instance)
+ 904:         qs = self.remote_field.model._default_manager.using(using).filter(
+ 905:             **{self.remote_field.field_name: value}
+ 906:         )
+
+================================================================================
+

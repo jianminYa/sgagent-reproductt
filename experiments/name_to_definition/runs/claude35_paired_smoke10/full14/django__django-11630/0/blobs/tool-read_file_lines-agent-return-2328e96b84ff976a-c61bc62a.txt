@@ -1,0 +1,40 @@
+File: /tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py
+Total lines: 198
+Showing lines 15-50:
+
+  15:     errors = []
+  16:     if app_configs is None:
+  17:         models = apps.get_models()
+  18:     else:
+  19:         models = chain.from_iterable(app_config.get_models() for app_config in app_configs)
+  20:     for model in models:
+  21:         if model._meta.managed and not model._meta.proxy:
+  22:             db_table_models[model._meta.db_table].append(model._meta.label)
+  23:         if not inspect.ismethod(model.check):
+  24:             errors.append(
+  25:                 Error(
+  26:                     "The '%s.check()' class method is currently overridden by %r."
+  27:                     % (model.__name__, model.check),
+  28:                     obj=model,
+  29:                     id='models.E020'
+  30:                 )
+  31:             )
+  32:         else:
+  33:             errors.extend(model.check(**kwargs))
+  34:         for model_index in model._meta.indexes:
+  35:             indexes[model_index.name].append(model._meta.label)
+  36:         for model_constraint in model._meta.constraints:
+  37:             constraints[model_constraint.name].append(model._meta.label)
+  38:     for db_table, model_labels in db_table_models.items():
+  39:         if len(model_labels) != 1:
+  40:             errors.append(
+  41:                 Error(
+  42:                     "db_table '%s' is used by multiple models: %s."
+  43:                     % (db_table, ', '.join(db_table_models[db_table])),
+  44:                     obj=db_table,
+  45:                     id='models.E028',
+  46:                 )
+  47:             )
+  48:     for index_name, model_labels in indexes.items():
+  49:         if len(model_labels) > 1:
+  50:             model_labels = set(model_labels)

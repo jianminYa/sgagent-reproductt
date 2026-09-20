@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-5oom4hte/tests/check_framework/test_model_checks.py", "start_line": 50, "end_line": 100}

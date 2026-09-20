@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 9,
+  "tool_calls": 7,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 10,
+  "tool_result_chars": 9278,
+  "input_tokens": 29726,
+  "output_tokens": 3857,
+  "total_tokens": 33583,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 98487.067,
+  "graph_updates": 17,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-ord6iswx/requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-ord6iswx/requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-1963-0-ebf90b61eb",
+  "instance_id": "psf__requests-1963",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

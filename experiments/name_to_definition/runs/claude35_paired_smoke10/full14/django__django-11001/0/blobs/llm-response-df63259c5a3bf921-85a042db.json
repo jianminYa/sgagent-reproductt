@@ -1,0 +1,1 @@
+{"additional_kwargs": {}, "content": "```json\n{\n    \"locations\": [\n        {\n            \"file_path\": \"/tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py\",\n            \"start_line\": 35,\n            \"end_line\": 35\n        }\n    ]\n}\n```", "name": null, "tool_calls": [], "type": "ai"}

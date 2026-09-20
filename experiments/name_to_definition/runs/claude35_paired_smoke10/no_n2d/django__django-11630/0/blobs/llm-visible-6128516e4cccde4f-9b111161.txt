@@ -1,0 +1,18 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py",
+            "start_line": 20,
+            "end_line": 22
+        },
+        {
+            "file_path": "/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py",
+            "start_line": 38,
+            "end_line": 47
+        }
+    ]
+}
+```

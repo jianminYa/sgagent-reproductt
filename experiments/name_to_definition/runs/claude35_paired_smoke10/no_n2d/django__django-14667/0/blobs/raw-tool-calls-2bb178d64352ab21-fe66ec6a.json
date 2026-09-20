@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{ \"file\": \"/tmp/sgagent-n2d-gwa0zdpk/django/db/models/sql/query.py\", \"full_qualified_name\": \"django.db.models.sql.query.Query.add_deferred_loading\" }"]

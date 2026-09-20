@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_6910364c445646c2ae6443d1ef34fc9b",
+    "msg_b830565998cb43478b09543e38fbb30c",
+    "msg_1203144407c4447f889722731495f199",
+    "msg_68202b6d3bac4ff9998cdb19ef93df6d",
+    "msg_27eaa0ac212844079d68f1bc456f76d8",
+    "msg_f16d7ab5031040f892666c5db18f8978",
+    "msg_ef0af2e5d6d240e4ab53688add3093d5",
+    "msg_320cd7e48d6b44c09ab36317269795db",
+    "msg_d25ee175d9014f088af10802de607e60",
+    "msg_11a41daf2b2144d39abf3a6f1008458c",
+    "msg_61604df16e944b0aa3556ee3dc9b6bd4",
+    "msg_0b6c967717894ba788df50b24d828520"
+  ],
+  "stop_reasons": {
+    "end_turn": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 11983,
+  "input_tokens": 48253,
+  "output_tokens": 2259,
+  "total_tokens": 50512,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 118941.847,
+  "graph_updates": 21,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-aao7ehe4/lib/matplotlib/backends/backend_ps.py",
+      "start_line": 669,
+      "end_line": 669
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/matplotlib/backends/backend_ps.py",
+      "start_line": 669,
+      "end_line": 669
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-23964-0-b48fec32b9",
+  "instance_id": "matplotlib__matplotlib-23964",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

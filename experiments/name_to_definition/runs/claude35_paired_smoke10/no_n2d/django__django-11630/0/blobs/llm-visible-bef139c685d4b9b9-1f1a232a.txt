@@ -1,0 +1,20 @@
+
+
+#REFLECT
+Now I have all the context I need. Let me summarize:
+
+**The Bug:**
+In `check_all_models` (line 11-74 of `/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py`), the E028 check groups models by `db_table` name alone (line 22). When multiple models from different apps share the same `db_table` name but are routed to different databases, the check incorrectly flags them as an error.
+
+**The Fix:**
+The grouping key at line 22 should include the database that each model is routed to. We need to use `router.db_for_read()` to determine which database each model uses, and only flag models that share both the same `db_table` AND the same database.
+
+The key locations are:
+1. **Line 12**: Where `db_table_models` is defined - the data structure needs to account for databases
+2. **Line 20-22**: Where models are grouped by `db_table` - needs to also consider the database
+3. **Lines 38-47**: Where the error is generated - the error message and grouping logic need updating
+
+Let me also check the test file to understand the expected behavior better.
+
+#TOOL_CALL search_code_with_context
+{"keyword": "models.E028", "search_path": "/tmp/sgagent-n2d-1yd2xahh/tests/check_framework/test_model_checks.py"}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_7cd35665bb874c4ab14f7128a1f549ae",
+    "msg_51adbb8df49343939e41a07d7c3c1a61",
+    "msg_7d3e88ddf33f48ea83bd31f55b6b178b",
+    "msg_d32a29f993004821988633e7bec95f03",
+    "msg_9b78d5954553446ab2d8e19a080853c5"
+  ],
+  "stop_reasons": {
+    "end_turn": 5
+  },
+  "locator_llm_calls": 5,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 5,
+  "tool_result_chars": 1237950,
+  "input_tokens": 10183,
+  "output_tokens": 1223,
+  "total_tokens": 11406,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 212922.399,
+  "graph_updates": 10,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-sympy__sympy-15609-0-ad23a1e9ca",
+  "instance_id": "sympy__sympy-15609",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

@@ -1,0 +1,6 @@
+
+
+Let me analyze this bug step by step. The issue is about `QuerySet.defer()` not properly clearing deferred fields when chaining with `only()`.
+
+#TOOL_CALL find_methods_by_name
+{ "name": "add_deferred_loading" }

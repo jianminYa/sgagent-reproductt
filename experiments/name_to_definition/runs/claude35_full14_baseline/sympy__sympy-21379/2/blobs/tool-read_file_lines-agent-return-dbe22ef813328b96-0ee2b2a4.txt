@@ -1,0 +1,24 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/trigonometric.py
+Total lines: 3441
+Showing lines 56-75:
+
+  56:     def _as_real_imag(self, deep=True, **hints):
+  57:         if self.args[0].is_extended_real:
+  58:             if deep:
+  59:                 hints['complex'] = False
+  60:                 return (self.args[0].expand(deep, **hints), S.Zero)
+  61:             else:
+  62:                 return (self.args[0], S.Zero)
+  63:         if deep:
+  64:             re, im = self.args[0].expand(deep, **hints).as_real_imag()
+  65:         else:
+  66:             re, im = self.args[0].as_real_imag()
+  67:         return (re, im)
+  68: 
+  69:     def _period(self, general_period, symbol=None):
+  70:         f = expand_mul(self.args[0])
+  71:         if symbol is None:
+  72:             symbol = tuple(f.free_symbols)[0]
+  73: 
+  74:         if not f.has(symbol):
+  75:             return S.Zero

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_44c283140d6c410fb836c3c929b39b5c",
+    "msg_065edd61289448d58639cf2e9e587a59",
+    "msg_b136c8b0d9bb48919533eb6ea1ff3fae",
+    "msg_23e35345f14e44dda5569bf3941c3bf9",
+    "msg_da8b0e4de3364b8d95765ca82fb3598e",
+    "msg_be92c3fdc55743d48b1eeb4929bca49b",
+    "msg_1f4a2960113e40f590e23834657e51af",
+    "msg_f9968aee791b4959b104f4060ebb1929",
+    "msg_c68eb4e06b6444e788070c4be192ad70",
+    "msg_0b6b12689e084785934075bb281d633d",
+    "msg_f6cbef4baa254525bde76ffcbe60cada",
+    "msg_3f47de1d738f4ebc8b9c5217083f1928",
+    "msg_48b44fe974e0400d8a5336476c3ff8d1",
+    "msg_e0f24f93cc2c45c0a6085b3d9ef8d90e",
+    "msg_499a86aabbc24c9e904d7dd2b9675b38",
+    "msg_16719ef3a3394037a93c055066e60456",
+    "msg_1caa30b2b5cf429db30679ffbf518aa2",
+    "msg_3dda1a8d451c47fc98cf223797fa406b"
+  ],
+  "stop_reasons": {
+    "end_turn": 18
+  },
+  "locator_llm_calls": 16,
+  "tool_calls": 12,
+  "failed_tool_calls": 0,
+  "reflection_turns": 3,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 18,
+  "tool_result_chars": 20932,
+  "input_tokens": 70730,
+  "output_tokens": 5584,
+  "total_tokens": 76314,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 181287.081,
+  "graph_updates": 31,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-3beds_be/src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1348
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "src/_pytest/python.py",
+      "start_line": 1345,
+      "end_line": 1348
+    }
+  ],
+  "run_id": "sgagent-official-pytest-dev__pytest-5221-0-ee5ae5d2c5",
+  "instance_id": "pytest-dev__pytest-5221",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

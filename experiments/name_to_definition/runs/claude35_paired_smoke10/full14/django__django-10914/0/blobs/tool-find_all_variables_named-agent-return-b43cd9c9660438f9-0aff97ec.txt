@@ -1,0 +1,6 @@
+abs_path: /tmp/sgagent-n2d-0hngtli7/django/conf/global_settings.py
+name: FILE_UPLOAD_PERMISSIONS
+full_qualified_name: django.conf.global_settings.FILE_UPLOAD_PERMISSIONS
+content: FILE_UPLOAD_PERMISSIONS = None
+start line: 307
+end line: 307

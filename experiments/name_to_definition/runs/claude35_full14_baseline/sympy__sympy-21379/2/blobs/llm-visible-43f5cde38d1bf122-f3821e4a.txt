@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/exponential.py", "start_line": 316, "end_line": 370}

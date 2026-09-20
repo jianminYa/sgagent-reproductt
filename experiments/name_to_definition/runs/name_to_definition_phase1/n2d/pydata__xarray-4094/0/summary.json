@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 1442,
+    "output_tokens": 76,
+    "reasoning_tokens": null,
+    "total_tokens": 1518
+  },
+  "input_tokens": 65291,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2355,
+      "output_tokens": 17,
+      "reasoning_tokens": null,
+      "total_tokens": 2372
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4041,
+      "output_tokens": 32,
+      "reasoning_tokens": null,
+      "total_tokens": 4073
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4107,
+      "output_tokens": 10,
+      "reasoning_tokens": null,
+      "total_tokens": 4117
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4310,
+      "output_tokens": 62,
+      "reasoning_tokens": null,
+      "total_tokens": 4372
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4816,
+      "output_tokens": 38,
+      "reasoning_tokens": null,
+      "total_tokens": 4854
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5804,
+      "output_tokens": 60,
+      "reasoning_tokens": null,
+      "total_tokens": 5864
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6759,
+      "output_tokens": 116,
+      "reasoning_tokens": null,
+      "total_tokens": 6875
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6739,
+      "output_tokens": 137,
+      "reasoning_tokens": null,
+      "total_tokens": 6876
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7762,
+      "output_tokens": 37,
+      "reasoning_tokens": null,
+      "total_tokens": 7799
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8343,
+      "output_tokens": 36,
+      "reasoning_tokens": null,
+      "total_tokens": 8379
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8813,
+      "output_tokens": 99,
+      "reasoning_tokens": null,
+      "total_tokens": 8912
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 720,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 25787,
+  "total_llm_calls": 12,
+  "total_tokens": 66011,
+  "wall_clock_ms": 56995.859,
+  "run_id": "name_to_definition_phase1-pydata__xarray-4094-n2d-5a2ea4005e",
+  "arm": "n2d",
+  "instance_id": "pydata__xarray-4094"
+}

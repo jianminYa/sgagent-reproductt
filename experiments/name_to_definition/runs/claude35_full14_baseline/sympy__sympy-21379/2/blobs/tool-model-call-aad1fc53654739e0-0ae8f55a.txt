@@ -1,0 +1,2 @@
+#TOOL_CALL execute_shell_command_with_validation
+{"command": "cat -n /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py | head -n 195 | tail -n 20"}

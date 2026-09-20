@@ -1,0 +1,20 @@
+
+
+#REFLECT
+Let me think about this carefully. The `re.eval()` method at line 72 checks `arg.is_extended_real` - if True, it returns `arg` directly. If the cache is empty and the expression contains Piecewise with real symbols, the `is_extended_real` check might not resolve immediately (returns None), causing it to fall through to the else branch at line 80.
+
+In the else branch (line 96), `term.as_real_imag(ignore=arg)` is called. This could trigger `Pow.as_real_imag()` which for `exp(...)` calls `self.exp.as_real_imag()` (line 1299 of power.py), and this chain eventually leads to polynomial operations on expressions containing Piecewise.
+
+But I need to find where exactly `poly()` is called. Let me look at the `Pow.as_real_imag()` method more carefully, specifically the integer exponent branch which calls `poly()`.
+
+Actually, wait. Let me reconsider the path. The expression is `exp(sinh(Piecewise((x, y > x), (y, True)) / z))`. When `subs({1: 1.0})` is called:
+
+1. The `subs` walks the tree and tries to substitute `1` with `1.0`
+2. During reconstruction, `exp.eval()` or some other evaluation is triggered
+3. With real symbols, assumption queries like `is_extended_real` are triggered on `exp(sinh(Piecewise(...)/z))`
+4. For `exp(arg)`, `is_extended_real` might call `as_real_imag()` 
+
+Let me look at how `as_real_imag` is called for the `Pow` class with integer exponents, since that's where `poly()` is used.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-4st5urrw/sympy/core/power.py", "start_line": 1237, "end_line": 1280}

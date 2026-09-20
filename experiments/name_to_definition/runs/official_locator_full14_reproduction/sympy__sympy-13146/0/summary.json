@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_02b4281afb6f4424b6842864b98beaf4",
+    "msg_50617d65f4a6450e849419bbce19cc2f",
+    "msg_af875b5e35554cf5b8646296e6cc431f",
+    "msg_ee820eec45f04e28acc7163e8335e065",
+    "msg_b3be1cea72a24783b8d86f436f0a2e3b",
+    "msg_4046d6cd87c043b495131b33165e6504",
+    "msg_d9f3ecea241e4132a655c5fb7731b9ec",
+    "msg_8a21e7afec4647249563e9b3ae9e6265",
+    "msg_3191610f06cc4233bef944d679c93800",
+    "msg_7b2be9003294414f8fe8c48ffd4baed3"
+  ],
+  "stop_reasons": {
+    "end_turn": 10
+  },
+  "locator_llm_calls": 9,
+  "tool_calls": 7,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 10,
+  "tool_result_chars": 292275,
+  "input_tokens": 132122,
+  "output_tokens": 4022,
+  "total_tokens": 136144,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 180249.69,
+  "graph_updates": 17,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-cij9ae43/sympy/core/power.py",
+      "start_line": 1069,
+      "end_line": 1078
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-cij9ae43/sympy/core/power.py",
+      "start_line": 188,
+      "end_line": 235
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/core/power.py",
+      "start_line": 1069,
+      "end_line": 1078
+    },
+    {
+      "file_path": "sympy/core/power.py",
+      "start_line": 188,
+      "end_line": 235
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13146-0-b2a54dc59c",
+  "instance_id": "sympy__sympy-13146",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

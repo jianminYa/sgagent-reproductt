@@ -2,16 +2,15 @@
 Router functions for agent workflow
 """
 
-from langchain_core.messages import HumanMessage,AIMessage
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 
 from agent.state import AgentState
 
 
 def is_tool_result_message(message):
     """Check if message is a tool result message"""
-    return isinstance(message, HumanMessage) and message.content.startswith(
-        "/\/ Tool Result:"
-    )
+    return (isinstance(message, ToolMessage)
+            or isinstance(message, HumanMessage) and message.content.startswith("/\/ Tool Result:"))
 
 
 def locator_router(state: "AgentState"):
@@ -30,7 +29,7 @@ def locator_router(state: "AgentState"):
     ):
         return "summarize"
 
-    if isinstance(last_message, AIMessage) and "#TOOL_CALL" in last_message.content:
+    if isinstance(last_message, AIMessage) and ("#TOOL_CALL" in last_message.content or getattr(last_message, "tool_calls", None)):
         return "call_tool"
 
     if state.get("next") == "Suggester":
@@ -55,7 +54,7 @@ def suggester_router(state: "AgentState"):
     ):
         return "summarize"
 
-    if isinstance(last_message, AIMessage) and "#TOOL_CALL" in last_message.content:
+    if isinstance(last_message, AIMessage) and ("#TOOL_CALL" in last_message.content or getattr(last_message, "tool_calls", None)):
         return "call_tool"
 
     if state.get("next") == "Fixer":
@@ -82,7 +81,7 @@ def fixer_router(state: "AgentState"):
     ):
         return "summarize"
 
-    if isinstance(last_message, AIMessage) and "#TOOL_CALL" in last_message.content:
+    if isinstance(last_message, AIMessage) and ("#TOOL_CALL" in last_message.content or getattr(last_message, "tool_calls", None)):
         return "call_tool"
 
     if state.get("next") == "END":

@@ -1,0 +1,2 @@
+#TOOL_CALL search_code_with_context
+{"keyword": "Piecewise generators do not make sense", "search_path": "/tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py"}

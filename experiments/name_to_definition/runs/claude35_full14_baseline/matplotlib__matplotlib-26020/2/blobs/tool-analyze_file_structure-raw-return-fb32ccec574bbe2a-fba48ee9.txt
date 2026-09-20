@@ -1,0 +1,24 @@
+Each line below indicates a class, including class_name and absolute_path:
+SimpleChainedObjects /tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/mpl_axes.py
+Axes /tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/mpl_axes.py
+AxisDict /tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/mpl_axes.py
+SimpleAxisArtist /tmp/sgagent-n2d-wvvg8bdn/lib/mpl_toolkits/axes_grid1/mpl_axes.py
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+__init__  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleChainedObjects.__init__  [{'name': 'self', 'type': None}, {'name': 'objects', 'type': None}]
+__getattr__  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleChainedObjects.__getattr__  [{'name': 'self', 'type': None}, {'name': 'k', 'type': None}]
+__call__  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleChainedObjects.__call__  [{'name': 'self', 'type': None}]
+__init__  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.__init__  [{'name': 'self', 'type': None}, {'name': 'axes', 'type': None}]
+__getitem__  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.__getitem__  [{'name': 'self', 'type': None}, {'name': 'k', 'type': None}]
+__call__  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.__call__  [{'name': 'self', 'type': None}]
+axis  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.axis  [{'name': 'self', 'type': None}]
+clear  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.clear  [{'name': 'self', 'type': None}]
+__init__  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.AxisDict.__init__  [{'name': 'self', 'type': None}, {'name': 'axes', 'type': None}]
+__getitem__  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.AxisDict.__getitem__  [{'name': 'self', 'type': None}, {'name': 'k', 'type': None}]
+__call__  lib.mpl_toolkits.axes_grid1.mpl_axes.Axes.AxisDict.__call__  [{'name': 'self', 'type': None}]
+__init__  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.__init__  [{'name': 'self', 'type': None}, {'name': 'axis', 'type': None}, {'name': 'axisnum', 'type': None}, {'name': 'spine', 'type': None}]
+major_ticks  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.major_ticks  [{'name': 'self', 'type': None}]
+major_ticklabels  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.major_ticklabels  [{'name': 'self', 'type': None}]
+label  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.label  [{'name': 'self', 'type': None}]
+set_visible  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.set_visible  [{'name': 'self', 'type': None}, {'name': 'b', 'type': None}]
+set_label  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.set_label  [{'name': 'self', 'type': None}, {'name': 'txt', 'type': None}]
+toggle  lib.mpl_toolkits.axes_grid1.mpl_axes.SimpleAxisArtist.toggle  [{'name': 'self', 'type': None}, {'name': 'all', 'type': None}, {'name': 'ticks', 'type': None}, {'name': 'ticklabels', 'type': None}, {'name': 'label', 'type': None}]

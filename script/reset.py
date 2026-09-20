@@ -8,8 +8,9 @@ TEST_BED = settings.TEST_BED
 PROJECT_NAME = settings.PROJECT_NAME
 
 current_dir = Path(__file__).parent.parent
-# parquet_path = current_dir / "dataset.parquet"
-parquet_path = current_dir / "dataset" /"lite.parquet"
+parquet_path = Path(settings.DATASET_PATH)
+if not parquet_path.is_absolute():
+    parquet_path = current_dir / parquet_path
 df = pd.read_parquet(parquet_path)
 
 CONF_PATH = '/root/hy/neo4j-community-5.26.6/conf/neo4j.conf'

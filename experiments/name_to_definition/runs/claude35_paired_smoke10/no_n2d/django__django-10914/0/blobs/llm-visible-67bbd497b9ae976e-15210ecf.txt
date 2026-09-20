@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL find_variable_usage
+{ "file": "/tmp/sgagent-n2d-wtyvhqy4/django/conf/global_settings.py", "variable_name": "FILE_UPLOAD_PERMISSIONS" }

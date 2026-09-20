@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 769,
+    "output_tokens": 60,
+    "reasoning_tokens": null,
+    "total_tokens": 829
+  },
+  "input_tokens": 49940,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2834,
+      "output_tokens": 22,
+      "reasoning_tokens": null,
+      "total_tokens": 2856
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3864,
+      "output_tokens": 63,
+      "reasoning_tokens": null,
+      "total_tokens": 3927
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4024,
+      "output_tokens": 62,
+      "reasoning_tokens": null,
+      "total_tokens": 4086
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4048,
+      "output_tokens": 46,
+      "reasoning_tokens": null,
+      "total_tokens": 4094
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4107,
+      "output_tokens": 14,
+      "reasoning_tokens": null,
+      "total_tokens": 4121
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4327,
+      "output_tokens": 62,
+      "reasoning_tokens": null,
+      "total_tokens": 4389
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4731,
+      "output_tokens": 42,
+      "reasoning_tokens": null,
+      "total_tokens": 4773
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4955,
+      "output_tokens": 40,
+      "reasoning_tokens": null,
+      "total_tokens": 4995
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5176,
+      "output_tokens": 54,
+      "reasoning_tokens": null,
+      "total_tokens": 5230
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5474,
+      "output_tokens": 93,
+      "reasoning_tokens": null,
+      "total_tokens": 5567
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5631,
+      "output_tokens": 247,
+      "reasoning_tokens": null,
+      "total_tokens": 5878
+    }
+  ],
+  "locations": [
+    {
+      "end_line": 10,
+      "file_path": "django/contrib/auth/validators.py",
+      "start_line": 10
+    },
+    {
+      "end_line": 20,
+      "file_path": "django/contrib/auth/validators.py",
+      "start_line": 20
+    }
+  ],
+  "locator_llm_calls": 12,
+  "output_tokens": 805,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "completed",
+  "token_usage_incomplete": false,
+  "tool_calls": 11,
+  "tool_result_chars": 8621,
+  "total_llm_calls": 12,
+  "total_tokens": 50745,
+  "wall_clock_ms": 57194.229,
+  "run_id": "name_to_definition_phase1-django__django-11099-n2d-ca034f6dd3",
+  "arm": "n2d",
+  "instance_id": "django__django-11099"
+}

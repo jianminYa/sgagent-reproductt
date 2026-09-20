@@ -1,0 +1,1 @@
+["#TOOL_CALL read_file_lines\n{\"file_path\": \"/tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py\", \"start_line\": 4343, \"end_line\": 4420}"]

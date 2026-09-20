@@ -1,0 +1,2 @@
+#TOOL_CALL find_all_variables_named
+{ "variable_name": "FILE_UPLOAD_PERMISSIONS" }

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 752,
+    "output_tokens": 114,
+    "reasoning_tokens": null,
+    "total_tokens": 866
+  },
+  "input_tokens": 50306,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2828,
+      "output_tokens": 17,
+      "reasoning_tokens": null,
+      "total_tokens": 2845
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3949,
+      "output_tokens": 20,
+      "reasoning_tokens": null,
+      "total_tokens": 3969
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4036,
+      "output_tokens": 21,
+      "reasoning_tokens": null,
+      "total_tokens": 4057
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4123,
+      "output_tokens": 54,
+      "reasoning_tokens": null,
+      "total_tokens": 4177
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4318,
+      "output_tokens": 38,
+      "reasoning_tokens": null,
+      "total_tokens": 4356
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4394,
+      "output_tokens": 38,
+      "reasoning_tokens": null,
+      "total_tokens": 4432
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4688,
+      "output_tokens": 34,
+      "reasoning_tokens": null,
+      "total_tokens": 4722
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4842,
+      "output_tokens": 39,
+      "reasoning_tokens": null,
+      "total_tokens": 4881
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5208,
+      "output_tokens": 76,
+      "reasoning_tokens": null,
+      "total_tokens": 5284
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5223,
+      "output_tokens": 39,
+      "reasoning_tokens": null,
+      "total_tokens": 5262
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5945,
+      "output_tokens": 414,
+      "reasoning_tokens": null,
+      "total_tokens": 6359
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 904,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 8347,
+  "total_llm_calls": 12,
+  "total_tokens": 51210,
+  "wall_clock_ms": 64880.295,
+  "run_id": "name_to_definition_phase1-sympy__sympy-13031-n2d-338452b462",
+  "arm": "n2d",
+  "instance_id": "sympy__sympy-13031"
+}

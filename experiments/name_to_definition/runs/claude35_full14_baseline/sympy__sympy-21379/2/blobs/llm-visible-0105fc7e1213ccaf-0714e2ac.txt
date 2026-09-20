@@ -1,0 +1,18 @@
+
+
+#REFLECT
+Now I have a thorough understanding of the problem. Let me think about the root cause more carefully.
+
+The key insight is:
+1. `Expr.as_real_imag()` (line 1939-1943) calls `re(self)` and `im(self)` 
+2. For `sinh` with real symbols, when cache is empty, `is_extended_real` returns None
+3. This causes `re.eval()` to fall through to calling `as_real_imag()` on sub-terms
+4. Eventually this reaches `Pow.as_real_imag()` which for `exp(arg)` calls `self.exp.as_real_imag()`
+5. The chain eventually calls `poly()` somewhere with a Piecewise-containing expression
+
+The most robust fix would be in `_parallel_poly_from_expr()` in `polytools.py` where the error is raised. Instead of raising an error when Piecewise generators are found, we should handle it more gracefully. But actually, the real question is: **why is `poly()` being called with a Piecewise expression at all?**
+
+Let me look at the `Pow.as_real_imag()` method more carefully, specifically the integer exponent branch that calls `poly()`.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-4st5urrw/sympy/core/power.py", "start_line": 1237, "end_line": 1316}

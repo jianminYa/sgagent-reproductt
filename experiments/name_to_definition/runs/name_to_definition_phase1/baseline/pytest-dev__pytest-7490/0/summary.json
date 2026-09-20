@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 9021,
+    "output_tokens": 78,
+    "reasoning_tokens": null,
+    "total_tokens": 9099
+  },
+  "input_tokens": 81120,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 0,
+      "output_tokens": 16,
+      "reasoning_tokens": null,
+      "total_tokens": 16
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5770,
+      "output_tokens": 19,
+      "reasoning_tokens": null,
+      "total_tokens": 5789
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5954,
+      "output_tokens": 82,
+      "reasoning_tokens": null,
+      "total_tokens": 6036
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6481,
+      "output_tokens": 69,
+      "reasoning_tokens": null,
+      "total_tokens": 6550
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6800,
+      "output_tokens": 47,
+      "reasoning_tokens": null,
+      "total_tokens": 6847
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7023,
+      "output_tokens": 46,
+      "reasoning_tokens": null,
+      "total_tokens": 7069
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7205,
+      "output_tokens": 49,
+      "reasoning_tokens": null,
+      "total_tokens": 7254
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7771,
+      "output_tokens": 246,
+      "reasoning_tokens": null,
+      "total_tokens": 8017
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7761,
+      "output_tokens": 46,
+      "reasoning_tokens": null,
+      "total_tokens": 7807
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8386,
+      "output_tokens": 34,
+      "reasoning_tokens": null,
+      "total_tokens": 8420
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 8948,
+      "output_tokens": 281,
+      "reasoning_tokens": null,
+      "total_tokens": 9229
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 1013,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 16400,
+  "total_llm_calls": 12,
+  "total_tokens": 82133,
+  "wall_clock_ms": 64435.57,
+  "run_id": "name_to_definition_phase1-pytest-dev__pytest-7490-baseline-4a2822969b",
+  "arm": "baseline",
+  "instance_id": "pytest-dev__pytest-7490"
+}

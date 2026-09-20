@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 736,
+    "output_tokens": 56,
+    "reasoning_tokens": null,
+    "total_tokens": 792
+  },
+  "input_tokens": 53455,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2533,
+      "output_tokens": 17,
+      "reasoning_tokens": null,
+      "total_tokens": 2550
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3536,
+      "output_tokens": 19,
+      "reasoning_tokens": null,
+      "total_tokens": 3555
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3661,
+      "output_tokens": 44,
+      "reasoning_tokens": null,
+      "total_tokens": 3705
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4148,
+      "output_tokens": 59,
+      "reasoning_tokens": null,
+      "total_tokens": 4207
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4386,
+      "output_tokens": 102,
+      "reasoning_tokens": null,
+      "total_tokens": 4488
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4496,
+      "output_tokens": 43,
+      "reasoning_tokens": null,
+      "total_tokens": 4539
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5567,
+      "output_tokens": 67,
+      "reasoning_tokens": null,
+      "total_tokens": 5634
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5703,
+      "output_tokens": 77,
+      "reasoning_tokens": null,
+      "total_tokens": 5780
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6025,
+      "output_tokens": 65,
+      "reasoning_tokens": null,
+      "total_tokens": 6090
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6842,
+      "output_tokens": 285,
+      "reasoning_tokens": null,
+      "total_tokens": 7127
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5822,
+      "output_tokens": 286,
+      "reasoning_tokens": null,
+      "total_tokens": 6108
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 1120,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 19432,
+  "total_llm_calls": 12,
+  "total_tokens": 54575,
+  "wall_clock_ms": 80181.221,
+  "run_id": "name_to_definition_phase1-sphinx-doc__sphinx-8721-baseline-cf05c2fdb2",
+  "arm": "baseline",
+  "instance_id": "sphinx-doc__sphinx-8721"
+}

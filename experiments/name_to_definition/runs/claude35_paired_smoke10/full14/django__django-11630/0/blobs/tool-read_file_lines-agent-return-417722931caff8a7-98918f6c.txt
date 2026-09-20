@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-5oom4hte/tests/check_framework/test_model_checks.py
+Total lines: 304
+Showing lines 50-99:
+
+  50:             )
+  51:         ])
+  52: 
+  53:     def test_no_collision_for_unmanaged_models(self):
+  54:         class Unmanaged(models.Model):
+  55:             class Meta:
+  56:                 db_table = 'test_table'
+  57:                 managed = False
+  58: 
+  59:         class Managed(models.Model):
+  60:             class Meta:
+  61:                 db_table = 'test_table'
+  62: 
+  63:         self.assertEqual(checks.run_checks(app_configs=self.apps.get_app_configs()), [])
+  64: 
+  65:     def test_no_collision_for_proxy_models(self):
+  66:         class Model(models.Model):
+  67:             class Meta:
+  68:                 db_table = 'test_table'
+  69: 
+  70:         class ProxyModel(Model):
+  71:             class Meta:
+  72:                 proxy = True
+  73: 
+  74:         self.assertEqual(Model._meta.db_table, ProxyModel._meta.db_table)
+  75:         self.assertEqual(checks.run_checks(app_configs=self.apps.get_app_configs()), [])
+  76: 
+  77: 
+  78: @isolate_apps('check_framework', attr_name='apps')
+  79: @override_system_checks([checks.model_checks.check_all_models])
+  80: class IndexNameTests(SimpleTestCase):
+  81:     def test_collision_in_same_model(self):
+  82:         index = models.Index(fields=['id'], name='foo')
+  83: 
+  84:         class Model(models.Model):
+  85:             class Meta:
+  86:                 indexes = [index, index]
+  87: 
+  88:         self.assertEqual(checks.run_checks(app_configs=self.apps.get_app_configs()), [
+  89:             Error(
+  90:                 "index name 'foo' is not unique for model check_framework.Model.",
+  91:                 id='models.E029',
+  92:             ),
+  93:         ])
+  94: 
+  95:     def test_collision_in_different_models(self):
+  96:         index = models.Index(fields=['id'], name='foo')
+  97: 
+  98:         class Model1(models.Model):
+  99:             class Meta:

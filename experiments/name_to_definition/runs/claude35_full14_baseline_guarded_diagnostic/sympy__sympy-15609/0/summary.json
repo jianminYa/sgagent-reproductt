@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "7573d5d4-752d-43aa-82bf-3d6c1a1c347f",
+    "5de9637e-0fee-4cbc-bcd2-197532bc8e17",
+    "aa5ec82f-eb90-4983-9a26-6a9433786d2f",
+    "b3083112-1dca-4294-8f00-23468b2f9bb1",
+    "96864c59-d536-48b6-84b2-c8cc899dc176",
+    "41a4cde1-52d9-48c2-9c53-53f7b92897ef",
+    "ee0532bc-0ed5-4b93-aacc-5f1e152515c0",
+    "b5713593-fc25-4e3a-b7f0-7688cb7daffb",
+    "cefae8a6-0a40-4a19-ad83-c2399aa02d1e",
+    "4f347b85-0102-46eb-a7e0-4175df031cd1",
+    "571696a6-ac97-4a50-8519-0d92fc28b164"
+  ],
+  "stop_reasons": {
+    "stop": 11
+  },
+  "locator_llm_calls": 10,
+  "tool_calls": 8,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 11,
+  "tool_result_chars": 49471,
+  "tool_original_chars": 633368,
+  "tool_returned_chars": 49471,
+  "truncated_tool_calls": 1,
+  "input_tokens": 106877,
+  "output_tokens": 2692,
+  "total_tokens": 109569,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 270545.163,
+  "graph_updates": 20,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-j5u__4do/sympy/printing/latex.py",
+      "start_line": 1439,
+      "end_line": 1441
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/printing/latex.py",
+      "start_line": 1439,
+      "end_line": 1441
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-15609-0-1114057f55",
+  "instance_id": "sympy__sympy-15609",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

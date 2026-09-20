@@ -1,0 +1,77 @@
+
+
+#REFLECT
+
+I now have a clear understanding of the bug:
+
+**Bug**: In `django/db/models/sql/query.py`, line 751, when processing `select_related().only()` on a proxy model, the code sets `opts = cur_model._meta` where `cur_model` could be a proxy model. This means `opts.pk` refers to the proxy model's pk, and field lookups use the proxy model's meta. This causes a mismatch later when `RelatedPopulator.__init__` tries to find the pk's `attname` in `init_list`, resulting in `ValueError: 'id' is not in list`.
+
+**Fix**: The fix is exactly as described in the problem statement - on line 751, change:
+```python
+opts = cur_model._meta
+```
+to:
+```python
+opts = cur_model._meta.concrete_model._meta
+```
+
+But we also need to ensure that `cur_model` itself is set to the concrete model, because it's used as a key in `must_include` dict on line 757. Let me check whether `must_include` uses concrete models as keys throughout.
+
+Looking at line 737: `must_include = {orig_opts.concrete_model: {orig_opts.pk}}` — Yes, the keys are concrete models.
+Line 740: `cur_model = self.model._meta.concrete_model` — Initial value is concrete model.
+Lines 748/750: `cur_model = source.related_model` / `cur_model = source.remote_field.model` — These could return a proxy model!
+Line 757: `add_to_dict(must_include, cur_model, opts.pk)` — If `cur_model` is a proxy, the key won't match.
+
+So the fix should also ensure `cur_model` is the concrete model. Let me verify by looking at line 760-763 to see how `model` is handled there.
+
+Line 760-763:
+```python
+model = field.related_model if is_reverse_object else field.model
+model = model._meta.concrete_model  # Already converts to concrete!
+```
+
+So the code already handles this for the final field but NOT for intermediate models. The fix needs to ensure `cur_model` is set to the concrete model after lines 748/750.
+
+The cleanest fix matching the reporter's suggestion: change line 751 from `opts = cur_model._meta` to `opts = cur_model._meta.concrete_model._meta` and also update `cur_model` to be the concrete model.
+
+Let me verify:
+
+The location is:
+- **Line 748**: `cur_model = source.related_model` — should be `cur_model = source.related_model._meta.concrete_model`
+- **Line 750**: `cur_model = source.remote_field.model` — should be `cur_model = source.remote_field.model._meta.concrete_model`
+
+OR simply after line 751:
+- **Line 751**: change to ensure concrete model is used.
+
+The simplest and most correct fix matching what the reporter suggests is to modify just one line. But we need `cur_model` to also be concrete because it's used as a dict key on line 757. So the best approach is:
+
+After line 750 (or effectively at line 751), convert `cur_model` to its concrete model, then set `opts`:
+
+```python
+cur_model = cur_model._meta.concrete_model
+opts = cur_model._meta
+```
+
+This keeps `cur_model` as concrete (consistent with its initial value on line 740) and `opts` follows naturally.
+
+**INFO ENOUGH**
+
+The bug location is:
+
+1. **Line 751** (`opts = cur_model._meta`) — This line needs to be changed so that both `cur_model` is resolved to the concrete model and `opts` uses the concrete model's `_meta`. When a ForeignKey points to a proxy model, `cur_model` (set on lines 748 or 750) will be the proxy model, causing `opts.pk` to be looked up incorrectly, and `must_include` dict keys to be inconsistent.
+
+**Fix location**: Lines 748–751
+
+The fix is to normalize `cur_model` to the concrete model before setting `opts`:
+
+```python
+# Line 747-751 should become:
+                if is_reverse_o2o(source):
+                    cur_model = source.related_model
+                else:
+                    cur_model = source.remote_field.model
+                cur_model = cur_model._meta.concrete_model
+                opts = cur_model._meta
+```
+
+This ensures that when traversing through a ForeignKey to a proxy model (like `ProxyCustomModel`), the code correctly uses the concrete model (`CustomModel`) for field lookups and `must_include` dictionary keys, preventing the `ValueError: 'id' is not in list` crash in `RelatedPopulator.__init__`.

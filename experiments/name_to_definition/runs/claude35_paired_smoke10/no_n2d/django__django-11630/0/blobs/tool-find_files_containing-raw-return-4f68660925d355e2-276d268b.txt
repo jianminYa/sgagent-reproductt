@@ -1,0 +1,1 @@
+['/tmp/sgagent-n2d-1yd2xahh/django/core/checks/model_checks.py', '/tmp/sgagent-n2d-1yd2xahh/tests/check_framework/test_model_checks.py']

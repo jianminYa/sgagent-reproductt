@@ -1,0 +1,28 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "sympy/functions/elementary/hyperbolic.py",
+            "start_line": 184,
+            "end_line": 194
+        },
+        {
+            "file_path": "sympy/functions/elementary/hyperbolic.py",
+            "start_line": 369,
+            "end_line": 380
+        },
+        {
+            "file_path": "sympy/functions/elementary/hyperbolic.py",
+            "start_line": 614,
+            "end_line": 625
+        },
+        {
+            "file_path": "sympy/functions/elementary/hyperbolic.py",
+            "start_line": 808,
+            "end_line": 820
+        }
+    ]
+}
+```

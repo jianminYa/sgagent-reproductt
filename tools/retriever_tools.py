@@ -14,6 +14,13 @@ from langchain_core.messages import HumanMessage
 
 # Global retriever instance (will be initialized when first used)
 _retriever: Optional[CKGRetriever] = None
+_TRACE_HOOK = None
+
+
+def set_trace_hook(hook):
+    """Install an optional experiment trace callback for nested tool work."""
+    global _TRACE_HOOK
+    _TRACE_HOOK = hook
 
 
 def get_retriever() -> CKGRetriever:
@@ -29,7 +36,16 @@ def get_retriever() -> CKGRetriever:
     return _retriever
 
 
-graph_retriever = get_retriever()
+class _LazyRetriever:
+    """Proxy that preserves the legacy global API without import-time KG work."""
+
+    def __getattr__(self, name):
+        return getattr(get_retriever(), name)
+
+
+# Keep legacy call sites working, but do not build a repository index merely by
+# importing this module.  This is especially important for the baseline arm.
+graph_retriever = _LazyRetriever()
 
 
 def truncate_output(text: str, max_chars: int = 5000) -> str:
@@ -730,10 +746,52 @@ If UNSAFE, briefly explain why in one sentence after the classification."""
             base_url=settings.openai_base_url,
             extra_body={"enable_thinking": False},
         )
+        if _TRACE_HOOK:
+            _TRACE_HOOK(
+                "nested_llm_request",
+                phase="shell_validation",
+                model="deepseek-v3",
+                messages=[{"role": "user", "content": validation_prompt}],
+                temperature=0.0,
+                base_url=settings.openai_base_url,
+            )
         # Get validation result
-        validation_response = validator.invoke(
-            [HumanMessage(content=validation_prompt)]
-        )
+        try:
+            validation_response = validator.invoke(
+                [HumanMessage(content=validation_prompt)]
+            )
+        except Exception as exc:
+            if _TRACE_HOOK:
+                _TRACE_HOOK(
+                    "nested_llm_error",
+                    phase="shell_validation",
+                    model="deepseek-v3",
+                    error_type=type(exc).__name__,
+                    error=str(exc),
+                )
+            raise
+        if _TRACE_HOOK:
+            usage = getattr(validation_response, "usage_metadata", None) or {}
+            metadata = getattr(validation_response, "response_metadata", None) or {}
+            input_tokens = usage.get("input_tokens", metadata.get("prompt_tokens"))
+            output_tokens = usage.get("output_tokens", metadata.get("completion_tokens"))
+            total_tokens = usage.get("total_tokens", metadata.get("total_tokens"))
+            if total_tokens is None and input_tokens is not None and output_tokens is not None:
+                total_tokens = input_tokens + output_tokens
+            _TRACE_HOOK(
+                "nested_llm_response",
+                phase="shell_validation",
+                model="deepseek-v3",
+                visible_content=str(getattr(validation_response, "content", "")),
+                token_usage={
+                    "input_tokens": input_tokens,
+                    "output_tokens": output_tokens,
+                    "total_tokens": total_tokens,
+                    "complete": input_tokens is not None and output_tokens is not None and total_tokens is not None,
+                },
+                request_id=metadata.get("request_id") or metadata.get("id"),
+                returned_model=metadata.get("model"),
+            )
         validation_result = validation_response.content.strip()
 
         # Check if command is safe

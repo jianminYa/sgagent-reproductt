@@ -1,0 +1,1 @@
+Error executing command 'cd /tmp/sgagent-n2d-4st5urrw && sed -n '184p;369p;614p;808p' sympy/functions/elementary/hyperbolic.py': OfficialTrace.event() got multiple values for argument 'phase'

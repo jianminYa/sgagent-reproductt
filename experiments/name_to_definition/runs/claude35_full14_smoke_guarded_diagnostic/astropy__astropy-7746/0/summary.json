@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "3d77acb2-bec2-4ed2-b6b8-bf464e3d8daa",
+    "63f1df62-aba1-4ed6-9461-774a3d7eb554",
+    "c538aae0-a6d2-41ff-b03b-efd2fe129fd3",
+    "0a70945e-084f-462e-8ef2-4324bcab7b2d",
+    "c2ba3594-f576-4bae-9862-324fe237e640"
+  ],
+  "stop_reasons": {
+    "stop": 5
+  },
+  "locator_llm_calls": 5,
+  "tool_calls": 3,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 5,
+  "tool_result_chars": 34497,
+  "tool_original_chars": 437834,
+  "tool_returned_chars": 34497,
+  "truncated_tool_calls": 1,
+  "input_tokens": 57500,
+  "output_tokens": 1347,
+  "total_tokens": 58847,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 66694.109,
+  "graph_updates": 8,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-uoj4exm6/astropy/wcs/wcs.py",
+      "start_line": 1214,
+      "end_line": 1231
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-uoj4exm6/astropy/wcs/wcs.py",
+      "start_line": 1233,
+      "end_line": 1243
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-uoj4exm6/astropy/wcs/wcs.py",
+      "start_line": 1245,
+      "end_line": 1256
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1214,
+      "end_line": 1231
+    },
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1233,
+      "end_line": 1243
+    },
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1245,
+      "end_line": 1256
+    }
+  ],
+  "run_id": "sgagent-official-astropy__astropy-7746-0-ed6412fa55",
+  "instance_id": "astropy__astropy-7746",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_smoke"
+}

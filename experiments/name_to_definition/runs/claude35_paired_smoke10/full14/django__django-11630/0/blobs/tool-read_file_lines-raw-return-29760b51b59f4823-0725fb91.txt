@@ -1,0 +1,19 @@
+File: /tmp/sgagent-n2d-5oom4hte/django/core/checks/model_checks.py
+Total lines: 198
+Showing lines 1-15:
+
+   1: import inspect
+   2: import types
+   3: from collections import defaultdict
+   4: from itertools import chain
+   5: 
+   6: from django.apps import apps
+   7: from django.core.checks import Error, Tags, register
+   8: 
+   9: 
+  10: @register(Tags.models)
+  11: def check_all_models(app_configs=None, **kwargs):
+  12:     db_table_models = defaultdict(list)
+  13:     indexes = defaultdict(list)
+  14:     constraints = defaultdict(list)
+  15:     errors = []

@@ -36,6 +36,13 @@ res_dir = logs_dir / ROUND / f"{INSTANCE_ID}_{timestamp}.json"
 
 # Create logger instance for agent module
 agent_logger = Logger(logs_dir / ROUND, f"{INSTANCE_ID}_{timestamp}.log")
+_TRACE_HOOK = None
+
+
+def set_trace_hook(hook):
+    """Install an optional experiment callback without changing agent behavior."""
+    global _TRACE_HOOK
+    _TRACE_HOOK = hook
 
 
 class Location(BaseModel):
@@ -58,6 +65,8 @@ def create_agent(
 ):
     """Create an agent."""
     prompt = prompt.partial(base_dir=base_dir)
+    if tools and hasattr(llm, "bind_tools"):
+        llm = llm.bind_tools(tools)
     return prompt | llm
 
 
@@ -279,6 +288,11 @@ def agent_node(state: AgentState, agent, name, model_type):
                     )
 
             except Exception as e:
+                if _TRACE_HOOK:
+                    _TRACE_HOOK(
+                        "parse_failure", "Locator",
+                        error_type=type(e).__name__, error=str(e), content=result.content,
+                    )
                 # JSON parsing failed: prompt the model to re-output valid JSON schema
                 agent_logger.error("=" * 80)
                 agent_logger.error("⚠️ JSON PARSING FAILED - DEBUG INFO:")
@@ -351,6 +365,15 @@ def agent_node(state: AgentState, agent, name, model_type):
                 state["ready_to_locate"] = False
                 if state.get("next") == "Locator":
                     state["next"] = "Suggester"
+
+        if _TRACE_HOOK:
+            _TRACE_HOOK(
+                "agent_markers", name,
+                info_enough="INFO ENOUGH" in result.content,
+                propose_location="PROPOSE LOCATION" in result.content,
+                propose_suggestion="PROPOSE SUGGESTION" in result.content,
+                tool_call="#TOOL_CALL" in result.content,
+            )
 
         ## to be continued
         if (
@@ -815,12 +838,20 @@ def custom_tool_node(state: AgentState, tool_map: dict):
         return state
 
     tool_calls = parse_all_tool_calls(last_message.content)
+    native_calls = getattr(last_message, "tool_calls", None) or []
+    if native_calls:
+        tool_calls = [
+            (call.get("name"), call.get("args") or {}, call.get("id"))
+            for call in native_calls
+        ]
     if not tool_calls:
         return state
 
-    for tool_name, args in tool_calls:
+    for item in tool_calls:
+        tool_name, args = item[0], item[1]
+        native_call_id = item[2] if len(item) > 2 else None
         if tool_name not in tool_map:
-            continue
+            raise RuntimeError(f"Unknown tool requested in experiment/runtime: {tool_name}")
 
         call_id = uuid.uuid4().hex[:8]
         tool_fn = tool_map[tool_name]
@@ -832,6 +863,9 @@ def custom_tool_node(state: AgentState, tool_map: dict):
         except Exception as e:
             result = f"[❌ Tool execution error: {e}]"
 
-        state["messages"].append(HumanMessage(content=f"/\/ Tool Result:\n{result}"))
+        if native_call_id:
+            state["messages"].append(ToolMessage(content=str(result), tool_call_id=native_call_id, name=tool_name))
+        else:
+            state["messages"].append(HumanMessage(content=f"/\/ Tool Result:\n{result}"))
 
     return state

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "1459cdad-5856-49cd-a47c-2b63adf3e901",
+    "a50adb87-ed4b-431d-b436-b2579c9e52c4",
+    "9d0842f8-64f5-4f6d-a54b-24f468b946ea",
+    "06744214-9bf3-4e81-8882-96d4508d96f0",
+    "6816b26e-220e-40b2-a245-655d15b41236",
+    "3f9716a1-b3ad-48bd-9b40-993bb6732586",
+    "ea7f074e-6292-42b9-807b-ef3733b77eef",
+    "59345323-a1f6-4c85-87ac-0b2a9a2db77d",
+    "02e3c10b-a8e8-481e-ac9e-3a33fee0fbc9",
+    "8a887042-f797-41e9-98ee-c67016a8dbb9",
+    "80d5ea07-bf7f-40cb-8855-e0c5d06c84f2",
+    "2af529d0-35c3-4b91-a358-b6978822e379",
+    "66a6e6ed-cc76-4fbe-a80e-d0546817ae8c",
+    "348fffdc-844e-4ddf-9321-2793cc4814cb",
+    "1735ec43-07be-4426-b4c4-d452772cba83",
+    "d8bd7e5b-ba8b-4e31-8945-e1658765e8f5",
+    "f1634f41-7439-4fa6-b5fc-f6f632c5f044",
+    "8a85020a-91e3-4a20-a846-170776cd4432",
+    "46896055-07e0-44f6-b25f-6cb8197f51f0",
+    "4607a082-30b4-4f87-acd1-7a96b2fd0a2a",
+    "b68ea572-4e8d-478d-8b93-4aec4f14b876",
+    "b2a8a9af-6ed8-4425-906f-31834a57be7d",
+    "8c2d5223-9c0f-4e2f-860b-5f5c0fb8dde9",
+    "7a24507d-e569-4893-8504-624a4b188f7e",
+    "082c08a9-e173-4dbb-a2c7-7cc7b1e0b403",
+    "6bb2e0b4-bff6-4eee-9535-7d9b8d7994df"
+  ],
+  "stop_reasons": {
+    "stop": 26
+  },
+  "locator_llm_calls": 23,
+  "tool_calls": 21,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 3,
+  "total_llm_calls": 26,
+  "tool_result_chars": 70333,
+  "tool_original_chars": 95338,
+  "tool_returned_chars": 70333,
+  "truncated_tool_calls": 1,
+  "input_tokens": 382694,
+  "output_tokens": 10223,
+  "total_tokens": 392917,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 354291.57,
+  "graph_updates": 50,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-26jjqqq9/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 13,
+      "end_line": 17
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 13,
+      "end_line": 17
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-26020-0-dc8f9ff901",
+  "instance_id": "matplotlib__matplotlib-26020",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

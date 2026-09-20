@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{\"file\": \"/tmp/sgagent-n2d-4st5urrw/sympy/core/expr.py\", \"full_qualified_name\": \"sympy.core.expr.Expr.as_real_imag\"}"]

@@ -1,0 +1,15 @@
+
+
+I can see the bug clearly now. In the `_eval_col_insert` method on line 89, when `j >= pos + other.cols`, we need to access the original matrix's columns that come after position `pos`. The correct index should be `self[i, j - other.cols]`, not `self[i, j - pos - other.cols]`.
+
+Let me verify this reasoning:
+- If `j < pos`: return `self[i, j]` — correct, columns before insertion point
+- If `pos <= j < pos + other.cols`: return `other[i, j - pos]` — correct, columns from the inserted matrix
+- If `j >= pos + other.cols`: return `self[i, j - other.cols]` — this should map back to the original column index `j - other.cols`, which gives us columns starting from `pos` in the original matrix.
+
+But the current code has `self[i, j - pos - other.cols]`, which incorrectly subtracts `pos` as well. For example, with `pos=3`, `other.cols=2`, and `j=5` (the first column after the inserted block), the current code gives `self[i, 5-3-2] = self[i, 0]` instead of the correct `self[i, 5-2] = self[i, 3]`.
+
+Let me also check the `col_insert` method to see how `pos` is normalized:
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py", "start_line": 182, "end_line": 218}

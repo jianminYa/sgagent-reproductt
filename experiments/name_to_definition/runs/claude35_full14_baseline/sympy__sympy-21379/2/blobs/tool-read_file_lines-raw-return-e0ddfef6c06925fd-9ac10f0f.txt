@@ -1,0 +1,33 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Total lines: 1748
+Showing lines 612-640:
+
+ 612:     def as_real_imag(self, deep=True, **hints):
+ 613:         from sympy import cos, sin
+ 614:         if self.args[0].is_extended_real:
+ 615:             if deep:
+ 616:                 hints['complex'] = False
+ 617:                 return (self.expand(deep, **hints), S.Zero)
+ 618:             else:
+ 619:                 return (self, S.Zero)
+ 620:         if deep:
+ 621:             re, im = self.args[0].expand(deep, **hints).as_real_imag()
+ 622:         else:
+ 623:             re, im = self.args[0].as_real_imag()
+ 624:         denom = sinh(re)**2 + cos(im)**2
+ 625:         return (sinh(re)*cosh(re)/denom, sin(im)*cos(im)/denom)
+ 626: 
+ 627:     def _eval_rewrite_as_tractable(self, arg, limitvar=None, **kwargs):
+ 628:         neg_exp, pos_exp = exp(-arg), exp(arg)
+ 629:         return (pos_exp - neg_exp)/(pos_exp + neg_exp)
+ 630: 
+ 631:     def _eval_rewrite_as_exp(self, arg, **kwargs):
+ 632:         neg_exp, pos_exp = exp(-arg), exp(arg)
+ 633:         return (pos_exp - neg_exp)/(pos_exp + neg_exp)
+ 634: 
+ 635:     def _eval_rewrite_as_sinh(self, arg, **kwargs):
+ 636:         return S.ImaginaryUnit*sinh(arg)/sinh(S.Pi*S.ImaginaryUnit/2 - arg)
+ 637: 
+ 638:     def _eval_rewrite_as_cosh(self, arg, **kwargs):
+ 639:         return S.ImaginaryUnit*cosh(S.Pi*S.ImaginaryUnit/2 - arg)/cosh(arg)
+ 640: 

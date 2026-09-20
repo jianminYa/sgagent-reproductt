@@ -1,155 +1,124 @@
-# SGAgent
+# SGAgent：Name-to-Definition 定位实验
 
-![Overflow Visualization](static/images/overflow.png)
+本仓库包含 SGAgent 源码，以及截至 2026-09-20 已完成的 Name-to-Definition 实验：实验提示词、运行日志、完整 trace、离线评估结果、配对消融分析和复现实验脚本。
 
-SGAgent is an intelligent software engineering agent designed to automatically locate, analyze, and fix issues in GitHub repositories. It uses advanced AI techniques combined with code knowledge graphs to understand complex codebases and generate precise fixes for reported issues.
+SGAgent 面向软件工程任务，结合代码知识图谱、检索工具和多阶段 agent workflow，对 SWE-bench Lite 问题进行代码位置定位，并进一步支持补丁生成。
 
-## Project Structure
+## 当前实验进展
 
-```
+实验关注的问题是：在固定模型、数据集和评估器下，完整工具集与移除 N2D 专用工具后的定位效果有何差异。
+
+| 阶段 | 实验 | 结果摘要 |
+|---|---|---|
+| Phase 1 | 官方 Locator reproduction | 45/45 完成，结果和复现差异报告已保存 |
+| Phase 2 | Claude-3.5 Full14 baseline | 45/45 完成，provider failure 为 0 |
+| Phase 3 | 完整 trace、请求级重试、no-N2D 准备 | 已加入 trace validator、sidecar 完整性校验和 arm diff 测试 |
+| Paired smoke | Full14 vs no-N2D，固定 10 个实例 | 两组均 10/10 完成、provider failure 为 0、trace 均 10/10 有效 |
+
+### 10-instance 配对 smoke 结果
+
+运行使用相同的 10 个实例、模型别名 `ep-64pmfvfo`、协议、并行度、超时、重试策略和离线评估器。
+
+| 指标 | Full14 | no-N2D |
+|---|---:|---:|
+| File accuracy | 1.0000 | 1.0000 |
+| Class accuracy | 0.9000 | 0.9000 |
+| Function accuracy | 0.4000 | 0.4000 |
+| Line accuracy | 0.6000 | 0.6000 |
+| Line IoU | 0.2533 | 0.3068 |
+| Paper File Jaccard | 0.9250 | 0.9250 |
+| Paper Function Jaccard | 0.6333 | 0.6250 |
+| 平均总 token | 89,318 | 176,874.6 |
+
+初步结论：no-N2D 在这 10 个实例上没有带来明确的离散定位指标提升；Line IoU 略高，但 Paper Function Jaccard 略低，且平均 token 消耗约为 Full14 的两倍。因此该结果目前属于 pilot-scale paired evidence，不应单独作为扩大正式全量消融实验的充分依据。
+
+完整配对分析见 [`paired_comparison.md`](experiments/name_to_definition/reports/claude35_paired_smoke10/paired_comparison.md)。
+
+## 主要实验产物
+
+- [实验提示词](experiments/name_to_definition/)
+- [45-instance Claude-3.5 baseline 报告](experiments/name_to_definition/reports/claude35_full14_baseline/)
+- [10-instance Full14/no-N2D 配对报告](experiments/name_to_definition/reports/claude35_paired_smoke10/)
+- [Full14 原始运行 trace](experiments/name_to_definition/runs/claude35_paired_smoke10/full14/)
+- [no-N2D 原始运行 trace](experiments/name_to_definition/runs/claude35_paired_smoke10/no_n2d/)
+- [Phase3 trace schema 说明](experiments/name_to_definition/reports/claude35_full14_baseline/trace_schema_phase3.md)
+- [Phase3 readiness 与失败诊断](experiments/name_to_definition/reports/claude35_full14_baseline/)
+
+每条正式 smoke 轨迹包含 `trajectory.jsonl`、`summary.json` 和必要的完整 sidecar/blob；trace validator 会检查事件序号、请求/响应配对、工具执行结果、sidecar SHA256、汇总计数和敏感信息。
+
+## 目录结构
+
+```text
 sgagent/
-- agent/                 # Core agent implementation
-- cases/                 # Test cases and reproduction data
-- dataset/               # Project datasets in parquet format
-- kg/                    # Knowledge graph construction and utilities
-- logs/                  # Execution logs and results
-- models/                # Data models and entities
-- prompts/               # LLM prompts for different agents
-- retriever/             # Code knowledge graph retriever
-- router/                # Workflow routing logic
-- script/                # Utility scripts for various operations
-- static/                # Static assets and images
-- tools/                 # Tool implementations for agent usage
-- utils/                 # Utility functions and helpers
-- workflow/              # Workflow graph and state management
-- main.py                # Main entry point
-- settings.py            # Configuration settings
-- pending.txt            # Target dataset instance IDs
-- pyproject.toml         # Project dependencies and metadata
+├── agent/                         # agent 核心逻辑
+├── kg/                            # 知识图谱构建
+├── retriever/                     # 代码检索器
+├── router/ workflow/              # workflow 与路由
+├── tools/                         # agent 工具实现
+├── experiments/name_to_definition/
+│   ├── PROMPT_PHASE*.md           # 实验阶段说明
+│   ├── official_locator.py        # 官方 Locator runner
+│   ├── official_evaluate.py       # 离线评估器
+│   ├── tracing.py                 # 完整 trace 写入
+│   ├── trace_validator.py         # trace 校验
+│   ├── runs/                      # 原始轨迹和 sidecar
+│   └── reports/                   # 汇总结果和分析
+├── tests/                         # 实验与输出安全测试
+├── logs/                          # 历史运行日志
+├── dataset/                       # 本地 SWE-bench Lite/Verified 数据
+└── README.md
 ```
 
-## Directory Details
+本地 `experiments/name_to_definition/repo_cache/` 仅用于构建知识图谱，已加入 `.gitignore`，不属于实验结果，也不上传第三方仓库的嵌套 Git 数据。
 
-### agent/
-Contains the core implementation of the SGAgent agents:
-- `core.py`: Main agent functionality including state management and node execution
-- `state.py`: Agent state definitions using Pydantic models
+## 复现与验证
 
-### cases/
-Contains test cases and reproduction data for issue fixing:
-- `reproduction_lite.jsonl`: Lightweight test cases
-- `reproduction_verified.jsonl`: Verified test cases
+项目依赖见 `pyproject.toml` 和 `uv.lock`，建议使用 Python 3.12+ 与 `uv`。
 
-### dataset/
-Contains project datasets in Apache Parquet format:
-- `lite.parquet`: Lightweight dataset for quick testing
-- `verified.parquet`: Verified dataset with confirmed issue cases
-
-### kg/
-Knowledge Graph implementation for code understanding:
-- `construct_tags.py`: Builds code structure tags and relationships
-- `main.py`: Main knowledge graph construction interface
-- `utils.py`: Utility functions for knowledge graph operations
-
-### logs/
-Execution logs and results storage:
-- Contains timestamped logs for each execution
-- Stores API call statistics and patch results
-
-### models/
-Data models and entities used throughout the system:
-- `entities.py`: Core data structures for code elements
-
-### pending.txt
-Contains the instance IDs of the target dataset that the SGAgent agent will process. Each line represents a unique identifier for an issue instance that needs to be analyzed and fixed.
-
-### prompts/
-LLM prompts for different agents in the workflow:
-- `system.py`: System prompts with tool definitions
-- `locator.py`: Prompts for the issue location agent
-- `suggester.py`: Prompts for the fix suggestion agent
-- `fixer.py`: Prompts for the code fixing agent
-
-### settings.py
-Configuration file that defines all the settings used by the SGAgent agent:
-- LLM API settings (API keys, base URLs, model names)
-- Neo4j database connection settings
-- Project-specific settings (TEST_BED, PROJECT_NAME, INSTANCE_ID, PROBLEM_STATEMENT)
-- Execution round identifier
-- Unified timestamp for the application run
-
-The settings can be configured through environment variables or directly in this file.
-
-### retriever/
-Code Knowledge Graph Retriever for intelligent code search:
-- `ckg_retriever.py`: Main retriever implementation with relationship analysis
-- `converters.py`: Data conversion utilities
-
-### router/
-Workflow routing logic:
-- `router.py`: Conditional routing functions for agent transitions
-
-### script/
-Utility scripts for various operations:
-- `apply_patch.py`: Patch application utilities
-- `evaluation/`: Evaluation scripts and metrics
-- `find_err.py`: Error finding utilities
-- `replace.py`: Code replacement utilities
-- `rerank.py`: Result reranking algorithms
-- `reset.py`: Project reset utilities
-
-### static/
-Static assets and images:
-- Documentation images and visual assets
-
-### tools/
-Tool implementations that wrap retriever methods for agent usage:
-- `retriever_tools.py`: Tool functions that provide agent-accessible interfaces to the knowledge graph
-
-### utils/
-Utility functions and helpers:
-- `decorators.py`: Custom decorators
-- `logger.py`: Logging utilities
-- `logging.py`: Advanced logging configuration
-- `text_processing.py`: Text processing utilities
-
-### workflow/
-Workflow graph and state management:
-- `graph.py`: LangGraph workflow construction
-- `summarizer.py`: Conversation summarization for long executions
-
-## Core Workflow
-
-SGAgent follows a three-stage workflow:
-
-1. **Locator**: Identifies suspicious code locations related to the issue
-2. **Suggester**: Analyzes the located code and provides fix suggestions
-3. **Fixer**: Implements the actual code fixes based on suggestions
-
-## Key Features
-
-- **Knowledge Graph-Based Code Understanding**: Uses a constructed knowledge graph to understand code relationships and dependencies
-- **Multi-Agent Architecture**: Employs specialized agents for different stages of issue fixing
-- **Precise Patch Generation**: Generates minimal, context-aware code patches
-- **Framework Compatibility**: Maintains compatibility with existing project structures and patterns
-- **Extensive Tooling**: Provides a rich set of tools for code analysis and manipulation
-
-## Requirements
-
-- Python 3.12+
-- Dependencies listed in `pyproject.toml`
-
-## Usage
-
-To run SGAgent on a GitHub repository:
-
-1: install uv 
-
+### 运行测试
 
 ```bash
-uv run run_batch.py
-or
-uv run main.py
+pytest -q tests/test_phase3_trace_and_arms.py \
+  tests/test_output_guard.py \
+  tests/test_name_to_definition.py
 ```
 
-Configuration is handled through environment variables and the `settings.py` file.
+当前实验完成时测试结果为 `11 passed`。
+
+### 验证已有 trace
+
+```bash
+python -m experiments.name_to_definition.trace_validator \
+  experiments/name_to_definition/runs/claude35_paired_smoke10/full14/*/0/trajectory.jsonl
+```
+
+批量离线评估不需要调用模型。例如：
+
+```bash
+python -m experiments.name_to_definition.official_evaluate \
+  --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json \
+  --runs experiments/name_to_definition/runs/claude35_paired_smoke10/full14 \
+  --lite dataset/lite.parquet \
+  --repo-cache experiments/name_to_definition/repo_cache \
+  --source-root /path/to/source-root \
+  --output /tmp/name-to-definition-evaluation \
+  --experiment-id local_recheck
+```
+
+### 运行新的模型实验
+
+模型 API 配置必须从本机安全环境加载，不要把 API key 写入命令行、配置快照、日志、trace 或 Git。实验脚本支持 `OPENAI_BASE_URL`、`OPENAI_API_KEY` 等环境变量；本仓库上传的配置快照只记录安全的配置来源，不包含 credential。
+
+完整 paid run 会产生大量模型请求和 trace，除非明确授权，不建议直接重新运行。已有 paid 结果可以通过上面的离线评估命令复核。
+
+## 数据、隐私与限制
+
+- 已上传的实验结果不包含 API key、认证 header 或本机安全配置文件内容；敏感信息扫描已覆盖源码、日志、报告和 smoke trace。
+- 报告中的 `cost_usd` 没有伪造估算；当前未将 qtapi 价格写入实验配置。
+- 45-instance baseline 中部分较早的成功轨迹属于 Phase2 legacy trace；新的 paired smoke 两个 arm 均使用完整 trace schema，并通过 validator。
+- 10-instance 结果是小样本配对 smoke，不代表统计显著性，也不能替代更大规模正式实验。
+- `dataset/` 中的数据文件是本地实验输入，第三方 repository cache 不随仓库提交。
+
+## 原始项目说明
+
+SGAgent 原始目标是自动定位、分析并修复 GitHub 仓库中的问题。Locator、Suggester 和 Fixer 分别负责问题定位、修复建议和补丁实现；知识图谱和检索工具用于提供代码结构与上下文。

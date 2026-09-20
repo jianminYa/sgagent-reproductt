@@ -1,0 +1,35 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/core/power.py
+Total lines: 1899
+Showing lines 1286-1316:
+
+1286:                     return S.Zero, (-self.base)**self.exp
+1287: 
+1288:             # XXX: This is not totally correct since for x**(p/q) with
+1289:             #      x being imaginary there are actually q roots, but
+1290:             #      only a single one is returned from here.
+1291:             r = self.func(self.func(re_e, 2) + self.func(im_e, 2), S.Half)
+1292:             t = atan2(im_e, re_e)
+1293: 
+1294:             rp, tp = self.func(r, self.exp), t*self.exp
+1295: 
+1296:             return rp*cos(tp), rp*sin(tp)
+1297:         elif self.base is S.Exp1:
+1298:             from ..functions import exp
+1299:             re_e, im_e = self.exp.as_real_imag()
+1300:             if deep:
+1301:                 re_e = re_e.expand(deep, **hints)
+1302:                 im_e = im_e.expand(deep, **hints)
+1303:             c, s = cos(im_e), sin(im_e)
+1304:             return exp(re_e)*c, exp(re_e)*s
+1305:         else:
+1306: 
+1307:             if deep:
+1308:                 hints['complex'] = False
+1309: 
+1310:                 expanded = self.expand(deep, **hints)
+1311:                 if hints.get('ignore') == expanded:
+1312:                     return None
+1313:                 else:
+1314:                     return (re(expanded), im(expanded))
+1315:             else:
+1316:                 return re(self), im(self)

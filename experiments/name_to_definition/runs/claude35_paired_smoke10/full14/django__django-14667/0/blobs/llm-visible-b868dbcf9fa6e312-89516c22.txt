@@ -1,0 +1,50 @@
+
+
+#REFLECT
+Now I have full understanding of the bug and the problem statement confirms my analysis.
+
+The bug is in `add_deferred_loading` at line 2089. When we're in "only" mode (`defer=False`) and the difference results in an empty set, the state `(set(), False)` is incorrectly interpreted as "no restriction" (load all fields).
+
+The fix: In the `else` branch of `add_deferred_loading`, when `existing` is non-empty but the result of `existing.difference(field_names)` is empty, we should switch to defer mode. Specifically, we should convert to `(field_names, True)` — meaning "defer these fields."
+
+But wait, let me think about the second case: `Company.objects.only("name").defer("name").defer("country")`:
+1. After `.only("name")`: `({"name"}, False)` 
+2. After `.defer("name")`: `(set(), False)` — BUG: should be `({"name"}, True)`
+3. After `.defer("country")`: Since now `defer=True`, it would be `({"name", "country"}, True)` — correct!
+
+So the fix is: when `defer=False` and `existing` is non-empty, if the difference results in an empty set, switch to `(field_names, True)`.
+
+Actually, a cleaner approach: the `else` branch should check if `existing` is non-empty. If `existing` is empty and `defer=False`, that's the initial state (no `.only()` was called), so we should just switch to defer mode: `(field_names, True)`. Wait, no — the initial state is `(frozenset(), True)`, not `(frozenset(), False)`.
+
+So `defer=False` always means `.only()` was called. The fix is simply: when the difference is empty, switch to `(field_names, True)`.
+
+The location is line 2087-2089 in `/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py`.
+
+**INFO ENOUGH**
+
+Here are the bug locations:
+
+**Location 1**: `/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py`, lines **2087–2089**
+
+```python
+        else:
+            # Remove names from the set of any existing "immediate load" names.
+            self.deferred_loading = existing.difference(field_names), False
+```
+
+**Root Cause**: When `defer=False` (we're in "only" mode from a prior `.only()` call) and `add_deferred_loading` is called (from `.defer()`), the code computes `existing.difference(field_names)`. If all "only" fields are removed, the result is `(empty_set, False)`, which Django interprets as "no field restriction — load everything." Instead, when the difference yields an empty set but `existing` was non-empty, it should switch to defer mode `(field_names, True)`.
+
+**Fix**: Replace line 2089 with logic that handles the empty-set case:
+
+```python
+        else:
+            # Remove names from the set of any existing "immediate load" names.
+            if not existing:
+                self.deferred_loading = field_names, True
+            else:
+                new_existing = existing.difference(field_names)
+                if new_existing:
+                    self.deferred_loading = new_existing, False
+                else:
+                    self.deferred_loading = field_names, True
+```

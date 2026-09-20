@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "0274d833-a3ae-4d3e-9d75-f9df8db2f15f",
+    "8cd5319b-8ee7-4368-83f1-1c8b61d47593",
+    "6d0efaef-89c1-427c-b214-c790b35547ce",
+    "373419a5-1f4c-4d01-a866-bafe1ee655dd",
+    "426ac4d5-a5f9-401b-915d-ec2b58818e54"
+  ],
+  "stop_reasons": {
+    "stop": 5
+  },
+  "locator_llm_calls": 5,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 5,
+  "tool_result_chars": 10354,
+  "tool_original_chars": 10354,
+  "tool_returned_chars": 10354,
+  "truncated_tool_calls": 0,
+  "input_tokens": 24867,
+  "output_tokens": 527,
+  "total_tokens": 25394,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 250707.986,
+  "graph_updates": 10,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-sympy__sympy-21614-0-8f5eb73d98",
+  "instance_id": "sympy__sympy-21614",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

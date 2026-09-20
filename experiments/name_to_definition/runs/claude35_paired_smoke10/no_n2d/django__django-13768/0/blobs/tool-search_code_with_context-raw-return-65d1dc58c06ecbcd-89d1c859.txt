@@ -1,0 +1,98 @@
+Search results for 'send_robust' in file (showing first 8 matches):
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 143-149:
+ 143:         a_signal.disconnect(dispatch_uid="uid")
+ 144:         self.assertTestIsClean(a_signal)
+ 145: 
+ 146:     def test_send_robust_success(self):
+ 147:         a_signal.connect(receiver_1_arg)
+ 148:         result = a_signal.send_robust(sender=self, val='test')
+ 149:         self.assertEqual(result, [(receiver_1_arg, 'test')])
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 145-151:
+ 145: 
+ 146:     def test_send_robust_success(self):
+ 147:         a_signal.connect(receiver_1_arg)
+ 148:         result = a_signal.send_robust(sender=self, val='test')
+ 149:         self.assertEqual(result, [(receiver_1_arg, 'test')])
+ 150:         a_signal.disconnect(receiver_1_arg)
+ 151:         self.assertTestIsClean(a_signal)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 150-156:
+ 150:         a_signal.disconnect(receiver_1_arg)
+ 151:         self.assertTestIsClean(a_signal)
+ 152: 
+ 153:     def test_send_robust_no_receivers(self):
+ 154:         result = a_signal.send_robust(sender=self, val='test')
+ 155:         self.assertEqual(result, [])
+ 156: 
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 151-157:
+ 151:         self.assertTestIsClean(a_signal)
+ 152: 
+ 153:     def test_send_robust_no_receivers(self):
+ 154:         result = a_signal.send_robust(sender=self, val='test')
+ 155:         self.assertEqual(result, [])
+ 156: 
+ 157:     def test_send_robust_ignored_sender(self):
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 154-160:
+ 154:         result = a_signal.send_robust(sender=self, val='test')
+ 155:         self.assertEqual(result, [])
+ 156: 
+ 157:     def test_send_robust_ignored_sender(self):
+ 158:         a_signal.connect(receiver_1_arg)
+ 159:         result = a_signal.send_robust(sender=self, val='test')
+ 160:         self.assertEqual(result, [(receiver_1_arg, 'test')])
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 156-162:
+ 156: 
+ 157:     def test_send_robust_ignored_sender(self):
+ 158:         a_signal.connect(receiver_1_arg)
+ 159:         result = a_signal.send_robust(sender=self, val='test')
+ 160:         self.assertEqual(result, [(receiver_1_arg, 'test')])
+ 161:         a_signal.disconnect(receiver_1_arg)
+ 162:         self.assertTestIsClean(a_signal)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 161-167:
+ 161:         a_signal.disconnect(receiver_1_arg)
+ 162:         self.assertTestIsClean(a_signal)
+ 163: 
+ 164:     def test_send_robust_fail(self):
+ 165:         def fails(val, **kwargs):
+ 166:             raise ValueError('this')
+ 167:         a_signal.connect(fails)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Lines 165-171:
+ 165:         def fails(val, **kwargs):
+ 166:             raise ValueError('this')
+ 167:         a_signal.connect(fails)
+ 168:         result = a_signal.send_robust(sender=self, val="test")
+ 169:         err = result[0][1]
+ 170:         self.assertIsInstance(err, ValueError)
+ 171:         self.assertEqual(err.args, ('this',))
+
+================================================================================
+

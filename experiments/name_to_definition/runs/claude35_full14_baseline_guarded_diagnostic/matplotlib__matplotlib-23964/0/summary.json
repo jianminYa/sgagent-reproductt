@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "9fc1ccd1-8912-478c-860b-62622088cefe",
+    "b9395175-bf74-467c-9727-3d6c22368b13",
+    "85ff35fa-f71a-4f99-b196-8bebaf471f06"
+  ],
+  "stop_reasons": {
+    "stop": 3
+  },
+  "locator_llm_calls": 3,
+  "tool_calls": 10,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 3,
+  "tool_result_chars": 24471,
+  "tool_original_chars": 24471,
+  "tool_returned_chars": 24471,
+  "truncated_tool_calls": 0,
+  "input_tokens": 31832,
+  "output_tokens": 1859,
+  "total_tokens": 33691,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 67048.408,
+  "graph_updates": 4,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-joilyc6k/lib/matplotlib/backends/backend_ps.py",
+      "start_line": 668,
+      "end_line": 669
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/matplotlib/backends/backend_ps.py",
+      "start_line": 668,
+      "end_line": 669
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-23964-0-8608c6baa2",
+  "instance_id": "matplotlib__matplotlib-23964",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

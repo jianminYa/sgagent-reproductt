@@ -1,0 +1,20 @@
+
+
+I now have all the information needed. The bug is clear:
+
+**Root Cause:** In `deferred_to_data()` method in `django/db/models/sql/query.py`, when traversing through related models (lines 747-751), if a ForeignKey points to a proxy model, `cur_model` gets set to the proxy model. Then `opts = cur_model._meta` on line 751 uses the proxy model's meta. This causes issues downstream because the `must_include` dictionary and field lookups use proxy model keys that don't match the concrete model keys used elsewhere, ultimately leading to the `ValueError: 'id' is not in list` in `RelatedPopulator.__init__`.
+
+**Fix:** On lines 748 and 750, `cur_model` should be normalized to the concrete model, consistent with how it's initialized on line 740 (`self.model._meta.concrete_model`). This way `opts` on line 751 will also naturally get the concrete model's meta.
+
+The fix locations are:
+
+1. **Line 748** (`cur_model = source.related_model`): Should be `cur_model = source.related_model._meta.concrete_model`
+2. **Line 750** (`cur_model = source.remote_field.model`): Should be `cur_model = source.remote_field.model._meta.concrete_model`
+
+These two lines are the only places where `cur_model` can be set to a proxy model instead of a concrete model.
+
+**INFO ENOUGH**
+
+Here are the precise bug locations:
+
+- **File:** `django/db/models/sql/query.py`, **lines 747–750** — `cur_model` is assigned from `source.related_model` or `source.remote_field.model` without normalizing to the concrete model, causing proxy models to propagate through the rest of the method.

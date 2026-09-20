@@ -8,7 +8,6 @@ class Settings(BaseSettings):
     """Configuration settings with support for environment variables."""
 
     # LLM API Settings
-    # openai_api_key: str = Field(default="sk-NdZukOuQQRhydvPW33Dc1e05AbCa4fE394BfD3FfB9Ac09Be", env="OPENAI_API_KEY")
     # openai_base_url: str = Field(default="https://api.holdai.top/v1", env="OPENAI_BASE_URL")
     openai_api_key: str = Field(default="", env="OPENAI_API_KEY")
     openai_base_url: str = Field(default="https://dashscope.aliyuncs.com/compatible-mode/v1", env="OPENAI_BASE_URL")
@@ -31,6 +30,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = Field(default="", env="PROJECT_NAME")
     INSTANCE_ID: str = Field(default="", env="INSTANCE_ID")
     PROBLEM_STATEMENT: str = Field(default="Find and fix bugs in the project", env="PROBLEM_STATEMENT")
+    DATASET_PATH: str = Field(default="dataset/lite.parquet", env="DATASET_PATH")
 
 
     ROUND: str = Field(default="verified_Claude-4-Sonnet_round_c_3", env="ROUND")

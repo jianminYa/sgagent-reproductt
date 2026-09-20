@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_5123f5d9bffb46cd840b6e8b5de98376",
+    "msg_211d749973714c99b21a871fffb44f4b",
+    "msg_26218d90839f4ab1bdf4ed51245bf18f",
+    "msg_771f4620849c46dda7eef7c80a49dfd7",
+    "msg_ffeed884b81f4a2dadd04752d5d1ae37",
+    "msg_89c4b5263d354dbda22b3ed3419c3b50",
+    "msg_51bc492b6bc74421830246341826af6a",
+    "msg_445f8709159d453d8a666b7ad2f08cac",
+    "msg_ed65d19d9efe482bb5956479cb7476ab",
+    "msg_a7eed92a1a45475e93feadceb5f310f9",
+    "msg_ea6b196957fb4a13a4a646a62c6ffe69",
+    "msg_eb1b8629d3644248b09d683bc5781f56",
+    "msg_57a2001ce17a424698d824eaec76a334",
+    "msg_400dd8b3ee1b4f89910fb93727069bd5",
+    "msg_aa5464bbff9a4661a2cc3d6dcf09f2e5",
+    "msg_21607318a28746e7a26cd699c28c120a",
+    "msg_53a80f3d9d7643ccb84306a54c792b68",
+    "msg_c0ef851f18ac48f78e2071efe73f681a",
+    "msg_f623ceee7f64498f834fad3f4e4b31e4",
+    "msg_ba542104e5fc4f94b4f3500d444db14e",
+    "msg_794208836c8b4172ac648324417cd9af",
+    "msg_44066bf75d794193be3315eac0e0fa5f"
+  ],
+  "stop_reasons": {
+    "end_turn": 22
+  },
+  "locator_llm_calls": 20,
+  "tool_calls": 18,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 22,
+  "tool_result_chars": 125539,
+  "input_tokens": 168086,
+  "output_tokens": 7032,
+  "total_tokens": 175118,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 265870.957,
+  "graph_updates": 42,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-mrm2dibe/django/forms/models.py",
+      "start_line": 103,
+      "end_line": 103
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/forms/models.py",
+      "start_line": 103,
+      "end_line": 103
+    }
+  ],
+  "run_id": "sgagent-official-django__django-13315-0-0908dc7083",
+  "instance_id": "django__django-13315",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

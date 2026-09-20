@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "0b969618-15f2-49f2-8029-528d7e531b5c",
+    "7d56e99f-05b8-4140-a1ab-5af9189ac82e",
+    "1dcef3f2-a14a-4752-ba3c-48eb7fc8daa1"
+  ],
+  "stop_reasons": {
+    "stop": 3
+  },
+  "locator_llm_calls": 3,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 3,
+  "tool_result_chars": 77130,
+  "tool_original_chars": 77130,
+  "tool_returned_chars": 77130,
+  "truncated_tool_calls": 0,
+  "input_tokens": 61051,
+  "output_tokens": 2253,
+  "total_tokens": 63304,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 48117.942,
+  "graph_updates": 4,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-xogc261z/requests/sessions.py",
+      "start_line": 428,
+      "end_line": 428
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 428,
+      "end_line": 428
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-2317-0-14a9b24c55",
+  "instance_id": "psf__requests-2317",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

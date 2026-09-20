@@ -1,0 +1,6 @@
+
+
+I'll investigate the `col_insert` method to understand the bug. Let me start by finding where this method is defined.
+
+#TOOL_CALL find_files_containing
+{"keyword": "col_insert"}

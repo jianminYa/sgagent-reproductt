@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "ccddb176-c4b1-446c-bbb2-66b024e07c56",
+    "ad2ebcee-d308-40f1-880b-9fc508c3e1d7",
+    "db4b8948-0fc2-4c98-9da6-459274288afd",
+    "222c19f4-131d-4713-96ba-86b74c03ebb9"
+  ],
+  "stop_reasons": {
+    "stop": 4
+  },
+  "logical_llm_calls": 4,
+  "http_attempts": 4,
+  "request_retries": 0,
+  "successful_llm_responses": 4,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 4,
+  "tool_calls": 2,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 4,
+  "logical_calls_by_phase": {
+    "locator": 4
+  },
+  "successful_responses_by_phase": {
+    "locator": 4
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 319550,
+      "output_tokens": 960,
+      "total_tokens": 320510
+    }
+  },
+  "tool_result_chars": 435553,
+  "tool_original_chars": 435553,
+  "tool_returned_chars": 435553,
+  "tool_original_bytes": 435553,
+  "tool_returned_bytes": 435553,
+  "truncated_tool_calls": 0,
+  "input_tokens": 319550,
+  "output_tokens": 960,
+  "total_tokens": 320510,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 329331.433,
+  "graph_updates": 6,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-jsq5qii0/astropy/wcs/wcs.py",
+      "start_line": 1214,
+      "end_line": 1231
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-jsq5qii0/astropy/wcs/wcs.py",
+      "start_line": 1233,
+      "end_line": 1243
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1214,
+      "end_line": 1231
+    },
+    {
+      "file_path": "astropy/wcs/wcs.py",
+      "start_line": 1233,
+      "end_line": 1243
+    }
+  ],
+  "run_id": "sgagent-official-astropy__astropy-7746-0-4bf89f212e",
+  "instance_id": "astropy__astropy-7746",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_full14"
+}

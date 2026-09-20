@@ -1,0 +1,1 @@
+["#TOOL_CALL execute_shell_command_with_validation\n{\"command\": \"cd /tmp/sgagent-n2d-p6bk8dd9 && python -m pytest tests/dispatch/tests.py -x -v 2>&1 | head -60\", \"working_directory\": \"/tmp/sgagent-n2d-p6bk8dd9\"}"]

@@ -1,0 +1,26 @@
+Search results for '_parallel_poly_from_expr' in file (showing first 2 matches):
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py
+Lines 4337-4343:
+4337: def parallel_poly_from_expr(exprs, *gens, **args):
+4338:     """Construct polynomials from expressions. """
+4339:     opt = options.build_options(gens, args)
+4340:     return _parallel_poly_from_expr(exprs, opt)
+4341: 
+4342: 
+4343: def _parallel_poly_from_expr(exprs, opt):
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py
+Lines 4340-4346:
+4340:     return _parallel_poly_from_expr(exprs, opt)
+4341: 
+4342: 
+4343: def _parallel_poly_from_expr(exprs, opt):
+4344:     """Construct polynomials from expressions. """
+4345:     from sympy.functions.elementary.piecewise import Piecewise
+4346: 
+
+================================================================================
+

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 2912,
+    "output_tokens": 59,
+    "reasoning_tokens": null,
+    "total_tokens": 2971
+  },
+  "input_tokens": 62212,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 881,
+      "output_tokens": 63,
+      "reasoning_tokens": null,
+      "total_tokens": 944
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3937,
+      "output_tokens": 20,
+      "reasoning_tokens": null,
+      "total_tokens": 3957
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4392,
+      "output_tokens": 131,
+      "reasoning_tokens": null,
+      "total_tokens": 4523
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4270,
+      "output_tokens": 37,
+      "reasoning_tokens": null,
+      "total_tokens": 4307
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4942,
+      "output_tokens": 41,
+      "reasoning_tokens": null,
+      "total_tokens": 4983
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5083,
+      "output_tokens": 29,
+      "reasoning_tokens": null,
+      "total_tokens": 5112
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6390,
+      "output_tokens": 62,
+      "reasoning_tokens": null,
+      "total_tokens": 6452
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6539,
+      "output_tokens": 76,
+      "reasoning_tokens": null,
+      "total_tokens": 6615
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6917,
+      "output_tokens": 165,
+      "reasoning_tokens": null,
+      "total_tokens": 7082
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6528,
+      "output_tokens": 57,
+      "reasoning_tokens": null,
+      "total_tokens": 6585
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 9421,
+      "output_tokens": 103,
+      "reasoning_tokens": null,
+      "total_tokens": 9524
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 843,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 29077,
+  "total_llm_calls": 12,
+  "total_tokens": 63055,
+  "wall_clock_ms": 57634.527,
+  "run_id": "name_to_definition_phase1-matplotlib__matplotlib-23476-baseline-a7bc3b7acd",
+  "arm": "baseline",
+  "instance_id": "matplotlib__matplotlib-23476"
+}

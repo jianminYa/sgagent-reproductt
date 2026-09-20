@@ -1,0 +1,170 @@
+{
+  "status": "official Locator reproduction; pilot-scale evidence",
+  "experiment_id": "sgagent_claude35_full14_baseline",
+  "n": 45,
+  "completed": 44,
+  "completion_rate": 0.9777777777777777,
+  "termination_reasons": {
+    "completed": 44,
+    "api_error": 1
+  },
+  "official_repository_metrics": {
+    "file_accuracy": 0.8666666666666667,
+    "class_accuracy": 0.8444444444444444,
+    "function_accuracy": 0.4,
+    "line_accuracy": 0.3333333333333333,
+    "line_iou": 0.23612117988312167
+  },
+  "paper_set_jaccard_metrics": {
+    "file_accuracy": 0.8444444444444444,
+    "function_accuracy": 0.562962962962963
+  },
+  "tokens": {
+    "incomplete_trajectories": 0,
+    "total": {
+      "n": 45,
+      "mean": 110983.06666666667,
+      "median": 74751.0,
+      "p25": 46133.0,
+      "p75": 120621.0
+    },
+    "input": {
+      "n": 45,
+      "mean": 108023.97777777778,
+      "median": 71352.0,
+      "p25": 43952.0,
+      "p75": 117570.0
+    },
+    "output": {
+      "n": 45,
+      "mean": 2959.088888888889,
+      "median": 1970.0,
+      "p25": 1365.0,
+      "p75": 3051.0
+    }
+  },
+  "calls": {
+    "locator_llm": {
+      "n": 45,
+      "mean": 9.688888888888888,
+      "median": 7.0,
+      "p25": 6.0,
+      "p75": 12.0
+    },
+    "summarizer_llm": {
+      "n": 45,
+      "mean": 0.6666666666666666,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 1.0
+    },
+    "total_llm": {
+      "n": 45,
+      "mean": 10.355555555555556,
+      "median": 7.0,
+      "p25": 7.0,
+      "p75": 13.0
+    },
+    "tools": {
+      "n": 45,
+      "mean": 8.666666666666666,
+      "median": 6.0,
+      "p25": 5.0,
+      "p75": 10.0
+    },
+    "failed_tools": {
+      "n": 45,
+      "mean": 0.2,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0
+    }
+  },
+  "tool_output": {
+    "original_chars": {
+      "n": 45,
+      "mean": 110093.77777777778,
+      "median": 62337.0,
+      "p25": 19576.0,
+      "p75": 129918.0
+    },
+    "returned_chars": {
+      "n": 45,
+      "mean": 41737.4,
+      "median": 34940.0,
+      "p25": 19576.0,
+      "p75": 56061.0
+    },
+    "truncated_calls": {
+      "n": 45,
+      "mean": 0.8,
+      "median": 1.0,
+      "p25": 0.0,
+      "p75": 1.0
+    },
+    "trajectories_with_truncation": 24
+  },
+  "tool_usage_patterns": {
+    "calls": {
+      "analyze_file_structure": 28,
+      "execute_shell_command_with_validation": 39,
+      "explore_directory": 19,
+      "extract_complete_method": 64,
+      "find_all_variables_named": 3,
+      "find_class_constructor": 10,
+      "find_files_containing": 49,
+      "find_methods_by_name": 47,
+      "find_variable_usage": 12,
+      "read_file_lines": 107,
+      "search_code_with_context": 18,
+      "show_file_imports": 3
+    },
+    "failed_calls": {
+      "execute_shell_command_with_validation": 9
+    }
+  },
+  "latency_ms": {
+    "n": 45,
+    "mean": 156891.59666666668,
+    "median": 129287.401,
+    "p25": 89933.66,
+    "p75": 175976.948
+  },
+  "cost_usd": null,
+  "cost_note": "qtapi pricing was not supplied; no fabricated cost estimate is reported.",
+  "model_metadata": {
+    "requested_models": {
+      "ep-64pmfvfo": 45
+    },
+    "returned_models": {
+      "ep-64pmfvfo": 45
+    },
+    "request_ids_recorded": 466,
+    "request_ids_unique": 466,
+    "request_ids_missing": 0,
+    "stop_reasons": {
+      "stop": 466
+    }
+  },
+  "evaluation_adapter": {
+    "predicted_ranges_as_synthetic_diff": true,
+    "official_evaluator_classes": "script.evaluation.PatchParser, ASTAnalyzer, MetricsCalculator",
+    "gold_source": "local Lite parquet patch; agent never receives patch"
+  },
+  "sampling": {
+    "actual_size": 45,
+    "method": "random.Random(seed).sample(sorted Lite instance_id list)",
+    "requested_size": 45,
+    "seed": 20260915
+  },
+  "dataset": {
+    "benchmark_split": "test",
+    "lite_path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "name": "SWE-bench Lite",
+    "revision": "local-commit-33a2cfe",
+    "row_count": 300,
+    "sort_rule": "instance_id ascending after repo de-duplication",
+    "source_note": "Local dataset/lite.parquet is authoritative for this reproduction run.",
+    "source_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench"
+  }
+}

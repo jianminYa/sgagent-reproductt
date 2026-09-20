@@ -1,0 +1,808 @@
+{
+  "status": "paired smoke comparison: full14 versus no_n2d",
+  "sample": {
+    "n": 10,
+    "instance_ids": [
+      "astropy__astropy-7746",
+      "django__django-10914",
+      "django__django-11001",
+      "django__django-11630",
+      "django__django-12184",
+      "django__django-13768",
+      "django__django-14534",
+      "django__django-14667",
+      "django__django-15814",
+      "sympy__sympy-13647"
+    ],
+    "same_instance_set": true
+  },
+  "arms": {
+    "full14": {
+      "experiment_id": "sgagent_claude35_paired_smoke10_full14",
+      "n": 10,
+      "completed": 10,
+      "completion_rate": 1.0,
+      "termination_reasons": {
+        "completed": 10
+      },
+      "provider_failure": {
+        "count": 0,
+        "rate": 0.0,
+        "definition": "trajectory termination_reason == api_error; HTTP attempts are separately counted"
+      },
+      "trace_validation": {
+        "checked": 10,
+        "valid": 10,
+        "invalid": 0,
+        "note": "Inherited Phase2 successful trajectories may be legacy traces; no successful sample was rerun for migration.",
+        "invalid_examples": []
+      }
+    },
+    "no_n2d": {
+      "experiment_id": "sgagent_claude35_paired_smoke10_no_n2d",
+      "n": 10,
+      "completed": 10,
+      "completion_rate": 1.0,
+      "termination_reasons": {
+        "completed": 10
+      },
+      "provider_failure": {
+        "count": 0,
+        "rate": 0.0,
+        "definition": "trajectory termination_reason == api_error; HTTP attempts are separately counted"
+      },
+      "trace_validation": {
+        "checked": 10,
+        "valid": 10,
+        "invalid": 0,
+        "note": "Inherited Phase2 successful trajectories may be legacy traces; no successful sample was rerun for migration.",
+        "invalid_examples": []
+      }
+    }
+  },
+  "aggregate_metrics": {
+    "official_repository_metrics": {
+      "class_accuracy": {
+        "full14": 0.9,
+        "no_n2d": 0.9,
+        "delta_no_n2d_minus_full14": 0.0
+      },
+      "file_accuracy": {
+        "full14": 1.0,
+        "no_n2d": 1.0,
+        "delta_no_n2d_minus_full14": 0.0
+      },
+      "function_accuracy": {
+        "full14": 0.4,
+        "no_n2d": 0.4,
+        "delta_no_n2d_minus_full14": 0.0
+      },
+      "line_accuracy": {
+        "full14": 0.6,
+        "no_n2d": 0.6,
+        "delta_no_n2d_minus_full14": 0.0
+      },
+      "line_iou": {
+        "full14": 0.25330326209737974,
+        "no_n2d": 0.3068066378066378,
+        "delta_no_n2d_minus_full14": 0.05350337570925806
+      }
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": {
+        "full14": 0.925,
+        "no_n2d": 0.925,
+        "delta_no_n2d_minus_full14": 0.0
+      },
+      "function_accuracy": {
+        "full14": 0.6333333333333333,
+        "no_n2d": 0.625,
+        "delta_no_n2d_minus_full14": -0.008333333333333304
+      }
+    }
+  },
+  "paired_direction": {
+    "file_match": {
+      "no_n2d_better": 0,
+      "full14_better": 0,
+      "tie": 10
+    },
+    "class_match": {
+      "no_n2d_better": 0,
+      "full14_better": 0,
+      "tie": 10
+    },
+    "function_match": {
+      "no_n2d_better": 0,
+      "full14_better": 0,
+      "tie": 10
+    },
+    "line_match": {
+      "no_n2d_better": 0,
+      "full14_better": 0,
+      "tie": 10
+    },
+    "line_iou": {
+      "no_n2d_better": 3,
+      "full14_better": 3,
+      "tie": 4
+    },
+    "paper_file_jaccard": {
+      "no_n2d_better": 0,
+      "full14_better": 0,
+      "tie": 10
+    },
+    "paper_function_jaccard": {
+      "no_n2d_better": 1,
+      "full14_better": 2,
+      "tie": 7
+    }
+  },
+  "paired_results": [
+    {
+      "instance_id": "astropy__astropy-7746",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": false,
+        "line_iou": 0.3939393939393939,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 320510,
+        "input_tokens": 319550,
+        "output_tokens": 960,
+        "logical_llm_calls": 4,
+        "http_attempts": 4,
+        "request_retries": 0,
+        "tool_calls": 2
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": false,
+        "line_iou": 0.3939393939393939,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 319750,
+        "input_tokens": 318859,
+        "output_tokens": 891,
+        "logical_llm_calls": 4,
+        "http_attempts": 4,
+        "request_retries": 0,
+        "tool_calls": 2
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.0,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": -760.0,
+        "input_tokens": -691.0,
+        "output_tokens": -69.0,
+        "logical_llm_calls": 0.0,
+        "http_attempts": 0.0,
+        "request_retries": 0.0,
+        "tool_calls": 0.0
+      }
+    },
+    {
+      "instance_id": "django__django-10914",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": false,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.04,
+        "paper_file_jaccard": 0.25,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": 122676,
+        "input_tokens": 119716,
+        "output_tokens": 2960,
+        "logical_llm_calls": 15,
+        "http_attempts": 16,
+        "request_retries": 1,
+        "tool_calls": 12
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": false,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.04,
+        "paper_file_jaccard": 0.25,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": 122564,
+        "input_tokens": 119822,
+        "output_tokens": 2742,
+        "logical_llm_calls": 13,
+        "http_attempts": 13,
+        "request_retries": 0,
+        "tool_calls": 10
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.0,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": -112.0,
+        "input_tokens": 106.0,
+        "output_tokens": -218.0,
+        "logical_llm_calls": -2.0,
+        "http_attempts": -3.0,
+        "request_retries": -1.0,
+        "tool_calls": -2.0
+      }
+    },
+    {
+      "instance_id": "django__django-11001",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.125,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.5,
+        "total_tokens": 30235,
+        "input_tokens": 29124,
+        "output_tokens": 1111,
+        "logical_llm_calls": 6,
+        "http_attempts": 6,
+        "request_retries": 0,
+        "tool_calls": 4
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.1,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.25,
+        "total_tokens": 287197,
+        "input_tokens": 285089,
+        "output_tokens": 2108,
+        "logical_llm_calls": 4,
+        "http_attempts": 4,
+        "request_retries": 0,
+        "tool_calls": 9
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": -0.024999999999999994,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": -0.25,
+        "total_tokens": 256962.0,
+        "input_tokens": 255965.0,
+        "output_tokens": 997.0,
+        "logical_llm_calls": -2.0,
+        "http_attempts": -2.0,
+        "request_retries": 0.0,
+        "tool_calls": 5.0
+      }
+    },
+    {
+      "instance_id": "django__django-11630",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": false,
+        "line_iou": 0.29411764705882354,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 65164,
+        "input_tokens": 62192,
+        "output_tokens": 2972,
+        "logical_llm_calls": 12,
+        "http_attempts": 12,
+        "request_retries": 0,
+        "tool_calls": 9
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": false,
+        "line_iou": 0.2777777777777778,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 81966,
+        "input_tokens": 78245,
+        "output_tokens": 3721,
+        "logical_llm_calls": 15,
+        "http_attempts": 15,
+        "request_retries": 0,
+        "tool_calls": 12
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": -0.01633986928104575,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": 16802.0,
+        "input_tokens": 16053.0,
+        "output_tokens": 749.0,
+        "logical_llm_calls": 3.0,
+        "http_attempts": 3.0,
+        "request_retries": 0.0,
+        "tool_calls": 3.0
+      }
+    },
+    {
+      "instance_id": "django__django-12184",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.1111111111111111,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.5,
+        "total_tokens": 84486,
+        "input_tokens": 81814,
+        "output_tokens": 2672,
+        "logical_llm_calls": 10,
+        "http_attempts": 10,
+        "request_retries": 0,
+        "tool_calls": 7
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.2222222222222222,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.5,
+        "total_tokens": 52860,
+        "input_tokens": 51153,
+        "output_tokens": 1707,
+        "logical_llm_calls": 7,
+        "http_attempts": 7,
+        "request_retries": 0,
+        "tool_calls": 5
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.1111111111111111,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": -31626.0,
+        "input_tokens": -30661.0,
+        "output_tokens": -965.0,
+        "logical_llm_calls": -3.0,
+        "http_attempts": -3.0,
+        "request_retries": 0.0,
+        "tool_calls": -2.0
+      }
+    },
+    {
+      "instance_id": "django__django-13768",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": false,
+        "line_iou": 0.23076923076923078,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.3333333333333333,
+        "total_tokens": 132953,
+        "input_tokens": 130539,
+        "output_tokens": 2414,
+        "logical_llm_calls": 15,
+        "http_attempts": 15,
+        "request_retries": 0,
+        "tool_calls": 12
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": false,
+        "line_iou": 0.3,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.6666666666666666,
+        "total_tokens": 135405,
+        "input_tokens": 133050,
+        "output_tokens": 2355,
+        "logical_llm_calls": 11,
+        "http_attempts": 12,
+        "request_retries": 1,
+        "tool_calls": 8
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.0692307692307692,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.3333333333333333,
+        "total_tokens": 2452.0,
+        "input_tokens": 2511.0,
+        "output_tokens": -59.0,
+        "logical_llm_calls": -4.0,
+        "http_attempts": -3.0,
+        "request_retries": 1.0,
+        "tool_calls": -4.0
+      }
+    },
+    {
+      "instance_id": "django__django-14534",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.42857142857142855,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.5,
+        "total_tokens": 25545,
+        "input_tokens": 24260,
+        "output_tokens": 1285,
+        "logical_llm_calls": 3,
+        "http_attempts": 3,
+        "request_retries": 0,
+        "tool_calls": 5
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": true,
+        "line_iou": 0.42857142857142855,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.5,
+        "total_tokens": 20430,
+        "input_tokens": 19350,
+        "output_tokens": 1080,
+        "logical_llm_calls": 3,
+        "http_attempts": 3,
+        "request_retries": 0,
+        "tool_calls": 5
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.0,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": -5115.0,
+        "input_tokens": -4910.0,
+        "output_tokens": -205.0,
+        "logical_llm_calls": 0.0,
+        "http_attempts": 0.0,
+        "request_retries": 0.0,
+        "tool_calls": 0.0
+      }
+    },
+    {
+      "instance_id": "django__django-14667",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": false,
+        "line_iou": 0.26666666666666666,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.5,
+        "total_tokens": 58791,
+        "input_tokens": 55869,
+        "output_tokens": 2922,
+        "logical_llm_calls": 7,
+        "http_attempts": 7,
+        "request_retries": 0,
+        "tool_calls": 5
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": false,
+        "line_match": false,
+        "line_iou": 0.2222222222222222,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 0.3333333333333333,
+        "total_tokens": 668691,
+        "input_tokens": 666968,
+        "output_tokens": 1723,
+        "logical_llm_calls": 6,
+        "http_attempts": 6,
+        "request_retries": 0,
+        "tool_calls": 4
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": -0.04444444444444445,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": -0.16666666666666669,
+        "total_tokens": 609900.0,
+        "input_tokens": 611099.0,
+        "output_tokens": -1199.0,
+        "logical_llm_calls": -1.0,
+        "http_attempts": -1.0,
+        "request_retries": 0.0,
+        "tool_calls": -1.0
+      }
+    },
+    {
+      "instance_id": "django__django-15814",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": true,
+        "line_iou": 0.5,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 32689,
+        "input_tokens": 30386,
+        "output_tokens": 2303,
+        "logical_llm_calls": 6,
+        "http_attempts": 6,
+        "request_retries": 0,
+        "tool_calls": 4
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": true,
+        "line_iou": 0.5,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 42277,
+        "input_tokens": 40831,
+        "output_tokens": 1446,
+        "logical_llm_calls": 8,
+        "http_attempts": 8,
+        "request_retries": 0,
+        "tool_calls": 6
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.0,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": 9588.0,
+        "input_tokens": 10445.0,
+        "output_tokens": -857.0,
+        "logical_llm_calls": 2.0,
+        "http_attempts": 2.0,
+        "request_retries": 0.0,
+        "tool_calls": 2.0
+      }
+    },
+    {
+      "instance_id": "sympy__sympy-13647",
+      "full14": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": true,
+        "line_iou": 0.14285714285714285,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 20131,
+        "input_tokens": 19260,
+        "output_tokens": 871,
+        "logical_llm_calls": 4,
+        "http_attempts": 4,
+        "request_retries": 0,
+        "tool_calls": 2
+      },
+      "no_n2d": {
+        "completed": true,
+        "termination_reason": "completed",
+        "file_match": true,
+        "class_match": true,
+        "function_match": true,
+        "line_match": true,
+        "line_iou": 0.5833333333333334,
+        "paper_file_jaccard": 1.0,
+        "paper_function_jaccard": 1.0,
+        "total_tokens": 37606,
+        "input_tokens": 36237,
+        "output_tokens": 1369,
+        "logical_llm_calls": 8,
+        "http_attempts": 8,
+        "request_retries": 0,
+        "tool_calls": 6
+      },
+      "delta_no_n2d_minus_full14": {
+        "file_match": 0.0,
+        "class_match": 0.0,
+        "function_match": 0.0,
+        "line_match": 0.0,
+        "line_iou": 0.4404761904761905,
+        "paper_file_jaccard": 0.0,
+        "paper_function_jaccard": 0.0,
+        "total_tokens": 17475.0,
+        "input_tokens": 16977.0,
+        "output_tokens": 498.0,
+        "logical_llm_calls": 4.0,
+        "http_attempts": 4.0,
+        "request_retries": 0.0,
+        "tool_calls": 4.0
+      }
+    }
+  ],
+  "aggregate_resource_deltas": {
+    "tokens": {
+      "input": {
+        "full14_mean": 87271.0,
+        "no_n2d_mean": 174960.4,
+        "delta_no_n2d_minus_full14_mean": 87689.4,
+        "full14_median": 59030.5,
+        "no_n2d_median": 99033.5,
+        "delta_no_n2d_minus_full14_median": 40003.0
+      },
+      "output": {
+        "full14_mean": 2047.0,
+        "no_n2d_mean": 1914.2,
+        "delta_no_n2d_minus_full14_mean": -132.79999999999995,
+        "full14_median": 2358.5,
+        "no_n2d_median": 1715.0,
+        "delta_no_n2d_minus_full14_median": -643.5
+      },
+      "total": {
+        "full14_mean": 89318.0,
+        "no_n2d_mean": 176874.6,
+        "delta_no_n2d_minus_full14_mean": 87556.6,
+        "full14_median": 61977.5,
+        "no_n2d_median": 102265.0,
+        "delta_no_n2d_minus_full14_median": 40287.5
+      }
+    },
+    "calls": {
+      "failed_logical_llm": {
+        "full14_mean": 0.0,
+        "no_n2d_mean": 0.0,
+        "delta_no_n2d_minus_full14_mean": 0.0,
+        "full14_median": 0.0,
+        "no_n2d_median": 0.0,
+        "delta_no_n2d_minus_full14_median": 0.0
+      },
+      "failed_tools": {
+        "full14_mean": 0.0,
+        "no_n2d_mean": 0.0,
+        "delta_no_n2d_minus_full14_mean": 0.0,
+        "full14_median": 0.0,
+        "no_n2d_median": 0.0,
+        "delta_no_n2d_minus_full14_median": 0.0
+      },
+      "http_attempts": {
+        "full14_mean": 8.3,
+        "no_n2d_mean": 8.0,
+        "delta_no_n2d_minus_full14_mean": -0.3000000000000007,
+        "full14_median": 6.5,
+        "no_n2d_median": 7.5,
+        "delta_no_n2d_minus_full14_median": 1.0
+      },
+      "locator_llm": {
+        "full14_mean": 7.8,
+        "no_n2d_mean": 7.6,
+        "delta_no_n2d_minus_full14_mean": -0.20000000000000018,
+        "full14_median": 6.5,
+        "no_n2d_median": 7.5,
+        "delta_no_n2d_minus_full14_median": 1.0
+      },
+      "logical_llm": {
+        "full14_mean": 8.2,
+        "no_n2d_mean": 7.9,
+        "delta_no_n2d_minus_full14_mean": -0.29999999999999893,
+        "full14_median": 6.5,
+        "no_n2d_median": 7.5,
+        "delta_no_n2d_minus_full14_median": 1.0
+      },
+      "request_retries": {
+        "full14_mean": 0.1,
+        "no_n2d_mean": 0.1,
+        "delta_no_n2d_minus_full14_mean": 0.0,
+        "full14_median": 0.0,
+        "no_n2d_median": 0.0,
+        "delta_no_n2d_minus_full14_median": 0.0
+      },
+      "successful_responses": {
+        "full14_mean": 8.2,
+        "no_n2d_mean": 7.9,
+        "delta_no_n2d_minus_full14_mean": -0.29999999999999893,
+        "full14_median": 6.5,
+        "no_n2d_median": 7.5,
+        "delta_no_n2d_minus_full14_median": 1.0
+      },
+      "summarizer_llm": {
+        "full14_mean": 0.4,
+        "no_n2d_mean": 0.3,
+        "delta_no_n2d_minus_full14_mean": -0.10000000000000003,
+        "full14_median": 0.0,
+        "no_n2d_median": 0.0,
+        "delta_no_n2d_minus_full14_median": 0.0
+      },
+      "tools": {
+        "full14_mean": 6.2,
+        "no_n2d_mean": 6.7,
+        "delta_no_n2d_minus_full14_mean": 0.5,
+        "full14_median": 5.0,
+        "no_n2d_median": 6.0,
+        "delta_no_n2d_minus_full14_median": 1.0
+      },
+      "total_llm": {
+        "full14_mean": 8.2,
+        "no_n2d_mean": 7.9,
+        "delta_no_n2d_minus_full14_mean": -0.29999999999999893,
+        "full14_median": 6.5,
+        "no_n2d_median": 7.5,
+        "delta_no_n2d_minus_full14_median": 1.0
+      }
+    }
+  },
+  "notes": [
+    "Both arms use the same explicit 10-instance set, model, protocol, timeout, worker count, retry policy, and offline evaluator.",
+    "Deltas are no_n2d minus full14; positive values favor no_n2d for metrics and indicate higher resource use for resource fields.",
+    "This is pilot-scale paired evidence and does not establish statistical significance or justify scaling beyond the smoke gate by itself."
+  ]
+}

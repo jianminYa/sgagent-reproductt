@@ -1,0 +1,15 @@
+File: /tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py
+Total lines: 1507
+Showing lines 30-40:
+
+  30:         # separately a list of extra select columns needed for grammatical correctness
+  31:         # of the query, but these columns are not included in self.select.
+  32:         self.select = None
+  33:         self.annotation_col_map = None
+  34:         self.klass_info = None
+  35:         self.ordering_parts = re.compile(r'(.*)\s(ASC|DESC)(.*)')
+  36:         self._meta_ordering = None
+  37: 
+  38:     def setup_query(self):
+  39:         if all(self.query.alias_refcount[a] == 0 for a in self.query.alias_map):
+  40:             self.query.get_initial_alias()

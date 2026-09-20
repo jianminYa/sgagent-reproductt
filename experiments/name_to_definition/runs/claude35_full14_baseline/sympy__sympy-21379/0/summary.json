@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "ed0b7c62-41b0-45aa-8512-a31f4e7f2d23",
+    "8ef9406c-9a19-4833-b1d4-797f9ada846b",
+    "05937010-be60-493c-b9e0-5d76d0020618",
+    "a6884930-f0cf-42a8-a508-097434dc867f",
+    "82b0c61b-52cc-4962-b5d2-027fa77875b5",
+    "905a9aea-cfb9-464c-9893-50cb5a5a2df3",
+    "c2419bbe-f712-4f55-98f9-13fd1a961d35",
+    "965ec040-629a-42f7-8376-94a851362776",
+    "e0b9a418-73aa-432a-98ac-d8d074bf734a",
+    "0931aadb-afff-4702-bec1-f3bc95d5662a",
+    "b05bfaf5-8716-4bec-92c7-976e4160aee6",
+    "1261a234-5a72-4432-8389-e43ae38ea478"
+  ],
+  "stop_reasons": {
+    "stop": 12
+  },
+  "locator_llm_calls": 11,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 723561,
+  "tool_original_chars": 723561,
+  "tool_returned_chars": 723561,
+  "truncated_tool_calls": 0,
+  "input_tokens": 580387,
+  "output_tokens": 4872,
+  "total_tokens": 585259,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 381393.705,
+  "graph_updates": 24,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-sympy__sympy-21379-0-1c37020f9a",
+  "instance_id": "sympy__sympy-21379",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

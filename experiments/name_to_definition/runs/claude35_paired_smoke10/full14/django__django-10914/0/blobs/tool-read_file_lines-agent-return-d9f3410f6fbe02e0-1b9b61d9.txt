@@ -1,0 +1,17 @@
+File: /tmp/sgagent-n2d-0hngtli7/tests/staticfiles_tests/test_storage.py
+Total lines: 599
+Showing lines 518-530:
+
+ 518:     @override_settings(
+ 519:         FILE_UPLOAD_PERMISSIONS=None,
+ 520:         FILE_UPLOAD_DIRECTORY_PERMISSIONS=None,
+ 521:     )
+ 522:     def test_collect_static_files_default_permissions(self):
+ 523:         call_command('collectstatic', **self.command_params)
+ 524:         test_file = os.path.join(settings.STATIC_ROOT, "test.txt")
+ 525:         test_dir = os.path.join(settings.STATIC_ROOT, "subdir")
+ 526:         file_mode = os.stat(test_file)[0] & 0o777
+ 527:         dir_mode = os.stat(test_dir)[0] & 0o777
+ 528:         self.assertEqual(file_mode, 0o666 & ~self.umask)
+ 529:         self.assertEqual(dir_mode, 0o777 & ~self.umask)
+ 530: 

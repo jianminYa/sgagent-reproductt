@@ -1,0 +1,47 @@
+## Summary
+
+### Objective
+Find and repair a bug in a Django project, specifically in the signal dispatch system.
+
+### Key Investigation Steps
+
+1. **Project identified**: Django framework source code located at `/tmp/sgagent-n2d-b9dtj6zl/`, specifically the signal dispatcher module.
+
+2. **Core file under investigation**: `/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py` — contains the `Signal` class with methods `send()`, `send_robust()`, `connect()`, `disconnect()`, etc.
+
+3. **`send_robust` method examined (lines 182-214)**: This method sends signals to all connected receivers, catching exceptions. When a receiver raises an exception, it appends `(receiver, err)` to the response list. Currently, **it does NOT log the exception** — it silently swallows errors.
+
+4. **Test expectations examined (lines 164-175)**: `test_send_robust_fail` checks that:
+   - Errors are returned as `(receiver, error)` tuples
+   - The error has a `__traceback__` attribute that is a `TracebackType` instance
+   - This test likely **already passes** since Python 3 automatically attaches `__traceback__` to exceptions
+
+### Identified Bug
+The `send_robust` method in `dispatcher.py` catches exceptions but **does not log them**. This is a known Django issue — when signal receivers fail, errors are silently swallowed with no logging, making debugging extremely difficult. The fix should add `logging.exception()` or `logger.error()` in the `except` block (lines 210-211).
+
+### Current Code (the problematic section):
+```python
+except Exception as err:
+    responses.append((receiver, err))  # No logging!
+```
+
+### Expected Fix
+Add a logger and log the exception in the `except` block:
+```python
+import logging
+logger = logging.getLogger('django.dispatch')
+# In send_robust's except block:
+except Exception as err:
+    logger.error(
+        "Error calling %s in Signal.send_robust() (%s)",
+        receiver.__qualname__,
+        err,
+        exc_info=err,
+    )
+    responses.append((receiver, err))
+```
+
+### Status
+- **Analysis complete**: The bug has been identified in `send_robust()` at line 210-211 of `/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py`
+- **No code changes applied yet**: The fix needs to be implemented
+- **No imports for logging exist** at the top of `dispatcher.py` — a `logging` import will need to be added

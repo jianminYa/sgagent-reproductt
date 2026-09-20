@@ -1,0 +1,6 @@
+
+
+Let me start by understanding the project structure and finding the relevant Signal code.
+
+#TOOL_CALL find_files_containing
+{"keyword": "send_robust"}

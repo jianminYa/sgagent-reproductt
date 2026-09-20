@@ -1,0 +1,466 @@
+{
+  "status": "official Locator reproduction; pilot-scale evidence",
+  "experiment_id": "sgagent_claude35_paired_smoke10_full14",
+  "n": 10,
+  "completed": 10,
+  "completion_rate": 1.0,
+  "termination_reasons": {
+    "completed": 10
+  },
+  "official_repository_metrics": {
+    "file_accuracy": 1.0,
+    "class_accuracy": 0.9,
+    "function_accuracy": 0.4,
+    "line_accuracy": 0.6,
+    "line_iou": 0.25330326209737974
+  },
+  "paper_set_jaccard_metrics": {
+    "file_accuracy": 0.925,
+    "function_accuracy": 0.6333333333333333
+  },
+  "operational_metrics": {
+    "n": 10,
+    "completed": 10,
+    "official_repository_metrics": {
+      "file_accuracy": 1.0,
+      "class_accuracy": 0.9,
+      "function_accuracy": 0.4,
+      "line_accuracy": 0.6,
+      "line_iou": 0.25330326209737974
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": 0.925,
+      "function_accuracy": 0.6333333333333333
+    }
+  },
+  "completed_only_conditional_metrics": {
+    "n": 10,
+    "completed": 10,
+    "official_repository_metrics": {
+      "file_accuracy": 1.0,
+      "class_accuracy": 0.9,
+      "function_accuracy": 0.4,
+      "line_accuracy": 0.6,
+      "line_iou": 0.25330326209737974
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": 0.925,
+      "function_accuracy": 0.6333333333333333
+    }
+  },
+  "bootstrap_ci_95": {
+    "completion_rate": {
+      "n": 10,
+      "resamples": 10000,
+      "lower_2_5": 1.0,
+      "upper_97_5": 1.0
+    },
+    "official_repository_metrics": {
+      "file_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 1.0,
+        "upper_97_5": 1.0
+      },
+      "class_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.7,
+        "upper_97_5": 1.0
+      },
+      "function_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.1,
+        "upper_97_5": 0.7
+      },
+      "line_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.3,
+        "upper_97_5": 0.9
+      },
+      "line_iou": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.16545112403935933,
+        "upper_97_5": 0.34363997113997113
+      }
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.775,
+        "upper_97_5": 1.0
+      },
+      "function_accuracy": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 0.4166666666666667,
+        "upper_97_5": 0.8333333333333334
+      }
+    },
+    "tokens": {
+      "total": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 44783.7,
+        "upper_97_5": 149840.0
+      },
+      "input": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 43529.4,
+        "upper_97_5": 147405.2
+      },
+      "output": {
+        "n": 10,
+        "resamples": 10000,
+        "lower_2_5": 1523.0,
+        "upper_97_5": 2553.1
+      }
+    }
+  },
+  "tokens": {
+    "incomplete_trajectories": 0,
+    "total": {
+      "n": 10,
+      "mean": 89318.0,
+      "median": 61977.5,
+      "p25": 30848.5,
+      "p75": 113128.5,
+      "p95": 236109.3499999998,
+      "max": 320510.0
+    },
+    "input": {
+      "n": 10,
+      "mean": 87271.0,
+      "median": 59030.5,
+      "p25": 29439.5,
+      "p75": 110240.5,
+      "p95": 234495.0499999998,
+      "max": 319550.0
+    },
+    "output": {
+      "n": 10,
+      "mean": 2047.0,
+      "median": 2358.5,
+      "p25": 1154.5,
+      "p75": 2859.5,
+      "p95": 2966.6,
+      "max": 2972.0
+    }
+  },
+  "completed_only_tokens": {
+    "total": {
+      "n": 10,
+      "mean": 89318.0,
+      "median": 61977.5,
+      "p25": 30848.5,
+      "p75": 113128.5,
+      "p95": 236109.3499999998,
+      "max": 320510.0
+    },
+    "input": {
+      "n": 10,
+      "mean": 87271.0,
+      "median": 59030.5,
+      "p25": 29439.5,
+      "p75": 110240.5,
+      "p95": 234495.0499999998,
+      "max": 319550.0
+    },
+    "output": {
+      "n": 10,
+      "mean": 2047.0,
+      "median": 2358.5,
+      "p25": 1154.5,
+      "p75": 2859.5,
+      "p95": 2966.6,
+      "max": 2972.0
+    }
+  },
+  "calls": {
+    "locator_llm": {
+      "n": 10,
+      "mean": 7.8,
+      "median": 6.5,
+      "p25": 4.5,
+      "p75": 10.5,
+      "p95": 14.0,
+      "max": 14.0
+    },
+    "summarizer_llm": {
+      "n": 10,
+      "mean": 0.4,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 1.0,
+      "p95": 1.0,
+      "max": 1.0
+    },
+    "total_llm": {
+      "n": 10,
+      "mean": 8.2,
+      "median": 6.5,
+      "p25": 4.5,
+      "p75": 11.5,
+      "p95": 15.0,
+      "max": 15.0
+    },
+    "tools": {
+      "n": 10,
+      "mean": 6.2,
+      "median": 5.0,
+      "p25": 4.0,
+      "p75": 8.5,
+      "p95": 12.0,
+      "max": 12.0
+    },
+    "failed_tools": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "logical_llm": {
+      "n": 10,
+      "mean": 8.2,
+      "median": 6.5,
+      "p25": 4.5,
+      "p75": 11.5,
+      "p95": 15.0,
+      "max": 15.0
+    },
+    "http_attempts": {
+      "n": 10,
+      "mean": 8.3,
+      "median": 6.5,
+      "p25": 4.5,
+      "p75": 11.5,
+      "p95": 15.549999999999999,
+      "max": 16.0
+    },
+    "successful_responses": {
+      "n": 10,
+      "mean": 8.2,
+      "median": 6.5,
+      "p25": 4.5,
+      "p75": 11.5,
+      "p95": 15.0,
+      "max": 15.0
+    },
+    "failed_logical_llm": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "request_retries": {
+      "n": 10,
+      "mean": 0.1,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.5499999999999989,
+      "max": 1.0
+    }
+  },
+  "tool_output": {
+    "original_chars": {
+      "n": 10,
+      "mean": 66353.9,
+      "median": 17852.5,
+      "p25": 9793.0,
+      "p75": 52849.75,
+      "p95": 269513.3499999996,
+      "max": 435553.0
+    },
+    "returned_chars": {
+      "n": 10,
+      "mean": 66353.9,
+      "median": 17852.5,
+      "p25": 9793.0,
+      "p75": 52849.75,
+      "p95": 269513.3499999996,
+      "max": 435553.0
+    },
+    "original_bytes": {
+      "n": 10,
+      "mean": 66393.5,
+      "median": 17888.5,
+      "p25": 9847.0,
+      "p75": 52867.75,
+      "p95": 269545.7499999996,
+      "max": 435553.0
+    },
+    "returned_bytes": {
+      "n": 10,
+      "mean": 66393.5,
+      "median": 17888.5,
+      "p25": 9847.0,
+      "p75": 52867.75,
+      "p95": 269545.7499999996,
+      "max": 435553.0
+    },
+    "truncated_calls": {
+      "n": 10,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "trajectories_with_truncation": 0,
+    "guard_enabled_values": {
+      "False": 10
+    },
+    "guard_all_disabled": true
+  },
+  "tool_usage_patterns": {
+    "calls": {
+      "analyze_file_structure": 4,
+      "execute_shell_command_with_validation": 1,
+      "explore_directory": 1,
+      "extract_complete_method": 6,
+      "find_all_variables_named": 1,
+      "find_files_containing": 8,
+      "find_methods_by_name": 10,
+      "find_variable_usage": 3,
+      "read_file_lines": 24,
+      "search_code_with_context": 3,
+      "show_file_imports": 1
+    },
+    "failed_calls": {}
+  },
+  "latency_ms": {
+    "n": 10,
+    "mean": 223854.0103,
+    "median": 183830.34350000002,
+    "p25": 171044.77975,
+    "p75": 229081.638,
+    "p95": 435032.2892499998,
+    "max": 521514.808
+  },
+  "provider_failure": {
+    "count": 0,
+    "rate": 0.0,
+    "definition": "trajectory termination_reason == api_error; HTTP attempts are separately counted"
+  },
+  "trace_validation": {
+    "checked": 10,
+    "valid": 10,
+    "invalid": 0,
+    "note": "Inherited Phase2 successful trajectories may be legacy traces; no successful sample was rerun for migration.",
+    "invalid_examples": []
+  },
+  "token_extremes": {
+    "highest": [
+      {
+        "instance_id": "astropy__astropy-7746",
+        "total_tokens": 320510
+      },
+      {
+        "instance_id": "django__django-13768",
+        "total_tokens": 132953
+      },
+      {
+        "instance_id": "django__django-10914",
+        "total_tokens": 122676
+      },
+      {
+        "instance_id": "django__django-12184",
+        "total_tokens": 84486
+      },
+      {
+        "instance_id": "django__django-11630",
+        "total_tokens": 65164
+      }
+    ],
+    "lowest": [
+      {
+        "instance_id": "sympy__sympy-13647",
+        "total_tokens": 20131
+      },
+      {
+        "instance_id": "django__django-14534",
+        "total_tokens": 25545
+      },
+      {
+        "instance_id": "django__django-11001",
+        "total_tokens": 30235
+      },
+      {
+        "instance_id": "django__django-15814",
+        "total_tokens": 32689
+      },
+      {
+        "instance_id": "django__django-14667",
+        "total_tokens": 58791
+      }
+    ]
+  },
+  "cost_usd": null,
+  "cost_note": "qtapi pricing was not supplied; no fabricated cost estimate is reported.",
+  "model_metadata": {
+    "requested_models": {
+      "ep-64pmfvfo": 10
+    },
+    "returned_models": {
+      "ep-64pmfvfo": 10
+    },
+    "request_ids_recorded": 82,
+    "request_ids_unique": 82,
+    "request_ids_missing": 0,
+    "stop_reasons": {
+      "stop": 82
+    },
+    "protocols": {
+      "openai_chat_completions": 10
+    },
+    "providers": {
+      "qtapi_openai_chat_completions": 10
+    }
+  },
+  "evaluation_adapter": {
+    "predicted_ranges_as_synthetic_diff": true,
+    "official_evaluator_classes": "script.evaluation.PatchParser, ASTAnalyzer, MetricsCalculator",
+    "gold_source": "local Lite parquet patch; agent never receives patch"
+  },
+  "sampling": {
+    "actual_size": 10,
+    "method": "explicit paired-smoke instance IDs",
+    "requested_size": 10,
+    "seed": 20260915,
+    "instance_filter": [
+      "astropy__astropy-7746",
+      "django__django-10914",
+      "django__django-11001",
+      "django__django-11630",
+      "django__django-12184",
+      "django__django-13768",
+      "django__django-14534",
+      "django__django-14667",
+      "django__django-15814",
+      "sympy__sympy-13647"
+    ]
+  },
+  "dataset": {
+    "benchmark_split": "test",
+    "lite_path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "name": "SWE-bench Lite",
+    "revision": "local-commit-33a2cfe",
+    "row_count": 300,
+    "sort_rule": "instance_id ascending after repo de-duplication",
+    "source_note": "Local dataset/lite.parquet is authoritative for this reproduction run.",
+    "source_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench"
+  }
+}

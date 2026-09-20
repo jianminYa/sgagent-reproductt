@@ -1,0 +1,62 @@
+Search results for 'def as_real_imag' in file (showing first 5 matches):
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Lines 176-182:
+ 176:     def _eval_conjugate(self):
+ 177:         return self.func(self.args[0].conjugate())
+ 178: 
+ 179:     def as_real_imag(self, deep=True, **hints):
+ 180:         """
+ 181:         Returns this function as a complex coordinate.
+ 182:         """
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Lines 364-370:
+ 364:     def _eval_conjugate(self):
+ 365:         return self.func(self.args[0].conjugate())
+ 366: 
+ 367:     def as_real_imag(self, deep=True, **hints):
+ 368:         from sympy import cos, sin
+ 369:         if self.args[0].is_extended_real:
+ 370:             if deep:
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Lines 609-615:
+ 609:     def _eval_conjugate(self):
+ 610:         return self.func(self.args[0].conjugate())
+ 611: 
+ 612:     def as_real_imag(self, deep=True, **hints):
+ 613:         from sympy import cos, sin
+ 614:         if self.args[0].is_extended_real:
+ 615:             if deep:
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Lines 803-809:
+ 803:     def _eval_conjugate(self):
+ 804:         return self.func(self.args[0].conjugate())
+ 805: 
+ 806:     def as_real_imag(self, deep=True, **hints):
+ 807:         from sympy import cos, sin
+ 808:         if self.args[0].is_extended_real:
+ 809:             if deep:
+
+================================================================================
+
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Lines 904-910:
+ 904:     def _eval_rewrite_as_coth(self, arg, **kwargs):
+ 905:         return self._rewrite_reciprocal("_eval_rewrite_as_coth", arg)
+ 906: 
+ 907:     def as_real_imag(self, deep = True, **hints):
+ 908:         return (1 / self._reciprocal_of(self.args[0])).as_real_imag(deep, **hints)
+ 909: 
+ 910:     def _eval_conjugate(self):
+
+================================================================================
+

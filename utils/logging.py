@@ -24,7 +24,9 @@ def record_api_call(
         "response": response,
         "prompt_tokens": prompt_tokens,
         "completion_tokens": completion_tokens,
-        "total_tokens": (prompt_tokens or 0) + (completion_tokens or 0)
+        "total_tokens": (prompt_tokens + completion_tokens)
+        if prompt_tokens is not None and completion_tokens is not None else None,
+        "token_usage_incomplete": prompt_tokens is None or completion_tokens is None,
     }
     api_stats.append(api_call_record)
 

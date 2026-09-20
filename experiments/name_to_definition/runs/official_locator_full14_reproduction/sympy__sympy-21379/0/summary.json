@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_68601bb06a2b48d8a40da0dd393458d0",
+    "msg_a8b4108b700e4d0d8efb9d23fcad97a0",
+    "msg_c9781748c66d4f558341f03d9061ff46",
+    "msg_f46be8b824a54d7c9e47793a16f10c67",
+    "msg_3d17c3c09f72483db7ff6e7acb736ed4",
+    "msg_794b5461df374ea8a7553d8c92a1a758",
+    "msg_7e92aefeac0846c09ca32cdd8e52ee1d",
+    "msg_2f532ee2b49c46f6923df64cc0b1d220",
+    "msg_e43ec4e88e75426ba4302510ffe39e64",
+    "msg_3a8dbc1875e5402f8ffcb747844aa9ae",
+    "msg_5bf620d3314e417db34d1da91aa76c92",
+    "msg_09822e63eb4443eb857913146a365d11",
+    "msg_f9a681822e4141bd90dde678f9f921d1",
+    "msg_10a44fa7737143feacca62aac536f583",
+    "msg_9a0265145de54f4a8a71f480d15ef9de",
+    "msg_88a3687f978e4e338c7e86b960f5be2f",
+    "msg_e0d0cbfc36f841ddbc3d1e1c8e497291",
+    "msg_24d670fa42a64ec898bdac82742f4d04",
+    "msg_1d89c18be4ad468ea7b0d6ff2902f46e",
+    "msg_2d9207fe886141d4a56c3cb906b8434e",
+    "msg_f999edc7d81648fe9f11b7e873ba177d",
+    "msg_f4bd6cab4f8b412085d9147e1e4e79a8"
+  ],
+  "stop_reasons": {
+    "end_turn": 22
+  },
+  "locator_llm_calls": 20,
+  "tool_calls": 17,
+  "failed_tool_calls": 0,
+  "reflection_turns": 2,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 22,
+  "tool_result_chars": 23976,
+  "input_tokens": 113097,
+  "output_tokens": 11294,
+  "total_tokens": 124391,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 436830.469,
+  "graph_updates": 41,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-7dg_0tte/sympy/polys/polyutils.py",
+      "start_line": 268,
+      "end_line": 270
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-7dg_0tte/sympy/polys/polyutils.py",
+      "start_line": 4,
+      "end_line": 8
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/polys/polyutils.py",
+      "start_line": 268,
+      "end_line": 270
+    },
+    {
+      "file_path": "sympy/polys/polyutils.py",
+      "start_line": 4,
+      "end_line": 8
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21379-0-91d0193308",
+  "instance_id": "sympy__sympy-21379",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

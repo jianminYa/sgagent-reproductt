@@ -1,0 +1,2 @@
+#TOOL_CALL read_file_lines
+{ "file_path": "/tmp/sgagent-n2d-gwa0zdpk/django/db/models/sql/query.py", "start_line": 2083, "end_line": 2089 }

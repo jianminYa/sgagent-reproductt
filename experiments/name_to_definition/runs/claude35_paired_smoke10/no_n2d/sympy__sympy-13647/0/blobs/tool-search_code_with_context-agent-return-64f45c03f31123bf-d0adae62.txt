@@ -1,0 +1,26 @@
+Search results for '_eval_row_insert' in file (showing first 2 matches):
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 140-146:
+ 140:             return self[i, j] if i < row else self[i + 1, j]
+ 141:         return self._new(self.rows - 1, self.cols, entry)
+ 142: 
+ 143:     def _eval_row_insert(self, pos, other):
+ 144:         entries = list(self)
+ 145:         insert_pos = pos * self.cols
+ 146:         entries[insert_pos:insert_pos] = list(other)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py
+Lines 452-458:
+ 452:             raise ShapeError(
+ 453:                 "`self` and `other` must have the same number of columns.")
+ 454: 
+ 455:         return self._eval_row_insert(pos, other)
+ 456: 
+ 457:     def row_join(self, other):
+ 458:         """Concatenates two matrices along self's last and rhs's first column
+
+================================================================================
+

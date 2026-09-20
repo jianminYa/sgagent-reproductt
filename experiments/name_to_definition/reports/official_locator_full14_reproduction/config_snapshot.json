@@ -1,0 +1,70 @@
+{
+  "experiment_id": "sgagent_official_locator_full14_reproduction",
+  "upstream_remote": "https://github.com/iSEngLab/SGAgent.git",
+  "upstream_commit": "33a2cfe61d56494ab2d20a2b0c48c1f43e37b452",
+  "dataset": {
+    "name": "SWE-bench Lite",
+    "path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "row_count": 300,
+    "manifest": "experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json",
+    "seed": 20260915,
+    "sample_size": 45,
+    "sampling": "reuse the exact frozen 45-instance manifest from Phase 1"
+  },
+  "model": {
+    "model": "claude-sonnet-5",
+    "provider": "anthropic_qtapi_messages",
+    "base_url": "https://cdn.qtapi.net",
+    "credential_source": "/home/jql/.config/miclaude/env.qtapi",
+    "temperature": 0.0,
+    "transport_max_tokens": 8192,
+    "experiment_output_token_limit": null
+  },
+  "workflow": {
+    "source": "public SGAgent workflow.graph/create_workflow",
+    "prompt_source": "experiments.name_to_definition.full_tool_prompt + prompts.locator.py",
+    "tool_count": 14,
+    "native_tools": false,
+    "protocol": "textual #TOOL_CALL",
+    "graph_recursion_limit": 150,
+    "stop": "after first parseable Locator output; do not enter Suggester/Fixer",
+    "tool_names": [
+      "explore_directory", "analyze_file_structure", "find_files_containing",
+      "get_code_relationships", "find_methods_by_name", "extract_complete_method",
+      "find_class_constructor", "list_class_attributes", "show_file_imports",
+      "find_variable_usage", "find_all_variables_named", "read_file_lines",
+      "search_code_with_context", "execute_shell_command_with_validation"
+    ]
+  },
+  "smoke": {
+    "manifest": "experiments/name_to_definition/manifests/full14_smoke_8_seed_20260915.json",
+    "selection": "8 fixed Lite instances with explicit function/method/class names",
+    "output_root": "experiments/name_to_definition/runs/official_locator_full14_smoke",
+    "retry_policy": "failed provider attempts are retained; resume retries only non-completed attempts; smoke recovered two initial HTTP 524 attempts"
+  },
+  "runtime": {
+    "python": "3.13.13",
+    "platform": "Linux ARM",
+    "langchain": "1.4.0",
+    "langchain_openai": "1.6.2",
+    "langgraph": "1.2.11",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "tree_sitter": "0.26.0",
+    "tree_sitter_language_pack": "1.20.0"
+  },
+  "run_command_without_secret": "source /home/jql/.config/miclaude/env.qtapi; export OPENAI_API_KEY=\"${ANTHROPIC_AUTH_TOKEN:-$ANTHROPIC_API_KEY}\"; export OPENAI_BASE_URL=\"$ANTHROPIC_BASE_URL\"; export OPENAI_MODEL=\"$ANTHROPIC_MODEL\"; python -m experiments.name_to_definition.official_locator --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --experiment-id sgagent_official_locator_full14_reproduction --workers 4 --timeout 300 --output-root experiments/name_to_definition/runs/official_locator_full14_reproduction --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar",
+  "evaluation_command": "python -m experiments.name_to_definition.official_evaluate --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --runs experiments/name_to_definition/runs/official_locator_full14_reproduction --lite dataset/lite.parquet --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar --output experiments/name_to_definition/reports/official_locator_full14_reproduction --experiment-id sgagent_official_locator_full14_reproduction",
+  "comparison_command": "python -m experiments.name_to_definition.compare_official_runs --five-report experiments/name_to_definition/reports/official_locator_reproduction/aggregate_report.json --full-report experiments/name_to_definition/reports/official_locator_full14_reproduction/aggregate_report.json --output experiments/name_to_definition/reports/official_locator_full14_reproduction/comparison",
+  "report_outputs": {
+    "aggregate": "experiments/name_to_definition/reports/official_locator_full14_reproduction/aggregate_report.json",
+    "instances": "experiments/name_to_definition/reports/official_locator_full14_reproduction/instance_results.jsonl",
+    "comparison": "experiments/name_to_definition/reports/official_locator_full14_reproduction/comparison/comparison_report.md",
+    "gap_report": "experiments/name_to_definition/reports/official_locator_full14_reproduction/reproduction_gap_report.md"
+  },
+  "security": {
+    "api_key_recorded": false,
+    "trajectory_redaction_enabled": true,
+    "request_metadata_recorded": ["requested_model", "returned_model", "request_id", "stop_reason"]
+  }
+}

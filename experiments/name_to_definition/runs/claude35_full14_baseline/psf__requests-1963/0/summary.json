@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "6c90e800-b581-4b67-805d-fe08675ed725",
+    "80f18973-bc50-4438-a8e1-31e52a9d8658",
+    "4004f107-db09-4606-bc21-b5cf15fe0452"
+  ],
+  "stop_reasons": {
+    "stop": 3
+  },
+  "locator_llm_calls": 3,
+  "tool_calls": 1,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 3,
+  "tool_result_chars": 5039,
+  "tool_original_chars": 5039,
+  "tool_returned_chars": 5039,
+  "truncated_tool_calls": 0,
+  "input_tokens": 11294,
+  "output_tokens": 930,
+  "total_tokens": 12224,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 30716.087,
+  "graph_updates": 4,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-tskbk4fb/requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-tskbk4fb/requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-tskbk4fb/requests/sessions.py",
+      "start_line": 181,
+      "end_line": 184
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 91,
+      "end_line": 91
+    },
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 102,
+      "end_line": 102
+    },
+    {
+      "file_path": "requests/sessions.py",
+      "start_line": 181,
+      "end_line": 184
+    }
+  ],
+  "run_id": "sgagent-official-psf__requests-1963-0-27d8633b8a",
+  "instance_id": "psf__requests-1963",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

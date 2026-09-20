@@ -1,0 +1,26 @@
+Search results for 'FILE_UPLOAD_PERMISSIONS' in file (showing first 2 matches):
+
+File: /tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py
+Lines 190-196:
+ 190:             self.__dict__.pop('location', None)
+ 191:         elif setting == 'MEDIA_URL':
+ 192:             self.__dict__.pop('base_url', None)
+ 193:         elif setting == 'FILE_UPLOAD_PERMISSIONS':
+ 194:             self.__dict__.pop('file_permissions_mode', None)
+ 195:         elif setting == 'FILE_UPLOAD_DIRECTORY_PERMISSIONS':
+ 196:             self.__dict__.pop('directory_permissions_mode', None)
+
+================================================================================
+
+File: /tmp/sgagent-n2d-0hngtli7/django/core/files/storage.py
+Lines 214-220:
+ 214: 
+ 215:     @cached_property
+ 216:     def file_permissions_mode(self):
+ 217:         return self._value_or_setting(self._file_permissions_mode, settings.FILE_UPLOAD_PERMISSIONS)
+ 218: 
+ 219:     @cached_property
+ 220:     def directory_permissions_mode(self):
+
+================================================================================
+

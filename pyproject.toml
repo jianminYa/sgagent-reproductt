@@ -15,8 +15,17 @@ dependencies = [
     "pyarrow>=21.0.0",
     "pydantic-settings>=2.11.0",
     "pygments>=2.19.2",
-    "tree-sitter-languages>=1.10.2",
+    "tree-sitter-language-pack>=0.9.0",
     "typer>=0.19.2",
 ]
 
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "prompt", "settings", "run_batch", "run_ablation"]
+
+[tool.setuptools.packages.find]
+include = ["agent*", "experiments*", "kg*", "models*", "prompts*", "retriever*", "router*", "tools*", "utils*", "workflow*"]
 

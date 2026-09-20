@@ -1,0 +1,4 @@
+
+
+#TOOL_CALL find_variable_usage
+{ "file": "/tmp/sgagent-n2d-gf2rd5i8/django/db/models/sql/compiler.py", "variable_name": "ordering_parts" }

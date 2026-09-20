@@ -1,0 +1,49 @@
+Each line below indicates a class, including class_name and absolute_path:
+re /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+im /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+sign /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+Abs /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+arg /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+conjugate /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+transpose /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+adjoint /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+polar_lift /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+periodic_argument /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+principal_branch /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/complexes.py
+Each line below indicates a method, including method_name, full_qualifie_ name and param list:
+eval  sympy.functions.elementary.complexes.re.eval  [{'name': 'cls', 'type': None}, {'name': 'arg', 'type': None}]
+as_real_imag  sympy.functions.elementary.complexes.re.as_real_imag  [{'name': 'self', 'type': None}, {'name': 'deep', 'type': None}]
+_eval_derivative  sympy.functions.elementary.complexes.re._eval_derivative  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}]
+_eval_rewrite_as_im  sympy.functions.elementary.complexes.re._eval_rewrite_as_im  [{'name': 'self', 'type': None}, {'name': 'arg', 'type': None}]
+_eval_is_algebraic  sympy.functions.elementary.complexes.re._eval_is_algebraic  [{'name': 'self', 'type': None}]
+_eval_is_zero  sympy.functions.elementary.complexes.re._eval_is_zero  [{'name': 'self', 'type': None}]
+_eval_is_finite  sympy.functions.elementary.complexes.re._eval_is_finite  [{'name': 'self', 'type': None}]
+_eval_is_complex  sympy.functions.elementary.complexes.re._eval_is_complex  [{'name': 'self', 'type': None}]
+_sage_  sympy.functions.elementary.complexes.re._sage_  [{'name': 'self', 'type': None}]
+eval  sympy.functions.elementary.complexes.im.eval  [{'name': 'cls', 'type': None}, {'name': 'arg', 'type': None}]
+as_real_imag  sympy.functions.elementary.complexes.im.as_real_imag  [{'name': 'self', 'type': None}, {'name': 'deep', 'type': None}]
+_eval_derivative  sympy.functions.elementary.complexes.im._eval_derivative  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}]
+_sage_  sympy.functions.elementary.complexes.im._sage_  [{'name': 'self', 'type': None}]
+_eval_rewrite_as_re  sympy.functions.elementary.complexes.im._eval_rewrite_as_re  [{'name': 'self', 'type': None}, {'name': 'arg', 'type': None}]
+_eval_is_algebraic  sympy.functions.elementary.complexes.im._eval_is_algebraic  [{'name': 'self', 'type': None}]
+_eval_is_zero  sympy.functions.elementary.complexes.im._eval_is_zero  [{'name': 'self', 'type': None}]
+_eval_is_finite  sympy.functions.elementary.complexes.im._eval_is_finite  [{'name': 'self', 'type': None}]
+_eval_is_complex  sympy.functions.elementary.complexes.im._eval_is_complex  [{'name': 'self', 'type': None}]
+doit  sympy.functions.elementary.complexes.sign.doit  [{'name': 'self', 'type': None}]
+eval  sympy.functions.elementary.complexes.sign.eval  [{'name': 'cls', 'type': None}, {'name': 'arg', 'type': None}]
+_eval_Abs  sympy.functions.elementary.complexes.sign._eval_Abs  [{'name': 'self', 'type': None}]
+_eval_conjugate  sympy.functions.elementary.complexes.sign._eval_conjugate  [{'name': 'self', 'type': None}]
+_eval_derivative  sympy.functions.elementary.complexes.sign._eval_derivative  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}]
+_eval_is_nonnegative  sympy.functions.elementary.complexes.sign._eval_is_nonnegative  [{'name': 'self', 'type': None}]
+_eval_is_nonpositive  sympy.functions.elementary.complexes.sign._eval_is_nonpositive  [{'name': 'self', 'type': None}]
+_eval_is_imaginary  sympy.functions.elementary.complexes.sign._eval_is_imaginary  [{'name': 'self', 'type': None}]
+_eval_is_integer  sympy.functions.elementary.complexes.sign._eval_is_integer  [{'name': 'self', 'type': None}]
+_eval_is_zero  sympy.functions.elementary.complexes.sign._eval_is_zero  [{'name': 'self', 'type': None}]
+_eval_power  sympy.functions.elementary.complexes.sign._eval_power  [{'name': 'self', 'type': None}, {'name': 'other', 'type': None}]
+_eval_nseries  sympy.functions.elementary.complexes.sign._eval_nseries  [{'name': 'self', 'type': None}, {'name': 'x', 'type': None}, {'name': 'n', 'type': None}, {'name': 'logx', 'type': None}, {'name': 'cdir', 'type': None}]
+_sage_  sympy.functions.elementary.complexes.sign._sage_  [{'name': 'self', 'type': None}]
+_eval_rewrite_as_Piecewise  sympy.functions.elementary.complexes.sign._eval_rewrite_as_Piecewise  [{'name': 'self', 'type': None}, {'name': 'arg', 'type': None}]
+_eval_rewrite_as_Heaviside  sympy.functions.elementary.complexes.sign._eval_rewrite_as_Heaviside  [{'name': 'self', 'type': None}, {'name': 'arg', 'type': None}]
+_eval_rewr
+
+... [输出被截断，原始长度: 12136 字符，显示前 5000 字符]

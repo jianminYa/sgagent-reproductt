@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_33f24f38497e44b6bd8c01cf4b966a2a",
+    "msg_3a061a3918a64378aa949fa7a08f3b0f",
+    "msg_0f3e385280364616a96684191cf42d88",
+    "msg_35b6d125a9274be89e15c525996b701c"
+  ],
+  "stop_reasons": {
+    "end_turn": 4
+  },
+  "locator_llm_calls": 4,
+  "tool_calls": 3,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 4,
+  "tool_result_chars": 440761,
+  "input_tokens": 9483,
+  "output_tokens": 446,
+  "total_tokens": 9929,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 178818.502,
+  "graph_updates": 7,
+  "termination_reason": "api_error",
+  "raw_locations": [],
+  "ranked_locations": [],
+  "run_id": "sgagent-official-astropy__astropy-7746-0-c0308f0bd8",
+  "instance_id": "astropy__astropy-7746",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_smoke"
+}

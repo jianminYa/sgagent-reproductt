@@ -1,0 +1,13 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-ratox0tr/django/forms/boundfield.py",
+            "start_line": 278,
+            "end_line": 280
+        }
+    ]
+}
+```

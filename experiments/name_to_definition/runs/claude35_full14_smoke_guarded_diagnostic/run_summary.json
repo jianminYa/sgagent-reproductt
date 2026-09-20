@@ -1,0 +1,87 @@
+[
+  {
+    "instance_id": "astropy__astropy-7746",
+    "skipped": true
+  },
+  {
+    "instance_id": "django__django-11001",
+    "skipped": true
+  },
+  {
+    "instance_id": "django__django-12184",
+    "skipped": true
+  },
+  {
+    "instance_id": "django__django-13768",
+    "skipped": true
+  },
+  {
+    "instance_id": "django__django-14534",
+    "skipped": true
+  },
+  {
+    "instance_id": "django__django-14667",
+    "skipped": true
+  },
+  {
+    "requested_model": "ep-64pmfvfo",
+    "returned_models": [
+      "ep-64pmfvfo"
+    ],
+    "request_ids": [
+      "e8c55235-f392-47a2-9190-0c9e883e51ee",
+      "c4bec04a-2455-4118-b68c-225213028921",
+      "32ef9f13-9533-4286-8f8b-154b3084623d",
+      "f12f5867-7c85-4776-9451-16f8605ce470",
+      "4fae5d32-4f81-4550-ba01-6a0814a91a00",
+      "36d812cc-ee60-4b39-b696-0fab2027f71c",
+      "0239503d-c4c9-46c1-84bd-19a88bfdb9ab",
+      "0dad14a5-9ca8-48c6-9117-a2121aaa7507",
+      "7ca0b9c6-3f86-4070-95fd-e3431bb986a5",
+      "d1378e27-944e-4fe1-a1ba-b1273c303f7b"
+    ],
+    "stop_reasons": {
+      "stop": 10
+    },
+    "locator_llm_calls": 9,
+    "tool_calls": 7,
+    "failed_tool_calls": 0,
+    "reflection_turns": 1,
+    "summarizer_llm_calls": 1,
+    "total_llm_calls": 10,
+    "tool_result_chars": 10916,
+    "tool_original_chars": 10916,
+    "tool_returned_chars": 10916,
+    "truncated_tool_calls": 0,
+    "input_tokens": 53667,
+    "output_tokens": 2703,
+    "total_tokens": 56370,
+    "token_usage_incomplete": false,
+    "wall_clock_ms": 141209.794,
+    "graph_updates": 17,
+    "termination_reason": "completed",
+    "raw_locations": [
+      {
+        "file_path": "django/db/models/sql/query.py",
+        "start_line": 751,
+        "end_line": 751
+      }
+    ],
+    "ranked_locations": [
+      {
+        "file_path": "django/db/models/sql/query.py",
+        "start_line": 751,
+        "end_line": 751
+      }
+    ],
+    "run_id": "sgagent-official-django__django-15814-1-4c0f37a915",
+    "instance_id": "django__django-15814",
+    "trajectory_path": "experiments/name_to_definition/runs/claude35_full14_smoke/django__django-15814/1/trajectory.jsonl",
+    "model": "ep-64pmfvfo",
+    "experiment_id": "sgagent_claude35_full14_smoke"
+  },
+  {
+    "instance_id": "sympy__sympy-13647",
+    "skipped": true
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": null,
+  "input_tokens": null,
+  "later_round_token_usage": [],
+  "locations": [],
+  "locator_llm_calls": 0,
+  "output_tokens": null,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "timeout",
+  "token_usage_incomplete": true,
+  "tool_calls": 0,
+  "tool_result_chars": 0,
+  "total_llm_calls": 0,
+  "total_tokens": null,
+  "wall_clock_ms": 90386.977,
+  "run_id": "name_to_definition_phase1-sympy__sympy-18199-n2d-0e76b99235",
+  "arm": "n2d",
+  "instance_id": "sympy__sympy-18199"
+}

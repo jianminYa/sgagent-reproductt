@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{\"file\": \"/tmp/sgagent-n2d-4st5urrw/sympy/core/power.py\", \"full_qualified_name\": \"sympy.core.power.Pow._eval_subs\"}"]

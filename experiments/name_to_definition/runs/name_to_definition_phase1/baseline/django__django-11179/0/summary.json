@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 449,
+    "output_tokens": 84,
+    "reasoning_tokens": null,
+    "total_tokens": 533
+  },
+  "input_tokens": 50329,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2699,
+      "output_tokens": 17,
+      "reasoning_tokens": null,
+      "total_tokens": 2716
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3443,
+      "output_tokens": 18,
+      "reasoning_tokens": null,
+      "total_tokens": 3461
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3510,
+      "output_tokens": 21,
+      "reasoning_tokens": null,
+      "total_tokens": 3531
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3639,
+      "output_tokens": 75,
+      "reasoning_tokens": null,
+      "total_tokens": 3714
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3755,
+      "output_tokens": 65,
+      "reasoning_tokens": null,
+      "total_tokens": 3820
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4155,
+      "output_tokens": 68,
+      "reasoning_tokens": null,
+      "total_tokens": 4223
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4509,
+      "output_tokens": 61,
+      "reasoning_tokens": null,
+      "total_tokens": 4570
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4961,
+      "output_tokens": 37,
+      "reasoning_tokens": null,
+      "total_tokens": 4998
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5500,
+      "output_tokens": 57,
+      "reasoning_tokens": null,
+      "total_tokens": 5557
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6482,
+      "output_tokens": 71,
+      "reasoning_tokens": null,
+      "total_tokens": 6553
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 7227,
+      "output_tokens": 297,
+      "reasoning_tokens": null,
+      "total_tokens": 7524
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 871,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 23252,
+  "total_llm_calls": 12,
+  "total_tokens": 51200,
+  "wall_clock_ms": 64757.618,
+  "run_id": "name_to_definition_phase1-django__django-11179-baseline-fc12c61d29",
+  "arm": "baseline",
+  "instance_id": "django__django-11179"
+}

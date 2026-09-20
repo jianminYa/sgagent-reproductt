@@ -1,0 +1,17 @@
+
+
+#REFLECT
+Now I need to understand the flow. When `subs({1: 1.0})` is called on `exp(sinh(Piecewise((x, y > x), (y, True)) / z))`:
+
+1. The `subs` method walks the expression tree
+2. When it reaches the inner expression, it tries to substitute `1` with `1.0`
+3. During reconstruction, `exp.eval()` is called with the argument
+4. The argument is `sinh(Piecewise(...) / z)` which is not Add, not Mul, etc.
+5. But wait - the issue might be in how `Pow._eval_subs` handles things
+
+The key clue is that the error happens only after clearing cache and with real symbols. This suggests that during `subs`, some assumption query triggers a code path that tries to use polynomial machinery.
+
+Let me look at `Pow._eval_subs` since `exp._eval_subs` delegates to it.
+
+#TOOL_CALL find_methods_by_name
+{"name": "_eval_subs"}

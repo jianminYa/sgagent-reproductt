@@ -1,0 +1,8 @@
+
+
+Let me analyze this bug step by step. The issue is about `QuerySet.defer()` not properly clearing deferred fields when chaining with `only()`.
+
+#TOOL_CALL find_files_containing
+{ "keyword": "def defer" }
+
+<br>

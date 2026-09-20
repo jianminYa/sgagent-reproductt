@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "bf1d9558-3dc6-4621-b7a7-7a5ded7ebc7e",
+    "d56f4a85-7749-4aae-bdea-56b9d8040c81",
+    "687570fc-5c05-4475-a560-ae1b2dafd520",
+    "79dcce8f-2145-4241-996a-09e8a14ada1c",
+    "cebb4b3d-7210-4f67-ade5-0ebc3aec8ddb",
+    "0ff4823e-2b4e-47a8-b6f2-a743f73f61cf",
+    "5cc99a44-1cb0-4708-8dbe-bc1bc4df410e",
+    "3a88e912-9551-486d-956d-7d51647a4e13",
+    "8dd0fe49-7393-4c3b-8f4c-72368f2587ba",
+    "387431c3-7e3b-475d-9a83-0a4f2cc88a5c",
+    "ac331aee-65fb-4f79-b452-9a0ed211b621",
+    "d45641eb-6c38-442f-9ff3-fd3e4492806f",
+    "f080e954-6708-436c-8423-08d275d61f6c",
+    "26d3e711-93bb-42a8-8781-c2f0bab00374",
+    "242040e3-7721-44d3-9aa0-31691926aebe",
+    "e22345b9-5388-4d1b-9c90-2e162e39f4fa",
+    "1bbcea25-0875-4a97-bf2f-8a36843afb50",
+    "4d63faaf-2fc4-4461-9773-4f78f1ce7c1e",
+    "08458f39-c15b-4c16-adcd-560db9899f73",
+    "3e220c92-7385-44ec-9aeb-fa6f0581283c"
+  ],
+  "stop_reasons": {
+    "stop": 20
+  },
+  "locator_llm_calls": 18,
+  "tool_calls": 16,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 20,
+  "tool_result_chars": 18298,
+  "tool_original_chars": 18298,
+  "tool_returned_chars": 18298,
+  "truncated_tool_calls": 0,
+  "input_tokens": 106193,
+  "output_tokens": 5242,
+  "total_tokens": 111435,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 175976.948,
+  "graph_updates": 38,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-1y8__lye/xarray/core/formatting.py",
+      "start_line": 271,
+      "end_line": 291
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-1y8__lye/xarray/core/formatting.py",
+      "start_line": 342,
+      "end_line": 356
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-1y8__lye/xarray/core/formatting.py",
+      "start_line": 294,
+      "end_line": 296
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 271,
+      "end_line": 291
+    },
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 342,
+      "end_line": 356
+    },
+    {
+      "file_path": "xarray/core/formatting.py",
+      "start_line": 294,
+      "end_line": 296
+    }
+  ],
+  "run_id": "sgagent-official-pydata__xarray-4248-1-c6ac8fdf17",
+  "instance_id": "pydata__xarray-4248",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

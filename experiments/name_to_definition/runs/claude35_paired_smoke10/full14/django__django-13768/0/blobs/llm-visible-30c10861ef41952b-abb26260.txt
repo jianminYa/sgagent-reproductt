@@ -1,0 +1,18 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py",
+            "start_line": 1,
+            "end_line": 6
+        },
+        {
+            "file_path": "/tmp/sgagent-n2d-b9dtj6zl/django/dispatch/dispatcher.py",
+            "start_line": 210,
+            "end_line": 211
+        }
+    ]
+}
+```

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "claude-sonnet-5",
+  "returned_models": [
+    "claude-sonnet-5"
+  ],
+  "request_ids": [
+    "msg_552ccbabda5c4efd8200c06d4c59db64",
+    "msg_b16668fb2ce64ff7bc788e9539dad854",
+    "msg_9cb63ed144a14fbeab9788e0eb3acfa6",
+    "msg_8ab51c7eef3a4f4bbf14a19ee5e2aa64",
+    "msg_7c5a02813b804223a363407b45a10c78",
+    "msg_1363a4eb1f424957b611e067f14161e7",
+    "msg_abe00553d4cc41508cc3a37a9a973f0b"
+  ],
+  "stop_reasons": {
+    "end_turn": 7
+  },
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 7,
+  "tool_result_chars": 72918,
+  "input_tokens": 26874,
+  "output_tokens": 1825,
+  "total_tokens": 28699,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 121894.931,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-zko_fua9/django/forms/boundfield.py",
+      "start_line": 279,
+      "end_line": 280
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/forms/boundfield.py",
+      "start_line": 279,
+      "end_line": 280
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14534-0-03aff31f6c",
+  "instance_id": "django__django-14534",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages",
+  "experiment_id": "sgagent_official_locator_full14_reproduction"
+}

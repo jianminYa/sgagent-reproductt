@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 11,
+  "tool_calls": 9,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 12,
+  "tool_result_chars": 8111,
+  "input_tokens": 97342,
+  "output_tokens": 5177,
+  "total_tokens": 102519,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 219159.247,
+  "graph_updates": 22,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-qndijix5/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 13,
+      "end_line": 17
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-qndijix5/lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 29,
+      "end_line": 32
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 13,
+      "end_line": 17
+    },
+    {
+      "file_path": "lib/mpl_toolkits/axes_grid1/axes_grid.py",
+      "start_line": 29,
+      "end_line": 32
+    }
+  ],
+  "run_id": "sgagent-official-matplotlib__matplotlib-26020-0-acc70c9a06",
+  "instance_id": "matplotlib__matplotlib-26020",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

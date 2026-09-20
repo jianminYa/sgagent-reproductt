@@ -1,0 +1,13 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-3bxshj3x/sympy/matrices/common.py",
+            "start_line": 81,
+            "end_line": 92
+        }
+    ]
+}
+```

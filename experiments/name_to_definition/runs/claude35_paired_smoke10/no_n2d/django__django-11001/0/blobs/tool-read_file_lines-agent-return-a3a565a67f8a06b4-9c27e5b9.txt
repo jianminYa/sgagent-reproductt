@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-3bud_650/django/db/models/sql/compiler.py
+Total lines: 1507
+Showing lines 316-365:
+
+ 316: 
+ 317:             if not self.query.extra or col not in self.query.extra:
+ 318:                 # 'col' is of the form 'field' or 'field1__field2' or
+ 319:                 # '-field1__field2__field', etc.
+ 320:                 order_by.extend(self.find_ordering_name(
+ 321:                     field, self.query.get_meta(), default_order=asc))
+ 322:             else:
+ 323:                 if col not in self.query.extra_select:
+ 324:                     order_by.append((
+ 325:                         OrderBy(RawSQL(*self.query.extra[col]), descending=descending),
+ 326:                         False))
+ 327:                 else:
+ 328:                     order_by.append((
+ 329:                         OrderBy(Ref(col, RawSQL(*self.query.extra[col])), descending=descending),
+ 330:                         True))
+ 331:         result = []
+ 332:         seen = set()
+ 333: 
+ 334:         for expr, is_ref in order_by:
+ 335:             resolved = expr.resolve_expression(self.query, allow_joins=True, reuse=None)
+ 336:             if self.query.combinator:
+ 337:                 src = resolved.get_source_expressions()[0]
+ 338:                 # Relabel order by columns to raw numbers if this is a combined
+ 339:                 # query; necessary since the columns can't be referenced by the
+ 340:                 # fully qualified name and the simple column names may collide.
+ 341:                 for idx, (sel_expr, _, col_alias) in enumerate(self.select):
+ 342:                     if is_ref and col_alias == src.refs:
+ 343:                         src = src.source
+ 344:                     elif col_alias:
+ 345:                         continue
+ 346:                     if src == sel_expr:
+ 347:                         resolved.set_source_expressions([RawSQL('%d' % (idx + 1), ())])
+ 348:                         break
+ 349:                 else:
+ 350:                     raise DatabaseError('ORDER BY term does not match any column in the result set.')
+ 351:             sql, params = self.compile(resolved)
+ 352:             # Don't add the same column twice, but the order direction is
+ 353:             # not taken into account so we strip it. When this entire method
+ 354:             # is refactored into expressions, then we can check each part as we
+ 355:             # generate it.
+ 356:             without_ordering = self.ordering_parts.search(sql).group(1)
+ 357:             params_hash = make_hashable(params)
+ 358:             if (without_ordering, params_hash) in seen:
+ 359:                 continue
+ 360:             seen.add((without_ordering, params_hash))
+ 361:             result.append((resolved, (sql, params, is_ref)))
+ 362:         return result
+ 363: 
+ 364:     def get_extra_select(self, order_by, select):
+ 365:         extra_select = []

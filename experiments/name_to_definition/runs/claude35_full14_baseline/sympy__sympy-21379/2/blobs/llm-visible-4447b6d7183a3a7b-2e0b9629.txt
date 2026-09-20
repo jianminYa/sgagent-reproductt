@@ -1,0 +1,7 @@
+
+
+#REFLECT
+Let me trace the actual error path more carefully. The error is "Piecewise generators do not make sense" which comes from `polytools.py`. Let me look at where this error is raised.
+
+#TOOL_CALL find_files_containing
+{"keyword": "Piecewise generators do not make sense"}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "locator_llm_calls": 16,
+  "tool_calls": 14,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 18,
+  "tool_result_chars": 19624,
+  "input_tokens": 76503,
+  "output_tokens": 12537,
+  "total_tokens": 89040,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 338202.9,
+  "graph_updates": 34,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+      "start_line": 99,
+      "end_line": 104
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+      "start_line": 129,
+      "end_line": 137
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+      "start_line": 139,
+      "end_line": 154
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/forms.py",
+      "start_line": 520,
+      "end_line": 522
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-gvmnfleu/django/forms/boundfield.py",
+      "start_line": 252,
+      "end_line": 256
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/forms/boundfield.py",
+      "start_line": 99,
+      "end_line": 104
+    },
+    {
+      "file_path": "django/forms/boundfield.py",
+      "start_line": 129,
+      "end_line": 137
+    },
+    {
+      "file_path": "django/forms/boundfield.py",
+      "start_line": 139,
+      "end_line": 154
+    },
+    {
+      "file_path": "django/forms/forms.py",
+      "start_line": 520,
+      "end_line": 522
+    },
+    {
+      "file_path": "django/forms/boundfield.py",
+      "start_line": 252,
+      "end_line": 256
+    }
+  ],
+  "run_id": "sgagent-official-django__django-16229-0-b54dd133bd",
+  "instance_id": "django__django-16229",
+  "model": "claude-sonnet-5",
+  "provider": "anthropic_qtapi_messages"
+}

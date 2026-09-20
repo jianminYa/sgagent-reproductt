@@ -1,0 +1,1 @@
+['import inspect\n', 'import types\n', 'from collections import defaultdict\n', 'from itertools import chain\n', '\nfrom django.apps import apps\n', 'from django.core.checks import Error, Tags, register\n', '\n    from django.db.models import signals\n']

@@ -1,0 +1,21 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py
+Total lines: 1748
+Showing lines 179-195:
+
+ 179:     def as_real_imag(self, deep=True, **hints):
+ 180:         """
+ 181:         Returns this function as a complex coordinate.
+ 182:         """
+ 183:         from sympy import cos, sin
+ 184:         if self.args[0].is_extended_real:
+ 185:             if deep:
+ 186:                 hints['complex'] = False
+ 187:                 return (self.expand(deep, **hints), S.Zero)
+ 188:             else:
+ 189:                 return (self, S.Zero)
+ 190:         if deep:
+ 191:             re, im = self.args[0].expand(deep, **hints).as_real_imag()
+ 192:         else:
+ 193:             re, im = self.args[0].as_real_imag()
+ 194:         return (sinh(re)*cos(im), cosh(re)*sin(im))
+ 195: 

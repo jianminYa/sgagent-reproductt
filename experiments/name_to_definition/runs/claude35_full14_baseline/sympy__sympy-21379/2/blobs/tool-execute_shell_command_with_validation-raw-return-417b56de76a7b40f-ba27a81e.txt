@@ -1,0 +1,1 @@
+Error executing command 'cat -n /tmp/sgagent-n2d-4st5urrw/sympy/functions/elementary/hyperbolic.py | head -n 195 | tail -n 20': OfficialTrace.event() got multiple values for argument 'phase'

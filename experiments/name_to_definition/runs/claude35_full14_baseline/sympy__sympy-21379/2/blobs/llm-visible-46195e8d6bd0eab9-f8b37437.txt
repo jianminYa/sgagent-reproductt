@@ -1,0 +1,11 @@
+
+
+#REFLECT
+The problem is about `exp(sinh(Piecewise(...) / z))` failing with `PolynomialError` when using `subs({1: 1.0})` with real symbols after clearing cache. The error is "Piecewise generators do not make sense".
+
+The key insight is that during `subs`, the expression gets reconstructed, and during that reconstruction, `exp` tries to simplify its argument. When `sinh` has a Piecewise argument, and the symbols are real, some code path tries to use polynomial machinery on the Piecewise.
+
+Let me look at the `exp` class's `eval` method, which is the classmethod that gets called during construction.
+
+#TOOL_CALL find_files_containing
+{"keyword": "class exp_polar"}

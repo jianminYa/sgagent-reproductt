@@ -1,0 +1,56 @@
+{
+  "policy": {
+    "logical_request_retry": true,
+    "max_additional_retries": 3,
+    "backoff_seconds": [15.0, 30.0, 60.0],
+    "retryable_statuses": [502, 503, 504],
+    "output_guard": false,
+    "tool_output_rewrite": false,
+    "context_class_threshold_chars": 32000
+  },
+  "instances": [
+    {
+      "instance_id": "matplotlib__matplotlib-26020",
+      "new_attempt": 2,
+      "initial_failure_attempt": 1,
+      "failure_phase": "locator",
+      "failure_logical_call_index": 9,
+      "failure_http_attempt_index": 1,
+      "failure_status": 502,
+      "failure_request_body_chars": 55379,
+      "failure_context_class": "large",
+      "retry_statuses": [502, 200],
+      "final_termination": "completed",
+      "evidence": "new attempt 2 trajectory.jsonl llm_http_attempt events and llm_request request_body_ref"
+    },
+    {
+      "instance_id": "sympy__sympy-21379",
+      "new_attempt": 2,
+      "initial_failure_attempt": 1,
+      "failure_phase": "locator",
+      "failure_logical_call_indices": [10, 24],
+      "failure_http_attempt_index": 1,
+      "failure_status": 502,
+      "failure_request_body_chars": [432638, 392713],
+      "failure_context_class": "large",
+      "retry_statuses": [502, 200, 502, 200],
+      "final_termination": "completed",
+      "evidence": "new attempt 2 trajectory.jsonl llm_http_attempt events and llm_request request_body_ref"
+    },
+    {
+      "instance_id": "sympy__sympy-21614",
+      "new_attempt": 2,
+      "initial_failure_attempt": 1,
+      "failure_phase": null,
+      "failure_logical_call_index": null,
+      "failure_http_attempt_index": null,
+      "failure_status": null,
+      "failure_request_body_chars": null,
+      "failure_context_class": "not_observed_in_recovery_attempt",
+      "retry_statuses": [200, 200, 200, 200, 200, 200],
+      "final_termination": "completed",
+      "evidence": "new attempt 2 trajectory.jsonl"
+    }
+  ],
+  "conclusion": "All three previously failed samples recovered under request-level retry. The observed 502s occurred on large-context requests in two samples, not on their first request; no residual provider failure remained in the fixed 45-sample baseline."
+}

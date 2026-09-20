@@ -1,0 +1,13 @@
+File: /tmp/sgagent-n2d-0hngtli7/django/conf/global_settings.py
+Total lines: 634
+Showing lines 304-312:
+
+ 304: 
+ 305: # The numeric mode to set newly-uploaded files to. The value should be a mode
+ 306: # you'd pass directly to os.chmod; see https://docs.python.org/library/os.html#files-and-directories.
+ 307: FILE_UPLOAD_PERMISSIONS = None
+ 308: 
+ 309: # The numeric mode to assign to newly-created directories, when uploading files.
+ 310: # The value should be a mode as you'd pass to os.chmod;
+ 311: # see https://docs.python.org/library/os.html#files-and-directories.
+ 312: FILE_UPLOAD_DIRECTORY_PERMISSIONS = None

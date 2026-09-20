@@ -1,0 +1,6 @@
+
+
+Let me explore the project structure to find the dispatcher source code.
+
+#TOOL_CALL explore_directory
+{ "dir_path": "/tmp/sgagent-n2d-b9dtj6zl" }

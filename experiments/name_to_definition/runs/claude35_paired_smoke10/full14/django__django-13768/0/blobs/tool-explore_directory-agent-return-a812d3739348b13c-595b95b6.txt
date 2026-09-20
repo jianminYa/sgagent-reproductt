@@ -1,0 +1,26 @@
+Contents of /tmp/sgagent-n2d-b9dtj6zl:
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.github/
+.gitignore
+.tx/
+AUTHORS
+CONTRIBUTING.rst
+Gruntfile.js
+INSTALL
+LICENSE
+LICENSE.python
+MANIFEST.in
+README.rst
+django/
+docs/
+extras/
+js_tests/
+package.json
+scripts/
+setup.cfg
+setup.py
+tests/
+tox.ini

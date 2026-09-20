@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "ce675e83-556a-43ec-aed1-bb73570228e2",
+    "957a383d-4e98-4f8c-9cd5-71fb8e2b4161",
+    "28c67526-6666-4959-9575-a3da034db582",
+    "fcc5e554-1310-470f-a4bc-f1caf1671290",
+    "c5307377-0bcf-4864-a647-06d265a89e6e",
+    "6f09303a-0401-4be5-bcf3-769935b96e3c"
+  ],
+  "stop_reasons": {
+    "stop": 6
+  },
+  "locator_llm_calls": 6,
+  "tool_calls": 4,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "total_llm_calls": 6,
+  "tool_result_chars": 42027,
+  "tool_original_chars": 102395,
+  "tool_returned_chars": 42027,
+  "truncated_tool_calls": 1,
+  "input_tokens": 60021,
+  "output_tokens": 905,
+  "total_tokens": 60926,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 58559.959,
+  "graph_updates": 10,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-8w4o18w1/xarray/core/groupby.py",
+      "start_line": 438,
+      "end_line": 444
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "xarray/core/groupby.py",
+      "start_line": 438,
+      "end_line": 444
+    }
+  ],
+  "run_id": "sgagent-official-pydata__xarray-5131-0-47de6ca124",
+  "instance_id": "pydata__xarray-5131",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

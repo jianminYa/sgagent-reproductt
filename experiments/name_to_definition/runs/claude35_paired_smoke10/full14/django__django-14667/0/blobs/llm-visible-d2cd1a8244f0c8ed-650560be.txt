@@ -1,0 +1,15 @@
+
+
+#REFLECT
+Let me understand the bug:
+
+1. `Company.objects.only("name")` sets `deferred_loading = ({"name"}, False)` — meaning "only load these fields"
+2. `.defer("name")` then calls `add_deferred_loading({"name"})` which hits the `else` branch (since `defer=False`), computing `existing.difference(field_names)` = `{"name"} - {"name"}` = `set()`, and sets `deferred_loading = (set(), False)`
+3. When `deferred_loading = (set(), False)`, it means "only load these fields" but the set is empty, which is interpreted as "load ALL fields" — this is the bug.
+
+The issue is that when the result of `existing.difference(field_names)` is an empty set with `defer=False`, it should be treated as "defer everything" (i.e., load only pk), but instead it's treated as "no restriction, load all fields."
+
+Let me look at how `deferred_loading` is consumed to confirm this understanding.
+
+#TOOL_CALL find_methods_by_name
+{ "name": "add_immediate_loading" }

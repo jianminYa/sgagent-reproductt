@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-p6bk8dd9/tests/dispatch/tests.py
+Total lines: 232
+Showing lines 1-50:
+
+   1: import gc
+   2: import sys
+   3: import weakref
+   4: from types import TracebackType
+   5: 
+   6: from django.dispatch import Signal, receiver
+   7: from django.test import SimpleTestCase
+   8: from django.test.utils import override_settings
+   9: 
+  10: if hasattr(sys, 'pypy_version_info'):
+  11:     def garbage_collect():
+  12:         # Collecting weakreferences can take two collections on PyPy.
+  13:         gc.collect()
+  14:         gc.collect()
+  15: else:
+  16:     def garbage_collect():
+  17:         gc.collect()
+  18: 
+  19: 
+  20: def receiver_1_arg(val, **kwargs):
+  21:     return val
+  22: 
+  23: 
+  24: class Callable:
+  25:     def __call__(self, val, **kwargs):
+  26:         return val
+  27: 
+  28:     def a(self, val, **kwargs):
+  29:         return val
+  30: 
+  31: 
+  32: a_signal = Signal()
+  33: b_signal = Signal()
+  34: c_signal = Signal()
+  35: d_signal = Signal(use_caching=True)
+  36: 
+  37: 
+  38: class DispatcherTests(SimpleTestCase):
+  39: 
+  40:     def assertTestIsClean(self, signal):
+  41:         """Assert that everything has been cleaned up automatically"""
+  42:         # Note that dead weakref cleanup happens as side effect of using
+  43:         # the signal's receivers through the signals API. So, first do a
+  44:         # call to an API method to force cleanup.
+  45:         self.assertFalse(signal.has_listeners())
+  46:         self.assertEqual(signal.receivers, [])
+  47: 
+  48:     @override_settings(DEBUG=True)
+  49:     def test_cannot_connect_no_kwargs(self):
+  50:         def receiver_no_kwargs(sender):

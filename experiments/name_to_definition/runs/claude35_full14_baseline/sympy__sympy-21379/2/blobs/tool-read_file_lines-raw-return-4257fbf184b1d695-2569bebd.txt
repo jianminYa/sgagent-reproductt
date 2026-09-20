@@ -1,0 +1,54 @@
+File: /tmp/sgagent-n2d-4st5urrw/sympy/polys/polytools.py
+Total lines: 7229
+Showing lines 4343-4392:
+
+4343: def _parallel_poly_from_expr(exprs, opt):
+4344:     """Construct polynomials from expressions. """
+4345:     from sympy.functions.elementary.piecewise import Piecewise
+4346: 
+4347:     if len(exprs) == 2:
+4348:         f, g = exprs
+4349: 
+4350:         if isinstance(f, Poly) and isinstance(g, Poly):
+4351:             f = f.__class__._from_poly(f, opt)
+4352:             g = g.__class__._from_poly(g, opt)
+4353: 
+4354:             f, g = f.unify(g)
+4355: 
+4356:             opt.gens = f.gens
+4357:             opt.domain = f.domain
+4358: 
+4359:             if opt.polys is None:
+4360:                 opt.polys = True
+4361: 
+4362:             return [f, g], opt
+4363: 
+4364:     origs, exprs = list(exprs), []
+4365:     _exprs, _polys = [], []
+4366: 
+4367:     failed = False
+4368: 
+4369:     for i, expr in enumerate(origs):
+4370:         expr = sympify(expr)
+4371: 
+4372:         if isinstance(expr, Basic):
+4373:             if expr.is_Poly:
+4374:                 _polys.append(i)
+4375:             else:
+4376:                 _exprs.append(i)
+4377: 
+4378:                 if opt.expand:
+4379:                     expr = expr.expand()
+4380:         else:
+4381:             failed = True
+4382: 
+4383:         exprs.append(expr)
+4384: 
+4385:     if failed:
+4386:         raise PolificationFailed(opt, origs, exprs, True)
+4387: 
+4388:     if _polys:
+4389:         # XXX: this is a temporary solution
+4390:         for i in _polys:
+4391:             exprs[i] = exprs[i].as_expr()
+4392: 

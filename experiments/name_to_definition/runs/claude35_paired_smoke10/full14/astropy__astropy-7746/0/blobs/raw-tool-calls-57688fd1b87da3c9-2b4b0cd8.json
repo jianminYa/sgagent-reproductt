@@ -1,0 +1,1 @@
+["#TOOL_CALL extract_complete_method\n{ \"file\": \"/tmp/sgagent-n2d-jsq5qii0/astropy/wcs/wcs.py\", \"full_qualified_name\": \"astropy.wcs.wcs.WCS._array_converter\" }"]

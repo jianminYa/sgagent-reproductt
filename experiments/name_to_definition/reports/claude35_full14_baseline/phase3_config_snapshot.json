@@ -1,0 +1,37 @@
+{
+  "phase": "PHASE3_TRACE_AND_ABLATION_PREP",
+  "experiment_id": "sgagent_claude35_full14_baseline_phase3",
+  "manifest": "experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json",
+  "dataset": "SWE-bench Lite local frozen manifest; seed 20260915",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "protocol": "openai_chat_completions",
+  "temperature": 0.0,
+  "secure_credential_source": "local secure environment configuration; secret material intentionally omitted",
+  "base_url_source": "OPENAI_BASE_URL from the secure environment configuration",
+  "runner": {
+    "output_root": "experiments/name_to_definition/runs/claude35_full14_baseline",
+    "repo_cache": "experiments/name_to_definition/repo_cache",
+    "source_root": "/home/jql/.orcar",
+    "workers": 1,
+    "timeout_seconds": 300,
+    "recursion_limit": 150,
+    "max_output_tokens": null,
+    "tool_output_guard": false,
+    "arm": "full14"
+  },
+  "retry_policy": {
+    "max_additional_retries": 3,
+    "backoff_seconds": [15.0, 30.0, 60.0],
+    "retryable_statuses": [502, 503, 504],
+    "retryable_network_errors": ["httpx.TimeoutException", "httpx.NetworkError"],
+    "non_retryable": [400, 401, 403, "model errors", "parse errors"]
+  },
+  "recovery_scope": [
+    "matplotlib__matplotlib-26020",
+    "sympy__sympy-21379",
+    "sympy__sympy-21614"
+  ],
+  "paid_paired_ablation_started": false,
+  "reproduction_command_no_secret": "set -a; source <secure qtapi environment>; set +a; python -m experiments.name_to_definition.official_locator --manifest experiments/name_to_definition/manifests/official_lite_45_seed_20260915.json --output-root experiments/name_to_definition/runs/claude35_full14_baseline --repo-cache experiments/name_to_definition/repo_cache --source-root /home/jql/.orcar --model ep-64pmfvfo --protocol openai_chat_completions --arm full14 --workers 1 --timeout 300 --request-retries 3 --retry-backoff 15,30,60 --instances matplotlib__matplotlib-26020,sympy__sympy-21379,sympy__sympy-21614 --resume"
+}

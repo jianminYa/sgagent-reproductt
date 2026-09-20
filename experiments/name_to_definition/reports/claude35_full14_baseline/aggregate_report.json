@@ -1,0 +1,546 @@
+{
+  "status": "official Locator reproduction; pilot-scale evidence",
+  "experiment_id": "sgagent_claude35_full14_baseline_phase3",
+  "n": 45,
+  "completed": 45,
+  "completion_rate": 1.0,
+  "termination_reasons": {
+    "completed": 45
+  },
+  "official_repository_metrics": {
+    "file_accuracy": 0.9111111111111111,
+    "class_accuracy": 0.8222222222222222,
+    "function_accuracy": 0.35555555555555557,
+    "line_accuracy": 0.3333333333333333,
+    "line_iou": 0.22350590550141716
+  },
+  "paper_set_jaccard_metrics": {
+    "file_accuracy": 0.8592592592592593,
+    "function_accuracy": 0.5203703703703704
+  },
+  "operational_metrics": {
+    "n": 45,
+    "completed": 45,
+    "official_repository_metrics": {
+      "file_accuracy": 0.9111111111111111,
+      "class_accuracy": 0.8222222222222222,
+      "function_accuracy": 0.35555555555555557,
+      "line_accuracy": 0.3333333333333333,
+      "line_iou": 0.22350590550141716
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": 0.8592592592592593,
+      "function_accuracy": 0.5203703703703704
+    }
+  },
+  "completed_only_conditional_metrics": {
+    "n": 45,
+    "completed": 45,
+    "official_repository_metrics": {
+      "file_accuracy": 0.9111111111111111,
+      "class_accuracy": 0.8222222222222222,
+      "function_accuracy": 0.35555555555555557,
+      "line_accuracy": 0.3333333333333333,
+      "line_iou": 0.22350590550141716
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": 0.8592592592592593,
+      "function_accuracy": 0.5203703703703704
+    }
+  },
+  "bootstrap_ci_95": {
+    "completion_rate": {
+      "n": 45,
+      "resamples": 10000,
+      "lower_2_5": 1.0,
+      "upper_97_5": 1.0
+    },
+    "official_repository_metrics": {
+      "file_accuracy": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.8222222222222222,
+        "upper_97_5": 0.9777777777777777
+      },
+      "class_accuracy": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.7111111111111111,
+        "upper_97_5": 0.9333333333333333
+      },
+      "function_accuracy": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.2222222222222222,
+        "upper_97_5": 0.4888888888888889
+      },
+      "line_accuracy": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.2,
+        "upper_97_5": 0.4666666666666667
+      },
+      "line_iou": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.17028491888515823,
+        "upper_97_5": 0.27912127087767596
+      }
+    },
+    "paper_set_jaccard_metrics": {
+      "file_accuracy": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.7592592592592592,
+        "upper_97_5": 0.9444444444444444
+      },
+      "function_accuracy": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 0.4129629629629629,
+        "upper_97_5": 0.6277777777777778
+      }
+    },
+    "tokens": {
+      "total": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 127192.73333333334,
+        "upper_97_5": 477240.5111111111
+      },
+      "input": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 126037.77777777778,
+        "upper_97_5": 465389.97777777776
+      },
+      "output": {
+        "n": 45,
+        "resamples": 10000,
+        "lower_2_5": 2102.488888888889,
+        "upper_97_5": 5201.355555555556
+      }
+    }
+  },
+  "tokens": {
+    "incomplete_trajectories": 0,
+    "total": {
+      "n": 45,
+      "mean": 270819.4222222222,
+      "median": 98078.0,
+      "p25": 61481.0,
+      "p75": 179865.0,
+      "p95": 1226416.399999997,
+      "max": 3660622.0
+    },
+    "input": {
+      "n": 45,
+      "mean": 267344.2444444444,
+      "median": 97315.0,
+      "p25": 59158.0,
+      "p75": 177849.0,
+      "p95": 1222396.9999999972,
+      "max": 3632677.0
+    },
+    "output": {
+      "n": 45,
+      "mean": 3475.177777777778,
+      "median": 1958.0,
+      "p25": 1164.0,
+      "p75": 2627.0,
+      "p95": 14434.399999999972,
+      "max": 27945.0
+    }
+  },
+  "completed_only_tokens": {
+    "total": {
+      "n": 45,
+      "mean": 270819.4222222222,
+      "median": 98078.0,
+      "p25": 61481.0,
+      "p75": 179865.0,
+      "p95": 1226416.399999997,
+      "max": 3660622.0
+    },
+    "input": {
+      "n": 45,
+      "mean": 267344.2444444444,
+      "median": 97315.0,
+      "p25": 59158.0,
+      "p75": 177849.0,
+      "p95": 1222396.9999999972,
+      "max": 3632677.0
+    },
+    "output": {
+      "n": 45,
+      "mean": 3475.177777777778,
+      "median": 1958.0,
+      "p25": 1164.0,
+      "p75": 2627.0,
+      "p95": 14434.399999999972,
+      "max": 27945.0
+    }
+  },
+  "calls": {
+    "locator_llm": {
+      "n": 45,
+      "mean": 9.977777777777778,
+      "median": 8.0,
+      "p25": 5.0,
+      "p75": 10.0,
+      "p95": 32.39999999999995,
+      "max": 58.0
+    },
+    "summarizer_llm": {
+      "n": 45,
+      "mean": 0.8222222222222222,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 1.0,
+      "p95": 4.3999999999999915,
+      "max": 9.0
+    },
+    "total_llm": {
+      "n": 45,
+      "mean": 10.8,
+      "median": 8.0,
+      "p25": 5.0,
+      "p75": 11.0,
+      "p95": 36.79999999999994,
+      "max": 67.0
+    },
+    "tools": {
+      "n": 45,
+      "mean": 8.488888888888889,
+      "median": 6.0,
+      "p25": 4.0,
+      "p75": 9.0,
+      "p95": 30.39999999999995,
+      "max": 51.0
+    },
+    "failed_tools": {
+      "n": 45,
+      "mean": 0.1111111111111111,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 5.0
+    },
+    "logical_llm": {
+      "n": 45,
+      "mean": 10.8,
+      "median": 8.0,
+      "p25": 5.0,
+      "p75": 11.0,
+      "p95": 36.79999999999994,
+      "max": 67.0
+    },
+    "http_attempts": {
+      "n": 3,
+      "mean": 29.333333333333332,
+      "median": 13.0,
+      "p25": 9.5,
+      "p75": 41.0,
+      "p95": 63.39999999999999,
+      "max": 69.0
+    },
+    "successful_responses": {
+      "n": 3,
+      "mean": 28.333333333333332,
+      "median": 12.0,
+      "p25": 9.0,
+      "p75": 39.5,
+      "p95": 61.49999999999999,
+      "max": 67.0
+    },
+    "failed_logical_llm": {
+      "n": 3,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "request_retries": {
+      "n": 3,
+      "mean": 1.0,
+      "median": 1.0,
+      "p25": 0.5,
+      "p75": 1.5,
+      "p95": 1.9,
+      "max": 2.0
+    }
+  },
+  "tool_output": {
+    "original_chars": {
+      "n": 45,
+      "mean": 190070.86666666667,
+      "median": 59084.0,
+      "p25": 17937.0,
+      "p75": 111207.0,
+      "p95": 933560.1999999986,
+      "max": 1930576.0
+    },
+    "returned_chars": {
+      "n": 45,
+      "mean": 190070.86666666667,
+      "median": 59084.0,
+      "p25": 17937.0,
+      "p75": 111207.0,
+      "p95": 933560.1999999986,
+      "max": 1930576.0
+    },
+    "original_bytes": {
+      "n": 3,
+      "mean": 1181360.0,
+      "median": 1580371.0,
+      "p25": 806716.0,
+      "p75": 1755509.5,
+      "p95": 1895620.3,
+      "max": 1930648.0
+    },
+    "returned_bytes": {
+      "n": 3,
+      "mean": 1181360.0,
+      "median": 1580371.0,
+      "p25": 806716.0,
+      "p75": 1755509.5,
+      "p95": 1895620.3,
+      "max": 1930648.0
+    },
+    "truncated_calls": {
+      "n": 45,
+      "mean": 0.0,
+      "median": 0.0,
+      "p25": 0.0,
+      "p75": 0.0,
+      "p95": 0.0,
+      "max": 0.0
+    },
+    "trajectories_with_truncation": 0,
+    "guard_enabled_values": {
+      "False": 45
+    },
+    "guard_all_disabled": true
+  },
+  "tool_usage_patterns": {
+    "calls": {
+      "analyze_file_structure": 26,
+      "execute_shell_command_with_validation": 20,
+      "explore_directory": 20,
+      "extract_complete_method": 59,
+      "find_all_variables_named": 4,
+      "find_class_constructor": 5,
+      "find_files_containing": 50,
+      "find_methods_by_name": 58,
+      "find_variable_usage": 9,
+      "get_code_relationships": 1,
+      "read_file_lines": 98,
+      "search_code_with_context": 35,
+      "show_file_imports": 2
+    },
+    "failed_calls": {
+      "execute_shell_command_with_validation": 5
+    }
+  },
+  "latency_ms": {
+    "n": 45,
+    "mean": 178278.39915555555,
+    "median": 124599.595,
+    "p25": 89798.593,
+    "p75": 170475.557,
+    "p95": 437410.4897999995,
+    "max": 1187834.047
+  },
+  "provider_failure": {
+    "count": 0,
+    "rate": 0.0,
+    "definition": "trajectory termination_reason == api_error; HTTP attempts are separately counted"
+  },
+  "trace_validation": {
+    "checked": 45,
+    "valid": 3,
+    "invalid": 42,
+    "note": "Inherited Phase2 successful trajectories may be legacy traces; no successful sample was rerun for migration.",
+    "invalid_examples": [
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/astropy__astropy-7746/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-10914/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs",
+          "successful tool call 3 lacks complete result refs",
+          "successful tool call 4 lacks complete result refs",
+          "successful tool call 5 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-11001/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs",
+          "successful tool call 3 lacks complete result refs",
+          "successful tool call 4 lacks complete result refs",
+          "successful tool call 5 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-11630/1/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs",
+          "successful tool call 3 lacks complete result refs",
+          "successful tool call 4 lacks complete result refs",
+          "successful tool call 5 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-12184/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs",
+          "successful tool call 3 lacks complete result refs",
+          "successful tool call 4 lacks complete result refs",
+          "successful tool call 5 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-12286/1/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs",
+          "successful tool call 3 lacks complete result refs",
+          "successful tool call 4 lacks complete result refs",
+          "successful tool call 5 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-13315/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs",
+          "successful tool call 3 lacks complete result refs",
+          "successful tool call 4 lacks complete result refs",
+          "successful tool call 5 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-13321/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-13448/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs"
+        ]
+      },
+      {
+        "trajectory": "experiments/name_to_definition/runs/claude35_full14_baseline/django__django-13590/0/trajectory.jsonl",
+        "errors": [
+          "successful tool call 1 lacks complete result refs",
+          "successful tool call 2 lacks complete result refs"
+        ]
+      }
+    ]
+  },
+  "token_extremes": {
+    "highest": [
+      {
+        "instance_id": "sympy__sympy-21379",
+        "total_tokens": 3660622
+      },
+      {
+        "instance_id": "sympy__sympy-13146",
+        "total_tokens": 1777554
+      },
+      {
+        "instance_id": "sympy__sympy-21614",
+        "total_tokens": 1417821
+      },
+      {
+        "instance_id": "pydata__xarray-4248",
+        "total_tokens": 460798
+      },
+      {
+        "instance_id": "django__django-14730",
+        "total_tokens": 395812
+      }
+    ],
+    "lowest": [
+      {
+        "instance_id": "psf__requests-1963",
+        "total_tokens": 12224
+      },
+      {
+        "instance_id": "django__django-13590",
+        "total_tokens": 18433
+      },
+      {
+        "instance_id": "sympy__sympy-24066",
+        "total_tokens": 18559
+      },
+      {
+        "instance_id": "django__django-14915",
+        "total_tokens": 24137
+      },
+      {
+        "instance_id": "matplotlib__matplotlib-23964",
+        "total_tokens": 26332
+      }
+    ]
+  },
+  "cost_usd": null,
+  "cost_note": "qtapi pricing was not supplied; no fabricated cost estimate is reported.",
+  "model_metadata": {
+    "requested_models": {
+      "ep-64pmfvfo": 45
+    },
+    "returned_models": {
+      "ep-64pmfvfo": 45
+    },
+    "request_ids_recorded": 486,
+    "request_ids_unique": 486,
+    "request_ids_missing": 0,
+    "stop_reasons": {
+      "stop": 486
+    },
+    "protocols": {
+      "openai_chat_completions": 45
+    },
+    "providers": {
+      "qtapi_openai_chat_completions": 45
+    }
+  },
+  "evaluation_adapter": {
+    "predicted_ranges_as_synthetic_diff": true,
+    "official_evaluator_classes": "script.evaluation.PatchParser, ASTAnalyzer, MetricsCalculator",
+    "gold_source": "local Lite parquet patch; agent never receives patch"
+  },
+  "sampling": {
+    "actual_size": 45,
+    "method": "random.Random(seed).sample(sorted Lite instance_id list)",
+    "requested_size": 45,
+    "seed": 20260915
+  },
+  "dataset": {
+    "benchmark_split": "test",
+    "lite_path": "/workspace/projects/agentlab/sgagent/dataset/lite.parquet",
+    "name": "SWE-bench Lite",
+    "revision": "local-commit-33a2cfe",
+    "row_count": 300,
+    "sort_rule": "instance_id ascending after repo de-duplication",
+    "source_note": "Local dataset/lite.parquet is authoritative for this reproduction run.",
+    "source_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench"
+  }
+}

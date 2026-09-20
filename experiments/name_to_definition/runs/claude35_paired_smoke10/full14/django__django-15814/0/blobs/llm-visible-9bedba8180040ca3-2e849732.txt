@@ -1,0 +1,13 @@
+PROPOSE LOCATION
+
+```json
+{
+    "locations": [
+        {
+            "file_path": "/tmp/sgagent-n2d-ej6s_t4e/django/db/models/sql/query.py",
+            "start_line": 747,
+            "end_line": 751
+        }
+    ]
+}
+```

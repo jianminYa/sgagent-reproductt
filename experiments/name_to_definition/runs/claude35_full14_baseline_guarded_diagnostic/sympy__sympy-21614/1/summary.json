@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "d2405eb9-44cf-452e-917f-3afd9db2db3a",
+    "bd1273f5-7b46-4e0b-a9d4-d1f8010eefff",
+    "03c8cb84-785b-40b3-be30-c09a7dd1fb5c",
+    "fa277606-eb37-4976-b231-4a0323bb9609",
+    "1b039d94-f640-4597-aacf-3f2b6950b28f",
+    "a374d094-52cd-46df-b754-6388d143c9d1",
+    "70a69717-2324-4755-a424-f94c18281d5d",
+    "5deb4799-3f60-49be-a98d-e867782f13d8",
+    "db43fb9a-32b7-40da-aca2-5280e2928760",
+    "b699a813-ddb6-47a4-9d64-9ff646dc9000",
+    "dcd89186-577f-48c9-8366-7f939ee65d9a",
+    "808c98e3-31ed-4f66-b08e-df28cbfbc455",
+    "ef13b773-ea87-4615-b1e1-e78ec1f9577e",
+    "203c8e9c-8bf3-4937-bf72-898fa59340a0",
+    "26db1377-9e01-4cf3-9535-6ab7b6f8e889",
+    "11c0c79c-71f9-465c-91c4-7c98588f9cf0",
+    "64497cb7-36e0-46ff-bc1d-ca68fc4f3067"
+  ],
+  "stop_reasons": {
+    "stop": 17
+  },
+  "locator_llm_calls": 15,
+  "tool_calls": 13,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 2,
+  "total_llm_calls": 17,
+  "tool_result_chars": 59780,
+  "tool_original_chars": 180421,
+  "tool_returned_chars": 59780,
+  "truncated_tool_calls": 1,
+  "input_tokens": 148070,
+  "output_tokens": 3825,
+  "total_tokens": 151895,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 315359.07,
+  "graph_updates": 31,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-ofx036y0/sympy/core/function.py",
+      "start_line": 1616,
+      "end_line": 1618
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/core/function.py",
+      "start_line": 1616,
+      "end_line": 1618
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-21614-1-8455b9c30d",
+  "instance_id": "sympy__sympy-21614",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

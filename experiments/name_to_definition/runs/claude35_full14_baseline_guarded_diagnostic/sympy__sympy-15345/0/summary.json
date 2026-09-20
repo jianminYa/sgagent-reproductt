@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "3b1d4114-da4c-4e88-80c6-d195c622d0b6",
+    "5daf94cb-2135-4b8f-adc6-b38a0be705dc",
+    "2c3f9c8b-bf10-40b2-8f35-6a9ab0e9ffaf",
+    "5b30f8cc-3b93-4128-9363-597718d93b69",
+    "81dea039-04ed-490e-9723-ac438f8106d2",
+    "a19265c2-fd9c-4766-acf7-1377d7b62ce6",
+    "fbb5f9bf-1be3-40b1-b575-968512f714f1",
+    "060001be-ebbe-4778-b9b1-cdf721b22071",
+    "2c15c0fa-9f3a-4e27-b37b-a90265929d65",
+    "f6915b77-aac6-4377-b4a9-f22edde2cbd8",
+    "705cac0c-9dac-4b6a-8c49-656fa73e7efd",
+    "122c88d0-383f-4da0-ba88-8ac6df381907",
+    "8f3945ef-20e3-422d-b246-839056bc276d",
+    "f98b6d32-d1d8-4ac5-804e-da942bab3723"
+  ],
+  "stop_reasons": {
+    "stop": 14
+  },
+  "locator_llm_calls": 13,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 14,
+  "tool_result_chars": 39190,
+  "tool_original_chars": 39190,
+  "tool_returned_chars": 39190,
+  "truncated_tool_calls": 0,
+  "input_tokens": 117570,
+  "output_tokens": 3051,
+  "total_tokens": 120621,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 289719.859,
+  "graph_updates": 26,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-358g4zmj/sympy/printing/mathematica.py",
+      "start_line": 11,
+      "end_line": 35
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-358g4zmj/sympy/printing/mathematica.py",
+      "start_line": 96,
+      "end_line": 102
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/printing/mathematica.py",
+      "start_line": 11,
+      "end_line": 35
+    },
+    {
+      "file_path": "sympy/printing/mathematica.py",
+      "start_line": 96,
+      "end_line": 102
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-15345-0-8da470795a",
+  "instance_id": "sympy__sympy-15345",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

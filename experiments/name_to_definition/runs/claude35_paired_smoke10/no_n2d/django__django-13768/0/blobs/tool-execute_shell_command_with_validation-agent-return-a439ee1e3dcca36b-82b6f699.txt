@@ -1,0 +1,1 @@
+Error executing command 'cd /tmp/sgagent-n2d-p6bk8dd9 && python -m pytest tests/dispatch/tests.py -x -v 2>&1 | head -60': OfficialTrace.event() got multiple values for argument 'phase'

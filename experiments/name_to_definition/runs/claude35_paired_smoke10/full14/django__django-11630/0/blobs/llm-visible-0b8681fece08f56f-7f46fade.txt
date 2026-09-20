@@ -1,0 +1,10 @@
+
+
+#REFLECT
+The problem is about Django 2.2 introducing a new system check (models.E028) that flags when multiple models use the same `db_table` name, even when those models are in different apps pointing to different databases. This is a false positive - the check should account for the fact that models using different databases can legitimately share table names.
+
+Let me find where this check is implemented in the Django codebase.
+
+
+#TOOL_CALL find_files_containing
+{"keyword": "models.E028"}

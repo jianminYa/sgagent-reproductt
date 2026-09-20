@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "8609aecd-4676-44e6-83cb-2b203072cde5",
+    "5045135b-a5e8-4dda-889b-26988183fa0e",
+    "89742e9b-bcc5-4da1-8344-2c459ac27f0e",
+    "195abd5a-8daf-4780-9151-0d2a80626f5e",
+    "4dcc89b0-b0d6-48d3-b7a0-d57bad771489",
+    "b83a1481-1171-4b21-ac79-3a1060caf02b",
+    "24d1b060-fe99-4fa5-adb6-a1ed8717440e"
+  ],
+  "stop_reasons": {
+    "stop": 7
+  },
+  "logical_llm_calls": 7,
+  "http_attempts": 7,
+  "request_retries": 0,
+  "successful_llm_responses": 7,
+  "failed_llm_calls": 0,
+  "locator_llm_calls": 7,
+  "tool_calls": 5,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 0,
+  "nested_llm_calls": 0,
+  "total_llm_calls": 7,
+  "logical_calls_by_phase": {
+    "locator": 7
+  },
+  "successful_responses_by_phase": {
+    "locator": 7
+  },
+  "tokens_by_phase": {
+    "locator": {
+      "input_tokens": 55869,
+      "output_tokens": 2922,
+      "total_tokens": 58791
+    }
+  },
+  "tool_result_chars": 16486,
+  "tool_original_chars": 16486,
+  "tool_returned_chars": 16486,
+  "tool_original_bytes": 16594,
+  "tool_returned_bytes": 16594,
+  "truncated_tool_calls": 0,
+  "input_tokens": 55869,
+  "output_tokens": 2922,
+  "total_tokens": 58791,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 176155.842,
+  "graph_updates": 12,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-gv7ni7r9/django/db/models/sql/query.py",
+      "start_line": 2083,
+      "end_line": 2089
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "django/db/models/sql/query.py",
+      "start_line": 2083,
+      "end_line": 2089
+    }
+  ],
+  "run_id": "sgagent-official-django__django-14667-0-47ddebecda",
+  "instance_id": "django__django-14667",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_paired_smoke10_full14"
+}

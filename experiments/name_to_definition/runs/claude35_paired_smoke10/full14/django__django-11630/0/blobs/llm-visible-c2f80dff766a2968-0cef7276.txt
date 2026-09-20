@@ -1,0 +1,11 @@
+
+
+#REFLECT
+Now I understand the bug clearly. The `check_all_models` function at line 12-22 groups models by `db_table` name and at lines 38-47 raises an error if multiple models share the same `db_table`. However, it doesn't consider that models might be using different databases. If two models in different apps point to different databases, they can legitimately have the same table name.
+
+The fix needs to account for the database routing. We need to group models not just by `db_table` but by `(db_table, database)` combination. Let me look at how database routing works to understand how to determine which database a model uses.
+
+Let me check the test file to understand the expected behavior better.
+
+#TOOL_CALL read_file_lines
+{"file_path": "/tmp/sgagent-n2d-5oom4hte/tests/check_framework/test_model_checks.py", "start_line": 1, "end_line": 50}

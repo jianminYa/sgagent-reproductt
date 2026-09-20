@@ -1,0 +1,373 @@
+{
+  "pilot_status": "pilot evidence",
+  "real_pilot_ran": true,
+  "pilot_scope": "45 sampled intersection instances x 2 arms = 90 real Claude trajectories",
+  "by_arm": {
+    "baseline": {
+      "n": 45,
+      "completed": 1,
+      "failed": 44,
+      "token_usage_incomplete": 0,
+      "termination_reasons": {
+        "budget_exhausted": 43,
+        "timeout": 1,
+        "completed": 1
+      },
+      "total_tokens": {
+        "n": 45,
+        "mean": 71308.46666666666,
+        "median": 70944.0,
+        "p25": 55892.0,
+        "p75": 82133.0
+      },
+      "locator_llm_calls": {
+        "n": 45,
+        "mean": 11.688888888888888,
+        "median": 12.0,
+        "p25": 12.0,
+        "p75": 12.0
+      },
+      "tool_calls": {
+        "n": 45,
+        "mean": 11.666666666666666,
+        "median": 12.0,
+        "p25": 12.0,
+        "p75": 12.0
+      },
+      "failed_tool_calls": {
+        "n": 45,
+        "mean": 0.0,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      },
+      "file_accuracy": 0.022222222222222223,
+      "function_accuracy": 0.022222222222222223,
+      "line_hit_rate": 0,
+      "line_iou": 0.0,
+      "first_gold_tokens": {
+        "n": 43,
+        "mean": 58445.93023255814,
+        "median": 54609.0,
+        "p25": 43188.5,
+        "p75": 77208.5
+      },
+      "first_gold_llm_calls": {
+        "n": 45,
+        "mean": 9.755555555555556,
+        "median": 11.0,
+        "p25": 9.0,
+        "p75": 12.0
+      },
+      "first_gold_tool_calls": {
+        "n": 45,
+        "mean": 8.8,
+        "median": 10.0,
+        "p25": 8.0,
+        "p75": 11.0
+      }
+    },
+    "n2d": {
+      "n": 45,
+      "completed": 3,
+      "failed": 42,
+      "token_usage_incomplete": 1,
+      "termination_reasons": {
+        "budget_exhausted": 41,
+        "completed": 3,
+        "timeout": 1
+      },
+      "total_tokens": {
+        "n": 44,
+        "mean": 72048.65909090909,
+        "median": 68043.5,
+        "p25": 59225.0,
+        "p75": 81638.25
+      },
+      "locator_llm_calls": {
+        "n": 45,
+        "mean": 11.71111111111111,
+        "median": 12.0,
+        "p25": 12.0,
+        "p75": 12.0
+      },
+      "tool_calls": {
+        "n": 45,
+        "mean": 11.622222222222222,
+        "median": 12.0,
+        "p25": 12.0,
+        "p75": 12.0
+      },
+      "failed_tool_calls": {
+        "n": 45,
+        "mean": 0.0,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      },
+      "file_accuracy": 0.06666666666666667,
+      "function_accuracy": 0.044444444444444446,
+      "line_hit_rate": 0.06666666666666667,
+      "line_iou": 0.007583774250440917,
+      "first_gold_tokens": {
+        "n": 43,
+        "mean": 53403.62790697674,
+        "median": 53295.0,
+        "p25": 43437.5,
+        "p75": 61895.0
+      },
+      "first_gold_llm_calls": {
+        "n": 45,
+        "mean": 9.577777777777778,
+        "median": 10.0,
+        "p25": 9.0,
+        "p75": 12.0
+      },
+      "first_gold_tool_calls": {
+        "n": 45,
+        "mean": 8.622222222222222,
+        "median": 9.0,
+        "p25": 8.0,
+        "p75": 11.0
+      },
+      "lookup_gold_definition_in_candidates": 4,
+      "lookup_recall_at_1": 0.044444444444444446,
+      "lookup_recall_at_3": 0.06666666666666667,
+      "lookup_recall_at_5": 0.08888888888888889,
+      "lookup_rank_defined_n": 4,
+      "lookup_recall_at_1_defined": 0.5,
+      "lookup_recall_at_3_defined": 0.75,
+      "lookup_recall_at_5_defined": 1
+    }
+  },
+  "paired": {
+    "baseline_minus_n2d_note": {
+      "instances": 45,
+      "delta_defined_as_n2d_minus_baseline": {
+        "total_tokens": {
+          "n": 44,
+          "mean": 773.1818181818181,
+          "median": 4057.0,
+          "bootstrap_95_ci": [
+            -6306.522727272727,
+            7630.613636363636
+          ]
+        },
+        "locator_llm_calls": {
+          "n": 45,
+          "mean": 0.022222222222222223,
+          "median": 0.0,
+          "bootstrap_95_ci": [
+            -0.7111111111111111,
+            0.6444444444444445
+          ]
+        },
+        "tool_calls": {
+          "n": 45,
+          "mean": -0.044444444444444446,
+          "median": 0.0,
+          "bootstrap_95_ci": [
+            -0.7777777777777778,
+            0.6222222222222222
+          ]
+        },
+        "file_hit": {
+          "n": 45,
+          "mean": 0.044444444444444446,
+          "median": 0.0,
+          "bootstrap_95_ci": [
+            -0.044444444444444446,
+            0.13333333333333333
+          ]
+        },
+        "function_hit": {
+          "n": 45,
+          "mean": 0.022222222222222223,
+          "median": 0.0,
+          "bootstrap_95_ci": [
+            -0.044444444444444446,
+            0.08888888888888889
+          ]
+        },
+        "max_line_iou": {
+          "n": 45,
+          "mean": 0.007583774250440917,
+          "median": 0.0,
+          "bootstrap_95_ci": [
+            0.0,
+            0.01710758377425044
+          ]
+        }
+      }
+    }
+  },
+  "official_swe_explore_metrics": null,
+  "official_swe_explore_note": "Official scorer not bundled in this repository; fields are intentionally null.",
+  "tool_usage_patterns": {
+    "baseline": {
+      "calls": {
+        "analyze_file_structure": 60,
+        "explore_directory": 112,
+        "extract_complete_method": 113,
+        "find_files_containing": 43,
+        "read_file_lines": 102,
+        "search_code_with_context": 93,
+        "show_file_imports": 2
+      },
+      "successful_calls": {
+        "analyze_file_structure": 60,
+        "explore_directory": 112,
+        "extract_complete_method": 113,
+        "find_files_containing": 43,
+        "read_file_lines": 102,
+        "search_code_with_context": 93,
+        "show_file_imports": 2
+      },
+      "failed_calls": {}
+    },
+    "n2d": {
+      "calls": {
+        "analyze_file_structure": 54,
+        "explore_directory": 117,
+        "extract_complete_method": 110,
+        "find_files_containing": 42,
+        "find_methods_by_name": 20,
+        "read_file_lines": 105,
+        "search_code_with_context": 71,
+        "show_file_imports": 4
+      },
+      "successful_calls": {
+        "analyze_file_structure": 54,
+        "explore_directory": 117,
+        "extract_complete_method": 110,
+        "find_files_containing": 42,
+        "find_methods_by_name": 20,
+        "read_file_lines": 105,
+        "search_code_with_context": 71,
+        "show_file_imports": 4
+      },
+      "failed_calls": {}
+    }
+  },
+  "trajectory_contrast_examples": {
+    "reduced_calls": [
+      {
+        "instance_id": "django__django-11099",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/django__django-11099/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/django__django-11099/0/trajectory.jsonl",
+        "delta_tool_calls": -1,
+        "delta_total_tokens": 5589,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "completed"
+      },
+      {
+        "instance_id": "matplotlib__matplotlib-24970",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/matplotlib__matplotlib-24970/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/matplotlib__matplotlib-24970/0/trajectory.jsonl",
+        "delta_tool_calls": -2,
+        "delta_total_tokens": -10706,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "completed"
+      },
+      {
+        "instance_id": "sympy__sympy-18199",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/sympy__sympy-18199/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/sympy__sympy-18199/0/trajectory.jsonl",
+        "delta_tool_calls": -12,
+        "delta_total_tokens": null,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "timeout"
+      }
+    ],
+    "no_improvement": [
+      {
+        "instance_id": "astropy__astropy-12907",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/astropy__astropy-12907/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/astropy__astropy-12907/0/trajectory.jsonl",
+        "delta_tool_calls": 0,
+        "delta_total_tokens": 278,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "budget_exhausted"
+      },
+      {
+        "instance_id": "astropy__astropy-14182",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/astropy__astropy-14182/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/astropy__astropy-14182/0/trajectory.jsonl",
+        "delta_tool_calls": 0,
+        "delta_total_tokens": 97,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "budget_exhausted"
+      },
+      {
+        "instance_id": "astropy__astropy-14995",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/astropy__astropy-14995/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/astropy__astropy-14995/0/trajectory.jsonl",
+        "delta_tool_calls": 0,
+        "delta_total_tokens": 4887,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "budget_exhausted"
+      }
+    ],
+    "regression": [
+      {
+        "instance_id": "astropy__astropy-14365",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/astropy__astropy-14365/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/astropy__astropy-14365/0/trajectory.jsonl",
+        "delta_tool_calls": 9,
+        "delta_total_tokens": 52216,
+        "baseline_termination": "budget_exhausted",
+        "n2d_termination": "budget_exhausted"
+      },
+      {
+        "instance_id": "django__django-13033",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/django__django-13033/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/django__django-13033/0/trajectory.jsonl",
+        "delta_tool_calls": 2,
+        "delta_total_tokens": 21933,
+        "baseline_termination": "timeout",
+        "n2d_termination": "budget_exhausted"
+      },
+      {
+        "instance_id": "pytest-dev__pytest-7432",
+        "baseline_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/baseline/pytest-dev__pytest-7432/0/trajectory.jsonl",
+        "n2d_trajectory": "experiments/name_to_definition/runs/name_to_definition_phase1/n2d/pytest-dev__pytest-7432/0/trajectory.jsonl",
+        "delta_tool_calls": 4,
+        "delta_total_tokens": 25370,
+        "baseline_termination": "completed",
+        "n2d_termination": "budget_exhausted"
+      }
+    ]
+  },
+  "subgroups": {
+    "name_eligible": {
+      "n": 86,
+      "file_accuracy": 0.03488372093023256,
+      "function_accuracy": 0.03488372093023256,
+      "line_iou": 0.0023071244001476557
+    },
+    "non_eligible": {
+      "n": 4,
+      "file_accuracy": 0.25,
+      "function_accuracy": 0,
+      "line_iou": 0.03571428571428571
+    },
+    "ambiguity_1": {
+      "n": 72,
+      "file_accuracy": 0.041666666666666664,
+      "function_accuracy": 0.041666666666666664,
+      "line_iou": 0.002755731922398589
+    },
+    "ambiguity_2-5": {
+      "n": 10,
+      "file_accuracy": 0,
+      "function_accuracy": 0,
+      "line_iou": 0.0
+    },
+    "ambiguity_>5": {
+      "n": 4,
+      "file_accuracy": 0,
+      "function_accuracy": 0,
+      "line_iou": 0.0
+    }
+  }
+}

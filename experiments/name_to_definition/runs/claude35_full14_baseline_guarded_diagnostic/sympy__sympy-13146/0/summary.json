@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "requested_model": "ep-64pmfvfo",
+  "returned_models": [
+    "ep-64pmfvfo"
+  ],
+  "request_ids": [
+    "ba54b4c5-6669-4859-b396-4fe8efa4321d",
+    "a25b0e83-a5a9-4fe7-9525-f6afd160f6e3",
+    "1585711e-ec4c-428b-8111-c97fcbe1dcf7",
+    "9554d853-f520-46c1-beea-3936af092f49",
+    "fe96c222-cc04-4b6d-a7a1-c8b00c422125",
+    "19a048a1-1155-4694-82c4-0d0c16bb76a7",
+    "594aa15f-74f5-4081-bda0-ddb108670a63",
+    "d99114c1-22a5-4ac8-9900-e8aab5486729",
+    "3f183bbc-1008-4fb4-8367-418b70978948",
+    "58df0f36-e640-4162-aea3-a1bed225e079",
+    "21e4db95-416f-4bec-9161-3d873a7b4f34",
+    "5bdf0def-6863-44fa-ab65-a48aef2569a0",
+    "b7d4ab68-7fb3-48ef-84c0-76e47eb83f7b",
+    "91d178e0-6704-4171-8bd3-70aa213c43b0"
+  ],
+  "stop_reasons": {
+    "stop": 14
+  },
+  "locator_llm_calls": 13,
+  "tool_calls": 11,
+  "failed_tool_calls": 0,
+  "reflection_turns": 1,
+  "summarizer_llm_calls": 1,
+  "total_llm_calls": 14,
+  "tool_result_chars": 77591,
+  "tool_original_chars": 221861,
+  "tool_returned_chars": 77591,
+  "truncated_tool_calls": 2,
+  "input_tokens": 222547,
+  "output_tokens": 5308,
+  "total_tokens": 227855,
+  "token_usage_incomplete": false,
+  "wall_clock_ms": 221480.709,
+  "graph_updates": 26,
+  "termination_reason": "completed",
+  "raw_locations": [
+    {
+      "file_path": "/tmp/sgagent-n2d-tpps6pef/sympy/core/numbers.py",
+      "start_line": 1089,
+      "end_line": 1090
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-tpps6pef/sympy/core/numbers.py",
+      "start_line": 1337,
+      "end_line": 1338
+    },
+    {
+      "file_path": "/tmp/sgagent-n2d-tpps6pef/sympy/core/numbers.py",
+      "start_line": 1249,
+      "end_line": 1276
+    }
+  ],
+  "ranked_locations": [
+    {
+      "file_path": "sympy/core/numbers.py",
+      "start_line": 1089,
+      "end_line": 1090
+    },
+    {
+      "file_path": "sympy/core/numbers.py",
+      "start_line": 1337,
+      "end_line": 1338
+    },
+    {
+      "file_path": "sympy/core/numbers.py",
+      "start_line": 1249,
+      "end_line": 1276
+    }
+  ],
+  "run_id": "sgagent-official-sympy__sympy-13146-0-e8a65edbf7",
+  "instance_id": "sympy__sympy-13146",
+  "model": "ep-64pmfvfo",
+  "provider": "qtapi_openai_chat_completions",
+  "experiment_id": "sgagent_claude35_full14_baseline"
+}

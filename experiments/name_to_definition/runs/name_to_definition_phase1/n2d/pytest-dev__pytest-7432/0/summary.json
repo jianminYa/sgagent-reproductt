@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "failed_tool_calls": 0,
+  "first_round_token_usage": {
+    "cached_input_tokens": null,
+    "complete": true,
+    "input_tokens": 782,
+    "output_tokens": 58,
+    "reasoning_tokens": null,
+    "total_tokens": 840
+  },
+  "input_tokens": 58361,
+  "later_round_token_usage": [
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 2851,
+      "output_tokens": 19,
+      "reasoning_tokens": null,
+      "total_tokens": 2870
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 3930,
+      "output_tokens": 55,
+      "reasoning_tokens": null,
+      "total_tokens": 3985
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4439,
+      "output_tokens": 81,
+      "reasoning_tokens": null,
+      "total_tokens": 4520
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4978,
+      "output_tokens": 206,
+      "reasoning_tokens": null,
+      "total_tokens": 5184
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 4893,
+      "output_tokens": 59,
+      "reasoning_tokens": null,
+      "total_tokens": 4952
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5677,
+      "output_tokens": 37,
+      "reasoning_tokens": null,
+      "total_tokens": 5714
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6088,
+      "output_tokens": 65,
+      "reasoning_tokens": null,
+      "total_tokens": 6153
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6303,
+      "output_tokens": 74,
+      "reasoning_tokens": null,
+      "total_tokens": 6377
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6625,
+      "output_tokens": 381,
+      "reasoning_tokens": null,
+      "total_tokens": 7006
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 5708,
+      "output_tokens": 304,
+      "reasoning_tokens": null,
+      "total_tokens": 6012
+    },
+    {
+      "cached_input_tokens": null,
+      "complete": true,
+      "input_tokens": 6087,
+      "output_tokens": 28,
+      "reasoning_tokens": null,
+      "total_tokens": 6115
+    }
+  ],
+  "locations": [],
+  "locator_llm_calls": 12,
+  "output_tokens": 1367,
+  "reflection_turns": 0,
+  "summarizer_llm_calls": 0,
+  "termination_reason": "budget_exhausted",
+  "token_usage_incomplete": false,
+  "tool_calls": 12,
+  "tool_result_chars": 15474,
+  "total_llm_calls": 12,
+  "total_tokens": 59728,
+  "wall_clock_ms": 71015.419,
+  "run_id": "name_to_definition_phase1-pytest-dev__pytest-7432-n2d-c001cbb888",
+  "arm": "n2d",
+  "instance_id": "pytest-dev__pytest-7432"
+}
